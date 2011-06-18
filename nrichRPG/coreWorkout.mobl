@@ -499,31 +499,33 @@ control qaItem(qa:QA, number:Num) {
 }
 
 control showQA(qa:QA) {
-  panelHeader(qa.topic.toLowerCase(), onclick={renderMaths();}) {
-    sideButton("Del", onclick={
-      var qa2:QA = nextQA(qa);
-      remove(qa);
-      qa = qa2;
-      renderQA(qa);
-    })
-  }
-  group {
-    item(questionStyle, onclick={renderMaths();}, hideArrow=true) {
-      html("Q" + qa.number + ". " + qa.question)
-      <span style="display:none">
-        html(renderQA(qa))
-      </span>
-    }
-    item(onclick={renderMaths();}, hideArrow=true) {
-      block(answerStyle) {
-        checkBox(qa.done, "Check answer", onchange = {
-          renderQA(qa);
-        })
-      }
-      when(qa.done) {
-        answerBlock(qa)
-      }
-    }
+  when (qa) {
+	  panelHeader(qa.topic.toLowerCase(), onclick={renderMaths();}) {
+	    sideButton("Del", onclick={
+	      var qa2:QA = nextQA(qa);
+	      remove(qa);
+	      qa = qa2;
+	      renderQA(qa);
+	    })
+	  }
+	  group {
+	    item(questionStyle, onclick={renderMaths();}, hideArrow=true) {
+	      html("Q" + qa.number + ". " + qa.question)
+	      <span style="display:none">
+	        html(renderQA(qa))
+	      </span>
+	    }
+	    item(onclick={renderMaths();}, hideArrow=true) {
+	      block(answerStyle) {
+	        checkBox(qa.done, "Check answer", onchange = {
+	          renderQA(qa);
+	        })
+	      }
+	      when(qa.done) {
+	        answerBlock(qa)
+	      }
+	    }
+	  }
   }
 }
 

@@ -31,7 +31,7 @@ control mMasterDetail(items : Collection<?>, masterItem : Control2<Dynamic, Num>
               masterItem(it, indexOf(it, items))
             }
           } else {
-            item(hideArrow=true, onclick={ current = it; scrollUp();}) {
+            item(hideArrow=true, onclick={ current = it; visible = true; scrollUp();}) {
               masterItem(it, indexOf(it, items))
             }
           }

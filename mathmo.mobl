@@ -31,7 +31,7 @@ control qTab() {
 			clearAllQ();
 		})
 	}
-	mMasterDetail(QA.all().filter("done", "=", false) order by number asc, qaItem, showQA)
+	mMasterDetail(QA.all() order by number asc, qaItem, showQA)
 }
 
 control coreTab() {

@@ -28,8 +28,8 @@ control qTab() {
 		image("mathmoIcon.png", 35, 35, style=logoStyle, onclick={openUrl(resourceUrl);})
 		image("nrichIcon.png", 35, 35, style=logoStyle, onclick={openUrl(homeUrl);})
 		button("Clear", onclick={
-      deleteCurrentQ();
 			clearAllQ();
+      deleteCurrentQ();
 		})
 	}
 	mMasterDetail(QA.all() order by number asc, qaItem, showQA)
@@ -38,8 +38,8 @@ control qTab() {
 control coreTab() {
 	header("Q on topic") {
 		button("Clear", onclick={
-      deleteCurrentQ();
 			clearAllQ();
+      deleteCurrentQ();
 		})
 	}
 	group() {

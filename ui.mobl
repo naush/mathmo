@@ -33,7 +33,7 @@ control mMasterDetail(items : Collection<?>, masterItem : Control2<Dynamic, Num>
       }
     </div>
     <div style="float:left; width:66.5%; position:relative; margin-left: 0.5%;">
-      when(QA.all().count()) {
+      when(QA.all().one() != null) {
         detail(current)
       } else {
         <div style="padding:20px">

@@ -23,12 +23,6 @@ resource english.json
 var homeUrl:String = "http://nrich.maths.org";
 var resourceUrl:String = "http://nrich.maths.org/7088";
 
-control qaItem(qa:QA, number:Num) {
-	<span style="color:" + (qa.done ? (qa.correct ? "#480" : "#C00") : "#000") + "\"" >
-	html("Q" + number + ". " + qa.topic)
-	</span>
-}
-
 control qTab() {
 	header("Mathmo") {
 		image("mathmoIcon.png", 35, 35, style=logoStyle, onclick={openUrl(resourceUrl);})

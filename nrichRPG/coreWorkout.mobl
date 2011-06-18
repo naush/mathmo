@@ -499,7 +499,7 @@ control qaItem(qa:QA, number:Num) {
 }
 
 control showQA(qa:QA) {
-  when (qa) {
+  when (qa && QA.all().count() > 0) {
 	  panelHeader(qa.topic.toLowerCase(), onclick={renderMaths();}) {
 	    sideButton("Del", onclick={
 	      var qa2:QA = nextQA(qa);

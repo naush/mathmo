@@ -13,15 +13,15 @@ function indexOf(it : Dynamic, items : Collection<Dynamic>) : Num {
 	return -1;
 }
 
-var current : Dynamic = null;
-var copyItems : Collection<Dynamic> = null;
+var visible : Bool = true;
 
-function deleteCurrentQ():void
+function hideCurrentQ():void
 {
-  current = null;
+  visible = false;
 }
 
 control mMasterDetail(items : Collection<?>, masterItem : Control2<Dynamic, Num>, detail : Control1<Dynamic>) {
+  var current : Dynamic = items.one()
   <div width="100%">
     <div style="float:left; width:33%; position:relative; border-right: solid 1px #cccccc;">
       group {
@@ -39,7 +39,7 @@ control mMasterDetail(items : Collection<?>, masterItem : Control2<Dynamic, Num>
       }
     </div>
     <div style="float:left; width:66.5%; position:relative; margin-left: 0.5%;">
-      when(current) {
+      when(current && visible) {
         detail(current)
       } else {
         <div style="padding:20px">

@@ -15,12 +15,12 @@ nrichRPG.coreWorkout.tickCount = mobl.ref(0);
 nrichRPG.coreWorkout.updateCounts = function(callback) {
   var __this = this;
   nrichRPG.questionAnswer.QA.all().count(function(result__) {
-    var tmp1330 = result__;
-    var result__ = tmp1330;
+    var tmp1694 = result__;
+    var result__ = tmp1694;
     nrichRPG.coreWorkout.qCount.set(result__);
     nrichRPG.questionAnswer.QA.all().filter("done", "=", true).count(function(result__) {
-      var tmp1331 = result__;
-      var result__ = tmp1331;
+      var tmp1695 = result__;
+      var result__ = tmp1695;
       nrichRPG.coreWorkout.tickCount.set(result__);
       var result__ = mobl.log("qCount = " + nrichRPG.coreWorkout.qCount.get() + " tickCount = " + nrichRPG.coreWorkout.tickCount.get());
       if(callback && callback.apply) callback(); return;
@@ -31,7 +31,7 @@ nrichRPG.coreWorkout.updateCounts = function(callback) {
 nrichRPG.coreWorkout.clearAllQ = function(callback) {
   var __this = this;
   nrichRPG.questionAnswer.QA.all().destroyAll(function(result__) {
-    var tmp1332 = result__;
+    var tmp1696 = result__;
     if(callback && callback.apply) callback(); return;
   });
 };
@@ -39,22 +39,22 @@ nrichRPG.coreWorkout.clearAllQ = function(callback) {
 nrichRPG.coreWorkout.randomQ = function(n, topicId, callback) {
   var __this = this;
   var result__ = mobl.range(0, n);
-  mobl.range(0, n).list(function(coll1564) {
-    coll1564 = coll1564.reverse();
-    function processOne64() {
+  mobl.range(0, n).list(function(coll1576) {
+    coll1576 = coll1576.reverse();
+    function processOne76() {
       var i;
-      i = coll1564.pop();
+      i = coll1576.pop();
       nrichRPG.coreWorkout.makeQA(topicId, function(result__) {
-        var tmp1333 = result__;
+        var tmp1697 = result__;
         
-        if(coll1564.length > 0) processOne64(); else rest64();
+        if(coll1576.length > 0) processOne76(); else rest76();
         
       });
     }
-    function rest64() {
+    function rest76() {
       if(callback && callback.apply) callback(); return;
     }
-    if(coll1564.length > 0) processOne64(); else rest64();
+    if(coll1576.length > 0) processOne76(); else rest76();
   });
   
 };
@@ -62,11 +62,11 @@ nrichRPG.coreWorkout.randomQ = function(n, topicId, callback) {
 nrichRPG.coreWorkout.randomQStar = function(n, callback) {
   var __this = this;
   var result__ = mobl.range(0, n);
-  mobl.range(0, n).list(function(coll1565) {
-    coll1565 = coll1565.reverse();
-    function processOne65() {
+  mobl.range(0, n).list(function(coll1577) {
+    coll1577 = coll1577.reverse();
+    function processOne77() {
       var i;
-      i = coll1565.pop();
+      i = coll1577.pop();
       var result__ = mobl.Math.floor(13 * mobl.Math.random());
       var r = result__;
       var result__ = "F" + (1 + r);
@@ -76,26 +76,26 @@ nrichRPG.coreWorkout.randomQStar = function(n, callback) {
         var result__ = "F3a";
         tid = result__;
         nrichRPG.coreWorkout.makeQAStar(tid, function(result__) {
-          var tmp1334 = result__;
+          var tmp1698 = result__;
           
-          if(coll1565.length > 0) processOne65(); else rest65();
+          if(coll1577.length > 0) processOne77(); else rest77();
           
         });
       } else {
         {
           nrichRPG.coreWorkout.makeQAStar(tid, function(result__) {
-            var tmp1334 = result__;
+            var tmp1698 = result__;
             
-            if(coll1565.length > 0) processOne65(); else rest65();
+            if(coll1577.length > 0) processOne77(); else rest77();
             
           });
         }
       }
     }
-    function rest65() {
+    function rest77() {
       if(callback && callback.apply) callback(); return;
     }
-    if(coll1565.length > 0) processOne65(); else rest65();
+    if(coll1577.length > 0) processOne77(); else rest77();
   });
   
 };
@@ -103,312 +103,312 @@ nrichRPG.coreWorkout.randomQStar = function(n, callback) {
 nrichRPG.coreWorkout.randomQStats = function(n, callback) {
   var __this = this;
   var result__ = mobl.range(0, n);
-  mobl.range(0, n).list(function(coll1566) {
-    coll1566 = coll1566.reverse();
-    function processOne66() {
+  mobl.range(0, n).list(function(coll1578) {
+    coll1578 = coll1578.reverse();
+    function processOne78() {
       var i;
-      i = coll1566.pop();
+      i = coll1578.pop();
       var result__ = mobl.Math.floor(6 * mobl.Math.random());
       var r = result__;
       var result__ = "S" + (1 + r);
       var tid = result__;
       nrichRPG.coreWorkout.makeQAStar(tid, function(result__) {
-        var tmp1335 = result__;
+        var tmp1699 = result__;
         
-        if(coll1566.length > 0) processOne66(); else rest66();
+        if(coll1578.length > 0) processOne78(); else rest78();
         
       });
     }
-    function rest66() {
+    function rest78() {
       if(callback && callback.apply) callback(); return;
     }
-    if(coll1566.length > 0) processOne66(); else rest66();
+    if(coll1578.length > 0) processOne78(); else rest78();
   });
   
 };
 
 
 nrichRPG.coreWorkout.addQA = function(elements, callback) {
-  var root1763 = $("<span>");
+  var root2137 = $("<span>");
   var subs__ = new mobl.CompSubscription();
-  var nodes1323 = $("<span>");
-  root1763.append(nodes1323);
+  var nodes1667 = $("<span>");
+  root2137.append(nodes1667);
   subs__.addSub((ui.group)(function(_, callback) {
-    var root1764 = $("<span>");
+    var root2138 = $("<span>");
     var subs__ = new mobl.CompSubscription();
     var result__ = function(event, callback) {
                      if(event && event.stopPropagation) event.stopPropagation();
                      mobl.call('nrichRPG.coreWorkout.addAlgebra', [mobl.ref(false), mobl.ref("slide")], function(result__) {
-                     var tmp1343 = result__;
+                     var tmp1707 = result__;
                      if(callback && callback.apply) callback(); return;
                      });
                    };
-    var tmp1235 = mobl.ref(result__);
+    var tmp1600 = mobl.ref(result__);
     
-    var nodes1324 = $("<span>");
-    root1764.append(nodes1324);
-    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1235, mobl.ref(null), mobl.ref(false), function(_, callback) {
-      var root1765 = $("<span>");
+    var nodes1668 = $("<span>");
+    root2138.append(nodes1668);
+    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1600, mobl.ref(null), mobl.ref(false), function(_, callback) {
+      var root2139 = $("<span>");
       var subs__ = new mobl.CompSubscription();
-      var nodes1325 = $("<span>");
-      root1765.append(nodes1325);
+      var nodes1669 = $("<span>");
+      root2139.append(nodes1669);
       subs__.addSub((mobl.label)(mobl.ref("+Algebraic"), mobl.ref(null), mobl.ref(null), function(_, callback) {
-        var root1766 = $("<span>");
+        var root2140 = $("<span>");
         var subs__ = new mobl.CompSubscription();
-        callback(root1766); return subs__;
+        callback(root2140); return subs__;
         return subs__;
       }, function(node) {
-        var oldNodes = nodes1325;
-        nodes1325 = node.contents();
-        oldNodes.replaceWith(nodes1325);
+        var oldNodes = nodes1669;
+        nodes1669 = node.contents();
+        oldNodes.replaceWith(nodes1669);
       }));
-      callback(root1765); return subs__;
+      callback(root2139); return subs__;
       
       return subs__;
     }, function(node) {
-      var oldNodes = nodes1324;
-      nodes1324 = node.contents();
-      oldNodes.replaceWith(nodes1324);
+      var oldNodes = nodes1668;
+      nodes1668 = node.contents();
+      oldNodes.replaceWith(nodes1668);
     }));
     var result__ = function(event, callback) {
                      if(event && event.stopPropagation) event.stopPropagation();
                      mobl.call('nrichRPG.coreWorkout.addCurveSketch', [mobl.ref(false), mobl.ref("slide")], function(result__) {
-                     var tmp1342 = result__;
+                     var tmp1706 = result__;
                      if(callback && callback.apply) callback(); return;
                      });
                    };
-    var tmp1236 = mobl.ref(result__);
+    var tmp1601 = mobl.ref(result__);
     
-    var nodes1326 = $("<span>");
-    root1764.append(nodes1326);
-    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1236, mobl.ref(null), mobl.ref(false), function(_, callback) {
-      var root1767 = $("<span>");
+    var nodes1670 = $("<span>");
+    root2138.append(nodes1670);
+    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1601, mobl.ref(null), mobl.ref(false), function(_, callback) {
+      var root2141 = $("<span>");
       var subs__ = new mobl.CompSubscription();
-      var nodes1327 = $("<span>");
-      root1767.append(nodes1327);
+      var nodes1671 = $("<span>");
+      root2141.append(nodes1671);
       subs__.addSub((mobl.label)(mobl.ref("+Curve sketching"), mobl.ref(null), mobl.ref(null), function(_, callback) {
-        var root1768 = $("<span>");
+        var root2142 = $("<span>");
         var subs__ = new mobl.CompSubscription();
-        callback(root1768); return subs__;
+        callback(root2142); return subs__;
         return subs__;
       }, function(node) {
-        var oldNodes = nodes1327;
-        nodes1327 = node.contents();
-        oldNodes.replaceWith(nodes1327);
+        var oldNodes = nodes1671;
+        nodes1671 = node.contents();
+        oldNodes.replaceWith(nodes1671);
       }));
-      callback(root1767); return subs__;
+      callback(root2141); return subs__;
       
       return subs__;
     }, function(node) {
-      var oldNodes = nodes1326;
-      nodes1326 = node.contents();
-      oldNodes.replaceWith(nodes1326);
+      var oldNodes = nodes1670;
+      nodes1670 = node.contents();
+      oldNodes.replaceWith(nodes1670);
     }));
     var result__ = function(event, callback) {
                      if(event && event.stopPropagation) event.stopPropagation();
                      mobl.call('nrichRPG.coreWorkout.addGeometry', [mobl.ref(false), mobl.ref("slide")], function(result__) {
-                     var tmp1341 = result__;
+                     var tmp1705 = result__;
                      if(callback && callback.apply) callback(); return;
                      });
                    };
-    var tmp1237 = mobl.ref(result__);
+    var tmp1602 = mobl.ref(result__);
     
-    var nodes1328 = $("<span>");
-    root1764.append(nodes1328);
-    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1237, mobl.ref(null), mobl.ref(false), function(_, callback) {
-      var root1769 = $("<span>");
+    var nodes1672 = $("<span>");
+    root2138.append(nodes1672);
+    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1602, mobl.ref(null), mobl.ref(false), function(_, callback) {
+      var root2143 = $("<span>");
       var subs__ = new mobl.CompSubscription();
-      var nodes1329 = $("<span>");
-      root1769.append(nodes1329);
+      var nodes1673 = $("<span>");
+      root2143.append(nodes1673);
       subs__.addSub((mobl.label)(mobl.ref("+Geometry"), mobl.ref(null), mobl.ref(null), function(_, callback) {
-        var root1770 = $("<span>");
+        var root2144 = $("<span>");
         var subs__ = new mobl.CompSubscription();
-        callback(root1770); return subs__;
+        callback(root2144); return subs__;
         return subs__;
       }, function(node) {
-        var oldNodes = nodes1329;
-        nodes1329 = node.contents();
-        oldNodes.replaceWith(nodes1329);
+        var oldNodes = nodes1673;
+        nodes1673 = node.contents();
+        oldNodes.replaceWith(nodes1673);
       }));
-      callback(root1769); return subs__;
+      callback(root2143); return subs__;
       
       return subs__;
     }, function(node) {
-      var oldNodes = nodes1328;
-      nodes1328 = node.contents();
-      oldNodes.replaceWith(nodes1328);
+      var oldNodes = nodes1672;
+      nodes1672 = node.contents();
+      oldNodes.replaceWith(nodes1672);
     }));
     var result__ = function(event, callback) {
                      if(event && event.stopPropagation) event.stopPropagation();
                      mobl.call('nrichRPG.coreWorkout.addSequencesAndSeries', [mobl.ref(false), mobl.ref("slide")], function(result__) {
-                     var tmp1340 = result__;
+                     var tmp1704 = result__;
                      if(callback && callback.apply) callback(); return;
                      });
                    };
-    var tmp1238 = mobl.ref(result__);
+    var tmp1603 = mobl.ref(result__);
     
-    var nodes1330 = $("<span>");
-    root1764.append(nodes1330);
-    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1238, mobl.ref(null), mobl.ref(false), function(_, callback) {
-      var root1771 = $("<span>");
+    var nodes1674 = $("<span>");
+    root2138.append(nodes1674);
+    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1603, mobl.ref(null), mobl.ref(false), function(_, callback) {
+      var root2145 = $("<span>");
       var subs__ = new mobl.CompSubscription();
-      var nodes1331 = $("<span>");
-      root1771.append(nodes1331);
+      var nodes1675 = $("<span>");
+      root2145.append(nodes1675);
       subs__.addSub((mobl.label)(mobl.ref("+Sequences & series"), mobl.ref(null), mobl.ref(null), function(_, callback) {
-        var root1772 = $("<span>");
+        var root2146 = $("<span>");
         var subs__ = new mobl.CompSubscription();
-        callback(root1772); return subs__;
+        callback(root2146); return subs__;
         return subs__;
       }, function(node) {
-        var oldNodes = nodes1331;
-        nodes1331 = node.contents();
-        oldNodes.replaceWith(nodes1331);
+        var oldNodes = nodes1675;
+        nodes1675 = node.contents();
+        oldNodes.replaceWith(nodes1675);
       }));
-      callback(root1771); return subs__;
+      callback(root2145); return subs__;
       
       return subs__;
     }, function(node) {
-      var oldNodes = nodes1330;
-      nodes1330 = node.contents();
-      oldNodes.replaceWith(nodes1330);
+      var oldNodes = nodes1674;
+      nodes1674 = node.contents();
+      oldNodes.replaceWith(nodes1674);
     }));
     var result__ = function(event, callback) {
                      if(event && event.stopPropagation) event.stopPropagation();
                      mobl.call('nrichRPG.coreWorkout.addVectors', [mobl.ref(false), mobl.ref("slide")], function(result__) {
-                     var tmp1339 = result__;
+                     var tmp1703 = result__;
                      if(callback && callback.apply) callback(); return;
                      });
                    };
-    var tmp1239 = mobl.ref(result__);
+    var tmp1604 = mobl.ref(result__);
     
-    var nodes1332 = $("<span>");
-    root1764.append(nodes1332);
-    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1239, mobl.ref(null), mobl.ref(false), function(_, callback) {
-      var root1773 = $("<span>");
+    var nodes1676 = $("<span>");
+    root2138.append(nodes1676);
+    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1604, mobl.ref(null), mobl.ref(false), function(_, callback) {
+      var root2147 = $("<span>");
       var subs__ = new mobl.CompSubscription();
-      var nodes1333 = $("<span>");
-      root1773.append(nodes1333);
+      var nodes1677 = $("<span>");
+      root2147.append(nodes1677);
       subs__.addSub((mobl.label)(mobl.ref("+Vectors"), mobl.ref(null), mobl.ref(null), function(_, callback) {
-        var root1774 = $("<span>");
+        var root2148 = $("<span>");
         var subs__ = new mobl.CompSubscription();
-        callback(root1774); return subs__;
+        callback(root2148); return subs__;
         return subs__;
       }, function(node) {
-        var oldNodes = nodes1333;
-        nodes1333 = node.contents();
-        oldNodes.replaceWith(nodes1333);
+        var oldNodes = nodes1677;
+        nodes1677 = node.contents();
+        oldNodes.replaceWith(nodes1677);
       }));
-      callback(root1773); return subs__;
+      callback(root2147); return subs__;
       
       return subs__;
     }, function(node) {
-      var oldNodes = nodes1332;
-      nodes1332 = node.contents();
-      oldNodes.replaceWith(nodes1332);
+      var oldNodes = nodes1676;
+      nodes1676 = node.contents();
+      oldNodes.replaceWith(nodes1676);
     }));
     var result__ = function(event, callback) {
                      if(event && event.stopPropagation) event.stopPropagation();
                      mobl.call('nrichRPG.coreWorkout.addDifferentiation', [mobl.ref(false), mobl.ref("slide")], function(result__) {
-                     var tmp1338 = result__;
+                     var tmp1702 = result__;
                      if(callback && callback.apply) callback(); return;
                      });
                    };
-    var tmp1240 = mobl.ref(result__);
+    var tmp1605 = mobl.ref(result__);
     
-    var nodes1334 = $("<span>");
-    root1764.append(nodes1334);
-    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1240, mobl.ref(null), mobl.ref(false), function(_, callback) {
-      var root1775 = $("<span>");
+    var nodes1678 = $("<span>");
+    root2138.append(nodes1678);
+    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1605, mobl.ref(null), mobl.ref(false), function(_, callback) {
+      var root2149 = $("<span>");
       var subs__ = new mobl.CompSubscription();
-      var nodes1335 = $("<span>");
-      root1775.append(nodes1335);
+      var nodes1679 = $("<span>");
+      root2149.append(nodes1679);
       subs__.addSub((mobl.label)(mobl.ref("+Differentiation"), mobl.ref(null), mobl.ref(null), function(_, callback) {
-        var root1776 = $("<span>");
+        var root2150 = $("<span>");
         var subs__ = new mobl.CompSubscription();
-        callback(root1776); return subs__;
+        callback(root2150); return subs__;
         return subs__;
       }, function(node) {
-        var oldNodes = nodes1335;
-        nodes1335 = node.contents();
-        oldNodes.replaceWith(nodes1335);
+        var oldNodes = nodes1679;
+        nodes1679 = node.contents();
+        oldNodes.replaceWith(nodes1679);
       }));
-      callback(root1775); return subs__;
+      callback(root2149); return subs__;
       
       return subs__;
     }, function(node) {
-      var oldNodes = nodes1334;
-      nodes1334 = node.contents();
-      oldNodes.replaceWith(nodes1334);
+      var oldNodes = nodes1678;
+      nodes1678 = node.contents();
+      oldNodes.replaceWith(nodes1678);
     }));
     var result__ = function(event, callback) {
                      if(event && event.stopPropagation) event.stopPropagation();
                      mobl.call('nrichRPG.coreWorkout.addIntegration', [mobl.ref(false), mobl.ref("slide")], function(result__) {
-                     var tmp1337 = result__;
+                     var tmp1701 = result__;
                      if(callback && callback.apply) callback(); return;
                      });
                    };
-    var tmp1241 = mobl.ref(result__);
+    var tmp1606 = mobl.ref(result__);
     
-    var nodes1336 = $("<span>");
-    root1764.append(nodes1336);
-    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1241, mobl.ref(null), mobl.ref(false), function(_, callback) {
-      var root1777 = $("<span>");
+    var nodes1680 = $("<span>");
+    root2138.append(nodes1680);
+    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1606, mobl.ref(null), mobl.ref(false), function(_, callback) {
+      var root2151 = $("<span>");
       var subs__ = new mobl.CompSubscription();
-      var nodes1337 = $("<span>");
-      root1777.append(nodes1337);
+      var nodes1681 = $("<span>");
+      root2151.append(nodes1681);
       subs__.addSub((mobl.label)(mobl.ref("+Integration"), mobl.ref(null), mobl.ref(null), function(_, callback) {
-        var root1778 = $("<span>");
+        var root2152 = $("<span>");
         var subs__ = new mobl.CompSubscription();
-        callback(root1778); return subs__;
+        callback(root2152); return subs__;
         return subs__;
       }, function(node) {
-        var oldNodes = nodes1337;
-        nodes1337 = node.contents();
-        oldNodes.replaceWith(nodes1337);
+        var oldNodes = nodes1681;
+        nodes1681 = node.contents();
+        oldNodes.replaceWith(nodes1681);
       }));
-      callback(root1777); return subs__;
+      callback(root2151); return subs__;
       
       return subs__;
     }, function(node) {
-      var oldNodes = nodes1336;
-      nodes1336 = node.contents();
-      oldNodes.replaceWith(nodes1336);
+      var oldNodes = nodes1680;
+      nodes1680 = node.contents();
+      oldNodes.replaceWith(nodes1680);
     }));
     var result__ = function(event, callback) {
                      if(event && event.stopPropagation) event.stopPropagation();
                      mobl.call('nrichRPG.coreWorkout.addDifferentialEquations', [mobl.ref(false), mobl.ref("slide")], function(result__) {
-                     var tmp1336 = result__;
+                     var tmp1700 = result__;
                      if(callback && callback.apply) callback(); return;
                      });
                    };
-    var tmp1242 = mobl.ref(result__);
+    var tmp1607 = mobl.ref(result__);
     
-    var nodes1338 = $("<span>");
-    root1764.append(nodes1338);
-    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1242, mobl.ref(null), mobl.ref(false), function(_, callback) {
-      var root1779 = $("<span>");
+    var nodes1682 = $("<span>");
+    root2138.append(nodes1682);
+    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1607, mobl.ref(null), mobl.ref(false), function(_, callback) {
+      var root2153 = $("<span>");
       var subs__ = new mobl.CompSubscription();
-      var nodes1339 = $("<span>");
-      root1779.append(nodes1339);
+      var nodes1683 = $("<span>");
+      root2153.append(nodes1683);
       subs__.addSub((mobl.label)(mobl.ref("+Differential equations"), mobl.ref(null), mobl.ref(null), function(_, callback) {
-        var root1780 = $("<span>");
+        var root2154 = $("<span>");
         var subs__ = new mobl.CompSubscription();
-        callback(root1780); return subs__;
+        callback(root2154); return subs__;
         return subs__;
       }, function(node) {
-        var oldNodes = nodes1339;
-        nodes1339 = node.contents();
-        oldNodes.replaceWith(nodes1339);
+        var oldNodes = nodes1683;
+        nodes1683 = node.contents();
+        oldNodes.replaceWith(nodes1683);
       }));
-      callback(root1779); return subs__;
+      callback(root2153); return subs__;
       
       return subs__;
     }, function(node) {
-      var oldNodes = nodes1338;
-      nodes1338 = node.contents();
-      oldNodes.replaceWith(nodes1338);
+      var oldNodes = nodes1682;
+      nodes1682 = node.contents();
+      oldNodes.replaceWith(nodes1682);
     }));
-    callback(root1764); return subs__;
+    callback(root2138); return subs__;
     
     
     
@@ -419,24 +419,24 @@ nrichRPG.coreWorkout.addQA = function(elements, callback) {
     
     return subs__;
   }, function(node) {
-    var oldNodes = nodes1323;
-    nodes1323 = node.contents();
-    oldNodes.replaceWith(nodes1323);
+    var oldNodes = nodes1667;
+    nodes1667 = node.contents();
+    oldNodes.replaceWith(nodes1667);
   }));
-  callback(root1763); return subs__;
+  callback(root2137); return subs__;
   
   return subs__;
 };
 
 nrichRPG.coreWorkout.addAlgebra = function(callback, screenCallback) {
-  var root1781 = $("<div>");
+  var root2155 = $("<div>");
   var subs__ = new mobl.CompSubscription();
   
   var qa = mobl.ref(new nrichRPG.questionAnswer.QA({}));
-  var nodes1340 = $("<span>");
-  root1781.append(nodes1340);
+  var nodes1684 = $("<span>");
+  root2155.append(nodes1684);
   subs__.addSub((ui.header)(mobl.ref("Algebraic"), mobl.ref(false), mobl.ref(null), function(_, callback) {
-    var root1782 = $("<span>");
+    var root2156 = $("<span>");
     var subs__ = new mobl.CompSubscription();
     var result__ = function(event, callback) {
                      if(event && event.stopPropagation) event.stopPropagation();
@@ -444,317 +444,317 @@ nrichRPG.coreWorkout.addAlgebra = function(callback, screenCallback) {
                      return;
                      if(callback && callback.apply) callback(); return;
                    };
-    var tmp1244 = mobl.ref(result__);
+    var tmp1609 = mobl.ref(result__);
     
     var result__ = mobl._("Back", []);
-    var tmp1243 = mobl.ref(result__);
+    var tmp1608 = mobl.ref(result__);
     
-    var nodes1341 = $("<span>");
-    root1782.append(nodes1341);
-    subs__.addSub((ui.backButton)(tmp1243, mobl.ref(ui.backButtonStyle), mobl.ref(ui.backButtonPushedStyle), tmp1244, function(_, callback) {
-      var root1783 = $("<span>");
+    var nodes1685 = $("<span>");
+    root2156.append(nodes1685);
+    subs__.addSub((ui.backButton)(tmp1608, mobl.ref(ui.backButtonStyle), mobl.ref(ui.backButtonPushedStyle), tmp1609, function(_, callback) {
+      var root2157 = $("<span>");
       var subs__ = new mobl.CompSubscription();
-      callback(root1783); return subs__;
+      callback(root2157); return subs__;
       return subs__;
     }, function(node) {
-      var oldNodes = nodes1341;
-      nodes1341 = node.contents();
-      oldNodes.replaceWith(nodes1341);
+      var oldNodes = nodes1685;
+      nodes1685 = node.contents();
+      oldNodes.replaceWith(nodes1685);
     }));
-    callback(root1782); return subs__;
+    callback(root2156); return subs__;
     
     return subs__;
   }, function(node) {
-    var oldNodes = nodes1340;
-    nodes1340 = node.contents();
-    oldNodes.replaceWith(nodes1340);
+    var oldNodes = nodes1684;
+    nodes1684 = node.contents();
+    oldNodes.replaceWith(nodes1684);
   }));
-  var nodes1342 = $("<span>");
-  root1781.append(nodes1342);
+  var nodes1686 = $("<span>");
+  root2155.append(nodes1686);
   subs__.addSub((ui.group)(function(_, callback) {
-    var root1784 = $("<span>");
+    var root2158 = $("<span>");
     var subs__ = new mobl.CompSubscription();
     var result__ = function(event, callback) {
                      if(event && event.stopPropagation) event.stopPropagation();
                      nrichRPG.coreWorkout.makeQA(10, function(result__) {
-                       var tmp1351 = result__;
+                       var tmp1715 = result__;
                        var result__ = mobl.alert("Quadratic Q added");
                        if(callback && callback.apply) callback(); return;
                      });
                    };
-    var tmp1245 = mobl.ref(result__);
+    var tmp1610 = mobl.ref(result__);
     
-    var nodes1343 = $("<span>");
-    root1784.append(nodes1343);
-    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1245, mobl.ref(null), mobl.ref(false), function(_, callback) {
-      var root1785 = $("<span>");
+    var nodes1687 = $("<span>");
+    root2158.append(nodes1687);
+    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1610, mobl.ref(null), mobl.ref(false), function(_, callback) {
+      var root2159 = $("<span>");
       var subs__ = new mobl.CompSubscription();
-      var nodes1344 = $("<span>");
-      root1785.append(nodes1344);
+      var nodes1688 = $("<span>");
+      root2159.append(nodes1688);
       subs__.addSub((mobl.label)(mobl.ref("+Quadratic equations"), mobl.ref(null), mobl.ref(null), function(_, callback) {
-        var root1786 = $("<span>");
+        var root2160 = $("<span>");
         var subs__ = new mobl.CompSubscription();
-        callback(root1786); return subs__;
+        callback(root2160); return subs__;
         return subs__;
       }, function(node) {
-        var oldNodes = nodes1344;
-        nodes1344 = node.contents();
-        oldNodes.replaceWith(nodes1344);
+        var oldNodes = nodes1688;
+        nodes1688 = node.contents();
+        oldNodes.replaceWith(nodes1688);
       }));
-      callback(root1785); return subs__;
+      callback(root2159); return subs__;
       
       return subs__;
     }, function(node) {
-      var oldNodes = nodes1343;
-      nodes1343 = node.contents();
-      oldNodes.replaceWith(nodes1343);
+      var oldNodes = nodes1687;
+      nodes1687 = node.contents();
+      oldNodes.replaceWith(nodes1687);
     }));
     var result__ = function(event, callback) {
                      if(event && event.stopPropagation) event.stopPropagation();
                      nrichRPG.coreWorkout.makeQA(11, function(result__) {
-                       var tmp1350 = result__;
+                       var tmp1714 = result__;
                        var result__ = mobl.alert("Completing the Square Q added");
                        if(callback && callback.apply) callback(); return;
                      });
                    };
-    var tmp1246 = mobl.ref(result__);
+    var tmp1611 = mobl.ref(result__);
     
-    var nodes1345 = $("<span>");
-    root1784.append(nodes1345);
-    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1246, mobl.ref(null), mobl.ref(false), function(_, callback) {
-      var root1787 = $("<span>");
+    var nodes1689 = $("<span>");
+    root2158.append(nodes1689);
+    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1611, mobl.ref(null), mobl.ref(false), function(_, callback) {
+      var root2161 = $("<span>");
       var subs__ = new mobl.CompSubscription();
-      var nodes1346 = $("<span>");
-      root1787.append(nodes1346);
+      var nodes1690 = $("<span>");
+      root2161.append(nodes1690);
       subs__.addSub((mobl.label)(mobl.ref("+Completing the square"), mobl.ref(null), mobl.ref(null), function(_, callback) {
-        var root1788 = $("<span>");
+        var root2162 = $("<span>");
         var subs__ = new mobl.CompSubscription();
-        callback(root1788); return subs__;
+        callback(root2162); return subs__;
         return subs__;
       }, function(node) {
-        var oldNodes = nodes1346;
-        nodes1346 = node.contents();
-        oldNodes.replaceWith(nodes1346);
+        var oldNodes = nodes1690;
+        nodes1690 = node.contents();
+        oldNodes.replaceWith(nodes1690);
       }));
-      callback(root1787); return subs__;
+      callback(root2161); return subs__;
       
       return subs__;
     }, function(node) {
-      var oldNodes = nodes1345;
-      nodes1345 = node.contents();
-      oldNodes.replaceWith(nodes1345);
+      var oldNodes = nodes1689;
+      nodes1689 = node.contents();
+      oldNodes.replaceWith(nodes1689);
     }));
     var result__ = function(event, callback) {
                      if(event && event.stopPropagation) event.stopPropagation();
                      nrichRPG.coreWorkout.makeQA(7, function(result__) {
-                       var tmp1349 = result__;
+                       var tmp1713 = result__;
                        var result__ = mobl.alert("Ineqalities Q added");
                        if(callback && callback.apply) callback(); return;
                      });
                    };
-    var tmp1247 = mobl.ref(result__);
+    var tmp1612 = mobl.ref(result__);
     
-    var nodes1347 = $("<span>");
-    root1784.append(nodes1347);
-    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1247, mobl.ref(null), mobl.ref(false), function(_, callback) {
-      var root1789 = $("<span>");
+    var nodes1691 = $("<span>");
+    root2158.append(nodes1691);
+    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1612, mobl.ref(null), mobl.ref(false), function(_, callback) {
+      var root2163 = $("<span>");
       var subs__ = new mobl.CompSubscription();
-      var nodes1348 = $("<span>");
-      root1789.append(nodes1348);
+      var nodes1692 = $("<span>");
+      root2163.append(nodes1692);
       subs__.addSub((mobl.label)(mobl.ref("+Inequalities"), mobl.ref(null), mobl.ref(null), function(_, callback) {
-        var root1790 = $("<span>");
+        var root2164 = $("<span>");
         var subs__ = new mobl.CompSubscription();
-        callback(root1790); return subs__;
+        callback(root2164); return subs__;
         return subs__;
       }, function(node) {
-        var oldNodes = nodes1348;
-        nodes1348 = node.contents();
-        oldNodes.replaceWith(nodes1348);
+        var oldNodes = nodes1692;
+        nodes1692 = node.contents();
+        oldNodes.replaceWith(nodes1692);
       }));
-      callback(root1789); return subs__;
+      callback(root2163); return subs__;
       
       return subs__;
     }, function(node) {
-      var oldNodes = nodes1347;
-      nodes1347 = node.contents();
-      oldNodes.replaceWith(nodes1347);
+      var oldNodes = nodes1691;
+      nodes1691 = node.contents();
+      oldNodes.replaceWith(nodes1691);
     }));
     var result__ = function(event, callback) {
                      if(event && event.stopPropagation) event.stopPropagation();
                      nrichRPG.coreWorkout.makeQA(9, function(result__) {
-                       var tmp1348 = result__;
+                       var tmp1712 = result__;
                        var result__ = mobl.alert("Factor theorem Q added");
                        if(callback && callback.apply) callback(); return;
                      });
                    };
-    var tmp1248 = mobl.ref(result__);
+    var tmp1613 = mobl.ref(result__);
     
-    var nodes1349 = $("<span>");
-    root1784.append(nodes1349);
-    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1248, mobl.ref(null), mobl.ref(false), function(_, callback) {
-      var root1791 = $("<span>");
+    var nodes1693 = $("<span>");
+    root2158.append(nodes1693);
+    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1613, mobl.ref(null), mobl.ref(false), function(_, callback) {
+      var root2165 = $("<span>");
       var subs__ = new mobl.CompSubscription();
-      var nodes1350 = $("<span>");
-      root1791.append(nodes1350);
+      var nodes1694 = $("<span>");
+      root2165.append(nodes1694);
       subs__.addSub((mobl.label)(mobl.ref("+Factor theorem"), mobl.ref(null), mobl.ref(null), function(_, callback) {
-        var root1792 = $("<span>");
+        var root2166 = $("<span>");
         var subs__ = new mobl.CompSubscription();
-        callback(root1792); return subs__;
+        callback(root2166); return subs__;
         return subs__;
       }, function(node) {
-        var oldNodes = nodes1350;
-        nodes1350 = node.contents();
-        oldNodes.replaceWith(nodes1350);
+        var oldNodes = nodes1694;
+        nodes1694 = node.contents();
+        oldNodes.replaceWith(nodes1694);
       }));
-      callback(root1791); return subs__;
+      callback(root2165); return subs__;
       
       return subs__;
     }, function(node) {
-      var oldNodes = nodes1349;
-      nodes1349 = node.contents();
-      oldNodes.replaceWith(nodes1349);
+      var oldNodes = nodes1693;
+      nodes1693 = node.contents();
+      oldNodes.replaceWith(nodes1693);
     }));
     var result__ = function(event, callback) {
                      if(event && event.stopPropagation) event.stopPropagation();
                      nrichRPG.coreWorkout.makeQA(1, function(result__) {
-                       var tmp1347 = result__;
+                       var tmp1711 = result__;
                        var result__ = mobl.alert("Partial fraction Q added");
                        if(callback && callback.apply) callback(); return;
                      });
                    };
-    var tmp1249 = mobl.ref(result__);
+    var tmp1614 = mobl.ref(result__);
     
-    var nodes1351 = $("<span>");
-    root1784.append(nodes1351);
-    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1249, mobl.ref(null), mobl.ref(false), function(_, callback) {
-      var root1793 = $("<span>");
+    var nodes1695 = $("<span>");
+    root2158.append(nodes1695);
+    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1614, mobl.ref(null), mobl.ref(false), function(_, callback) {
+      var root2167 = $("<span>");
       var subs__ = new mobl.CompSubscription();
-      var nodes1352 = $("<span>");
-      root1793.append(nodes1352);
+      var nodes1696 = $("<span>");
+      root2167.append(nodes1696);
       subs__.addSub((mobl.label)(mobl.ref("+Partial fractions"), mobl.ref(null), mobl.ref(null), function(_, callback) {
-        var root1794 = $("<span>");
+        var root2168 = $("<span>");
         var subs__ = new mobl.CompSubscription();
-        callback(root1794); return subs__;
+        callback(root2168); return subs__;
         return subs__;
       }, function(node) {
-        var oldNodes = nodes1352;
-        nodes1352 = node.contents();
-        oldNodes.replaceWith(nodes1352);
+        var oldNodes = nodes1696;
+        nodes1696 = node.contents();
+        oldNodes.replaceWith(nodes1696);
       }));
-      callback(root1793); return subs__;
+      callback(root2167); return subs__;
       
       return subs__;
     }, function(node) {
-      var oldNodes = nodes1351;
-      nodes1351 = node.contents();
-      oldNodes.replaceWith(nodes1351);
+      var oldNodes = nodes1695;
+      nodes1695 = node.contents();
+      oldNodes.replaceWith(nodes1695);
     }));
     var result__ = function(event, callback) {
                      if(event && event.stopPropagation) event.stopPropagation();
                      nrichRPG.coreWorkout.makeQA(30, function(result__) {
-                       var tmp1346 = result__;
+                       var tmp1710 = result__;
                        var result__ = mobl.alert("Powers Q added");
                        if(callback && callback.apply) callback(); return;
                      });
                    };
-    var tmp1250 = mobl.ref(result__);
+    var tmp1615 = mobl.ref(result__);
     
-    var nodes1353 = $("<span>");
-    root1784.append(nodes1353);
-    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1250, mobl.ref(null), mobl.ref(false), function(_, callback) {
-      var root1795 = $("<span>");
+    var nodes1697 = $("<span>");
+    root2158.append(nodes1697);
+    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1615, mobl.ref(null), mobl.ref(false), function(_, callback) {
+      var root2169 = $("<span>");
       var subs__ = new mobl.CompSubscription();
-      var nodes1354 = $("<span>");
-      root1795.append(nodes1354);
+      var nodes1698 = $("<span>");
+      root2169.append(nodes1698);
       subs__.addSub((mobl.label)(mobl.ref("+Powers"), mobl.ref(null), mobl.ref(null), function(_, callback) {
-        var root1796 = $("<span>");
+        var root2170 = $("<span>");
         var subs__ = new mobl.CompSubscription();
-        callback(root1796); return subs__;
+        callback(root2170); return subs__;
         return subs__;
       }, function(node) {
-        var oldNodes = nodes1354;
-        nodes1354 = node.contents();
-        oldNodes.replaceWith(nodes1354);
+        var oldNodes = nodes1698;
+        nodes1698 = node.contents();
+        oldNodes.replaceWith(nodes1698);
       }));
-      callback(root1795); return subs__;
+      callback(root2169); return subs__;
       
       return subs__;
     }, function(node) {
-      var oldNodes = nodes1353;
-      nodes1353 = node.contents();
-      oldNodes.replaceWith(nodes1353);
+      var oldNodes = nodes1697;
+      nodes1697 = node.contents();
+      oldNodes.replaceWith(nodes1697);
     }));
     var result__ = function(event, callback) {
                      if(event && event.stopPropagation) event.stopPropagation();
                      nrichRPG.coreWorkout.makeQA(13, function(result__) {
-                       var tmp1345 = result__;
+                       var tmp1709 = result__;
                        var result__ = mobl.alert("Logarithm Q added");
                        if(callback && callback.apply) callback(); return;
                      });
                    };
-    var tmp1251 = mobl.ref(result__);
+    var tmp1616 = mobl.ref(result__);
     
-    var nodes1355 = $("<span>");
-    root1784.append(nodes1355);
-    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1251, mobl.ref(null), mobl.ref(false), function(_, callback) {
-      var root1797 = $("<span>");
+    var nodes1699 = $("<span>");
+    root2158.append(nodes1699);
+    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1616, mobl.ref(null), mobl.ref(false), function(_, callback) {
+      var root2171 = $("<span>");
       var subs__ = new mobl.CompSubscription();
-      var nodes1356 = $("<span>");
-      root1797.append(nodes1356);
+      var nodes1700 = $("<span>");
+      root2171.append(nodes1700);
       subs__.addSub((mobl.label)(mobl.ref("+Logarithms"), mobl.ref(null), mobl.ref(null), function(_, callback) {
-        var root1798 = $("<span>");
+        var root2172 = $("<span>");
         var subs__ = new mobl.CompSubscription();
-        callback(root1798); return subs__;
+        callback(root2172); return subs__;
         return subs__;
       }, function(node) {
-        var oldNodes = nodes1356;
-        nodes1356 = node.contents();
-        oldNodes.replaceWith(nodes1356);
+        var oldNodes = nodes1700;
+        nodes1700 = node.contents();
+        oldNodes.replaceWith(nodes1700);
       }));
-      callback(root1797); return subs__;
+      callback(root2171); return subs__;
       
       return subs__;
     }, function(node) {
-      var oldNodes = nodes1355;
-      nodes1355 = node.contents();
-      oldNodes.replaceWith(nodes1355);
+      var oldNodes = nodes1699;
+      nodes1699 = node.contents();
+      oldNodes.replaceWith(nodes1699);
     }));
     var result__ = function(event, callback) {
                      if(event && event.stopPropagation) event.stopPropagation();
                      nrichRPG.coreWorkout.makeQA(17, function(result__) {
-                       var tmp1344 = result__;
+                       var tmp1708 = result__;
                        var result__ = mobl.alert("Trig equation Q added");
                        if(callback && callback.apply) callback(); return;
                      });
                    };
-    var tmp1252 = mobl.ref(result__);
+    var tmp1617 = mobl.ref(result__);
     
-    var nodes1357 = $("<span>");
-    root1784.append(nodes1357);
-    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1252, mobl.ref(null), mobl.ref(false), function(_, callback) {
-      var root1799 = $("<span>");
+    var nodes1701 = $("<span>");
+    root2158.append(nodes1701);
+    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1617, mobl.ref(null), mobl.ref(false), function(_, callback) {
+      var root2173 = $("<span>");
       var subs__ = new mobl.CompSubscription();
-      var nodes1358 = $("<span>");
-      root1799.append(nodes1358);
+      var nodes1702 = $("<span>");
+      root2173.append(nodes1702);
       subs__.addSub((mobl.label)(mobl.ref("+Trig equations"), mobl.ref(null), mobl.ref(null), function(_, callback) {
-        var root1800 = $("<span>");
+        var root2174 = $("<span>");
         var subs__ = new mobl.CompSubscription();
-        callback(root1800); return subs__;
+        callback(root2174); return subs__;
         return subs__;
       }, function(node) {
-        var oldNodes = nodes1358;
-        nodes1358 = node.contents();
-        oldNodes.replaceWith(nodes1358);
+        var oldNodes = nodes1702;
+        nodes1702 = node.contents();
+        oldNodes.replaceWith(nodes1702);
       }));
-      callback(root1799); return subs__;
+      callback(root2173); return subs__;
       
       return subs__;
     }, function(node) {
-      var oldNodes = nodes1357;
-      nodes1357 = node.contents();
-      oldNodes.replaceWith(nodes1357);
+      var oldNodes = nodes1701;
+      nodes1701 = node.contents();
+      oldNodes.replaceWith(nodes1701);
     }));
-    callback(root1784); return subs__;
+    callback(root2158); return subs__;
     
     
     
@@ -765,23 +765,23 @@ nrichRPG.coreWorkout.addAlgebra = function(callback, screenCallback) {
     
     return subs__;
   }, function(node) {
-    var oldNodes = nodes1342;
-    nodes1342 = node.contents();
-    oldNodes.replaceWith(nodes1342);
+    var oldNodes = nodes1686;
+    nodes1686 = node.contents();
+    oldNodes.replaceWith(nodes1686);
   }));
-  callback(root1781); return subs__;
+  callback(root2155); return subs__;
   
   
   return subs__;
 };
 
 nrichRPG.coreWorkout.addCurveSketch = function(callback, screenCallback) {
-  var root1801 = $("<div>");
+  var root2175 = $("<div>");
   var subs__ = new mobl.CompSubscription();
-  var nodes1359 = $("<span>");
-  root1801.append(nodes1359);
+  var nodes1703 = $("<span>");
+  root2175.append(nodes1703);
   subs__.addSub((ui.header)(mobl.ref("Curve Sketching"), mobl.ref(false), mobl.ref(null), function(_, callback) {
-    var root1802 = $("<span>");
+    var root2176 = $("<span>");
     var subs__ = new mobl.CompSubscription();
     var result__ = function(event, callback) {
                      if(event && event.stopPropagation) event.stopPropagation();
@@ -789,212 +789,212 @@ nrichRPG.coreWorkout.addCurveSketch = function(callback, screenCallback) {
                      return;
                      if(callback && callback.apply) callback(); return;
                    };
-    var tmp1254 = mobl.ref(result__);
+    var tmp1619 = mobl.ref(result__);
     
     var result__ = mobl._("Back", []);
-    var tmp1253 = mobl.ref(result__);
+    var tmp1618 = mobl.ref(result__);
     
-    var nodes1360 = $("<span>");
-    root1802.append(nodes1360);
-    subs__.addSub((ui.backButton)(tmp1253, mobl.ref(ui.backButtonStyle), mobl.ref(ui.backButtonPushedStyle), tmp1254, function(_, callback) {
-      var root1803 = $("<span>");
+    var nodes1704 = $("<span>");
+    root2176.append(nodes1704);
+    subs__.addSub((ui.backButton)(tmp1618, mobl.ref(ui.backButtonStyle), mobl.ref(ui.backButtonPushedStyle), tmp1619, function(_, callback) {
+      var root2177 = $("<span>");
       var subs__ = new mobl.CompSubscription();
-      callback(root1803); return subs__;
+      callback(root2177); return subs__;
       return subs__;
     }, function(node) {
-      var oldNodes = nodes1360;
-      nodes1360 = node.contents();
-      oldNodes.replaceWith(nodes1360);
+      var oldNodes = nodes1704;
+      nodes1704 = node.contents();
+      oldNodes.replaceWith(nodes1704);
     }));
-    callback(root1802); return subs__;
+    callback(root2176); return subs__;
     
     return subs__;
   }, function(node) {
-    var oldNodes = nodes1359;
-    nodes1359 = node.contents();
-    oldNodes.replaceWith(nodes1359);
+    var oldNodes = nodes1703;
+    nodes1703 = node.contents();
+    oldNodes.replaceWith(nodes1703);
   }));
-  var nodes1361 = $("<span>");
-  root1801.append(nodes1361);
+  var nodes1705 = $("<span>");
+  root2175.append(nodes1705);
   subs__.addSub((ui.group)(function(_, callback) {
-    var root1804 = $("<span>");
+    var root2178 = $("<span>");
     var subs__ = new mobl.CompSubscription();
     var result__ = function(event, callback) {
                      if(event && event.stopPropagation) event.stopPropagation();
                      nrichRPG.coreWorkout.makeQA(24, function(result__) {
-                       var tmp1356 = result__;
+                       var tmp1720 = result__;
                        var result__ = mobl.alert("Modulus Q added");
                        if(callback && callback.apply) callback(); return;
                      });
                    };
-    var tmp1255 = mobl.ref(result__);
+    var tmp1620 = mobl.ref(result__);
     
-    var nodes1362 = $("<span>");
-    root1804.append(nodes1362);
-    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1255, mobl.ref(null), mobl.ref(false), function(_, callback) {
-      var root1805 = $("<span>");
+    var nodes1706 = $("<span>");
+    root2178.append(nodes1706);
+    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1620, mobl.ref(null), mobl.ref(false), function(_, callback) {
+      var root2179 = $("<span>");
       var subs__ = new mobl.CompSubscription();
-      var nodes1363 = $("<span>");
-      root1805.append(nodes1363);
+      var nodes1707 = $("<span>");
+      root2179.append(nodes1707);
       subs__.addSub((mobl.label)(mobl.ref("+Modulus function"), mobl.ref(null), mobl.ref(null), function(_, callback) {
-        var root1806 = $("<span>");
+        var root2180 = $("<span>");
         var subs__ = new mobl.CompSubscription();
-        callback(root1806); return subs__;
+        callback(root2180); return subs__;
         return subs__;
       }, function(node) {
-        var oldNodes = nodes1363;
-        nodes1363 = node.contents();
-        oldNodes.replaceWith(nodes1363);
+        var oldNodes = nodes1707;
+        nodes1707 = node.contents();
+        oldNodes.replaceWith(nodes1707);
       }));
-      callback(root1805); return subs__;
+      callback(root2179); return subs__;
       
       return subs__;
     }, function(node) {
-      var oldNodes = nodes1362;
-      nodes1362 = node.contents();
-      oldNodes.replaceWith(nodes1362);
+      var oldNodes = nodes1706;
+      nodes1706 = node.contents();
+      oldNodes.replaceWith(nodes1706);
     }));
     var result__ = function(event, callback) {
                      if(event && event.stopPropagation) event.stopPropagation();
                      nrichRPG.coreWorkout.makeQA(25, function(result__) {
-                       var tmp1355 = result__;
+                       var tmp1719 = result__;
                        var result__ = mobl.alert("Transformations of functions Q added");
                        if(callback && callback.apply) callback(); return;
                      });
                    };
-    var tmp1256 = mobl.ref(result__);
+    var tmp1621 = mobl.ref(result__);
     
-    var nodes1364 = $("<span>");
-    root1804.append(nodes1364);
-    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1256, mobl.ref(null), mobl.ref(false), function(_, callback) {
-      var root1807 = $("<span>");
+    var nodes1708 = $("<span>");
+    root2178.append(nodes1708);
+    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1621, mobl.ref(null), mobl.ref(false), function(_, callback) {
+      var root2181 = $("<span>");
       var subs__ = new mobl.CompSubscription();
-      var nodes1365 = $("<span>");
-      root1807.append(nodes1365);
+      var nodes1709 = $("<span>");
+      root2181.append(nodes1709);
       subs__.addSub((mobl.label)(mobl.ref("+Transformations of functions"), mobl.ref(null), mobl.ref(null), function(_, callback) {
-        var root1808 = $("<span>");
+        var root2182 = $("<span>");
         var subs__ = new mobl.CompSubscription();
-        callback(root1808); return subs__;
+        callback(root2182); return subs__;
         return subs__;
       }, function(node) {
-        var oldNodes = nodes1365;
-        nodes1365 = node.contents();
-        oldNodes.replaceWith(nodes1365);
+        var oldNodes = nodes1709;
+        nodes1709 = node.contents();
+        oldNodes.replaceWith(nodes1709);
       }));
-      callback(root1807); return subs__;
+      callback(root2181); return subs__;
       
       return subs__;
     }, function(node) {
-      var oldNodes = nodes1364;
-      nodes1364 = node.contents();
-      oldNodes.replaceWith(nodes1364);
+      var oldNodes = nodes1708;
+      nodes1708 = node.contents();
+      oldNodes.replaceWith(nodes1708);
     }));
     var result__ = function(event, callback) {
                      if(event && event.stopPropagation) event.stopPropagation();
                      nrichRPG.coreWorkout.makeQA(26, function(result__) {
-                       var tmp1354 = result__;
+                       var tmp1718 = result__;
                        var result__ = mobl.alert("Composition of functions Q added");
                        if(callback && callback.apply) callback(); return;
                      });
                    };
-    var tmp1257 = mobl.ref(result__);
+    var tmp1622 = mobl.ref(result__);
     
-    var nodes1366 = $("<span>");
-    root1804.append(nodes1366);
-    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1257, mobl.ref(null), mobl.ref(false), function(_, callback) {
-      var root1809 = $("<span>");
+    var nodes1710 = $("<span>");
+    root2178.append(nodes1710);
+    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1622, mobl.ref(null), mobl.ref(false), function(_, callback) {
+      var root2183 = $("<span>");
       var subs__ = new mobl.CompSubscription();
-      var nodes1367 = $("<span>");
-      root1809.append(nodes1367);
+      var nodes1711 = $("<span>");
+      root2183.append(nodes1711);
       subs__.addSub((mobl.label)(mobl.ref("+Composition of functions"), mobl.ref(null), mobl.ref(null), function(_, callback) {
-        var root1810 = $("<span>");
+        var root2184 = $("<span>");
         var subs__ = new mobl.CompSubscription();
-        callback(root1810); return subs__;
+        callback(root2184); return subs__;
         return subs__;
       }, function(node) {
-        var oldNodes = nodes1367;
-        nodes1367 = node.contents();
-        oldNodes.replaceWith(nodes1367);
+        var oldNodes = nodes1711;
+        nodes1711 = node.contents();
+        oldNodes.replaceWith(nodes1711);
       }));
-      callback(root1809); return subs__;
+      callback(root2183); return subs__;
       
       return subs__;
     }, function(node) {
-      var oldNodes = nodes1366;
-      nodes1366 = node.contents();
-      oldNodes.replaceWith(nodes1366);
+      var oldNodes = nodes1710;
+      nodes1710 = node.contents();
+      oldNodes.replaceWith(nodes1710);
     }));
     var result__ = function(event, callback) {
                      if(event && event.stopPropagation) event.stopPropagation();
                      nrichRPG.coreWorkout.makeQA(270, function(result__) {
-                       var tmp1353 = result__;
+                       var tmp1717 = result__;
                        var result__ = mobl.alert("Implicit functions Q added");
                        if(callback && callback.apply) callback(); return;
                      });
                    };
-    var tmp1258 = mobl.ref(result__);
+    var tmp1623 = mobl.ref(result__);
     
-    var nodes1368 = $("<span>");
-    root1804.append(nodes1368);
-    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1258, mobl.ref(null), mobl.ref(false), function(_, callback) {
-      var root1811 = $("<span>");
+    var nodes1712 = $("<span>");
+    root2178.append(nodes1712);
+    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1623, mobl.ref(null), mobl.ref(false), function(_, callback) {
+      var root2185 = $("<span>");
       var subs__ = new mobl.CompSubscription();
-      var nodes1369 = $("<span>");
-      root1811.append(nodes1369);
+      var nodes1713 = $("<span>");
+      root2185.append(nodes1713);
       subs__.addSub((mobl.label)(mobl.ref("+Implicit functions"), mobl.ref(null), mobl.ref(null), function(_, callback) {
-        var root1812 = $("<span>");
+        var root2186 = $("<span>");
         var subs__ = new mobl.CompSubscription();
-        callback(root1812); return subs__;
+        callback(root2186); return subs__;
         return subs__;
       }, function(node) {
-        var oldNodes = nodes1369;
-        nodes1369 = node.contents();
-        oldNodes.replaceWith(nodes1369);
+        var oldNodes = nodes1713;
+        nodes1713 = node.contents();
+        oldNodes.replaceWith(nodes1713);
       }));
-      callback(root1811); return subs__;
+      callback(root2185); return subs__;
       
       return subs__;
     }, function(node) {
-      var oldNodes = nodes1368;
-      nodes1368 = node.contents();
-      oldNodes.replaceWith(nodes1368);
+      var oldNodes = nodes1712;
+      nodes1712 = node.contents();
+      oldNodes.replaceWith(nodes1712);
     }));
     var result__ = function(event, callback) {
                      if(event && event.stopPropagation) event.stopPropagation();
                      nrichRPG.coreWorkout.makeQA(27, function(result__) {
-                       var tmp1352 = result__;
+                       var tmp1716 = result__;
                        var result__ = mobl.alert("Parametric functions Q added");
                        if(callback && callback.apply) callback(); return;
                      });
                    };
-    var tmp1259 = mobl.ref(result__);
+    var tmp1624 = mobl.ref(result__);
     
-    var nodes1370 = $("<span>");
-    root1804.append(nodes1370);
-    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1259, mobl.ref(null), mobl.ref(false), function(_, callback) {
-      var root1813 = $("<span>");
+    var nodes1714 = $("<span>");
+    root2178.append(nodes1714);
+    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1624, mobl.ref(null), mobl.ref(false), function(_, callback) {
+      var root2187 = $("<span>");
       var subs__ = new mobl.CompSubscription();
-      var nodes1371 = $("<span>");
-      root1813.append(nodes1371);
+      var nodes1715 = $("<span>");
+      root2187.append(nodes1715);
       subs__.addSub((mobl.label)(mobl.ref("+Parametric functions"), mobl.ref(null), mobl.ref(null), function(_, callback) {
-        var root1814 = $("<span>");
+        var root2188 = $("<span>");
         var subs__ = new mobl.CompSubscription();
-        callback(root1814); return subs__;
+        callback(root2188); return subs__;
         return subs__;
       }, function(node) {
-        var oldNodes = nodes1371;
-        nodes1371 = node.contents();
-        oldNodes.replaceWith(nodes1371);
+        var oldNodes = nodes1715;
+        nodes1715 = node.contents();
+        oldNodes.replaceWith(nodes1715);
       }));
-      callback(root1813); return subs__;
+      callback(root2187); return subs__;
       
       return subs__;
     }, function(node) {
-      var oldNodes = nodes1370;
-      nodes1370 = node.contents();
-      oldNodes.replaceWith(nodes1370);
+      var oldNodes = nodes1714;
+      nodes1714 = node.contents();
+      oldNodes.replaceWith(nodes1714);
     }));
-    callback(root1804); return subs__;
+    callback(root2178); return subs__;
     
     
     
@@ -1002,23 +1002,23 @@ nrichRPG.coreWorkout.addCurveSketch = function(callback, screenCallback) {
     
     return subs__;
   }, function(node) {
-    var oldNodes = nodes1361;
-    nodes1361 = node.contents();
-    oldNodes.replaceWith(nodes1361);
+    var oldNodes = nodes1705;
+    nodes1705 = node.contents();
+    oldNodes.replaceWith(nodes1705);
   }));
-  callback(root1801); return subs__;
+  callback(root2175); return subs__;
   
   
   return subs__;
 };
 
 nrichRPG.coreWorkout.addGeometry = function(callback, screenCallback) {
-  var root1815 = $("<div>");
+  var root2189 = $("<div>");
   var subs__ = new mobl.CompSubscription();
-  var nodes1372 = $("<span>");
-  root1815.append(nodes1372);
+  var nodes1716 = $("<span>");
+  root2189.append(nodes1716);
   subs__.addSub((ui.header)(mobl.ref("+Geometry"), mobl.ref(false), mobl.ref(null), function(_, callback) {
-    var root1816 = $("<span>");
+    var root2190 = $("<span>");
     var subs__ = new mobl.CompSubscription();
     var result__ = function(event, callback) {
                      if(event && event.stopPropagation) event.stopPropagation();
@@ -1026,164 +1026,164 @@ nrichRPG.coreWorkout.addGeometry = function(callback, screenCallback) {
                      return;
                      if(callback && callback.apply) callback(); return;
                    };
-    var tmp1261 = mobl.ref(result__);
+    var tmp1626 = mobl.ref(result__);
     
     var result__ = mobl._("Back", []);
-    var tmp1260 = mobl.ref(result__);
+    var tmp1625 = mobl.ref(result__);
     
-    var nodes1373 = $("<span>");
-    root1816.append(nodes1373);
-    subs__.addSub((ui.backButton)(tmp1260, mobl.ref(ui.backButtonStyle), mobl.ref(ui.backButtonPushedStyle), tmp1261, function(_, callback) {
-      var root1817 = $("<span>");
+    var nodes1717 = $("<span>");
+    root2190.append(nodes1717);
+    subs__.addSub((ui.backButton)(tmp1625, mobl.ref(ui.backButtonStyle), mobl.ref(ui.backButtonPushedStyle), tmp1626, function(_, callback) {
+      var root2191 = $("<span>");
       var subs__ = new mobl.CompSubscription();
-      callback(root1817); return subs__;
+      callback(root2191); return subs__;
       return subs__;
     }, function(node) {
-      var oldNodes = nodes1373;
-      nodes1373 = node.contents();
-      oldNodes.replaceWith(nodes1373);
+      var oldNodes = nodes1717;
+      nodes1717 = node.contents();
+      oldNodes.replaceWith(nodes1717);
     }));
-    callback(root1816); return subs__;
+    callback(root2190); return subs__;
     
     return subs__;
   }, function(node) {
-    var oldNodes = nodes1372;
-    nodes1372 = node.contents();
-    oldNodes.replaceWith(nodes1372);
+    var oldNodes = nodes1716;
+    nodes1716 = node.contents();
+    oldNodes.replaceWith(nodes1716);
   }));
-  var nodes1374 = $("<span>");
-  root1815.append(nodes1374);
+  var nodes1718 = $("<span>");
+  root2189.append(nodes1718);
   subs__.addSub((ui.group)(function(_, callback) {
-    var root1818 = $("<span>");
+    var root2192 = $("<span>");
     var subs__ = new mobl.CompSubscription();
     var result__ = function(event, callback) {
                      if(event && event.stopPropagation) event.stopPropagation();
                      nrichRPG.coreWorkout.makeQA(15, function(result__) {
-                       var tmp1359 = result__;
+                       var tmp1723 = result__;
                        var result__ = mobl.alert("Triangles Q added");
                        if(callback && callback.apply) callback(); return;
                      });
                    };
-    var tmp1262 = mobl.ref(result__);
+    var tmp1627 = mobl.ref(result__);
     
-    var nodes1375 = $("<span>");
-    root1818.append(nodes1375);
-    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1262, mobl.ref(null), mobl.ref(false), function(_, callback) {
-      var root1819 = $("<span>");
+    var nodes1719 = $("<span>");
+    root2192.append(nodes1719);
+    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1627, mobl.ref(null), mobl.ref(false), function(_, callback) {
+      var root2193 = $("<span>");
       var subs__ = new mobl.CompSubscription();
-      var nodes1376 = $("<span>");
-      root1819.append(nodes1376);
+      var nodes1720 = $("<span>");
+      root2193.append(nodes1720);
       subs__.addSub((mobl.label)(mobl.ref("+Triangles"), mobl.ref(null), mobl.ref(null), function(_, callback) {
-        var root1820 = $("<span>");
+        var root2194 = $("<span>");
         var subs__ = new mobl.CompSubscription();
-        callback(root1820); return subs__;
+        callback(root2194); return subs__;
         return subs__;
       }, function(node) {
-        var oldNodes = nodes1376;
-        nodes1376 = node.contents();
-        oldNodes.replaceWith(nodes1376);
+        var oldNodes = nodes1720;
+        nodes1720 = node.contents();
+        oldNodes.replaceWith(nodes1720);
       }));
-      callback(root1819); return subs__;
+      callback(root2193); return subs__;
       
       return subs__;
     }, function(node) {
-      var oldNodes = nodes1375;
-      nodes1375 = node.contents();
-      oldNodes.replaceWith(nodes1375);
+      var oldNodes = nodes1719;
+      nodes1719 = node.contents();
+      oldNodes.replaceWith(nodes1719);
     }));
     var result__ = function(event, callback) {
                      if(event && event.stopPropagation) event.stopPropagation();
                      nrichRPG.coreWorkout.makeQA(16, function(result__) {
-                       var tmp1358 = result__;
+                       var tmp1722 = result__;
                        var result__ = mobl.alert("Circles Q added");
                        if(callback && callback.apply) callback(); return;
                      });
                    };
-    var tmp1263 = mobl.ref(result__);
+    var tmp1628 = mobl.ref(result__);
     
-    var nodes1377 = $("<span>");
-    root1818.append(nodes1377);
-    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1263, mobl.ref(null), mobl.ref(false), function(_, callback) {
-      var root1821 = $("<span>");
+    var nodes1721 = $("<span>");
+    root2192.append(nodes1721);
+    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1628, mobl.ref(null), mobl.ref(false), function(_, callback) {
+      var root2195 = $("<span>");
       var subs__ = new mobl.CompSubscription();
-      var nodes1378 = $("<span>");
-      root1821.append(nodes1378);
+      var nodes1722 = $("<span>");
+      root2195.append(nodes1722);
       subs__.addSub((mobl.label)(mobl.ref("+Circles"), mobl.ref(null), mobl.ref(null), function(_, callback) {
-        var root1822 = $("<span>");
+        var root2196 = $("<span>");
         var subs__ = new mobl.CompSubscription();
-        callback(root1822); return subs__;
+        callback(root2196); return subs__;
         return subs__;
       }, function(node) {
-        var oldNodes = nodes1378;
-        nodes1378 = node.contents();
-        oldNodes.replaceWith(nodes1378);
+        var oldNodes = nodes1722;
+        nodes1722 = node.contents();
+        oldNodes.replaceWith(nodes1722);
       }));
-      callback(root1821); return subs__;
+      callback(root2195); return subs__;
       
       return subs__;
     }, function(node) {
-      var oldNodes = nodes1377;
-      nodes1377 = node.contents();
-      oldNodes.replaceWith(nodes1377);
+      var oldNodes = nodes1721;
+      nodes1721 = node.contents();
+      oldNodes.replaceWith(nodes1721);
     }));
     var result__ = function(event, callback) {
                      if(event && event.stopPropagation) event.stopPropagation();
                      nrichRPG.coreWorkout.makeQA(6, function(result__) {
-                       var tmp1357 = result__;
+                       var tmp1721 = result__;
                        var result__ = mobl.alert("3D lines Q added");
                        if(callback && callback.apply) callback(); return;
                      });
                    };
-    var tmp1264 = mobl.ref(result__);
+    var tmp1629 = mobl.ref(result__);
     
-    var nodes1379 = $("<span>");
-    root1818.append(nodes1379);
-    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1264, mobl.ref(null), mobl.ref(false), function(_, callback) {
-      var root1823 = $("<span>");
+    var nodes1723 = $("<span>");
+    root2192.append(nodes1723);
+    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1629, mobl.ref(null), mobl.ref(false), function(_, callback) {
+      var root2197 = $("<span>");
       var subs__ = new mobl.CompSubscription();
-      var nodes1380 = $("<span>");
-      root1823.append(nodes1380);
+      var nodes1724 = $("<span>");
+      root2197.append(nodes1724);
       subs__.addSub((mobl.label)(mobl.ref("+ 3D lines"), mobl.ref(null), mobl.ref(null), function(_, callback) {
-        var root1824 = $("<span>");
+        var root2198 = $("<span>");
         var subs__ = new mobl.CompSubscription();
-        callback(root1824); return subs__;
+        callback(root2198); return subs__;
         return subs__;
       }, function(node) {
-        var oldNodes = nodes1380;
-        nodes1380 = node.contents();
-        oldNodes.replaceWith(nodes1380);
+        var oldNodes = nodes1724;
+        nodes1724 = node.contents();
+        oldNodes.replaceWith(nodes1724);
       }));
-      callback(root1823); return subs__;
+      callback(root2197); return subs__;
       
       return subs__;
     }, function(node) {
-      var oldNodes = nodes1379;
-      nodes1379 = node.contents();
-      oldNodes.replaceWith(nodes1379);
+      var oldNodes = nodes1723;
+      nodes1723 = node.contents();
+      oldNodes.replaceWith(nodes1723);
     }));
-    callback(root1818); return subs__;
+    callback(root2192); return subs__;
     
     
     
     return subs__;
   }, function(node) {
-    var oldNodes = nodes1374;
-    nodes1374 = node.contents();
-    oldNodes.replaceWith(nodes1374);
+    var oldNodes = nodes1718;
+    nodes1718 = node.contents();
+    oldNodes.replaceWith(nodes1718);
   }));
-  callback(root1815); return subs__;
+  callback(root2189); return subs__;
   
   
   return subs__;
 };
 
 nrichRPG.coreWorkout.addSequencesAndSeries = function(callback, screenCallback) {
-  var root1825 = $("<div>");
+  var root2199 = $("<div>");
   var subs__ = new mobl.CompSubscription();
-  var nodes1381 = $("<span>");
-  root1825.append(nodes1381);
+  var nodes1725 = $("<span>");
+  root2199.append(nodes1725);
   subs__.addSub((ui.header)(mobl.ref("+Sequences and Series"), mobl.ref(false), mobl.ref(null), function(_, callback) {
-    var root1826 = $("<span>");
+    var root2200 = $("<span>");
     var subs__ = new mobl.CompSubscription();
     var result__ = function(event, callback) {
                      if(event && event.stopPropagation) event.stopPropagation();
@@ -1191,200 +1191,200 @@ nrichRPG.coreWorkout.addSequencesAndSeries = function(callback, screenCallback) 
                      return;
                      if(callback && callback.apply) callback(); return;
                    };
-    var tmp1266 = mobl.ref(result__);
+    var tmp1631 = mobl.ref(result__);
     
     var result__ = mobl._("Back", []);
-    var tmp1265 = mobl.ref(result__);
+    var tmp1630 = mobl.ref(result__);
     
-    var nodes1382 = $("<span>");
-    root1826.append(nodes1382);
-    subs__.addSub((ui.backButton)(tmp1265, mobl.ref(ui.backButtonStyle), mobl.ref(ui.backButtonPushedStyle), tmp1266, function(_, callback) {
-      var root1827 = $("<span>");
+    var nodes1726 = $("<span>");
+    root2200.append(nodes1726);
+    subs__.addSub((ui.backButton)(tmp1630, mobl.ref(ui.backButtonStyle), mobl.ref(ui.backButtonPushedStyle), tmp1631, function(_, callback) {
+      var root2201 = $("<span>");
       var subs__ = new mobl.CompSubscription();
-      callback(root1827); return subs__;
+      callback(root2201); return subs__;
       return subs__;
     }, function(node) {
-      var oldNodes = nodes1382;
-      nodes1382 = node.contents();
-      oldNodes.replaceWith(nodes1382);
+      var oldNodes = nodes1726;
+      nodes1726 = node.contents();
+      oldNodes.replaceWith(nodes1726);
     }));
-    callback(root1826); return subs__;
+    callback(root2200); return subs__;
     
     return subs__;
   }, function(node) {
-    var oldNodes = nodes1381;
-    nodes1381 = node.contents();
-    oldNodes.replaceWith(nodes1381);
+    var oldNodes = nodes1725;
+    nodes1725 = node.contents();
+    oldNodes.replaceWith(nodes1725);
   }));
-  var nodes1383 = $("<span>");
-  root1825.append(nodes1383);
+  var nodes1727 = $("<span>");
+  root2199.append(nodes1727);
   subs__.addSub((ui.group)(function(_, callback) {
-    var root1828 = $("<span>");
+    var root2202 = $("<span>");
     var subs__ = new mobl.CompSubscription();
     var result__ = function(event, callback) {
                      if(event && event.stopPropagation) event.stopPropagation();
                      nrichRPG.coreWorkout.makeQA(8, function(result__) {
-                       var tmp1363 = result__;
+                       var tmp1727 = result__;
                        var result__ = mobl.alert("Arithmetic Progressions Q added");
                        if(callback && callback.apply) callback(); return;
                      });
                    };
-    var tmp1267 = mobl.ref(result__);
+    var tmp1632 = mobl.ref(result__);
     
-    var nodes1384 = $("<span>");
-    root1828.append(nodes1384);
-    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1267, mobl.ref(null), mobl.ref(false), function(_, callback) {
-      var root1829 = $("<span>");
+    var nodes1728 = $("<span>");
+    root2202.append(nodes1728);
+    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1632, mobl.ref(null), mobl.ref(false), function(_, callback) {
+      var root2203 = $("<span>");
       var subs__ = new mobl.CompSubscription();
-      var nodes1385 = $("<span>");
-      root1829.append(nodes1385);
+      var nodes1729 = $("<span>");
+      root2203.append(nodes1729);
       subs__.addSub((mobl.label)(mobl.ref("+Arithmetic progressions"), mobl.ref(null), mobl.ref(null), function(_, callback) {
-        var root1830 = $("<span>");
+        var root2204 = $("<span>");
         var subs__ = new mobl.CompSubscription();
-        callback(root1830); return subs__;
+        callback(root2204); return subs__;
         return subs__;
       }, function(node) {
-        var oldNodes = nodes1385;
-        nodes1385 = node.contents();
-        oldNodes.replaceWith(nodes1385);
+        var oldNodes = nodes1729;
+        nodes1729 = node.contents();
+        oldNodes.replaceWith(nodes1729);
       }));
-      callback(root1829); return subs__;
+      callback(root2203); return subs__;
       
       return subs__;
     }, function(node) {
-      var oldNodes = nodes1384;
-      nodes1384 = node.contents();
-      oldNodes.replaceWith(nodes1384);
+      var oldNodes = nodes1728;
+      nodes1728 = node.contents();
+      oldNodes.replaceWith(nodes1728);
     }));
     var result__ = function(event, callback) {
                      if(event && event.stopPropagation) event.stopPropagation();
                      nrichRPG.coreWorkout.makeQA(12, function(result__) {
-                       var tmp1362 = result__;
+                       var tmp1726 = result__;
                        var result__ = mobl.alert("Binomial Expansion Q added");
                        if(callback && callback.apply) callback(); return;
                      });
                    };
-    var tmp1268 = mobl.ref(result__);
+    var tmp1633 = mobl.ref(result__);
     
-    var nodes1386 = $("<span>");
-    root1828.append(nodes1386);
-    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1268, mobl.ref(null), mobl.ref(false), function(_, callback) {
-      var root1831 = $("<span>");
+    var nodes1730 = $("<span>");
+    root2202.append(nodes1730);
+    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1633, mobl.ref(null), mobl.ref(false), function(_, callback) {
+      var root2205 = $("<span>");
       var subs__ = new mobl.CompSubscription();
-      var nodes1387 = $("<span>");
-      root1831.append(nodes1387);
+      var nodes1731 = $("<span>");
+      root2205.append(nodes1731);
       subs__.addSub((mobl.label)(mobl.ref("+Binomial expansion"), mobl.ref(null), mobl.ref(null), function(_, callback) {
-        var root1832 = $("<span>");
+        var root2206 = $("<span>");
         var subs__ = new mobl.CompSubscription();
-        callback(root1832); return subs__;
+        callback(root2206); return subs__;
         return subs__;
       }, function(node) {
-        var oldNodes = nodes1387;
-        nodes1387 = node.contents();
-        oldNodes.replaceWith(nodes1387);
+        var oldNodes = nodes1731;
+        nodes1731 = node.contents();
+        oldNodes.replaceWith(nodes1731);
       }));
-      callback(root1831); return subs__;
+      callback(root2205); return subs__;
       
       return subs__;
     }, function(node) {
-      var oldNodes = nodes1386;
-      nodes1386 = node.contents();
-      oldNodes.replaceWith(nodes1386);
+      var oldNodes = nodes1730;
+      nodes1730 = node.contents();
+      oldNodes.replaceWith(nodes1730);
     }));
     var result__ = function(event, callback) {
                      if(event && event.stopPropagation) event.stopPropagation();
                      nrichRPG.coreWorkout.makeQA(23, function(result__) {
-                       var tmp1361 = result__;
+                       var tmp1725 = result__;
                        var result__ = mobl.alert("Geometric Progression Q added");
                        if(callback && callback.apply) callback(); return;
                      });
                    };
-    var tmp1269 = mobl.ref(result__);
+    var tmp1634 = mobl.ref(result__);
     
-    var nodes1388 = $("<span>");
-    root1828.append(nodes1388);
-    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1269, mobl.ref(null), mobl.ref(false), function(_, callback) {
-      var root1833 = $("<span>");
+    var nodes1732 = $("<span>");
+    root2202.append(nodes1732);
+    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1634, mobl.ref(null), mobl.ref(false), function(_, callback) {
+      var root2207 = $("<span>");
       var subs__ = new mobl.CompSubscription();
-      var nodes1389 = $("<span>");
-      root1833.append(nodes1389);
+      var nodes1733 = $("<span>");
+      root2207.append(nodes1733);
       subs__.addSub((mobl.label)(mobl.ref("+Geometric progressions"), mobl.ref(null), mobl.ref(null), function(_, callback) {
-        var root1834 = $("<span>");
+        var root2208 = $("<span>");
         var subs__ = new mobl.CompSubscription();
-        callback(root1834); return subs__;
+        callback(root2208); return subs__;
         return subs__;
       }, function(node) {
-        var oldNodes = nodes1389;
-        nodes1389 = node.contents();
-        oldNodes.replaceWith(nodes1389);
+        var oldNodes = nodes1733;
+        nodes1733 = node.contents();
+        oldNodes.replaceWith(nodes1733);
       }));
-      callback(root1833); return subs__;
+      callback(root2207); return subs__;
       
       return subs__;
     }, function(node) {
-      var oldNodes = nodes1388;
-      nodes1388 = node.contents();
-      oldNodes.replaceWith(nodes1388);
+      var oldNodes = nodes1732;
+      nodes1732 = node.contents();
+      oldNodes.replaceWith(nodes1732);
     }));
     var result__ = function(event, callback) {
                      if(event && event.stopPropagation) event.stopPropagation();
                      nrichRPG.coreWorkout.makeQA(2, function(result__) {
-                       var tmp1360 = result__;
+                       var tmp1724 = result__;
                        var result__ = mobl.alert("Binomial theorem Q added");
                        if(callback && callback.apply) callback(); return;
                      });
                    };
-    var tmp1270 = mobl.ref(result__);
+    var tmp1635 = mobl.ref(result__);
     
-    var nodes1390 = $("<span>");
-    root1828.append(nodes1390);
-    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1270, mobl.ref(null), mobl.ref(false), function(_, callback) {
-      var root1835 = $("<span>");
+    var nodes1734 = $("<span>");
+    root2202.append(nodes1734);
+    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1635, mobl.ref(null), mobl.ref(false), function(_, callback) {
+      var root2209 = $("<span>");
       var subs__ = new mobl.CompSubscription();
-      var nodes1391 = $("<span>");
-      root1835.append(nodes1391);
+      var nodes1735 = $("<span>");
+      root2209.append(nodes1735);
       subs__.addSub((mobl.label)(mobl.ref("+Binomial theorem"), mobl.ref(null), mobl.ref(null), function(_, callback) {
-        var root1836 = $("<span>");
+        var root2210 = $("<span>");
         var subs__ = new mobl.CompSubscription();
-        callback(root1836); return subs__;
+        callback(root2210); return subs__;
         return subs__;
       }, function(node) {
-        var oldNodes = nodes1391;
-        nodes1391 = node.contents();
-        oldNodes.replaceWith(nodes1391);
+        var oldNodes = nodes1735;
+        nodes1735 = node.contents();
+        oldNodes.replaceWith(nodes1735);
       }));
-      callback(root1835); return subs__;
+      callback(root2209); return subs__;
       
       return subs__;
     }, function(node) {
-      var oldNodes = nodes1390;
-      nodes1390 = node.contents();
-      oldNodes.replaceWith(nodes1390);
+      var oldNodes = nodes1734;
+      nodes1734 = node.contents();
+      oldNodes.replaceWith(nodes1734);
     }));
-    callback(root1828); return subs__;
+    callback(root2202); return subs__;
     
     
     
     
     return subs__;
   }, function(node) {
-    var oldNodes = nodes1383;
-    nodes1383 = node.contents();
-    oldNodes.replaceWith(nodes1383);
+    var oldNodes = nodes1727;
+    nodes1727 = node.contents();
+    oldNodes.replaceWith(nodes1727);
   }));
-  callback(root1825); return subs__;
+  callback(root2199); return subs__;
   
   
   return subs__;
 };
 
 nrichRPG.coreWorkout.addVectors = function(callback, screenCallback) {
-  var root1837 = $("<div>");
+  var root2211 = $("<div>");
   var subs__ = new mobl.CompSubscription();
-  var nodes1392 = $("<span>");
-  root1837.append(nodes1392);
+  var nodes1736 = $("<span>");
+  root2211.append(nodes1736);
   subs__.addSub((ui.header)(mobl.ref("+Vectors"), mobl.ref(false), mobl.ref(null), function(_, callback) {
-    var root1838 = $("<span>");
+    var root2212 = $("<span>");
     var subs__ = new mobl.CompSubscription();
     var result__ = function(event, callback) {
                      if(event && event.stopPropagation) event.stopPropagation();
@@ -1392,128 +1392,128 @@ nrichRPG.coreWorkout.addVectors = function(callback, screenCallback) {
                      return;
                      if(callback && callback.apply) callback(); return;
                    };
-    var tmp1272 = mobl.ref(result__);
+    var tmp1637 = mobl.ref(result__);
     
     var result__ = mobl._("Back", []);
-    var tmp1271 = mobl.ref(result__);
+    var tmp1636 = mobl.ref(result__);
     
-    var nodes1393 = $("<span>");
-    root1838.append(nodes1393);
-    subs__.addSub((ui.backButton)(tmp1271, mobl.ref(ui.backButtonStyle), mobl.ref(ui.backButtonPushedStyle), tmp1272, function(_, callback) {
-      var root1839 = $("<span>");
+    var nodes1737 = $("<span>");
+    root2212.append(nodes1737);
+    subs__.addSub((ui.backButton)(tmp1636, mobl.ref(ui.backButtonStyle), mobl.ref(ui.backButtonPushedStyle), tmp1637, function(_, callback) {
+      var root2213 = $("<span>");
       var subs__ = new mobl.CompSubscription();
-      callback(root1839); return subs__;
+      callback(root2213); return subs__;
       return subs__;
     }, function(node) {
-      var oldNodes = nodes1393;
-      nodes1393 = node.contents();
-      oldNodes.replaceWith(nodes1393);
+      var oldNodes = nodes1737;
+      nodes1737 = node.contents();
+      oldNodes.replaceWith(nodes1737);
     }));
-    callback(root1838); return subs__;
+    callback(root2212); return subs__;
     
     return subs__;
   }, function(node) {
-    var oldNodes = nodes1392;
-    nodes1392 = node.contents();
-    oldNodes.replaceWith(nodes1392);
+    var oldNodes = nodes1736;
+    nodes1736 = node.contents();
+    oldNodes.replaceWith(nodes1736);
   }));
-  var nodes1394 = $("<span>");
-  root1837.append(nodes1394);
+  var nodes1738 = $("<span>");
+  root2211.append(nodes1738);
   subs__.addSub((ui.group)(function(_, callback) {
-    var root1840 = $("<span>");
+    var root2214 = $("<span>");
     var subs__ = new mobl.CompSubscription();
     var result__ = function(event, callback) {
                      if(event && event.stopPropagation) event.stopPropagation();
                      nrichRPG.coreWorkout.makeQA(5, function(result__) {
-                       var tmp1365 = result__;
+                       var tmp1729 = result__;
                        var result__ = mobl.alert("Scalar product Q added");
                        if(callback && callback.apply) callback(); return;
                      });
                    };
-    var tmp1273 = mobl.ref(result__);
+    var tmp1638 = mobl.ref(result__);
     
-    var nodes1395 = $("<span>");
-    root1840.append(nodes1395);
-    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1273, mobl.ref(null), mobl.ref(false), function(_, callback) {
-      var root1841 = $("<span>");
+    var nodes1739 = $("<span>");
+    root2214.append(nodes1739);
+    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1638, mobl.ref(null), mobl.ref(false), function(_, callback) {
+      var root2215 = $("<span>");
       var subs__ = new mobl.CompSubscription();
-      var nodes1396 = $("<span>");
-      root1841.append(nodes1396);
+      var nodes1740 = $("<span>");
+      root2215.append(nodes1740);
       subs__.addSub((mobl.label)(mobl.ref("+Scalar products"), mobl.ref(null), mobl.ref(null), function(_, callback) {
-        var root1842 = $("<span>");
+        var root2216 = $("<span>");
         var subs__ = new mobl.CompSubscription();
-        callback(root1842); return subs__;
+        callback(root2216); return subs__;
         return subs__;
       }, function(node) {
-        var oldNodes = nodes1396;
-        nodes1396 = node.contents();
-        oldNodes.replaceWith(nodes1396);
+        var oldNodes = nodes1740;
+        nodes1740 = node.contents();
+        oldNodes.replaceWith(nodes1740);
       }));
-      callback(root1841); return subs__;
+      callback(root2215); return subs__;
       
       return subs__;
     }, function(node) {
-      var oldNodes = nodes1395;
-      nodes1395 = node.contents();
-      oldNodes.replaceWith(nodes1395);
+      var oldNodes = nodes1739;
+      nodes1739 = node.contents();
+      oldNodes.replaceWith(nodes1739);
     }));
     var result__ = function(event, callback) {
                      if(event && event.stopPropagation) event.stopPropagation();
                      nrichRPG.coreWorkout.makeQA(18, function(result__) {
-                       var tmp1364 = result__;
+                       var tmp1728 = result__;
                        var result__ = mobl.alert("Vector equation of lines Q added");
                        if(callback && callback.apply) callback(); return;
                      });
                    };
-    var tmp1274 = mobl.ref(result__);
+    var tmp1639 = mobl.ref(result__);
     
-    var nodes1397 = $("<span>");
-    root1840.append(nodes1397);
-    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1274, mobl.ref(null), mobl.ref(false), function(_, callback) {
-      var root1843 = $("<span>");
+    var nodes1741 = $("<span>");
+    root2214.append(nodes1741);
+    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1639, mobl.ref(null), mobl.ref(false), function(_, callback) {
+      var root2217 = $("<span>");
       var subs__ = new mobl.CompSubscription();
-      var nodes1398 = $("<span>");
-      root1843.append(nodes1398);
+      var nodes1742 = $("<span>");
+      root2217.append(nodes1742);
       subs__.addSub((mobl.label)(mobl.ref("+Vector equation of lines"), mobl.ref(null), mobl.ref(null), function(_, callback) {
-        var root1844 = $("<span>");
+        var root2218 = $("<span>");
         var subs__ = new mobl.CompSubscription();
-        callback(root1844); return subs__;
+        callback(root2218); return subs__;
         return subs__;
       }, function(node) {
-        var oldNodes = nodes1398;
-        nodes1398 = node.contents();
-        oldNodes.replaceWith(nodes1398);
+        var oldNodes = nodes1742;
+        nodes1742 = node.contents();
+        oldNodes.replaceWith(nodes1742);
       }));
-      callback(root1843); return subs__;
+      callback(root2217); return subs__;
       
       return subs__;
     }, function(node) {
-      var oldNodes = nodes1397;
-      nodes1397 = node.contents();
-      oldNodes.replaceWith(nodes1397);
+      var oldNodes = nodes1741;
+      nodes1741 = node.contents();
+      oldNodes.replaceWith(nodes1741);
     }));
-    callback(root1840); return subs__;
+    callback(root2214); return subs__;
     
     
     return subs__;
   }, function(node) {
-    var oldNodes = nodes1394;
-    nodes1394 = node.contents();
-    oldNodes.replaceWith(nodes1394);
+    var oldNodes = nodes1738;
+    nodes1738 = node.contents();
+    oldNodes.replaceWith(nodes1738);
   }));
-  callback(root1837); return subs__;
+  callback(root2211); return subs__;
   
   
   return subs__;
 };
 
 nrichRPG.coreWorkout.addDifferentiation = function(callback, screenCallback) {
-  var root1845 = $("<div>");
+  var root2219 = $("<div>");
   var subs__ = new mobl.CompSubscription();
-  var nodes1399 = $("<span>");
-  root1845.append(nodes1399);
+  var nodes1743 = $("<span>");
+  root2219.append(nodes1743);
   subs__.addSub((ui.header)(mobl.ref("+Differentiation"), mobl.ref(false), mobl.ref(null), function(_, callback) {
-    var root1846 = $("<span>");
+    var root2220 = $("<span>");
     var subs__ = new mobl.CompSubscription();
     var result__ = function(event, callback) {
                      if(event && event.stopPropagation) event.stopPropagation();
@@ -1521,211 +1521,211 @@ nrichRPG.coreWorkout.addDifferentiation = function(callback, screenCallback) {
                      return;
                      if(callback && callback.apply) callback(); return;
                    };
-    var tmp1276 = mobl.ref(result__);
+    var tmp1641 = mobl.ref(result__);
     
     var result__ = mobl._("Back", []);
-    var tmp1275 = mobl.ref(result__);
+    var tmp1640 = mobl.ref(result__);
     
-    var nodes1400 = $("<span>");
-    root1846.append(nodes1400);
-    subs__.addSub((ui.backButton)(tmp1275, mobl.ref(ui.backButtonStyle), mobl.ref(ui.backButtonPushedStyle), tmp1276, function(_, callback) {
-      var root1847 = $("<span>");
+    var nodes1744 = $("<span>");
+    root2220.append(nodes1744);
+    subs__.addSub((ui.backButton)(tmp1640, mobl.ref(ui.backButtonStyle), mobl.ref(ui.backButtonPushedStyle), tmp1641, function(_, callback) {
+      var root2221 = $("<span>");
       var subs__ = new mobl.CompSubscription();
-      callback(root1847); return subs__;
+      callback(root2221); return subs__;
       return subs__;
     }, function(node) {
-      var oldNodes = nodes1400;
-      nodes1400 = node.contents();
-      oldNodes.replaceWith(nodes1400);
+      var oldNodes = nodes1744;
+      nodes1744 = node.contents();
+      oldNodes.replaceWith(nodes1744);
     }));
-    callback(root1846); return subs__;
+    callback(root2220); return subs__;
     
     return subs__;
   }, function(node) {
-    var oldNodes = nodes1399;
-    nodes1399 = node.contents();
-    oldNodes.replaceWith(nodes1399);
+    var oldNodes = nodes1743;
+    nodes1743 = node.contents();
+    oldNodes.replaceWith(nodes1743);
   }));
-  var nodes1401 = $("<span>");
-  root1845.append(nodes1401);
+  var nodes1745 = $("<span>");
+  root2219.append(nodes1745);
   subs__.addSub((ui.group)(function(_, callback) {
-    var root1848 = $("<span>");
+    var root2222 = $("<span>");
     var subs__ = new mobl.CompSubscription();
     var result__ = function(event, callback) {
                      if(event && event.stopPropagation) event.stopPropagation();
                      nrichRPG.coreWorkout.makeQA(14, function(result__) {
-                       var tmp1370 = result__;
+                       var tmp1734 = result__;
                        var result__ = mobl.alert("Stationary points Q added");
                        if(callback && callback.apply) callback(); return;
                      });
                    };
-    var tmp1277 = mobl.ref(result__);
+    var tmp1642 = mobl.ref(result__);
     
-    var nodes1402 = $("<span>");
-    root1848.append(nodes1402);
-    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1277, mobl.ref(null), mobl.ref(false), function(_, callback) {
-      var root1849 = $("<span>");
+    var nodes1746 = $("<span>");
+    root2222.append(nodes1746);
+    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1642, mobl.ref(null), mobl.ref(false), function(_, callback) {
+      var root2223 = $("<span>");
       var subs__ = new mobl.CompSubscription();
-      var nodes1403 = $("<span>");
-      root1849.append(nodes1403);
+      var nodes1747 = $("<span>");
+      root2223.append(nodes1747);
       subs__.addSub((mobl.label)(mobl.ref("+Stationary points"), mobl.ref(null), mobl.ref(null), function(_, callback) {
-        var root1850 = $("<span>");
+        var root2224 = $("<span>");
         var subs__ = new mobl.CompSubscription();
-        callback(root1850); return subs__;
+        callback(root2224); return subs__;
         return subs__;
       }, function(node) {
-        var oldNodes = nodes1403;
-        nodes1403 = node.contents();
-        oldNodes.replaceWith(nodes1403);
+        var oldNodes = nodes1747;
+        nodes1747 = node.contents();
+        oldNodes.replaceWith(nodes1747);
       }));
-      callback(root1849); return subs__;
+      callback(root2223); return subs__;
       
       return subs__;
     }, function(node) {
-      var oldNodes = nodes1402;
-      nodes1402 = node.contents();
-      oldNodes.replaceWith(nodes1402);
+      var oldNodes = nodes1746;
+      nodes1746 = node.contents();
+      oldNodes.replaceWith(nodes1746);
     }));
     var result__ = function(event, callback) {
                      if(event && event.stopPropagation) event.stopPropagation();
                      nrichRPG.coreWorkout.makeQA(20, function(result__) {
-                       var tmp1369 = result__;
+                       var tmp1733 = result__;
                        var result__ = mobl.alert("Chain rule Q added");
                        if(callback && callback.apply) callback(); return;
                      });
                    };
-    var tmp1278 = mobl.ref(result__);
+    var tmp1643 = mobl.ref(result__);
     
-    var nodes1404 = $("<span>");
-    root1848.append(nodes1404);
-    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1278, mobl.ref(null), mobl.ref(false), function(_, callback) {
-      var root1851 = $("<span>");
+    var nodes1748 = $("<span>");
+    root2222.append(nodes1748);
+    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1643, mobl.ref(null), mobl.ref(false), function(_, callback) {
+      var root2225 = $("<span>");
       var subs__ = new mobl.CompSubscription();
-      var nodes1405 = $("<span>");
-      root1851.append(nodes1405);
+      var nodes1749 = $("<span>");
+      root2225.append(nodes1749);
       subs__.addSub((mobl.label)(mobl.ref("+Chain rule"), mobl.ref(null), mobl.ref(null), function(_, callback) {
-        var root1852 = $("<span>");
+        var root2226 = $("<span>");
         var subs__ = new mobl.CompSubscription();
-        callback(root1852); return subs__;
+        callback(root2226); return subs__;
         return subs__;
       }, function(node) {
-        var oldNodes = nodes1405;
-        nodes1405 = node.contents();
-        oldNodes.replaceWith(nodes1405);
+        var oldNodes = nodes1749;
+        nodes1749 = node.contents();
+        oldNodes.replaceWith(nodes1749);
       }));
-      callback(root1851); return subs__;
+      callback(root2225); return subs__;
       
       return subs__;
     }, function(node) {
-      var oldNodes = nodes1404;
-      nodes1404 = node.contents();
-      oldNodes.replaceWith(nodes1404);
+      var oldNodes = nodes1748;
+      nodes1748 = node.contents();
+      oldNodes.replaceWith(nodes1748);
     }));
     var result__ = function(event, callback) {
                      if(event && event.stopPropagation) event.stopPropagation();
                      nrichRPG.coreWorkout.makeQA(21, function(result__) {
-                       var tmp1368 = result__;
+                       var tmp1732 = result__;
                        var result__ = mobl.alert("Product rule Q added");
                        if(callback && callback.apply) callback(); return;
                      });
                    };
-    var tmp1279 = mobl.ref(result__);
+    var tmp1644 = mobl.ref(result__);
     
-    var nodes1406 = $("<span>");
-    root1848.append(nodes1406);
-    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1279, mobl.ref(null), mobl.ref(false), function(_, callback) {
-      var root1853 = $("<span>");
+    var nodes1750 = $("<span>");
+    root2222.append(nodes1750);
+    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1644, mobl.ref(null), mobl.ref(false), function(_, callback) {
+      var root2227 = $("<span>");
       var subs__ = new mobl.CompSubscription();
-      var nodes1407 = $("<span>");
-      root1853.append(nodes1407);
+      var nodes1751 = $("<span>");
+      root2227.append(nodes1751);
       subs__.addSub((mobl.label)(mobl.ref("+Product rule"), mobl.ref(null), mobl.ref(null), function(_, callback) {
-        var root1854 = $("<span>");
+        var root2228 = $("<span>");
         var subs__ = new mobl.CompSubscription();
-        callback(root1854); return subs__;
+        callback(root2228); return subs__;
         return subs__;
       }, function(node) {
-        var oldNodes = nodes1407;
-        nodes1407 = node.contents();
-        oldNodes.replaceWith(nodes1407);
+        var oldNodes = nodes1751;
+        nodes1751 = node.contents();
+        oldNodes.replaceWith(nodes1751);
       }));
-      callback(root1853); return subs__;
+      callback(root2227); return subs__;
       
       return subs__;
     }, function(node) {
-      var oldNodes = nodes1406;
-      nodes1406 = node.contents();
-      oldNodes.replaceWith(nodes1406);
+      var oldNodes = nodes1750;
+      nodes1750 = node.contents();
+      oldNodes.replaceWith(nodes1750);
     }));
     var result__ = function(event, callback) {
                      if(event && event.stopPropagation) event.stopPropagation();
                      nrichRPG.coreWorkout.makeQA(22, function(result__) {
-                       var tmp1367 = result__;
+                       var tmp1731 = result__;
                        var result__ = mobl.alert("Quotient rule Q added");
                        if(callback && callback.apply) callback(); return;
                      });
                    };
-    var tmp1280 = mobl.ref(result__);
+    var tmp1645 = mobl.ref(result__);
     
-    var nodes1408 = $("<span>");
-    root1848.append(nodes1408);
-    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1280, mobl.ref(null), mobl.ref(false), function(_, callback) {
-      var root1855 = $("<span>");
+    var nodes1752 = $("<span>");
+    root2222.append(nodes1752);
+    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1645, mobl.ref(null), mobl.ref(false), function(_, callback) {
+      var root2229 = $("<span>");
       var subs__ = new mobl.CompSubscription();
-      var nodes1409 = $("<span>");
-      root1855.append(nodes1409);
+      var nodes1753 = $("<span>");
+      root2229.append(nodes1753);
       subs__.addSub((mobl.label)(mobl.ref("+Quotient rule"), mobl.ref(null), mobl.ref(null), function(_, callback) {
-        var root1856 = $("<span>");
+        var root2230 = $("<span>");
         var subs__ = new mobl.CompSubscription();
-        callback(root1856); return subs__;
+        callback(root2230); return subs__;
         return subs__;
       }, function(node) {
-        var oldNodes = nodes1409;
-        nodes1409 = node.contents();
-        oldNodes.replaceWith(nodes1409);
+        var oldNodes = nodes1753;
+        nodes1753 = node.contents();
+        oldNodes.replaceWith(nodes1753);
       }));
-      callback(root1855); return subs__;
+      callback(root2229); return subs__;
       
       return subs__;
     }, function(node) {
-      var oldNodes = nodes1408;
-      nodes1408 = node.contents();
-      oldNodes.replaceWith(nodes1408);
+      var oldNodes = nodes1752;
+      nodes1752 = node.contents();
+      oldNodes.replaceWith(nodes1752);
     }));
     var result__ = function(event, callback) {
                      if(event && event.stopPropagation) event.stopPropagation();
                      nrichRPG.coreWorkout.makeQA(19, function(result__) {
-                       var tmp1366 = result__;
+                       var tmp1730 = result__;
                        if(callback && callback.apply) callback(); return;
                      });
                    };
-    var tmp1281 = mobl.ref(result__);
+    var tmp1646 = mobl.ref(result__);
     
-    var nodes1410 = $("<span>");
-    root1848.append(nodes1410);
-    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1281, mobl.ref(null), mobl.ref(false), function(_, callback) {
-      var root1857 = $("<span>");
+    var nodes1754 = $("<span>");
+    root2222.append(nodes1754);
+    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1646, mobl.ref(null), mobl.ref(false), function(_, callback) {
+      var root2231 = $("<span>");
       var subs__ = new mobl.CompSubscription();
-      var nodes1411 = $("<span>");
-      root1857.append(nodes1411);
+      var nodes1755 = $("<span>");
+      root2231.append(nodes1755);
       subs__.addSub((mobl.label)(mobl.ref("+Implicit differentiation"), mobl.ref(null), mobl.ref(null), function(_, callback) {
-        var root1858 = $("<span>");
+        var root2232 = $("<span>");
         var subs__ = new mobl.CompSubscription();
-        callback(root1858); return subs__;
+        callback(root2232); return subs__;
         return subs__;
       }, function(node) {
-        var oldNodes = nodes1411;
-        nodes1411 = node.contents();
-        oldNodes.replaceWith(nodes1411);
+        var oldNodes = nodes1755;
+        nodes1755 = node.contents();
+        oldNodes.replaceWith(nodes1755);
       }));
-      callback(root1857); return subs__;
+      callback(root2231); return subs__;
       
       return subs__;
     }, function(node) {
-      var oldNodes = nodes1410;
-      nodes1410 = node.contents();
-      oldNodes.replaceWith(nodes1410);
+      var oldNodes = nodes1754;
+      nodes1754 = node.contents();
+      oldNodes.replaceWith(nodes1754);
     }));
-    callback(root1848); return subs__;
+    callback(root2222); return subs__;
     
     
     
@@ -1733,23 +1733,23 @@ nrichRPG.coreWorkout.addDifferentiation = function(callback, screenCallback) {
     
     return subs__;
   }, function(node) {
-    var oldNodes = nodes1401;
-    nodes1401 = node.contents();
-    oldNodes.replaceWith(nodes1401);
+    var oldNodes = nodes1745;
+    nodes1745 = node.contents();
+    oldNodes.replaceWith(nodes1745);
   }));
-  callback(root1845); return subs__;
+  callback(root2219); return subs__;
   
   
   return subs__;
 };
 
 nrichRPG.coreWorkout.addIntegration = function(callback, screenCallback) {
-  var root1859 = $("<div>");
+  var root2233 = $("<div>");
   var subs__ = new mobl.CompSubscription();
-  var nodes1412 = $("<span>");
-  root1859.append(nodes1412);
+  var nodes1756 = $("<span>");
+  root2233.append(nodes1756);
   subs__.addSub((ui.header)(mobl.ref("+Integration"), mobl.ref(false), mobl.ref(null), function(_, callback) {
-    var root1860 = $("<span>");
+    var root2234 = $("<span>");
     var subs__ = new mobl.CompSubscription();
     var result__ = function(event, callback) {
                      if(event && event.stopPropagation) event.stopPropagation();
@@ -1757,164 +1757,164 @@ nrichRPG.coreWorkout.addIntegration = function(callback, screenCallback) {
                      return;
                      if(callback && callback.apply) callback(); return;
                    };
-    var tmp1283 = mobl.ref(result__);
+    var tmp1648 = mobl.ref(result__);
     
     var result__ = mobl._("Back", []);
-    var tmp1282 = mobl.ref(result__);
+    var tmp1647 = mobl.ref(result__);
     
-    var nodes1413 = $("<span>");
-    root1860.append(nodes1413);
-    subs__.addSub((ui.backButton)(tmp1282, mobl.ref(ui.backButtonStyle), mobl.ref(ui.backButtonPushedStyle), tmp1283, function(_, callback) {
-      var root1861 = $("<span>");
+    var nodes1757 = $("<span>");
+    root2234.append(nodes1757);
+    subs__.addSub((ui.backButton)(tmp1647, mobl.ref(ui.backButtonStyle), mobl.ref(ui.backButtonPushedStyle), tmp1648, function(_, callback) {
+      var root2235 = $("<span>");
       var subs__ = new mobl.CompSubscription();
-      callback(root1861); return subs__;
+      callback(root2235); return subs__;
       return subs__;
     }, function(node) {
-      var oldNodes = nodes1413;
-      nodes1413 = node.contents();
-      oldNodes.replaceWith(nodes1413);
+      var oldNodes = nodes1757;
+      nodes1757 = node.contents();
+      oldNodes.replaceWith(nodes1757);
     }));
-    callback(root1860); return subs__;
+    callback(root2234); return subs__;
     
     return subs__;
   }, function(node) {
-    var oldNodes = nodes1412;
-    nodes1412 = node.contents();
-    oldNodes.replaceWith(nodes1412);
+    var oldNodes = nodes1756;
+    nodes1756 = node.contents();
+    oldNodes.replaceWith(nodes1756);
   }));
-  var nodes1414 = $("<span>");
-  root1859.append(nodes1414);
+  var nodes1758 = $("<span>");
+  root2233.append(nodes1758);
   subs__.addSub((ui.group)(function(_, callback) {
-    var root1862 = $("<span>");
+    var root2236 = $("<span>");
     var subs__ = new mobl.CompSubscription();
     var result__ = function(event, callback) {
                      if(event && event.stopPropagation) event.stopPropagation();
                      nrichRPG.coreWorkout.makeQA(28, function(result__) {
-                       var tmp1373 = result__;
+                       var tmp1737 = result__;
                        var result__ = mobl.alert("Integration Q added");
                        if(callback && callback.apply) callback(); return;
                      });
                    };
-    var tmp1284 = mobl.ref(result__);
+    var tmp1649 = mobl.ref(result__);
     
-    var nodes1415 = $("<span>");
-    root1862.append(nodes1415);
-    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1284, mobl.ref(null), mobl.ref(false), function(_, callback) {
-      var root1863 = $("<span>");
+    var nodes1759 = $("<span>");
+    root2236.append(nodes1759);
+    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1649, mobl.ref(null), mobl.ref(false), function(_, callback) {
+      var root2237 = $("<span>");
       var subs__ = new mobl.CompSubscription();
-      var nodes1416 = $("<span>");
-      root1863.append(nodes1416);
+      var nodes1760 = $("<span>");
+      root2237.append(nodes1760);
       subs__.addSub((mobl.label)(mobl.ref("+Integration"), mobl.ref(null), mobl.ref(null), function(_, callback) {
-        var root1864 = $("<span>");
+        var root2238 = $("<span>");
         var subs__ = new mobl.CompSubscription();
-        callback(root1864); return subs__;
+        callback(root2238); return subs__;
         return subs__;
       }, function(node) {
-        var oldNodes = nodes1416;
-        nodes1416 = node.contents();
-        oldNodes.replaceWith(nodes1416);
+        var oldNodes = nodes1760;
+        nodes1760 = node.contents();
+        oldNodes.replaceWith(nodes1760);
       }));
-      callback(root1863); return subs__;
+      callback(root2237); return subs__;
       
       return subs__;
     }, function(node) {
-      var oldNodes = nodes1415;
-      nodes1415 = node.contents();
-      oldNodes.replaceWith(nodes1415);
+      var oldNodes = nodes1759;
+      nodes1759 = node.contents();
+      oldNodes.replaceWith(nodes1759);
     }));
     var result__ = function(event, callback) {
                      if(event && event.stopPropagation) event.stopPropagation();
                      nrichRPG.coreWorkout.makeQA(3, function(result__) {
-                       var tmp1372 = result__;
+                       var tmp1736 = result__;
                        var result__ = mobl.alert("Polynomial integration Q added");
                        if(callback && callback.apply) callback(); return;
                      });
                    };
-    var tmp1285 = mobl.ref(result__);
+    var tmp1650 = mobl.ref(result__);
     
-    var nodes1417 = $("<span>");
-    root1862.append(nodes1417);
-    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1285, mobl.ref(null), mobl.ref(false), function(_, callback) {
-      var root1865 = $("<span>");
+    var nodes1761 = $("<span>");
+    root2236.append(nodes1761);
+    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1650, mobl.ref(null), mobl.ref(false), function(_, callback) {
+      var root2239 = $("<span>");
       var subs__ = new mobl.CompSubscription();
-      var nodes1418 = $("<span>");
-      root1865.append(nodes1418);
+      var nodes1762 = $("<span>");
+      root2239.append(nodes1762);
       subs__.addSub((mobl.label)(mobl.ref("+Polynomial integration"), mobl.ref(null), mobl.ref(null), function(_, callback) {
-        var root1866 = $("<span>");
+        var root2240 = $("<span>");
         var subs__ = new mobl.CompSubscription();
-        callback(root1866); return subs__;
+        callback(root2240); return subs__;
         return subs__;
       }, function(node) {
-        var oldNodes = nodes1418;
-        nodes1418 = node.contents();
-        oldNodes.replaceWith(nodes1418);
+        var oldNodes = nodes1762;
+        nodes1762 = node.contents();
+        oldNodes.replaceWith(nodes1762);
       }));
-      callback(root1865); return subs__;
+      callback(root2239); return subs__;
       
       return subs__;
     }, function(node) {
-      var oldNodes = nodes1417;
-      nodes1417 = node.contents();
-      oldNodes.replaceWith(nodes1417);
+      var oldNodes = nodes1761;
+      nodes1761 = node.contents();
+      oldNodes.replaceWith(nodes1761);
     }));
     var result__ = function(event, callback) {
                      if(event && event.stopPropagation) event.stopPropagation();
                      nrichRPG.coreWorkout.makeQA(4, function(result__) {
-                       var tmp1371 = result__;
+                       var tmp1735 = result__;
                        var result__ = mobl.alert("Trig integration Q added");
                        if(callback && callback.apply) callback(); return;
                      });
                    };
-    var tmp1286 = mobl.ref(result__);
+    var tmp1651 = mobl.ref(result__);
     
-    var nodes1419 = $("<span>");
-    root1862.append(nodes1419);
-    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1286, mobl.ref(null), mobl.ref(false), function(_, callback) {
-      var root1867 = $("<span>");
+    var nodes1763 = $("<span>");
+    root2236.append(nodes1763);
+    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1651, mobl.ref(null), mobl.ref(false), function(_, callback) {
+      var root2241 = $("<span>");
       var subs__ = new mobl.CompSubscription();
-      var nodes1420 = $("<span>");
-      root1867.append(nodes1420);
+      var nodes1764 = $("<span>");
+      root2241.append(nodes1764);
       subs__.addSub((mobl.label)(mobl.ref("+Trig integration"), mobl.ref(null), mobl.ref(null), function(_, callback) {
-        var root1868 = $("<span>");
+        var root2242 = $("<span>");
         var subs__ = new mobl.CompSubscription();
-        callback(root1868); return subs__;
+        callback(root2242); return subs__;
         return subs__;
       }, function(node) {
-        var oldNodes = nodes1420;
-        nodes1420 = node.contents();
-        oldNodes.replaceWith(nodes1420);
+        var oldNodes = nodes1764;
+        nodes1764 = node.contents();
+        oldNodes.replaceWith(nodes1764);
       }));
-      callback(root1867); return subs__;
+      callback(root2241); return subs__;
       
       return subs__;
     }, function(node) {
-      var oldNodes = nodes1419;
-      nodes1419 = node.contents();
-      oldNodes.replaceWith(nodes1419);
+      var oldNodes = nodes1763;
+      nodes1763 = node.contents();
+      oldNodes.replaceWith(nodes1763);
     }));
-    callback(root1862); return subs__;
+    callback(root2236); return subs__;
     
     
     
     return subs__;
   }, function(node) {
-    var oldNodes = nodes1414;
-    nodes1414 = node.contents();
-    oldNodes.replaceWith(nodes1414);
+    var oldNodes = nodes1758;
+    nodes1758 = node.contents();
+    oldNodes.replaceWith(nodes1758);
   }));
-  callback(root1859); return subs__;
+  callback(root2233); return subs__;
   
   
   return subs__;
 };
 
 nrichRPG.coreWorkout.addDifferentialEquations = function(callback, screenCallback) {
-  var root1869 = $("<div>");
+  var root2243 = $("<div>");
   var subs__ = new mobl.CompSubscription();
-  var nodes1421 = $("<span>");
-  root1869.append(nodes1421);
+  var nodes1765 = $("<span>");
+  root2243.append(nodes1765);
   subs__.addSub((ui.header)(mobl.ref("+Diff equations"), mobl.ref(false), mobl.ref(null), function(_, callback) {
-    var root1870 = $("<span>");
+    var root2244 = $("<span>");
     var subs__ = new mobl.CompSubscription();
     var result__ = function(event, callback) {
                      if(event && event.stopPropagation) event.stopPropagation();
@@ -1922,549 +1922,549 @@ nrichRPG.coreWorkout.addDifferentialEquations = function(callback, screenCallbac
                      return;
                      if(callback && callback.apply) callback(); return;
                    };
-    var tmp1288 = mobl.ref(result__);
+    var tmp1653 = mobl.ref(result__);
     
     var result__ = mobl._("Back", []);
-    var tmp1287 = mobl.ref(result__);
+    var tmp1652 = mobl.ref(result__);
     
-    var nodes1422 = $("<span>");
-    root1870.append(nodes1422);
-    subs__.addSub((ui.backButton)(tmp1287, mobl.ref(ui.backButtonStyle), mobl.ref(ui.backButtonPushedStyle), tmp1288, function(_, callback) {
-      var root1871 = $("<span>");
+    var nodes1766 = $("<span>");
+    root2244.append(nodes1766);
+    subs__.addSub((ui.backButton)(tmp1652, mobl.ref(ui.backButtonStyle), mobl.ref(ui.backButtonPushedStyle), tmp1653, function(_, callback) {
+      var root2245 = $("<span>");
       var subs__ = new mobl.CompSubscription();
-      callback(root1871); return subs__;
+      callback(root2245); return subs__;
       return subs__;
     }, function(node) {
-      var oldNodes = nodes1422;
-      nodes1422 = node.contents();
-      oldNodes.replaceWith(nodes1422);
+      var oldNodes = nodes1766;
+      nodes1766 = node.contents();
+      oldNodes.replaceWith(nodes1766);
     }));
-    callback(root1870); return subs__;
+    callback(root2244); return subs__;
     
     return subs__;
   }, function(node) {
-    var oldNodes = nodes1421;
-    nodes1421 = node.contents();
-    oldNodes.replaceWith(nodes1421);
+    var oldNodes = nodes1765;
+    nodes1765 = node.contents();
+    oldNodes.replaceWith(nodes1765);
   }));
-  var nodes1423 = $("<span>");
-  root1869.append(nodes1423);
+  var nodes1767 = $("<span>");
+  root2243.append(nodes1767);
   subs__.addSub((ui.group)(function(_, callback) {
-    var root1872 = $("<span>");
+    var root2246 = $("<span>");
     var subs__ = new mobl.CompSubscription();
     var result__ = function(event, callback) {
                      if(event && event.stopPropagation) event.stopPropagation();
                      nrichRPG.coreWorkout.makeQA(29, function(result__) {
-                       var tmp1374 = result__;
+                       var tmp1738 = result__;
                        var result__ = mobl.alert("Differential equations Q added");
                        if(callback && callback.apply) callback(); return;
                      });
                    };
-    var tmp1289 = mobl.ref(result__);
+    var tmp1654 = mobl.ref(result__);
     
-    var nodes1424 = $("<span>");
-    root1872.append(nodes1424);
-    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1289, mobl.ref(null), mobl.ref(false), function(_, callback) {
-      var root1873 = $("<span>");
+    var nodes1768 = $("<span>");
+    root2246.append(nodes1768);
+    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1654, mobl.ref(null), mobl.ref(false), function(_, callback) {
+      var root2247 = $("<span>");
       var subs__ = new mobl.CompSubscription();
-      var nodes1425 = $("<span>");
-      root1873.append(nodes1425);
+      var nodes1769 = $("<span>");
+      root2247.append(nodes1769);
       subs__.addSub((mobl.label)(mobl.ref("+Diff equations"), mobl.ref(null), mobl.ref(null), function(_, callback) {
-        var root1874 = $("<span>");
+        var root2248 = $("<span>");
         var subs__ = new mobl.CompSubscription();
-        callback(root1874); return subs__;
+        callback(root2248); return subs__;
         return subs__;
       }, function(node) {
-        var oldNodes = nodes1425;
-        nodes1425 = node.contents();
-        oldNodes.replaceWith(nodes1425);
+        var oldNodes = nodes1769;
+        nodes1769 = node.contents();
+        oldNodes.replaceWith(nodes1769);
       }));
-      callback(root1873); return subs__;
+      callback(root2247); return subs__;
       
       return subs__;
     }, function(node) {
-      var oldNodes = nodes1424;
-      nodes1424 = node.contents();
-      oldNodes.replaceWith(nodes1424);
+      var oldNodes = nodes1768;
+      nodes1768 = node.contents();
+      oldNodes.replaceWith(nodes1768);
     }));
-    callback(root1872); return subs__;
+    callback(root2246); return subs__;
     
     return subs__;
   }, function(node) {
-    var oldNodes = nodes1423;
-    nodes1423 = node.contents();
-    oldNodes.replaceWith(nodes1423);
+    var oldNodes = nodes1767;
+    nodes1767 = node.contents();
+    oldNodes.replaceWith(nodes1767);
   }));
-  callback(root1869); return subs__;
+  callback(root2243); return subs__;
   
   
   return subs__;
 };
 
 nrichRPG.coreWorkout.addQAPlus = function(elements, callback) {
-  var root1875 = $("<span>");
+  var root2249 = $("<span>");
   var subs__ = new mobl.CompSubscription();
-  var nodes1426 = $("<span>");
-  root1875.append(nodes1426);
+  var nodes1770 = $("<span>");
+  root2249.append(nodes1770);
   subs__.addSub((ui.group)(function(_, callback) {
-    var root1876 = $("<span>");
+    var root2250 = $("<span>");
     var subs__ = new mobl.CompSubscription();
     var result__ = function(event, callback) {
                      if(event && event.stopPropagation) event.stopPropagation();
                      nrichRPG.coreWorkout.makeQAStar("F1", function(result__) {
-                       var tmp1387 = result__;
+                       var tmp1751 = result__;
                        var result__ = mobl.alert("Complex arithmetic Q added");
                        if(callback && callback.apply) callback(); return;
                      });
                    };
-    var tmp1290 = mobl.ref(result__);
+    var tmp1655 = mobl.ref(result__);
     
-    var nodes1427 = $("<span>");
-    root1876.append(nodes1427);
-    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1290, mobl.ref(null), mobl.ref(false), function(_, callback) {
-      var root1877 = $("<span>");
+    var nodes1771 = $("<span>");
+    root2250.append(nodes1771);
+    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1655, mobl.ref(null), mobl.ref(false), function(_, callback) {
+      var root2251 = $("<span>");
       var subs__ = new mobl.CompSubscription();
-      var nodes1428 = $("<span>");
-      root1877.append(nodes1428);
+      var nodes1772 = $("<span>");
+      root2251.append(nodes1772);
       subs__.addSub((mobl.label)(mobl.ref("+Complex arithmetic"), mobl.ref(null), mobl.ref(null), function(_, callback) {
-        var root1878 = $("<span>");
+        var root2252 = $("<span>");
         var subs__ = new mobl.CompSubscription();
-        callback(root1878); return subs__;
+        callback(root2252); return subs__;
         return subs__;
       }, function(node) {
-        var oldNodes = nodes1428;
-        nodes1428 = node.contents();
-        oldNodes.replaceWith(nodes1428);
+        var oldNodes = nodes1772;
+        nodes1772 = node.contents();
+        oldNodes.replaceWith(nodes1772);
       }));
-      callback(root1877); return subs__;
+      callback(root2251); return subs__;
       
       return subs__;
     }, function(node) {
-      var oldNodes = nodes1427;
-      nodes1427 = node.contents();
-      oldNodes.replaceWith(nodes1427);
+      var oldNodes = nodes1771;
+      nodes1771 = node.contents();
+      oldNodes.replaceWith(nodes1771);
     }));
     var result__ = function(event, callback) {
                      if(event && event.stopPropagation) event.stopPropagation();
                      nrichRPG.coreWorkout.makeQAStar("F2", function(result__) {
-                       var tmp1386 = result__;
+                       var tmp1750 = result__;
                        var result__ = mobl.alert("Modulus argument Q added");
                        if(callback && callback.apply) callback(); return;
                      });
                    };
-    var tmp1291 = mobl.ref(result__);
+    var tmp1656 = mobl.ref(result__);
     
-    var nodes1429 = $("<span>");
-    root1876.append(nodes1429);
-    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1291, mobl.ref(null), mobl.ref(false), function(_, callback) {
-      var root1879 = $("<span>");
+    var nodes1773 = $("<span>");
+    root2250.append(nodes1773);
+    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1656, mobl.ref(null), mobl.ref(false), function(_, callback) {
+      var root2253 = $("<span>");
       var subs__ = new mobl.CompSubscription();
-      var nodes1430 = $("<span>");
-      root1879.append(nodes1430);
+      var nodes1774 = $("<span>");
+      root2253.append(nodes1774);
       subs__.addSub((mobl.label)(mobl.ref("+Modulus argument"), mobl.ref(null), mobl.ref(null), function(_, callback) {
-        var root1880 = $("<span>");
+        var root2254 = $("<span>");
         var subs__ = new mobl.CompSubscription();
-        callback(root1880); return subs__;
+        callback(root2254); return subs__;
         return subs__;
       }, function(node) {
-        var oldNodes = nodes1430;
-        nodes1430 = node.contents();
-        oldNodes.replaceWith(nodes1430);
+        var oldNodes = nodes1774;
+        nodes1774 = node.contents();
+        oldNodes.replaceWith(nodes1774);
       }));
-      callback(root1879); return subs__;
+      callback(root2253); return subs__;
       
       return subs__;
     }, function(node) {
-      var oldNodes = nodes1429;
-      nodes1429 = node.contents();
-      oldNodes.replaceWith(nodes1429);
+      var oldNodes = nodes1773;
+      nodes1773 = node.contents();
+      oldNodes.replaceWith(nodes1773);
     }));
     var result__ = function(event, callback) {
                      if(event && event.stopPropagation) event.stopPropagation();
                      nrichRPG.coreWorkout.makeQAStar("F3a", function(result__) {
-                       var tmp1385 = result__;
+                       var tmp1749 = result__;
                        var result__ = mobl.alert("2nd order DE Q added");
                        if(callback && callback.apply) callback(); return;
                      });
                    };
-    var tmp1292 = mobl.ref(result__);
+    var tmp1657 = mobl.ref(result__);
     
-    var nodes1431 = $("<span>");
-    root1876.append(nodes1431);
-    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1292, mobl.ref(null), mobl.ref(false), function(_, callback) {
-      var root1881 = $("<span>");
+    var nodes1775 = $("<span>");
+    root2250.append(nodes1775);
+    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1657, mobl.ref(null), mobl.ref(false), function(_, callback) {
+      var root2255 = $("<span>");
       var subs__ = new mobl.CompSubscription();
-      var nodes1432 = $("<span>");
-      root1881.append(nodes1432);
+      var nodes1776 = $("<span>");
+      root2255.append(nodes1776);
       subs__.addSub((mobl.label)(mobl.ref("+2nd order DEs"), mobl.ref(null), mobl.ref(null), function(_, callback) {
-        var root1882 = $("<span>");
+        var root2256 = $("<span>");
         var subs__ = new mobl.CompSubscription();
-        callback(root1882); return subs__;
+        callback(root2256); return subs__;
         return subs__;
       }, function(node) {
-        var oldNodes = nodes1432;
-        nodes1432 = node.contents();
-        oldNodes.replaceWith(nodes1432);
+        var oldNodes = nodes1776;
+        nodes1776 = node.contents();
+        oldNodes.replaceWith(nodes1776);
       }));
-      callback(root1881); return subs__;
+      callback(root2255); return subs__;
       
       return subs__;
     }, function(node) {
-      var oldNodes = nodes1431;
-      nodes1431 = node.contents();
-      oldNodes.replaceWith(nodes1431);
+      var oldNodes = nodes1775;
+      nodes1775 = node.contents();
+      oldNodes.replaceWith(nodes1775);
     }));
     var result__ = function(event, callback) {
                      if(event && event.stopPropagation) event.stopPropagation();
                      nrichRPG.coreWorkout.makeQAStar("F4", function(result__) {
-                       var tmp1384 = result__;
+                       var tmp1748 = result__;
                        var result__ = mobl.alert("Rank 2 matrices Q added");
                        if(callback && callback.apply) callback(); return;
                      });
                    };
-    var tmp1293 = mobl.ref(result__);
+    var tmp1658 = mobl.ref(result__);
     
-    var nodes1433 = $("<span>");
-    root1876.append(nodes1433);
-    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1293, mobl.ref(null), mobl.ref(false), function(_, callback) {
-      var root1883 = $("<span>");
+    var nodes1777 = $("<span>");
+    root2250.append(nodes1777);
+    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1658, mobl.ref(null), mobl.ref(false), function(_, callback) {
+      var root2257 = $("<span>");
       var subs__ = new mobl.CompSubscription();
-      var nodes1434 = $("<span>");
-      root1883.append(nodes1434);
+      var nodes1778 = $("<span>");
+      root2257.append(nodes1778);
       subs__.addSub((mobl.label)(mobl.ref("+Rank 2 matrices"), mobl.ref(null), mobl.ref(null), function(_, callback) {
-        var root1884 = $("<span>");
+        var root2258 = $("<span>");
         var subs__ = new mobl.CompSubscription();
-        callback(root1884); return subs__;
+        callback(root2258); return subs__;
         return subs__;
       }, function(node) {
-        var oldNodes = nodes1434;
-        nodes1434 = node.contents();
-        oldNodes.replaceWith(nodes1434);
+        var oldNodes = nodes1778;
+        nodes1778 = node.contents();
+        oldNodes.replaceWith(nodes1778);
       }));
-      callback(root1883); return subs__;
+      callback(root2257); return subs__;
       
       return subs__;
     }, function(node) {
-      var oldNodes = nodes1433;
-      nodes1433 = node.contents();
-      oldNodes.replaceWith(nodes1433);
+      var oldNodes = nodes1777;
+      nodes1777 = node.contents();
+      oldNodes.replaceWith(nodes1777);
     }));
     var result__ = function(event, callback) {
                      if(event && event.stopPropagation) event.stopPropagation();
                      nrichRPG.coreWorkout.makeQAStar("F5", function(result__) {
-                       var tmp1383 = result__;
+                       var tmp1747 = result__;
                        var result__ = mobl.alert("Taylor Series Q added");
                        if(callback && callback.apply) callback(); return;
                      });
                    };
-    var tmp1294 = mobl.ref(result__);
+    var tmp1659 = mobl.ref(result__);
     
-    var nodes1435 = $("<span>");
-    root1876.append(nodes1435);
-    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1294, mobl.ref(null), mobl.ref(false), function(_, callback) {
-      var root1885 = $("<span>");
+    var nodes1779 = $("<span>");
+    root2250.append(nodes1779);
+    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1659, mobl.ref(null), mobl.ref(false), function(_, callback) {
+      var root2259 = $("<span>");
       var subs__ = new mobl.CompSubscription();
-      var nodes1436 = $("<span>");
-      root1885.append(nodes1436);
+      var nodes1780 = $("<span>");
+      root2259.append(nodes1780);
       subs__.addSub((mobl.label)(mobl.ref("+Taylor Series"), mobl.ref(null), mobl.ref(null), function(_, callback) {
-        var root1886 = $("<span>");
+        var root2260 = $("<span>");
         var subs__ = new mobl.CompSubscription();
-        callback(root1886); return subs__;
+        callback(root2260); return subs__;
         return subs__;
       }, function(node) {
-        var oldNodes = nodes1436;
-        nodes1436 = node.contents();
-        oldNodes.replaceWith(nodes1436);
+        var oldNodes = nodes1780;
+        nodes1780 = node.contents();
+        oldNodes.replaceWith(nodes1780);
       }));
-      callback(root1885); return subs__;
+      callback(root2259); return subs__;
       
       return subs__;
     }, function(node) {
-      var oldNodes = nodes1435;
-      nodes1435 = node.contents();
-      oldNodes.replaceWith(nodes1435);
+      var oldNodes = nodes1779;
+      nodes1779 = node.contents();
+      oldNodes.replaceWith(nodes1779);
     }));
     var result__ = function(event, callback) {
                      if(event && event.stopPropagation) event.stopPropagation();
                      nrichRPG.coreWorkout.makeQAStar("F6", function(result__) {
-                       var tmp1382 = result__;
+                       var tmp1746 = result__;
                        var result__ = mobl.alert("Polar Coordinates Q added");
                        if(callback && callback.apply) callback(); return;
                      });
                    };
-    var tmp1295 = mobl.ref(result__);
+    var tmp1660 = mobl.ref(result__);
     
-    var nodes1437 = $("<span>");
-    root1876.append(nodes1437);
-    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1295, mobl.ref(null), mobl.ref(false), function(_, callback) {
-      var root1887 = $("<span>");
+    var nodes1781 = $("<span>");
+    root2250.append(nodes1781);
+    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1660, mobl.ref(null), mobl.ref(false), function(_, callback) {
+      var root2261 = $("<span>");
       var subs__ = new mobl.CompSubscription();
-      var nodes1438 = $("<span>");
-      root1887.append(nodes1438);
+      var nodes1782 = $("<span>");
+      root2261.append(nodes1782);
       subs__.addSub((mobl.label)(mobl.ref("+Polar Coordinates"), mobl.ref(null), mobl.ref(null), function(_, callback) {
-        var root1888 = $("<span>");
+        var root2262 = $("<span>");
         var subs__ = new mobl.CompSubscription();
-        callback(root1888); return subs__;
+        callback(root2262); return subs__;
         return subs__;
       }, function(node) {
-        var oldNodes = nodes1438;
-        nodes1438 = node.contents();
-        oldNodes.replaceWith(nodes1438);
+        var oldNodes = nodes1782;
+        nodes1782 = node.contents();
+        oldNodes.replaceWith(nodes1782);
       }));
-      callback(root1887); return subs__;
+      callback(root2261); return subs__;
       
       return subs__;
     }, function(node) {
-      var oldNodes = nodes1437;
-      nodes1437 = node.contents();
-      oldNodes.replaceWith(nodes1437);
+      var oldNodes = nodes1781;
+      nodes1781 = node.contents();
+      oldNodes.replaceWith(nodes1781);
     }));
     var result__ = function(event, callback) {
                      if(event && event.stopPropagation) event.stopPropagation();
                      nrichRPG.coreWorkout.makeQAStar("F7", function(result__) {
-                       var tmp1381 = result__;
+                       var tmp1745 = result__;
                        var result__ = mobl.alert("Rank 3 matrices Q added");
                        if(callback && callback.apply) callback(); return;
                      });
                    };
-    var tmp1296 = mobl.ref(result__);
+    var tmp1661 = mobl.ref(result__);
     
-    var nodes1439 = $("<span>");
-    root1876.append(nodes1439);
-    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1296, mobl.ref(null), mobl.ref(false), function(_, callback) {
-      var root1889 = $("<span>");
+    var nodes1783 = $("<span>");
+    root2250.append(nodes1783);
+    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1661, mobl.ref(null), mobl.ref(false), function(_, callback) {
+      var root2263 = $("<span>");
       var subs__ = new mobl.CompSubscription();
-      var nodes1440 = $("<span>");
-      root1889.append(nodes1440);
+      var nodes1784 = $("<span>");
+      root2263.append(nodes1784);
       subs__.addSub((mobl.label)(mobl.ref("+Rank 3 matrices"), mobl.ref(null), mobl.ref(null), function(_, callback) {
-        var root1890 = $("<span>");
+        var root2264 = $("<span>");
         var subs__ = new mobl.CompSubscription();
-        callback(root1890); return subs__;
+        callback(root2264); return subs__;
         return subs__;
       }, function(node) {
-        var oldNodes = nodes1440;
-        nodes1440 = node.contents();
-        oldNodes.replaceWith(nodes1440);
+        var oldNodes = nodes1784;
+        nodes1784 = node.contents();
+        oldNodes.replaceWith(nodes1784);
       }));
-      callback(root1889); return subs__;
+      callback(root2263); return subs__;
       
       return subs__;
     }, function(node) {
-      var oldNodes = nodes1439;
-      nodes1439 = node.contents();
-      oldNodes.replaceWith(nodes1439);
+      var oldNodes = nodes1783;
+      nodes1783 = node.contents();
+      oldNodes.replaceWith(nodes1783);
     }));
     var result__ = function(event, callback) {
                      if(event && event.stopPropagation) event.stopPropagation();
                      nrichRPG.coreWorkout.makeQAStar("F8", function(result__) {
-                       var tmp1380 = result__;
+                       var tmp1744 = result__;
                        var result__ = mobl.alert("Further vectors added");
                        if(callback && callback.apply) callback(); return;
                      });
                    };
-    var tmp1297 = mobl.ref(result__);
+    var tmp1662 = mobl.ref(result__);
     
-    var nodes1441 = $("<span>");
-    root1876.append(nodes1441);
-    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1297, mobl.ref(null), mobl.ref(false), function(_, callback) {
-      var root1891 = $("<span>");
+    var nodes1785 = $("<span>");
+    root2250.append(nodes1785);
+    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1662, mobl.ref(null), mobl.ref(false), function(_, callback) {
+      var root2265 = $("<span>");
       var subs__ = new mobl.CompSubscription();
-      var nodes1442 = $("<span>");
-      root1891.append(nodes1442);
+      var nodes1786 = $("<span>");
+      root2265.append(nodes1786);
       subs__.addSub((mobl.label)(mobl.ref("+Further vectors"), mobl.ref(null), mobl.ref(null), function(_, callback) {
-        var root1892 = $("<span>");
+        var root2266 = $("<span>");
         var subs__ = new mobl.CompSubscription();
-        callback(root1892); return subs__;
+        callback(root2266); return subs__;
         return subs__;
       }, function(node) {
-        var oldNodes = nodes1442;
-        nodes1442 = node.contents();
-        oldNodes.replaceWith(nodes1442);
+        var oldNodes = nodes1786;
+        nodes1786 = node.contents();
+        oldNodes.replaceWith(nodes1786);
       }));
-      callback(root1891); return subs__;
+      callback(root2265); return subs__;
       
       return subs__;
     }, function(node) {
-      var oldNodes = nodes1441;
-      nodes1441 = node.contents();
-      oldNodes.replaceWith(nodes1441);
+      var oldNodes = nodes1785;
+      nodes1785 = node.contents();
+      oldNodes.replaceWith(nodes1785);
     }));
     var result__ = function(event, callback) {
                      if(event && event.stopPropagation) event.stopPropagation();
                      nrichRPG.coreWorkout.makeQAStar("F9", function(result__) {
-                       var tmp1379 = result__;
+                       var tmp1743 = result__;
                        var result__ = mobl.alert("Newton-Raphson added");
                        if(callback && callback.apply) callback(); return;
                      });
                    };
-    var tmp1298 = mobl.ref(result__);
+    var tmp1663 = mobl.ref(result__);
     
-    var nodes1443 = $("<span>");
-    root1876.append(nodes1443);
-    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1298, mobl.ref(null), mobl.ref(false), function(_, callback) {
-      var root1893 = $("<span>");
+    var nodes1787 = $("<span>");
+    root2250.append(nodes1787);
+    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1663, mobl.ref(null), mobl.ref(false), function(_, callback) {
+      var root2267 = $("<span>");
       var subs__ = new mobl.CompSubscription();
-      var nodes1444 = $("<span>");
-      root1893.append(nodes1444);
+      var nodes1788 = $("<span>");
+      root2267.append(nodes1788);
       subs__.addSub((mobl.label)(mobl.ref("+Newton-Raphson"), mobl.ref(null), mobl.ref(null), function(_, callback) {
-        var root1894 = $("<span>");
+        var root2268 = $("<span>");
         var subs__ = new mobl.CompSubscription();
-        callback(root1894); return subs__;
+        callback(root2268); return subs__;
         return subs__;
       }, function(node) {
-        var oldNodes = nodes1444;
-        nodes1444 = node.contents();
-        oldNodes.replaceWith(nodes1444);
+        var oldNodes = nodes1788;
+        nodes1788 = node.contents();
+        oldNodes.replaceWith(nodes1788);
       }));
-      callback(root1893); return subs__;
+      callback(root2267); return subs__;
       
       return subs__;
     }, function(node) {
-      var oldNodes = nodes1443;
-      nodes1443 = node.contents();
-      oldNodes.replaceWith(nodes1443);
+      var oldNodes = nodes1787;
+      nodes1787 = node.contents();
+      oldNodes.replaceWith(nodes1787);
     }));
     var result__ = function(event, callback) {
                      if(event && event.stopPropagation) event.stopPropagation();
                      nrichRPG.coreWorkout.makeQAStar("F10", function(result__) {
-                       var tmp1378 = result__;
+                       var tmp1742 = result__;
                        var result__ = mobl.alert("Further inequalities Q added");
                        if(callback && callback.apply) callback(); return;
                      });
                    };
-    var tmp1299 = mobl.ref(result__);
+    var tmp1664 = mobl.ref(result__);
     
-    var nodes1445 = $("<span>");
-    root1876.append(nodes1445);
-    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1299, mobl.ref(null), mobl.ref(false), function(_, callback) {
-      var root1895 = $("<span>");
+    var nodes1789 = $("<span>");
+    root2250.append(nodes1789);
+    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1664, mobl.ref(null), mobl.ref(false), function(_, callback) {
+      var root2269 = $("<span>");
       var subs__ = new mobl.CompSubscription();
-      var nodes1446 = $("<span>");
-      root1895.append(nodes1446);
+      var nodes1790 = $("<span>");
+      root2269.append(nodes1790);
       subs__.addSub((mobl.label)(mobl.ref("+Further inequalities"), mobl.ref(null), mobl.ref(null), function(_, callback) {
-        var root1896 = $("<span>");
+        var root2270 = $("<span>");
         var subs__ = new mobl.CompSubscription();
-        callback(root1896); return subs__;
+        callback(root2270); return subs__;
         return subs__;
       }, function(node) {
-        var oldNodes = nodes1446;
-        nodes1446 = node.contents();
-        oldNodes.replaceWith(nodes1446);
+        var oldNodes = nodes1790;
+        nodes1790 = node.contents();
+        oldNodes.replaceWith(nodes1790);
       }));
-      callback(root1895); return subs__;
+      callback(root2269); return subs__;
       
       return subs__;
     }, function(node) {
-      var oldNodes = nodes1445;
-      nodes1445 = node.contents();
-      oldNodes.replaceWith(nodes1445);
+      var oldNodes = nodes1789;
+      nodes1789 = node.contents();
+      oldNodes.replaceWith(nodes1789);
     }));
     var result__ = function(event, callback) {
                      if(event && event.stopPropagation) event.stopPropagation();
                      nrichRPG.coreWorkout.makeQAStar("F11", function(result__) {
-                       var tmp1377 = result__;
+                       var tmp1741 = result__;
                        var result__ = mobl.alert("Integration by substitution Q added");
                        if(callback && callback.apply) callback(); return;
                      });
                    };
-    var tmp1300 = mobl.ref(result__);
+    var tmp1665 = mobl.ref(result__);
     
-    var nodes1447 = $("<span>");
-    root1876.append(nodes1447);
-    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1300, mobl.ref(null), mobl.ref(false), function(_, callback) {
-      var root1897 = $("<span>");
+    var nodes1791 = $("<span>");
+    root2250.append(nodes1791);
+    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1665, mobl.ref(null), mobl.ref(false), function(_, callback) {
+      var root2271 = $("<span>");
       var subs__ = new mobl.CompSubscription();
-      var nodes1448 = $("<span>");
-      root1897.append(nodes1448);
+      var nodes1792 = $("<span>");
+      root2271.append(nodes1792);
       subs__.addSub((mobl.label)(mobl.ref("+Integration by substitution"), mobl.ref(null), mobl.ref(null), function(_, callback) {
-        var root1898 = $("<span>");
+        var root2272 = $("<span>");
         var subs__ = new mobl.CompSubscription();
-        callback(root1898); return subs__;
+        callback(root2272); return subs__;
         return subs__;
       }, function(node) {
-        var oldNodes = nodes1448;
-        nodes1448 = node.contents();
-        oldNodes.replaceWith(nodes1448);
+        var oldNodes = nodes1792;
+        nodes1792 = node.contents();
+        oldNodes.replaceWith(nodes1792);
       }));
-      callback(root1897); return subs__;
+      callback(root2271); return subs__;
       
       return subs__;
     }, function(node) {
-      var oldNodes = nodes1447;
-      nodes1447 = node.contents();
-      oldNodes.replaceWith(nodes1447);
+      var oldNodes = nodes1791;
+      nodes1791 = node.contents();
+      oldNodes.replaceWith(nodes1791);
     }));
     var result__ = function(event, callback) {
                      if(event && event.stopPropagation) event.stopPropagation();
                      nrichRPG.coreWorkout.makeQAStar("F12", function(result__) {
-                       var tmp1376 = result__;
+                       var tmp1740 = result__;
                        var result__ = mobl.alert("Figures of revolution Q added");
                        if(callback && callback.apply) callback(); return;
                      });
                    };
-    var tmp1301 = mobl.ref(result__);
+    var tmp1666 = mobl.ref(result__);
     
-    var nodes1449 = $("<span>");
-    root1876.append(nodes1449);
-    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1301, mobl.ref(null), mobl.ref(false), function(_, callback) {
-      var root1899 = $("<span>");
+    var nodes1793 = $("<span>");
+    root2250.append(nodes1793);
+    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1666, mobl.ref(null), mobl.ref(false), function(_, callback) {
+      var root2273 = $("<span>");
       var subs__ = new mobl.CompSubscription();
-      var nodes1450 = $("<span>");
-      root1899.append(nodes1450);
+      var nodes1794 = $("<span>");
+      root2273.append(nodes1794);
       subs__.addSub((mobl.label)(mobl.ref("+Figures of revolution"), mobl.ref(null), mobl.ref(null), function(_, callback) {
-        var root1900 = $("<span>");
+        var root2274 = $("<span>");
         var subs__ = new mobl.CompSubscription();
-        callback(root1900); return subs__;
+        callback(root2274); return subs__;
         return subs__;
       }, function(node) {
-        var oldNodes = nodes1450;
-        nodes1450 = node.contents();
-        oldNodes.replaceWith(nodes1450);
+        var oldNodes = nodes1794;
+        nodes1794 = node.contents();
+        oldNodes.replaceWith(nodes1794);
       }));
-      callback(root1899); return subs__;
+      callback(root2273); return subs__;
       
       return subs__;
     }, function(node) {
-      var oldNodes = nodes1449;
-      nodes1449 = node.contents();
-      oldNodes.replaceWith(nodes1449);
+      var oldNodes = nodes1793;
+      nodes1793 = node.contents();
+      oldNodes.replaceWith(nodes1793);
     }));
     var result__ = function(event, callback) {
                      if(event && event.stopPropagation) event.stopPropagation();
                      nrichRPG.coreWorkout.makeQAStar("F13", function(result__) {
-                       var tmp1375 = result__;
+                       var tmp1739 = result__;
                        var result__ = mobl.alert("Matrix transformations Q added");
                        if(callback && callback.apply) callback(); return;
                      });
                    };
-    var tmp1302 = mobl.ref(result__);
+    var tmp1667 = mobl.ref(result__);
     
-    var nodes1451 = $("<span>");
-    root1876.append(nodes1451);
-    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1302, mobl.ref(null), mobl.ref(false), function(_, callback) {
-      var root1901 = $("<span>");
+    var nodes1795 = $("<span>");
+    root2250.append(nodes1795);
+    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1667, mobl.ref(null), mobl.ref(false), function(_, callback) {
+      var root2275 = $("<span>");
       var subs__ = new mobl.CompSubscription();
-      var nodes1452 = $("<span>");
-      root1901.append(nodes1452);
+      var nodes1796 = $("<span>");
+      root2275.append(nodes1796);
       subs__.addSub((mobl.label)(mobl.ref("+Matrix transformations"), mobl.ref(null), mobl.ref(null), function(_, callback) {
-        var root1902 = $("<span>");
+        var root2276 = $("<span>");
         var subs__ = new mobl.CompSubscription();
-        callback(root1902); return subs__;
+        callback(root2276); return subs__;
         return subs__;
       }, function(node) {
-        var oldNodes = nodes1452;
-        nodes1452 = node.contents();
-        oldNodes.replaceWith(nodes1452);
+        var oldNodes = nodes1796;
+        nodes1796 = node.contents();
+        oldNodes.replaceWith(nodes1796);
       }));
-      callback(root1901); return subs__;
+      callback(root2275); return subs__;
       
       return subs__;
     }, function(node) {
-      var oldNodes = nodes1451;
-      nodes1451 = node.contents();
-      oldNodes.replaceWith(nodes1451);
+      var oldNodes = nodes1795;
+      nodes1795 = node.contents();
+      oldNodes.replaceWith(nodes1795);
     }));
-    callback(root1876); return subs__;
+    callback(root2250); return subs__;
     
     
     
@@ -2480,234 +2480,234 @@ nrichRPG.coreWorkout.addQAPlus = function(elements, callback) {
     
     return subs__;
   }, function(node) {
-    var oldNodes = nodes1426;
-    nodes1426 = node.contents();
-    oldNodes.replaceWith(nodes1426);
+    var oldNodes = nodes1770;
+    nodes1770 = node.contents();
+    oldNodes.replaceWith(nodes1770);
   }));
-  callback(root1875); return subs__;
+  callback(root2249); return subs__;
   
   return subs__;
 };
 
 nrichRPG.coreWorkout.addQAStats = function(elements, callback) {
-  var root1903 = $("<span>");
+  var root2277 = $("<span>");
   var subs__ = new mobl.CompSubscription();
-  var nodes1453 = $("<span>");
-  root1903.append(nodes1453);
+  var nodes1797 = $("<span>");
+  root2277.append(nodes1797);
   subs__.addSub((ui.group)(function(_, callback) {
-    var root1904 = $("<span>");
+    var root2278 = $("<span>");
     var subs__ = new mobl.CompSubscription();
     var result__ = function(event, callback) {
                      if(event && event.stopPropagation) event.stopPropagation();
                      nrichRPG.coreWorkout.makeQAStats("S1", function(result__) {
-                       var tmp1393 = result__;
+                       var tmp1757 = result__;
                        var result__ = mobl.alert("Discrete Distributions Q added");
                        if(callback && callback.apply) callback(); return;
                      });
                    };
-    var tmp1303 = mobl.ref(result__);
+    var tmp1668 = mobl.ref(result__);
     
-    var nodes1454 = $("<span>");
-    root1904.append(nodes1454);
-    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1303, mobl.ref(null), mobl.ref(false), function(_, callback) {
-      var root1905 = $("<span>");
+    var nodes1798 = $("<span>");
+    root2278.append(nodes1798);
+    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1668, mobl.ref(null), mobl.ref(false), function(_, callback) {
+      var root2279 = $("<span>");
       var subs__ = new mobl.CompSubscription();
-      var nodes1455 = $("<span>");
-      root1905.append(nodes1455);
+      var nodes1799 = $("<span>");
+      root2279.append(nodes1799);
       subs__.addSub((mobl.label)(mobl.ref("+Discrete Distributions"), mobl.ref(null), mobl.ref(null), function(_, callback) {
-        var root1906 = $("<span>");
+        var root2280 = $("<span>");
         var subs__ = new mobl.CompSubscription();
-        callback(root1906); return subs__;
+        callback(root2280); return subs__;
         return subs__;
       }, function(node) {
-        var oldNodes = nodes1455;
-        nodes1455 = node.contents();
-        oldNodes.replaceWith(nodes1455);
+        var oldNodes = nodes1799;
+        nodes1799 = node.contents();
+        oldNodes.replaceWith(nodes1799);
       }));
-      callback(root1905); return subs__;
+      callback(root2279); return subs__;
       
       return subs__;
     }, function(node) {
-      var oldNodes = nodes1454;
-      nodes1454 = node.contents();
-      oldNodes.replaceWith(nodes1454);
+      var oldNodes = nodes1798;
+      nodes1798 = node.contents();
+      oldNodes.replaceWith(nodes1798);
     }));
     var result__ = function(event, callback) {
                      if(event && event.stopPropagation) event.stopPropagation();
                      nrichRPG.coreWorkout.makeQAStats("S2", function(result__) {
-                       var tmp1392 = result__;
+                       var tmp1756 = result__;
                        var result__ = mobl.alert("Continuous Distributions Q added");
                        if(callback && callback.apply) callback(); return;
                      });
                    };
-    var tmp1304 = mobl.ref(result__);
+    var tmp1669 = mobl.ref(result__);
     
-    var nodes1456 = $("<span>");
-    root1904.append(nodes1456);
-    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1304, mobl.ref(null), mobl.ref(false), function(_, callback) {
-      var root1907 = $("<span>");
+    var nodes1800 = $("<span>");
+    root2278.append(nodes1800);
+    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1669, mobl.ref(null), mobl.ref(false), function(_, callback) {
+      var root2281 = $("<span>");
       var subs__ = new mobl.CompSubscription();
-      var nodes1457 = $("<span>");
-      root1907.append(nodes1457);
+      var nodes1801 = $("<span>");
+      root2281.append(nodes1801);
       subs__.addSub((mobl.label)(mobl.ref("+Continuous Distributions"), mobl.ref(null), mobl.ref(null), function(_, callback) {
-        var root1908 = $("<span>");
+        var root2282 = $("<span>");
         var subs__ = new mobl.CompSubscription();
-        callback(root1908); return subs__;
+        callback(root2282); return subs__;
         return subs__;
       }, function(node) {
-        var oldNodes = nodes1457;
-        nodes1457 = node.contents();
-        oldNodes.replaceWith(nodes1457);
+        var oldNodes = nodes1801;
+        nodes1801 = node.contents();
+        oldNodes.replaceWith(nodes1801);
       }));
-      callback(root1907); return subs__;
+      callback(root2281); return subs__;
       
       return subs__;
     }, function(node) {
-      var oldNodes = nodes1456;
-      nodes1456 = node.contents();
-      oldNodes.replaceWith(nodes1456);
+      var oldNodes = nodes1800;
+      nodes1800 = node.contents();
+      oldNodes.replaceWith(nodes1800);
     }));
     var result__ = function(event, callback) {
                      if(event && event.stopPropagation) event.stopPropagation();
                      nrichRPG.coreWorkout.makeQAStats("S3", function(result__) {
-                       var tmp1391 = result__;
+                       var tmp1755 = result__;
                        var result__ = mobl.alert("Hypothesis Testing Q added");
                        if(callback && callback.apply) callback(); return;
                      });
                    };
-    var tmp1305 = mobl.ref(result__);
+    var tmp1670 = mobl.ref(result__);
     
-    var nodes1458 = $("<span>");
-    root1904.append(nodes1458);
-    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1305, mobl.ref(null), mobl.ref(false), function(_, callback) {
-      var root1909 = $("<span>");
+    var nodes1802 = $("<span>");
+    root2278.append(nodes1802);
+    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1670, mobl.ref(null), mobl.ref(false), function(_, callback) {
+      var root2283 = $("<span>");
       var subs__ = new mobl.CompSubscription();
-      var nodes1459 = $("<span>");
-      root1909.append(nodes1459);
+      var nodes1803 = $("<span>");
+      root2283.append(nodes1803);
       subs__.addSub((mobl.label)(mobl.ref("+Hypothesis Testing"), mobl.ref(null), mobl.ref(null), function(_, callback) {
-        var root1910 = $("<span>");
+        var root2284 = $("<span>");
         var subs__ = new mobl.CompSubscription();
-        callback(root1910); return subs__;
+        callback(root2284); return subs__;
         return subs__;
       }, function(node) {
-        var oldNodes = nodes1459;
-        nodes1459 = node.contents();
-        oldNodes.replaceWith(nodes1459);
+        var oldNodes = nodes1803;
+        nodes1803 = node.contents();
+        oldNodes.replaceWith(nodes1803);
       }));
-      callback(root1909); return subs__;
+      callback(root2283); return subs__;
       
       return subs__;
     }, function(node) {
-      var oldNodes = nodes1458;
-      nodes1458 = node.contents();
-      oldNodes.replaceWith(nodes1458);
+      var oldNodes = nodes1802;
+      nodes1802 = node.contents();
+      oldNodes.replaceWith(nodes1802);
     }));
     var result__ = function(event, callback) {
                      if(event && event.stopPropagation) event.stopPropagation();
                      nrichRPG.coreWorkout.makeQAStats("S4", function(result__) {
-                       var tmp1390 = result__;
+                       var tmp1754 = result__;
                        var result__ = mobl.alert("Confidence Intervals Q added");
                        if(callback && callback.apply) callback(); return;
                      });
                    };
-    var tmp1306 = mobl.ref(result__);
+    var tmp1671 = mobl.ref(result__);
     
-    var nodes1460 = $("<span>");
-    root1904.append(nodes1460);
-    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1306, mobl.ref(null), mobl.ref(false), function(_, callback) {
-      var root1911 = $("<span>");
+    var nodes1804 = $("<span>");
+    root2278.append(nodes1804);
+    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1671, mobl.ref(null), mobl.ref(false), function(_, callback) {
+      var root2285 = $("<span>");
       var subs__ = new mobl.CompSubscription();
-      var nodes1461 = $("<span>");
-      root1911.append(nodes1461);
+      var nodes1805 = $("<span>");
+      root2285.append(nodes1805);
       subs__.addSub((mobl.label)(mobl.ref("+Confidence Intervals"), mobl.ref(null), mobl.ref(null), function(_, callback) {
-        var root1912 = $("<span>");
+        var root2286 = $("<span>");
         var subs__ = new mobl.CompSubscription();
-        callback(root1912); return subs__;
+        callback(root2286); return subs__;
         return subs__;
       }, function(node) {
-        var oldNodes = nodes1461;
-        nodes1461 = node.contents();
-        oldNodes.replaceWith(nodes1461);
+        var oldNodes = nodes1805;
+        nodes1805 = node.contents();
+        oldNodes.replaceWith(nodes1805);
       }));
-      callback(root1911); return subs__;
+      callback(root2285); return subs__;
       
       return subs__;
     }, function(node) {
-      var oldNodes = nodes1460;
-      nodes1460 = node.contents();
-      oldNodes.replaceWith(nodes1460);
+      var oldNodes = nodes1804;
+      nodes1804 = node.contents();
+      oldNodes.replaceWith(nodes1804);
     }));
     var result__ = function(event, callback) {
                      if(event && event.stopPropagation) event.stopPropagation();
                      nrichRPG.coreWorkout.makeQAStats("S5", function(result__) {
-                       var tmp1389 = result__;
+                       var tmp1753 = result__;
                        var result__ = mobl.alert("Chi Squared Q added");
                        if(callback && callback.apply) callback(); return;
                      });
                    };
-    var tmp1307 = mobl.ref(result__);
+    var tmp1672 = mobl.ref(result__);
     
-    var nodes1462 = $("<span>");
-    root1904.append(nodes1462);
-    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1307, mobl.ref(null), mobl.ref(false), function(_, callback) {
-      var root1913 = $("<span>");
+    var nodes1806 = $("<span>");
+    root2278.append(nodes1806);
+    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1672, mobl.ref(null), mobl.ref(false), function(_, callback) {
+      var root2287 = $("<span>");
       var subs__ = new mobl.CompSubscription();
-      var nodes1463 = $("<span>");
-      root1913.append(nodes1463);
+      var nodes1807 = $("<span>");
+      root2287.append(nodes1807);
       subs__.addSub((mobl.label)(mobl.ref("+Chi Squared"), mobl.ref(null), mobl.ref(null), function(_, callback) {
-        var root1914 = $("<span>");
+        var root2288 = $("<span>");
         var subs__ = new mobl.CompSubscription();
-        callback(root1914); return subs__;
+        callback(root2288); return subs__;
         return subs__;
       }, function(node) {
-        var oldNodes = nodes1463;
-        nodes1463 = node.contents();
-        oldNodes.replaceWith(nodes1463);
+        var oldNodes = nodes1807;
+        nodes1807 = node.contents();
+        oldNodes.replaceWith(nodes1807);
       }));
-      callback(root1913); return subs__;
+      callback(root2287); return subs__;
       
       return subs__;
     }, function(node) {
-      var oldNodes = nodes1462;
-      nodes1462 = node.contents();
-      oldNodes.replaceWith(nodes1462);
+      var oldNodes = nodes1806;
+      nodes1806 = node.contents();
+      oldNodes.replaceWith(nodes1806);
     }));
     var result__ = function(event, callback) {
                      if(event && event.stopPropagation) event.stopPropagation();
                      nrichRPG.coreWorkout.makeQAStats("S6", function(result__) {
-                       var tmp1388 = result__;
+                       var tmp1752 = result__;
                        var result__ = mobl.alert("Product Moment Q added");
                        if(callback && callback.apply) callback(); return;
                      });
                    };
-    var tmp1308 = mobl.ref(result__);
+    var tmp1673 = mobl.ref(result__);
     
-    var nodes1464 = $("<span>");
-    root1904.append(nodes1464);
-    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1308, mobl.ref(null), mobl.ref(false), function(_, callback) {
-      var root1915 = $("<span>");
+    var nodes1808 = $("<span>");
+    root2278.append(nodes1808);
+    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1673, mobl.ref(null), mobl.ref(false), function(_, callback) {
+      var root2289 = $("<span>");
       var subs__ = new mobl.CompSubscription();
-      var nodes1465 = $("<span>");
-      root1915.append(nodes1465);
+      var nodes1809 = $("<span>");
+      root2289.append(nodes1809);
       subs__.addSub((mobl.label)(mobl.ref("+Product Moments"), mobl.ref(null), mobl.ref(null), function(_, callback) {
-        var root1916 = $("<span>");
+        var root2290 = $("<span>");
         var subs__ = new mobl.CompSubscription();
-        callback(root1916); return subs__;
+        callback(root2290); return subs__;
         return subs__;
       }, function(node) {
-        var oldNodes = nodes1465;
-        nodes1465 = node.contents();
-        oldNodes.replaceWith(nodes1465);
+        var oldNodes = nodes1809;
+        nodes1809 = node.contents();
+        oldNodes.replaceWith(nodes1809);
       }));
-      callback(root1915); return subs__;
+      callback(root2289); return subs__;
       
       return subs__;
     }, function(node) {
-      var oldNodes = nodes1464;
-      nodes1464 = node.contents();
-      oldNodes.replaceWith(nodes1464);
+      var oldNodes = nodes1808;
+      nodes1808 = node.contents();
+      oldNodes.replaceWith(nodes1808);
     }));
-    callback(root1904); return subs__;
+    callback(root2278); return subs__;
     
     
     
@@ -2716,11 +2716,11 @@ nrichRPG.coreWorkout.addQAStats = function(elements, callback) {
     
     return subs__;
   }, function(node) {
-    var oldNodes = nodes1453;
-    nodes1453 = node.contents();
-    oldNodes.replaceWith(nodes1453);
+    var oldNodes = nodes1797;
+    nodes1797 = node.contents();
+    oldNodes.replaceWith(nodes1797);
   }));
-  callback(root1903); return subs__;
+  callback(root2277); return subs__;
   
   return subs__;
 };
@@ -2735,85 +2735,85 @@ nrichRPG.coreWorkout.panelHeaderContainerStyle = 'nrichRPG__coreWorkout__panelHe
 nrichRPG.coreWorkout.panelHeaderTextStyle = 'nrichRPG__coreWorkout__panelHeaderTextStyle';
 
 nrichRPG.coreWorkout.panelHeader = function(text, onclick, elements, callback) {
-  var root1917 = $("<span>");
+  var root2291 = $("<span>");
   var subs__ = new mobl.CompSubscription();
   
-  var node695 = $("<div>");
+  var node721 = $("<div>");
   
-  var ref689 = mobl.ref(nrichRPG.coreWorkout.panelHeaderStyle);
-  if(ref689.get() !== null) {
-    node695.attr('class', ref689.get());
-    subs__.addSub(ref689.addEventListener('change', function(_, ref, val) {
-      node695.attr('class', val);
+  var ref699 = mobl.ref(nrichRPG.coreWorkout.panelHeaderStyle);
+  if(ref699.get() !== null) {
+    node721.attr('class', ref699.get());
+    subs__.addSub(ref699.addEventListener('change', function(_, ref, val) {
+      node721.attr('class', val);
     }));
     
   }
-  subs__.addSub(ref689.rebind());
+  subs__.addSub(ref699.rebind());
   
-  var val351 = onclick.get();
-  if(val351 !== null) {
-    subs__.addSub(mobl.domBind(node695, 'tap', val351));
+  var val353 = onclick.get();
+  if(val353 !== null) {
+    subs__.addSub(mobl.domBind(node721, 'tap', val353));
   }
   
   
-  var node696 = $("<div>");
+  var node722 = $("<div>");
   
-  var ref688 = mobl.ref(nrichRPG.coreWorkout.panelHeaderContainerStyle);
-  if(ref688.get() !== null) {
-    node696.attr('class', ref688.get());
-    subs__.addSub(ref688.addEventListener('change', function(_, ref, val) {
-      node696.attr('class', val);
+  var ref698 = mobl.ref(nrichRPG.coreWorkout.panelHeaderContainerStyle);
+  if(ref698.get() !== null) {
+    node722.attr('class', ref698.get());
+    subs__.addSub(ref698.addEventListener('change', function(_, ref, val) {
+      node722.attr('class', val);
     }));
     
   }
-  subs__.addSub(ref688.rebind());
+  subs__.addSub(ref698.rebind());
   
   
-  var node697 = $("<div>");
+  var node723 = $("<div>");
   
-  var ref686 = text;
-  node697.text(""+ref686.get());
-  var ignore135 = false;
-  subs__.addSub(ref686.addEventListener('change', function(_, ref, val) {
-    if(ignore135) return;
-    node697.text(""+val);
+  var ref696 = text;
+  node723.text(""+ref696.get());
+  var ignore137 = false;
+  subs__.addSub(ref696.addEventListener('change', function(_, ref, val) {
+    if(ignore137) return;
+    node723.text(""+val);
   }));
-  subs__.addSub(ref686.rebind());
+  subs__.addSub(ref696.rebind());
   
   
-  var ref687 = mobl.ref(nrichRPG.coreWorkout.panelHeaderTextStyle);
-  if(ref687.get() !== null) {
-    node697.attr('class', ref687.get());
-    subs__.addSub(ref687.addEventListener('change', function(_, ref, val) {
-      node697.attr('class', val);
+  var ref697 = mobl.ref(nrichRPG.coreWorkout.panelHeaderTextStyle);
+  if(ref697.get() !== null) {
+    node723.attr('class', ref697.get());
+    subs__.addSub(ref697.addEventListener('change', function(_, ref, val) {
+      node723.attr('class', val);
     }));
     
   }
-  subs__.addSub(ref687.rebind());
+  subs__.addSub(ref697.rebind());
   
-  node696.append(node697);
-  node695.append(node696);
-  var nodes1466 = $("<span>");
-  node695.append(nodes1466);
+  node722.append(node723);
+  node721.append(node722);
+  var nodes1810 = $("<span>");
+  node721.append(nodes1810);
   subs__.addSub(mobl.ref(elements).addEventListener('change', function() {
-    renderControl281();
+    renderControl283();
   }));
   
-  function renderControl281() {
+  function renderControl283() {
     subs__.addSub((elements)(function(elements, callback) {
-      var root1918 = $("<span>");
+      var root2292 = $("<span>");
       var subs__ = new mobl.CompSubscription();
-      callback(root1918); return subs__;
+      callback(root2292); return subs__;
       return subs__;
     }, function(node) {
-      var oldNodes = nodes1466;
-      nodes1466 = node.contents();
-      oldNodes.replaceWith(nodes1466);
+      var oldNodes = nodes1810;
+      nodes1810 = node.contents();
+      oldNodes.replaceWith(nodes1810);
     }));
   }
-  renderControl281();
-  root1917.append(node695);
-  callback(root1917); return subs__;
+  renderControl283();
+  root2291.append(node721);
+  callback(root2291); return subs__;
   
   
   
@@ -2823,9 +2823,9 @@ nrichRPG.coreWorkout.panelHeader = function(text, onclick, elements, callback) {
 nrichRPG.coreWorkout.renderQA = function(qa, callback) {
   var __this = this;
   mobl.sleep(100, function(result__) {
-    var tmp1394 = result__;
+    var tmp1758 = result__;
     mathJAX.renderMaths(function(result__) {
-      var tmp1395 = result__;
+      var tmp1759 = result__;
       var result__ = qa.done && qa.answer == "%GRAPH%";
       if(result__) {
         var result__ = mobl.JSON.parse(qa.plotData);
@@ -2849,140 +2849,140 @@ nrichRPG.coreWorkout.renderQA = function(qa, callback) {
 
 
 nrichRPG.coreWorkout.answerBlock = function(qa, elements, callback) {
-  var root1919 = $("<span>");
+  var root2293 = $("<span>");
   var subs__ = new mobl.CompSubscription();
   
-  var node698 = $("<span>");
-  root1919.append(node698);
-  var condSubs169 = new mobl.CompSubscription();
-  subs__.addSub(condSubs169);
-  var oldValue169;
-  var renderCond169 = function() {
-    var value1169 = qa.get().correct;
-    if(oldValue169 === value1169) return;
-    oldValue169 = value1169;
-    var subs__ = condSubs169;
+  var node724 = $("<span>");
+  root2293.append(node724);
+  var condSubs179 = new mobl.CompSubscription();
+  subs__.addSub(condSubs179);
+  var oldValue179;
+  var renderCond179 = function() {
+    var value1179 = qa.get().correct;
+    if(oldValue179 === value1179) return;
+    oldValue179 = value1179;
+    var subs__ = condSubs179;
     subs__.unsubscribe();
-    node698.empty();
-    if(value1169) {
-      var nodes1467 = $("<span>");
-      node698.append(nodes1467);
+    node724.empty();
+    if(value1179) {
+      var nodes1811 = $("<span>");
+      node724.append(nodes1811);
       subs__.addSub((mobl.block)(mobl.ref(nrichRPG.coreWorkout.agreeStyle), mobl.ref(null), mobl.ref(null), mobl.ref(null), function(_, callback) {
-        var root1920 = $("<span>");
+        var root2294 = $("<span>");
         var subs__ = new mobl.CompSubscription();
         var result__ = qa.get().answer != "%GRAPH%";
-        var tmp1312 = mobl.ref(result__);
+        var tmp1677 = mobl.ref(result__);
         subs__.addSub(mobl.ref(qa, 'answer').addEventListener('change', function() {
-          tmp1312.set(qa.get().answer != "%GRAPH%");
+          tmp1677.set(qa.get().answer != "%GRAPH%");
         }));
         
         
-        var node699 = $("<span>");
-        root1920.append(node699);
-        var condSubs170 = new mobl.CompSubscription();
-        subs__.addSub(condSubs170);
-        var oldValue170;
-        var renderCond170 = function() {
-          var value1170 = tmp1312.get();
-          if(oldValue170 === value1170) return;
-          oldValue170 = value1170;
-          var subs__ = condSubs170;
+        var node725 = $("<span>");
+        root2294.append(node725);
+        var condSubs180 = new mobl.CompSubscription();
+        subs__.addSub(condSubs180);
+        var oldValue180;
+        var renderCond180 = function() {
+          var value1180 = tmp1677.get();
+          if(oldValue180 === value1180) return;
+          oldValue180 = value1180;
+          var subs__ = condSubs180;
           subs__.unsubscribe();
-          node699.empty();
-          if(value1170) {
+          node725.empty();
+          if(value1180) {
             var result__ = "A" + qa.get().number + ". ";
-            var tmp1309 = mobl.ref(result__);
+            var tmp1674 = mobl.ref(result__);
             subs__.addSub(mobl.ref(qa, 'number').addEventListener('change', function() {
-              tmp1309.set("A" + qa.get().number + ". ");
+              tmp1674.set("A" + qa.get().number + ". ");
             }));
             
-            var nodes1468 = $("<span>");
-            node699.append(nodes1468);
-            subs__.addSub((mobl.label)(tmp1309, mobl.ref(null), mobl.ref(null), function(_, callback) {
-              var root1921 = $("<span>");
+            var nodes1812 = $("<span>");
+            node725.append(nodes1812);
+            subs__.addSub((mobl.label)(tmp1674, mobl.ref(null), mobl.ref(null), function(_, callback) {
+              var root2295 = $("<span>");
               var subs__ = new mobl.CompSubscription();
-              callback(root1921); return subs__;
+              callback(root2295); return subs__;
               return subs__;
             }, function(node) {
-              var oldNodes = nodes1468;
-              nodes1468 = node.contents();
-              oldNodes.replaceWith(nodes1468);
+              var oldNodes = nodes1812;
+              nodes1812 = node.contents();
+              oldNodes.replaceWith(nodes1812);
             }));
-            var nodes1469 = $("<span>");
-            node699.append(nodes1469);
+            var nodes1813 = $("<span>");
+            node725.append(nodes1813);
             subs__.addSub((mobl.html)(mobl.ref(qa, 'answer'), function(_, callback) {
-              var root1922 = $("<span>");
+              var root2296 = $("<span>");
               var subs__ = new mobl.CompSubscription();
-              callback(root1922); return subs__;
+              callback(root2296); return subs__;
               return subs__;
             }, function(node) {
-              var oldNodes = nodes1469;
-              nodes1469 = node.contents();
-              oldNodes.replaceWith(nodes1469);
+              var oldNodes = nodes1813;
+              nodes1813 = node.contents();
+              oldNodes.replaceWith(nodes1813);
             }));
             
             
             
           } else {
             var result__ = "A" + qa.get().number + ". ";
-            var tmp1310 = mobl.ref(result__);
+            var tmp1675 = mobl.ref(result__);
             subs__.addSub(mobl.ref(qa, 'number').addEventListener('change', function() {
-              tmp1310.set("A" + qa.get().number + ". ");
+              tmp1675.set("A" + qa.get().number + ". ");
             }));
             
-            var nodes1470 = $("<span>");
-            node699.append(nodes1470);
-            subs__.addSub((mobl.label)(tmp1310, mobl.ref(null), mobl.ref(null), function(_, callback) {
-              var root1923 = $("<span>");
+            var nodes1814 = $("<span>");
+            node725.append(nodes1814);
+            subs__.addSub((mobl.label)(tmp1675, mobl.ref(null), mobl.ref(null), function(_, callback) {
+              var root2297 = $("<span>");
               var subs__ = new mobl.CompSubscription();
-              callback(root1923); return subs__;
+              callback(root2297); return subs__;
               return subs__;
             }, function(node) {
-              var oldNodes = nodes1470;
-              nodes1470 = node.contents();
-              oldNodes.replaceWith(nodes1470);
+              var oldNodes = nodes1814;
+              nodes1814 = node.contents();
+              oldNodes.replaceWith(nodes1814);
             }));
-            var nodes1471 = $("<span>");
-            node699.append(nodes1471);
+            var nodes1815 = $("<span>");
+            node725.append(nodes1815);
             subs__.addSub((plot.plot)(mobl.ref("corePlotArea"), mobl.ref(nrichRPG.coreWorkout.plotStyle), function(_, callback) {
-              var root1924 = $("<span>");
+              var root2298 = $("<span>");
               var subs__ = new mobl.CompSubscription();
-              callback(root1924); return subs__;
+              callback(root2298); return subs__;
               return subs__;
             }, function(node) {
-              var oldNodes = nodes1471;
-              nodes1471 = node.contents();
-              oldNodes.replaceWith(nodes1471);
+              var oldNodes = nodes1815;
+              nodes1815 = node.contents();
+              oldNodes.replaceWith(nodes1815);
             }));
             
-            var node700 = $("<span>");
-            node700.attr('style', "display:none");
+            var node726 = $("<span>");
+            node726.attr('style', "display:none");
             
             nrichRPG.coreWorkout.renderQA(qa.get(), function(result__) {
-              var tmp1397 = result__;
-              var tmp1311 = mobl.ref(result__);
+              var tmp1761 = result__;
+              var tmp1676 = mobl.ref(result__);
               subs__.addSub(qa.addEventListener('change', function() {
                 nrichRPG.coreWorkout.renderQA(qa.get(), function(result__) {
-                  var tmp1396 = result__;
-                  var result__ = tmp1396;
-                  tmp1311.set(result__);
+                  var tmp1760 = result__;
+                  var result__ = tmp1760;
+                  tmp1676.set(result__);
                   
                 });
               }));
               
-              var nodes1472 = $("<span>");
-              node700.append(nodes1472);
-              subs__.addSub((mobl.html)(tmp1311, function(_, callback) {
-                var root1925 = $("<span>");
+              var nodes1816 = $("<span>");
+              node726.append(nodes1816);
+              subs__.addSub((mobl.html)(tmp1676, function(_, callback) {
+                var root2299 = $("<span>");
                 var subs__ = new mobl.CompSubscription();
-                callback(root1925); return subs__;
+                callback(root2299); return subs__;
                 return subs__;
               }, function(node) {
-                var oldNodes = nodes1472;
-                nodes1472 = node.contents();
-                oldNodes.replaceWith(nodes1472);
+                var oldNodes = nodes1816;
+                nodes1816 = node.contents();
+                oldNodes.replaceWith(nodes1816);
               }));
-              node699.append(node700);
+              node725.append(node726);
               
               
             });
@@ -2991,140 +2991,140 @@ nrichRPG.coreWorkout.answerBlock = function(qa, elements, callback) {
             
           }
         };
-        renderCond170();
-        subs__.addSub(tmp1312.addEventListener('change', function() {
-          renderCond170();
+        renderCond180();
+        subs__.addSub(tmp1677.addEventListener('change', function() {
+          renderCond180();
         }));
         
-        callback(root1920); return subs__;
+        callback(root2294); return subs__;
         
         return subs__;
       }, function(node) {
-        var oldNodes = nodes1467;
-        nodes1467 = node.contents();
-        oldNodes.replaceWith(nodes1467);
+        var oldNodes = nodes1811;
+        nodes1811 = node.contents();
+        oldNodes.replaceWith(nodes1811);
       }));
       
       
     } else {
-      var nodes1473 = $("<span>");
-      node698.append(nodes1473);
+      var nodes1817 = $("<span>");
+      node724.append(nodes1817);
       subs__.addSub((mobl.block)(mobl.ref(nrichRPG.coreWorkout.disagreeStyle), mobl.ref(null), mobl.ref(null), mobl.ref(null), function(_, callback) {
-        var root1926 = $("<span>");
+        var root2300 = $("<span>");
         var subs__ = new mobl.CompSubscription();
         var result__ = qa.get().answer != "%GRAPH%";
-        var tmp1316 = mobl.ref(result__);
+        var tmp1681 = mobl.ref(result__);
         subs__.addSub(mobl.ref(qa, 'answer').addEventListener('change', function() {
-          tmp1316.set(qa.get().answer != "%GRAPH%");
+          tmp1681.set(qa.get().answer != "%GRAPH%");
         }));
         
         
-        var node701 = $("<span>");
-        root1926.append(node701);
-        var condSubs171 = new mobl.CompSubscription();
-        subs__.addSub(condSubs171);
-        var oldValue171;
-        var renderCond171 = function() {
-          var value1171 = tmp1316.get();
-          if(oldValue171 === value1171) return;
-          oldValue171 = value1171;
-          var subs__ = condSubs171;
+        var node727 = $("<span>");
+        root2300.append(node727);
+        var condSubs181 = new mobl.CompSubscription();
+        subs__.addSub(condSubs181);
+        var oldValue181;
+        var renderCond181 = function() {
+          var value1181 = tmp1681.get();
+          if(oldValue181 === value1181) return;
+          oldValue181 = value1181;
+          var subs__ = condSubs181;
           subs__.unsubscribe();
-          node701.empty();
-          if(value1171) {
+          node727.empty();
+          if(value1181) {
             var result__ = "A" + qa.get().number + ". ";
-            var tmp1313 = mobl.ref(result__);
+            var tmp1678 = mobl.ref(result__);
             subs__.addSub(mobl.ref(qa, 'number').addEventListener('change', function() {
-              tmp1313.set("A" + qa.get().number + ". ");
+              tmp1678.set("A" + qa.get().number + ". ");
             }));
             
-            var nodes1474 = $("<span>");
-            node701.append(nodes1474);
-            subs__.addSub((mobl.label)(tmp1313, mobl.ref(null), mobl.ref(null), function(_, callback) {
-              var root1927 = $("<span>");
+            var nodes1818 = $("<span>");
+            node727.append(nodes1818);
+            subs__.addSub((mobl.label)(tmp1678, mobl.ref(null), mobl.ref(null), function(_, callback) {
+              var root2301 = $("<span>");
               var subs__ = new mobl.CompSubscription();
-              callback(root1927); return subs__;
+              callback(root2301); return subs__;
               return subs__;
             }, function(node) {
-              var oldNodes = nodes1474;
-              nodes1474 = node.contents();
-              oldNodes.replaceWith(nodes1474);
+              var oldNodes = nodes1818;
+              nodes1818 = node.contents();
+              oldNodes.replaceWith(nodes1818);
             }));
-            var nodes1475 = $("<span>");
-            node701.append(nodes1475);
+            var nodes1819 = $("<span>");
+            node727.append(nodes1819);
             subs__.addSub((mobl.html)(mobl.ref(qa, 'answer'), function(_, callback) {
-              var root1928 = $("<span>");
+              var root2302 = $("<span>");
               var subs__ = new mobl.CompSubscription();
-              callback(root1928); return subs__;
+              callback(root2302); return subs__;
               return subs__;
             }, function(node) {
-              var oldNodes = nodes1475;
-              nodes1475 = node.contents();
-              oldNodes.replaceWith(nodes1475);
+              var oldNodes = nodes1819;
+              nodes1819 = node.contents();
+              oldNodes.replaceWith(nodes1819);
             }));
             
             
             
           } else {
             var result__ = "A" + qa.get().number + ". ";
-            var tmp1314 = mobl.ref(result__);
+            var tmp1679 = mobl.ref(result__);
             subs__.addSub(mobl.ref(qa, 'number').addEventListener('change', function() {
-              tmp1314.set("A" + qa.get().number + ". ");
+              tmp1679.set("A" + qa.get().number + ". ");
             }));
             
-            var nodes1476 = $("<span>");
-            node701.append(nodes1476);
-            subs__.addSub((mobl.label)(tmp1314, mobl.ref(null), mobl.ref(null), function(_, callback) {
-              var root1929 = $("<span>");
+            var nodes1820 = $("<span>");
+            node727.append(nodes1820);
+            subs__.addSub((mobl.label)(tmp1679, mobl.ref(null), mobl.ref(null), function(_, callback) {
+              var root2303 = $("<span>");
               var subs__ = new mobl.CompSubscription();
-              callback(root1929); return subs__;
+              callback(root2303); return subs__;
               return subs__;
             }, function(node) {
-              var oldNodes = nodes1476;
-              nodes1476 = node.contents();
-              oldNodes.replaceWith(nodes1476);
+              var oldNodes = nodes1820;
+              nodes1820 = node.contents();
+              oldNodes.replaceWith(nodes1820);
             }));
-            var nodes1477 = $("<span>");
-            node701.append(nodes1477);
+            var nodes1821 = $("<span>");
+            node727.append(nodes1821);
             subs__.addSub((plot.plot)(mobl.ref("corePlotArea"), mobl.ref(nrichRPG.coreWorkout.plotStyle), function(_, callback) {
-              var root1930 = $("<span>");
+              var root2304 = $("<span>");
               var subs__ = new mobl.CompSubscription();
-              callback(root1930); return subs__;
+              callback(root2304); return subs__;
               return subs__;
             }, function(node) {
-              var oldNodes = nodes1477;
-              nodes1477 = node.contents();
-              oldNodes.replaceWith(nodes1477);
+              var oldNodes = nodes1821;
+              nodes1821 = node.contents();
+              oldNodes.replaceWith(nodes1821);
             }));
             
-            var node702 = $("<span>");
-            node702.attr('style', "display:none");
+            var node728 = $("<span>");
+            node728.attr('style', "display:none");
             
             nrichRPG.coreWorkout.renderQA(qa.get(), function(result__) {
-              var tmp1399 = result__;
-              var tmp1315 = mobl.ref(result__);
+              var tmp1763 = result__;
+              var tmp1680 = mobl.ref(result__);
               subs__.addSub(qa.addEventListener('change', function() {
                 nrichRPG.coreWorkout.renderQA(qa.get(), function(result__) {
-                  var tmp1398 = result__;
-                  var result__ = tmp1398;
-                  tmp1315.set(result__);
+                  var tmp1762 = result__;
+                  var result__ = tmp1762;
+                  tmp1680.set(result__);
                   
                 });
               }));
               
-              var nodes1478 = $("<span>");
-              node702.append(nodes1478);
-              subs__.addSub((mobl.html)(tmp1315, function(_, callback) {
-                var root1931 = $("<span>");
+              var nodes1822 = $("<span>");
+              node728.append(nodes1822);
+              subs__.addSub((mobl.html)(tmp1680, function(_, callback) {
+                var root2305 = $("<span>");
                 var subs__ = new mobl.CompSubscription();
-                callback(root1931); return subs__;
+                callback(root2305); return subs__;
                 return subs__;
               }, function(node) {
-                var oldNodes = nodes1478;
-                nodes1478 = node.contents();
-                oldNodes.replaceWith(nodes1478);
+                var oldNodes = nodes1822;
+                nodes1822 = node.contents();
+                oldNodes.replaceWith(nodes1822);
               }));
-              node701.append(node702);
+              node727.append(node728);
               
               
             });
@@ -3133,73 +3133,73 @@ nrichRPG.coreWorkout.answerBlock = function(qa, elements, callback) {
             
           }
         };
-        renderCond171();
-        subs__.addSub(tmp1316.addEventListener('change', function() {
-          renderCond171();
+        renderCond181();
+        subs__.addSub(tmp1681.addEventListener('change', function() {
+          renderCond181();
         }));
         
-        callback(root1926); return subs__;
+        callback(root2300); return subs__;
         
         return subs__;
       }, function(node) {
-        var oldNodes = nodes1473;
-        nodes1473 = node.contents();
-        oldNodes.replaceWith(nodes1473);
+        var oldNodes = nodes1817;
+        nodes1817 = node.contents();
+        oldNodes.replaceWith(nodes1817);
       }));
       
       
     }
   };
-  renderCond169();
+  renderCond179();
   subs__.addSub(mobl.ref(qa, 'correct').addEventListener('change', function() {
-    renderCond169();
+    renderCond179();
   }));
   
-  var nodes1479 = $("<span>");
-  root1919.append(nodes1479);
+  var nodes1823 = $("<span>");
+  root2293.append(nodes1823);
   subs__.addSub((mobl.block)(mobl.ref(nrichRPG.coreWorkout.answerStyle), mobl.ref(null), mobl.ref(null), mobl.ref(null), function(_, callback) {
-    var root1932 = $("<span>");
+    var root2306 = $("<span>");
     var subs__ = new mobl.CompSubscription();
     
-    var node703 = $("<span>");
-    node703.attr('style', "display:none");
+    var node729 = $("<span>");
+    node729.attr('style', "display:none");
     
     nrichRPG.coreWorkout.renderQA(qa.get(), function(result__) {
-      var tmp1401 = result__;
-      var tmp1317 = mobl.ref(result__);
+      var tmp1765 = result__;
+      var tmp1682 = mobl.ref(result__);
       subs__.addSub(qa.addEventListener('change', function() {
         nrichRPG.coreWorkout.renderQA(qa.get(), function(result__) {
-          var tmp1400 = result__;
-          var result__ = tmp1400;
-          tmp1317.set(result__);
+          var tmp1764 = result__;
+          var result__ = tmp1764;
+          tmp1682.set(result__);
           
         });
       }));
       
-      var nodes1483 = $("<span>");
-      node703.append(nodes1483);
-      subs__.addSub((mobl.html)(tmp1317, function(_, callback) {
-        var root1936 = $("<span>");
+      var nodes1827 = $("<span>");
+      node729.append(nodes1827);
+      subs__.addSub((mobl.html)(tmp1682, function(_, callback) {
+        var root2310 = $("<span>");
         var subs__ = new mobl.CompSubscription();
-        callback(root1936); return subs__;
+        callback(root2310); return subs__;
         return subs__;
       }, function(node) {
-        var oldNodes = nodes1483;
-        nodes1483 = node.contents();
-        oldNodes.replaceWith(nodes1483);
+        var oldNodes = nodes1827;
+        nodes1827 = node.contents();
+        oldNodes.replaceWith(nodes1827);
       }));
-      root1932.append(node703);
-      var nodes1480 = $("<span>");
-      root1932.append(nodes1480);
+      root2306.append(node729);
+      var nodes1824 = $("<span>");
+      root2306.append(nodes1824);
       subs__.addSub((mobl.label)(mobl.ref("Did you agree?"), mobl.ref(null), mobl.ref(null), function(_, callback) {
-        var root1933 = $("<span>");
+        var root2307 = $("<span>");
         var subs__ = new mobl.CompSubscription();
-        callback(root1933); return subs__;
+        callback(root2307); return subs__;
         return subs__;
       }, function(node) {
-        var oldNodes = nodes1480;
-        nodes1480 = node.contents();
-        oldNodes.replaceWith(nodes1480);
+        var oldNodes = nodes1824;
+        nodes1824 = node.contents();
+        oldNodes.replaceWith(nodes1824);
       }));
       var result__ = function(event, callback) {
                        if(event && event.stopPropagation) event.stopPropagation();
@@ -3207,19 +3207,19 @@ nrichRPG.coreWorkout.answerBlock = function(qa, elements, callback) {
                        qa.get().correct = result__;
                        if(callback && callback.apply) callback(); return;
                      };
-      var tmp1318 = mobl.ref(result__);
+      var tmp1683 = mobl.ref(result__);
       
-      var nodes1481 = $("<span>");
-      root1932.append(nodes1481);
-      subs__.addSub((ui.sideButton)(mobl.ref("Yes"), mobl.ref(ui.sideButtonStyle), mobl.ref(ui.sideButtonPushedStyle), tmp1318, function(_, callback) {
-        var root1934 = $("<span>");
+      var nodes1825 = $("<span>");
+      root2306.append(nodes1825);
+      subs__.addSub((ui.sideButton)(mobl.ref("Yes"), mobl.ref(ui.sideButtonStyle), mobl.ref(ui.sideButtonPushedStyle), tmp1683, function(_, callback) {
+        var root2308 = $("<span>");
         var subs__ = new mobl.CompSubscription();
-        callback(root1934); return subs__;
+        callback(root2308); return subs__;
         return subs__;
       }, function(node) {
-        var oldNodes = nodes1481;
-        nodes1481 = node.contents();
-        oldNodes.replaceWith(nodes1481);
+        var oldNodes = nodes1825;
+        nodes1825 = node.contents();
+        oldNodes.replaceWith(nodes1825);
       }));
       var result__ = function(event, callback) {
                        if(event && event.stopPropagation) event.stopPropagation();
@@ -3227,21 +3227,21 @@ nrichRPG.coreWorkout.answerBlock = function(qa, elements, callback) {
                        qa.get().correct = result__;
                        if(callback && callback.apply) callback(); return;
                      };
-      var tmp1319 = mobl.ref(result__);
+      var tmp1684 = mobl.ref(result__);
       
-      var nodes1482 = $("<span>");
-      root1932.append(nodes1482);
-      subs__.addSub((ui.sideButton)(mobl.ref("No"), mobl.ref(ui.sideButtonStyle), mobl.ref(ui.sideButtonPushedStyle), tmp1319, function(_, callback) {
-        var root1935 = $("<span>");
+      var nodes1826 = $("<span>");
+      root2306.append(nodes1826);
+      subs__.addSub((ui.sideButton)(mobl.ref("No"), mobl.ref(ui.sideButtonStyle), mobl.ref(ui.sideButtonPushedStyle), tmp1684, function(_, callback) {
+        var root2309 = $("<span>");
         var subs__ = new mobl.CompSubscription();
-        callback(root1935); return subs__;
+        callback(root2309); return subs__;
         return subs__;
       }, function(node) {
-        var oldNodes = nodes1482;
-        nodes1482 = node.contents();
-        oldNodes.replaceWith(nodes1482);
+        var oldNodes = nodes1826;
+        nodes1826 = node.contents();
+        oldNodes.replaceWith(nodes1826);
       }));
-      callback(root1932); return subs__;
+      callback(root2306); return subs__;
       
       
       
@@ -3250,11 +3250,11 @@ nrichRPG.coreWorkout.answerBlock = function(qa, elements, callback) {
     
     return subs__;
   }, function(node) {
-    var oldNodes = nodes1479;
-    nodes1479 = node.contents();
-    oldNodes.replaceWith(nodes1479);
+    var oldNodes = nodes1823;
+    nodes1823 = node.contents();
+    oldNodes.replaceWith(nodes1823);
   }));
-  callback(root1919); return subs__;
+  callback(root2293); return subs__;
   
   
   return subs__;
@@ -3264,14 +3264,14 @@ nrichRPG.coreWorkout.nextQA = function(qa, callback) {
   var result__ = qa.number;
   var n = result__;
   (nrichRPG.questionAnswer.QA.all().filter("number", ">", qa.number)).one(function(result__) {
-    var tmp1402 = result__;
-    var result__ = tmp1402;
+    var tmp1766 = result__;
+    var result__ = tmp1766;
     var qa2 = result__;
     var result__ = qa2 == null;
     if(result__) {
       nrichRPG.questionAnswer.QA.all().one(function(result__) {
-        var tmp1403 = result__;
-        var result__ = tmp1403;
+        var tmp1767 = result__;
+        var result__ = tmp1767;
         if(callback && callback.apply) callback(result__);
         return;
         var result__ = qa2;
@@ -3292,371 +3292,301 @@ nrichRPG.coreWorkout.nextQA = function(qa, callback) {
 
 
 nrichRPG.coreWorkout.qaItem = function(qa, number, elements, callback) {
-  var root1937 = $("<span>");
+  var root2311 = $("<span>");
   var subs__ = new mobl.CompSubscription();
   
-  var node704 = $("<span>");
+  var node730 = $("<span>");
   
-  var ref690 = mobl.ref("color:" + (qa.get().done ? (qa.get().correct ? "#480" : "#C00") : "#000") + "\"");
-  if(ref690.get() !== null) {
-    node704.attr('style', ref690.get());
-    subs__.addSub(ref690.addEventListener('change', function(_, ref, val) {
-      node704.attr('style', val);
+  var ref700 = mobl.ref("color:" + (qa.get().done ? (qa.get().correct ? "#480" : "#C00") : "#000") + "\"");
+  if(ref700.get() !== null) {
+    node730.attr('style', ref700.get());
+    subs__.addSub(ref700.addEventListener('change', function(_, ref, val) {
+      node730.attr('style', val);
     }));
     subs__.addSub(mobl.ref(qa, 'done').addEventListener('change', function() {
-      node704.attr('style', "color:" + (qa.get().done ? (qa.get().correct ? "#480" : "#C00") : "#000") + "\"");
+      node730.attr('style', "color:" + (qa.get().done ? (qa.get().correct ? "#480" : "#C00") : "#000") + "\"");
     }));
     subs__.addSub(mobl.ref(qa, 'correct').addEventListener('change', function() {
-      node704.attr('style', "color:" + (qa.get().done ? (qa.get().correct ? "#480" : "#C00") : "#000") + "\"");
+      node730.attr('style', "color:" + (qa.get().done ? (qa.get().correct ? "#480" : "#C00") : "#000") + "\"");
     }));
     
   }
-  subs__.addSub(ref690.rebind());
+  subs__.addSub(ref700.rebind());
   
   var result__ = "Q" + number.get() + ". " + qa.get().topic;
-  var tmp1320 = mobl.ref(result__);
+  var tmp1685 = mobl.ref(result__);
   subs__.addSub(number.addEventListener('change', function() {
-    tmp1320.set("Q" + number.get() + ". " + qa.get().topic);
+    tmp1685.set("Q" + number.get() + ". " + qa.get().topic);
   }));
   subs__.addSub(mobl.ref(qa, 'topic').addEventListener('change', function() {
-    tmp1320.set("Q" + number.get() + ". " + qa.get().topic);
+    tmp1685.set("Q" + number.get() + ". " + qa.get().topic);
   }));
   
-  var nodes1484 = $("<span>");
-  node704.append(nodes1484);
-  subs__.addSub((mobl.html)(tmp1320, function(_, callback) {
-    var root1938 = $("<span>");
+  var nodes1828 = $("<span>");
+  node730.append(nodes1828);
+  subs__.addSub((mobl.html)(tmp1685, function(_, callback) {
+    var root2312 = $("<span>");
     var subs__ = new mobl.CompSubscription();
-    callback(root1938); return subs__;
+    callback(root2312); return subs__;
     return subs__;
   }, function(node) {
-    var oldNodes = nodes1484;
-    nodes1484 = node.contents();
-    oldNodes.replaceWith(nodes1484);
+    var oldNodes = nodes1828;
+    nodes1828 = node.contents();
+    oldNodes.replaceWith(nodes1828);
   }));
-  root1937.append(node704);
-  callback(root1937); return subs__;
+  root2311.append(node730);
+  callback(root2311); return subs__;
   
   
   return subs__;
 };
 
 nrichRPG.coreWorkout.showQA = function(qa, elements, callback) {
-  var root1939 = $("<span>");
+  var root2313 = $("<span>");
   var subs__ = new mobl.CompSubscription();
-  nrichRPG.questionAnswer.QA.all().count(function(result__) {
-    var tmp1415 = result__;
-    var result__ = tmp1415 > 0;
-    var tmp1414 = result__;
-    var result__ = qa.get() && tmp1414;
-    var tmp1413 = result__;
-    var tmp1329 = mobl.ref(result__);
-    subs__.addSub(qa.addEventListener('change', function() {
-      nrichRPG.questionAnswer.QA.all().count(function(result__) {
-        var tmp1406 = result__;
-        var result__ = tmp1406 > 0;
-        var tmp1405 = result__;
-        var result__ = qa.get() && tmp1405;
-        var tmp1404 = result__;
-        var result__ = tmp1404;
-        tmp1329.set(result__);
-        
-      });
-    }));
-    subs__.addSub(mobl.ref(nrichRPG.questionAnswer.QA.all()).addEventListener('change', function() {
-      nrichRPG.questionAnswer.QA.all().count(function(result__) {
-        var tmp1409 = result__;
-        var result__ = tmp1409 > 0;
-        var tmp1408 = result__;
-        var result__ = qa.get() && tmp1408;
-        var tmp1407 = result__;
-        var result__ = tmp1407;
-        tmp1329.set(result__);
-        
-      });
-    }));
-    subs__.addSub(mobl.ref(nrichRPG.questionAnswer.QA).addEventListener('change', function() {
-      nrichRPG.questionAnswer.QA.all().count(function(result__) {
-        var tmp1412 = result__;
-        var result__ = tmp1412 > 0;
-        var tmp1411 = result__;
-        var result__ = qa.get() && tmp1411;
-        var tmp1410 = result__;
-        var result__ = tmp1410;
-        tmp1329.set(result__);
-        
-      });
-    }));
+  var result__ = function(event, callback) {
+                   if(event && event.stopPropagation) event.stopPropagation();
+                   mathJAX.renderMaths(function(result__) {
+                     var tmp1775 = result__;
+                     if(callback && callback.apply) callback(); return;
+                   });
+                 };
+  var tmp1688 = mobl.ref(result__);
+  
+  var result__ = qa.get().topic.toLowerCase();
+  var tmp1687 = mobl.ref(result__);
+  subs__.addSub(mobl.ref(qa, 'topic').addEventListener('change', function() {
+    tmp1687.set(qa.get().topic.toLowerCase());
+  }));
+  
+  var nodes1829 = $("<span>");
+  root2313.append(nodes1829);
+  subs__.addSub((nrichRPG.coreWorkout.panelHeader)(tmp1687, tmp1688, function(_, callback) {
+    var root2314 = $("<span>");
+    var subs__ = new mobl.CompSubscription();
+    var result__ = function(event, callback) {
+                     if(event && event.stopPropagation) event.stopPropagation();
+                     nrichRPG.coreWorkout.nextQA(qa.get(), function(result__) {
+                       var tmp1768 = result__;
+                       var result__ = tmp1768;
+                       var qa2 = result__;
+                       var result__ = mobl.remove(qa.get());
+                       var result__ = qa2;
+                       qa.set(result__);
+                       nrichRPG.coreWorkout.renderQA(qa.get(), function(result__) {
+                         var tmp1769 = result__;
+                         if(callback && callback.apply) callback(); return;
+                       });
+                     });
+                   };
+    var tmp1686 = mobl.ref(result__);
     
+    var nodes1830 = $("<span>");
+    root2314.append(nodes1830);
+    subs__.addSub((ui.sideButton)(mobl.ref("Del"), mobl.ref(ui.sideButtonStyle), mobl.ref(ui.sideButtonPushedStyle), tmp1686, function(_, callback) {
+      var root2315 = $("<span>");
+      var subs__ = new mobl.CompSubscription();
+      callback(root2315); return subs__;
+      return subs__;
+    }, function(node) {
+      var oldNodes = nodes1830;
+      nodes1830 = node.contents();
+      oldNodes.replaceWith(nodes1830);
+    }));
+    callback(root2314); return subs__;
     
-    var node705 = $("<span>");
-    root1939.append(node705);
-    var condSubs172 = new mobl.CompSubscription();
-    subs__.addSub(condSubs172);
-    var oldValue172;
-    var renderCond172 = function() {
-      var value1172 = tmp1329.get();
-      if(oldValue172 === value1172) return;
-      oldValue172 = value1172;
-      var subs__ = condSubs172;
-      subs__.unsubscribe();
-      node705.empty();
-      if(value1172) {
+    return subs__;
+  }, function(node) {
+    var oldNodes = nodes1829;
+    nodes1829 = node.contents();
+    oldNodes.replaceWith(nodes1829);
+  }));
+  var nodes1831 = $("<span>");
+  root2313.append(nodes1831);
+  subs__.addSub((ui.group)(function(_, callback) {
+    var root2316 = $("<span>");
+    var subs__ = new mobl.CompSubscription();
+    var result__ = function(event, callback) {
+                     if(event && event.stopPropagation) event.stopPropagation();
+                     mathJAX.renderMaths(function(result__) {
+                       var tmp1774 = result__;
+                       if(callback && callback.apply) callback(); return;
+                     });
+                   };
+    var tmp1691 = mobl.ref(result__);
+    
+    var nodes1832 = $("<span>");
+    root2316.append(nodes1832);
+    subs__.addSub((ui.item)(mobl.ref(nrichRPG.coreWorkout.questionStyle), mobl.ref(ui.itemPushedStyle), tmp1691, mobl.ref(null), mobl.ref(true), function(_, callback) {
+      var root2317 = $("<span>");
+      var subs__ = new mobl.CompSubscription();
+      var result__ = "Q" + qa.get().number + ". " + qa.get().question;
+      var tmp1689 = mobl.ref(result__);
+      subs__.addSub(mobl.ref(qa, 'number').addEventListener('change', function() {
+        tmp1689.set("Q" + qa.get().number + ". " + qa.get().question);
+      }));
+      subs__.addSub(mobl.ref(qa, 'question').addEventListener('change', function() {
+        tmp1689.set("Q" + qa.get().number + ". " + qa.get().question);
+      }));
+      
+      var nodes1833 = $("<span>");
+      root2317.append(nodes1833);
+      subs__.addSub((mobl.html)(tmp1689, function(_, callback) {
+        var root2318 = $("<span>");
+        var subs__ = new mobl.CompSubscription();
+        callback(root2318); return subs__;
+        return subs__;
+      }, function(node) {
+        var oldNodes = nodes1833;
+        nodes1833 = node.contents();
+        oldNodes.replaceWith(nodes1833);
+      }));
+      
+      var node731 = $("<span>");
+      node731.attr('style', "display:none");
+      
+      nrichRPG.coreWorkout.renderQA(qa.get(), function(result__) {
+        var tmp1771 = result__;
+        var tmp1690 = mobl.ref(result__);
+        subs__.addSub(qa.addEventListener('change', function() {
+          nrichRPG.coreWorkout.renderQA(qa.get(), function(result__) {
+            var tmp1770 = result__;
+            var result__ = tmp1770;
+            tmp1690.set(result__);
+            
+          });
+        }));
+        
+        var nodes1834 = $("<span>");
+        node731.append(nodes1834);
+        subs__.addSub((mobl.html)(tmp1690, function(_, callback) {
+          var root2319 = $("<span>");
+          var subs__ = new mobl.CompSubscription();
+          callback(root2319); return subs__;
+          return subs__;
+        }, function(node) {
+          var oldNodes = nodes1834;
+          nodes1834 = node.contents();
+          oldNodes.replaceWith(nodes1834);
+        }));
+        root2317.append(node731);
+        callback(root2317); return subs__;
+        
+      });
+      
+      
+      return subs__;
+    }, function(node) {
+      var oldNodes = nodes1832;
+      nodes1832 = node.contents();
+      oldNodes.replaceWith(nodes1832);
+    }));
+    var result__ = function(event, callback) {
+                     if(event && event.stopPropagation) event.stopPropagation();
+                     mathJAX.renderMaths(function(result__) {
+                       var tmp1773 = result__;
+                       if(callback && callback.apply) callback(); return;
+                     });
+                   };
+    var tmp1693 = mobl.ref(result__);
+    
+    var nodes1835 = $("<span>");
+    root2316.append(nodes1835);
+    subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1693, mobl.ref(null), mobl.ref(true), function(_, callback) {
+      var root2320 = $("<span>");
+      var subs__ = new mobl.CompSubscription();
+      var nodes1836 = $("<span>");
+      root2320.append(nodes1836);
+      subs__.addSub((mobl.block)(mobl.ref(nrichRPG.coreWorkout.answerStyle), mobl.ref(null), mobl.ref(null), mobl.ref(null), function(_, callback) {
+        var root2321 = $("<span>");
+        var subs__ = new mobl.CompSubscription();
         var result__ = function(event, callback) {
                          if(event && event.stopPropagation) event.stopPropagation();
-                         mathJAX.renderMaths(function(result__) {
-                           var tmp1423 = result__;
+                         nrichRPG.coreWorkout.renderQA(qa.get(), function(result__) {
+                           var tmp1772 = result__;
                            if(callback && callback.apply) callback(); return;
                          });
                        };
-        var tmp1323 = mobl.ref(result__);
+        var tmp1692 = mobl.ref(result__);
         
-        var result__ = qa.get().topic.toLowerCase();
-        var tmp1322 = mobl.ref(result__);
-        subs__.addSub(mobl.ref(qa, 'topic').addEventListener('change', function() {
-          tmp1322.set(qa.get().topic.toLowerCase());
-        }));
-        
-        var nodes1485 = $("<span>");
-        node705.append(nodes1485);
-        subs__.addSub((nrichRPG.coreWorkout.panelHeader)(tmp1322, tmp1323, function(_, callback) {
-          var root1940 = $("<span>");
+        var nodes1837 = $("<span>");
+        root2321.append(nodes1837);
+        subs__.addSub((ui.checkBox)(mobl.ref(qa, 'done'), mobl.ref("Check answer"), tmp1692, function(_, callback) {
+          var root2322 = $("<span>");
           var subs__ = new mobl.CompSubscription();
-          var result__ = function(event, callback) {
-                           if(event && event.stopPropagation) event.stopPropagation();
-                           nrichRPG.coreWorkout.nextQA(qa.get(), function(result__) {
-                             var tmp1416 = result__;
-                             var result__ = tmp1416;
-                             var qa2 = result__;
-                             var result__ = mobl.remove(qa.get());
-                             var result__ = qa2;
-                             qa.set(result__);
-                             nrichRPG.coreWorkout.renderQA(qa.get(), function(result__) {
-                               var tmp1417 = result__;
-                               if(callback && callback.apply) callback(); return;
-                             });
-                           });
-                         };
-          var tmp1321 = mobl.ref(result__);
-          
-          var nodes1486 = $("<span>");
-          root1940.append(nodes1486);
-          subs__.addSub((ui.sideButton)(mobl.ref("Del"), mobl.ref(ui.sideButtonStyle), mobl.ref(ui.sideButtonPushedStyle), tmp1321, function(_, callback) {
-            var root1941 = $("<span>");
-            var subs__ = new mobl.CompSubscription();
-            callback(root1941); return subs__;
-            return subs__;
-          }, function(node) {
-            var oldNodes = nodes1486;
-            nodes1486 = node.contents();
-            oldNodes.replaceWith(nodes1486);
-          }));
-          callback(root1940); return subs__;
-          
+          callback(root2322); return subs__;
           return subs__;
         }, function(node) {
-          var oldNodes = nodes1485;
-          nodes1485 = node.contents();
-          oldNodes.replaceWith(nodes1485);
+          var oldNodes = nodes1837;
+          nodes1837 = node.contents();
+          oldNodes.replaceWith(nodes1837);
         }));
-        var nodes1487 = $("<span>");
-        node705.append(nodes1487);
-        subs__.addSub((ui.group)(function(_, callback) {
-          var root1942 = $("<span>");
-          var subs__ = new mobl.CompSubscription();
-          var result__ = function(event, callback) {
-                           if(event && event.stopPropagation) event.stopPropagation();
-                           mathJAX.renderMaths(function(result__) {
-                             var tmp1422 = result__;
-                             if(callback && callback.apply) callback(); return;
-                           });
-                         };
-          var tmp1326 = mobl.ref(result__);
-          
-          var nodes1488 = $("<span>");
-          root1942.append(nodes1488);
-          subs__.addSub((ui.item)(mobl.ref(nrichRPG.coreWorkout.questionStyle), mobl.ref(ui.itemPushedStyle), tmp1326, mobl.ref(null), mobl.ref(true), function(_, callback) {
-            var root1943 = $("<span>");
+        callback(root2321); return subs__;
+        
+        return subs__;
+      }, function(node) {
+        var oldNodes = nodes1836;
+        nodes1836 = node.contents();
+        oldNodes.replaceWith(nodes1836);
+      }));
+      
+      var node732 = $("<span>");
+      root2320.append(node732);
+      var condSubs182 = new mobl.CompSubscription();
+      subs__.addSub(condSubs182);
+      var oldValue182;
+      var renderCond182 = function() {
+        var value1182 = qa.get().done;
+        if(oldValue182 === value1182) return;
+        oldValue182 = value1182;
+        var subs__ = condSubs182;
+        subs__.unsubscribe();
+        node732.empty();
+        if(value1182) {
+          var nodes1838 = $("<span>");
+          node732.append(nodes1838);
+          subs__.addSub((nrichRPG.coreWorkout.answerBlock)(qa, function(_, callback) {
+            var root2323 = $("<span>");
             var subs__ = new mobl.CompSubscription();
-            var result__ = "Q" + qa.get().number + ". " + qa.get().question;
-            var tmp1324 = mobl.ref(result__);
-            subs__.addSub(mobl.ref(qa, 'number').addEventListener('change', function() {
-              tmp1324.set("Q" + qa.get().number + ". " + qa.get().question);
-            }));
-            subs__.addSub(mobl.ref(qa, 'question').addEventListener('change', function() {
-              tmp1324.set("Q" + qa.get().number + ". " + qa.get().question);
-            }));
-            
-            var nodes1489 = $("<span>");
-            root1943.append(nodes1489);
-            subs__.addSub((mobl.html)(tmp1324, function(_, callback) {
-              var root1944 = $("<span>");
-              var subs__ = new mobl.CompSubscription();
-              callback(root1944); return subs__;
-              return subs__;
-            }, function(node) {
-              var oldNodes = nodes1489;
-              nodes1489 = node.contents();
-              oldNodes.replaceWith(nodes1489);
-            }));
-            
-            var node706 = $("<span>");
-            node706.attr('style', "display:none");
-            
-            nrichRPG.coreWorkout.renderQA(qa.get(), function(result__) {
-              var tmp1419 = result__;
-              var tmp1325 = mobl.ref(result__);
-              subs__.addSub(qa.addEventListener('change', function() {
-                nrichRPG.coreWorkout.renderQA(qa.get(), function(result__) {
-                  var tmp1418 = result__;
-                  var result__ = tmp1418;
-                  tmp1325.set(result__);
-                  
-                });
-              }));
-              
-              var nodes1490 = $("<span>");
-              node706.append(nodes1490);
-              subs__.addSub((mobl.html)(tmp1325, function(_, callback) {
-                var root1945 = $("<span>");
-                var subs__ = new mobl.CompSubscription();
-                callback(root1945); return subs__;
-                return subs__;
-              }, function(node) {
-                var oldNodes = nodes1490;
-                nodes1490 = node.contents();
-                oldNodes.replaceWith(nodes1490);
-              }));
-              root1943.append(node706);
-              callback(root1943); return subs__;
-              
-            });
-            
-            
+            callback(root2323); return subs__;
             return subs__;
           }, function(node) {
-            var oldNodes = nodes1488;
-            nodes1488 = node.contents();
-            oldNodes.replaceWith(nodes1488);
+            var oldNodes = nodes1838;
+            nodes1838 = node.contents();
+            oldNodes.replaceWith(nodes1838);
           }));
-          var result__ = function(event, callback) {
-                           if(event && event.stopPropagation) event.stopPropagation();
-                           mathJAX.renderMaths(function(result__) {
-                             var tmp1421 = result__;
-                             if(callback && callback.apply) callback(); return;
-                           });
-                         };
-          var tmp1328 = mobl.ref(result__);
-          
-          var nodes1491 = $("<span>");
-          root1942.append(nodes1491);
-          subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp1328, mobl.ref(null), mobl.ref(true), function(_, callback) {
-            var root1946 = $("<span>");
-            var subs__ = new mobl.CompSubscription();
-            var nodes1492 = $("<span>");
-            root1946.append(nodes1492);
-            subs__.addSub((mobl.block)(mobl.ref(nrichRPG.coreWorkout.answerStyle), mobl.ref(null), mobl.ref(null), mobl.ref(null), function(_, callback) {
-              var root1947 = $("<span>");
-              var subs__ = new mobl.CompSubscription();
-              var result__ = function(event, callback) {
-                               if(event && event.stopPropagation) event.stopPropagation();
-                               nrichRPG.coreWorkout.renderQA(qa.get(), function(result__) {
-                                 var tmp1420 = result__;
-                                 if(callback && callback.apply) callback(); return;
-                               });
-                             };
-              var tmp1327 = mobl.ref(result__);
-              
-              var nodes1493 = $("<span>");
-              root1947.append(nodes1493);
-              subs__.addSub((ui.checkBox)(mobl.ref(qa, 'done'), mobl.ref("Check answer"), tmp1327, function(_, callback) {
-                var root1948 = $("<span>");
-                var subs__ = new mobl.CompSubscription();
-                callback(root1948); return subs__;
-                return subs__;
-              }, function(node) {
-                var oldNodes = nodes1493;
-                nodes1493 = node.contents();
-                oldNodes.replaceWith(nodes1493);
-              }));
-              callback(root1947); return subs__;
-              
-              return subs__;
-            }, function(node) {
-              var oldNodes = nodes1492;
-              nodes1492 = node.contents();
-              oldNodes.replaceWith(nodes1492);
-            }));
-            
-            var node707 = $("<span>");
-            root1946.append(node707);
-            var condSubs173 = new mobl.CompSubscription();
-            subs__.addSub(condSubs173);
-            var oldValue173;
-            var renderCond173 = function() {
-              var value1173 = qa.get().done;
-              if(oldValue173 === value1173) return;
-              oldValue173 = value1173;
-              var subs__ = condSubs173;
-              subs__.unsubscribe();
-              node707.empty();
-              if(value1173) {
-                var nodes1494 = $("<span>");
-                node707.append(nodes1494);
-                subs__.addSub((nrichRPG.coreWorkout.answerBlock)(qa, function(_, callback) {
-                  var root1949 = $("<span>");
-                  var subs__ = new mobl.CompSubscription();
-                  callback(root1949); return subs__;
-                  return subs__;
-                }, function(node) {
-                  var oldNodes = nodes1494;
-                  nodes1494 = node.contents();
-                  oldNodes.replaceWith(nodes1494);
-                }));
-                
-                
-              } else {
-                
-              }
-            };
-            renderCond173();
-            subs__.addSub(mobl.ref(qa, 'done').addEventListener('change', function() {
-              renderCond173();
-            }));
-            
-            callback(root1946); return subs__;
-            
-            
-            return subs__;
-          }, function(node) {
-            var oldNodes = nodes1491;
-            nodes1491 = node.contents();
-            oldNodes.replaceWith(nodes1491);
-          }));
-          callback(root1942); return subs__;
           
           
-          return subs__;
-        }, function(node) {
-          var oldNodes = nodes1487;
-          nodes1487 = node.contents();
-          oldNodes.replaceWith(nodes1487);
-        }));
-        
-        
-        
-      } else {
-        
-      }
-    };
-    renderCond172();
-    subs__.addSub(tmp1329.addEventListener('change', function() {
-      renderCond172();
+        } else {
+          
+        }
+      };
+      renderCond182();
+      subs__.addSub(mobl.ref(qa, 'done').addEventListener('change', function() {
+        renderCond182();
+      }));
+      
+      callback(root2320); return subs__;
+      
+      
+      return subs__;
+    }, function(node) {
+      var oldNodes = nodes1835;
+      nodes1835 = node.contents();
+      oldNodes.replaceWith(nodes1835);
     }));
+    callback(root2316); return subs__;
     
-    callback(root1939); return subs__;
     
-  });
+    return subs__;
+  }, function(node) {
+    var oldNodes = nodes1831;
+    nodes1831 = node.contents();
+    oldNodes.replaceWith(nodes1831);
+  }));
+  callback(root2313); return subs__;
+  
+  
   return subs__;
 };
 nrichRPG.coreWorkout.max = mobl.ref(0);
@@ -3667,18 +3597,18 @@ nrichRPG.coreWorkout.makeQA = function(n, callback) {
   var result__ = nrichRPG.questionAnswer.QA.all();
   var qas = result__;
   var result__ = qas;
-  qas.list(function(coll1567) {
-    coll1567 = coll1567.reverse();
-    function processOne67() {
+  qas.list(function(coll1579) {
+    coll1579 = coll1579.reverse();
+    function processOne79() {
       var item;
-      item = coll1567.pop();
+      item = coll1579.pop();
       var result__ = mobl.Math.max(nrichRPG.coreWorkout.max.get(), item.number);
       nrichRPG.coreWorkout.max.set(result__);
       
-      if(coll1567.length > 0) processOne67(); else rest67();
+      if(coll1579.length > 0) processOne79(); else rest79();
       
     }
-    function rest67() {
+    function rest79() {
       var result__ = nrichRPG.coreWorkout.max.get() + 1;
       qa.number = result__;
       var result__ = nrichRPG.coreWorkout.makeProblem(n);
@@ -3706,7 +3636,7 @@ nrichRPG.coreWorkout.makeQA = function(n, callback) {
         }
       }
     }
-    if(coll1567.length > 0) processOne67(); else rest67();
+    if(coll1579.length > 0) processOne79(); else rest79();
   });
   
 };
@@ -3718,18 +3648,18 @@ nrichRPG.coreWorkout.makeQAStar = function(s, callback) {
   var result__ = nrichRPG.questionAnswer.QA.all();
   var qas = result__;
   var result__ = qas;
-  qas.list(function(coll1568) {
-    coll1568 = coll1568.reverse();
-    function processOne68() {
+  qas.list(function(coll1580) {
+    coll1580 = coll1580.reverse();
+    function processOne80() {
       var item;
-      item = coll1568.pop();
+      item = coll1580.pop();
       var result__ = mobl.Math.max(nrichRPG.coreWorkout.max.get(), item.number);
       nrichRPG.coreWorkout.max.set(result__);
       
-      if(coll1568.length > 0) processOne68(); else rest68();
+      if(coll1580.length > 0) processOne80(); else rest80();
       
     }
-    function rest68() {
+    function rest80() {
       var result__ = nrichRPG.coreWorkout.max.get() + 1;
       qa.number = result__;
       var result__ = nrichRPG.coreWorkout.makeFurther(s);
@@ -3757,7 +3687,7 @@ nrichRPG.coreWorkout.makeQAStar = function(s, callback) {
         }
       }
     }
-    if(coll1568.length > 0) processOne68(); else rest68();
+    if(coll1580.length > 0) processOne80(); else rest80();
   });
   
 };
@@ -3769,18 +3699,18 @@ nrichRPG.coreWorkout.makeQAStats = function(s, callback) {
   var result__ = nrichRPG.questionAnswer.QA.all();
   var qas = result__;
   var result__ = qas;
-  qas.list(function(coll1569) {
-    coll1569 = coll1569.reverse();
-    function processOne69() {
+  qas.list(function(coll1581) {
+    coll1581 = coll1581.reverse();
+    function processOne81() {
       var item;
-      item = coll1569.pop();
+      item = coll1581.pop();
       var result__ = mobl.Math.max(nrichRPG.coreWorkout.max.get(), item.number);
       nrichRPG.coreWorkout.max.set(result__);
       
-      if(coll1569.length > 0) processOne69(); else rest69();
+      if(coll1581.length > 0) processOne81(); else rest81();
       
     }
-    function rest69() {
+    function rest81() {
       var result__ = nrichRPG.coreWorkout.max.get() + 1;
       qa.number = result__;
       var result__ = nrichRPG.coreWorkout.makeFurther(s);
@@ -3808,7 +3738,7 @@ nrichRPG.coreWorkout.makeQAStats = function(s, callback) {
         }
       }
     }
-    if(coll1569.length > 0) processOne69(); else rest69();
+    if(coll1581.length > 0) processOne81(); else rest81();
   });
   
 };

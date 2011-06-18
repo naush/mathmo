@@ -13,8 +13,8 @@ function indexOf(it : Dynamic, items : Collection<Dynamic>) : Num {
 	return -1;
 }
 
-control mMasterDetail(items : Collection<?>, masterItem : Control2<Dynamic, Num>, detail : Control1<Dynamic>) {
-  var current : Dynamic = items.one()
+control mMasterDetail(current : Dynamic, items : Collection<?>, masterItem : Control2<Dynamic, Num>, detail : Control1<Dynamic>) {
+  // var current : Dynamic = items.one()
   <div width="100%">
     <div style="float:left; width:33%; position:relative; border-right: solid 1px #cccccc;">
       group {

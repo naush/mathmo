@@ -43,9 +43,7 @@ function updateCounts():void
 
 function clearAllQ():void
 {
-  foreach (qa in QA.all()) {
-    remove(qa);
-  }
+	QA.all().destroyAll();
 }
 
 function randomQ(n:Num, topicId:Num):void

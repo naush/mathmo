@@ -41,11 +41,6 @@ function updateCounts():void
 	log("qCount = " + qCount + " tickCount = " + tickCount);
 }
 
-function clearAllQ():void
-{
-	QA.all().destroyAll();
-}
-
 function randomQ(n:Num, topicId:Num):void
 {
 	foreach(i in range(0,n)) {

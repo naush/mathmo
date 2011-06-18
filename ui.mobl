@@ -39,7 +39,11 @@ control mMasterDetail(items : Collection<?>, masterItem : Control2<Dynamic, Num>
       }
     </div>
     <div style="float:left; width:66.5%; position:relative; margin-left: 0.5%;">
+<<<<<<< HEAD
       when(current && visible) {
+=======
+      when(current && items.count() > 0) {
+>>>>>>> ce8fc3b... more specific condition for rendering detail
         detail(current)
       } else {
         <div style="padding:20px">

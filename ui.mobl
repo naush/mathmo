@@ -1,6 +1,7 @@
 module ui
 
 mixin mobl::ui::generic
+import nrichRPG::questionAnswer
 
 function indexOf(it : Dynamic, items : Collection<Dynamic>) : Num {
 	var counter : Num = 1;
@@ -32,7 +33,7 @@ control mMasterDetail(items : Collection<?>, masterItem : Control2<Dynamic, Num>
       }
     </div>
     <div style="float:left; width:66.5%; position:relative; margin-left: 0.5%;">
-      when(current && items) {
+      when(QA.all().count()) {
         detail(current)
       } else {
         <div style="padding:20px">

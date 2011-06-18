@@ -6,92 +6,92 @@ mobl.provides('ui');
 ui.loadingStyle = 'ui__loadingStyle';
 
 ui.whenLoaded = function(value, style, loadingMessage, elements, callback) {
-  var root5603 = $("<span>");
+  var root5805 = $("<span>");
   var subs__ = new mobl.CompSubscription();
   
-  var node1906 = $("<span>");
-  root5603.append(node1906);
-  var condSubs470 = new mobl.CompSubscription();
-  subs__.addSub(condSubs470);
-  var oldValue470;
-  var renderCond470 = function() {
-    var value2302 = value.get();
-    if(oldValue470 === value2302) return;
-    oldValue470 = value2302;
-    var subs__ = condSubs470;
+  var node2019 = $("<span>");
+  root5805.append(node2019);
+  var condSubs497 = new mobl.CompSubscription();
+  subs__.addSub(condSubs497);
+  var oldValue497;
+  var renderCond497 = function() {
+    var value2401 = value.get();
+    if(oldValue497 === value2401) return;
+    oldValue497 = value2401;
+    var subs__ = condSubs497;
     subs__.unsubscribe();
-    node1906.empty();
-    if(value2302) {
-      var nodes4345 = $("<span>");
-      node1906.append(nodes4345);
+    node2019.empty();
+    if(value2401) {
+      var nodes4481 = $("<span>");
+      node2019.append(nodes4481);
       subs__.addSub(mobl.ref(elements).addEventListener('change', function() {
-        renderControl750();
+        renderControl796();
       }));
       
-      function renderControl750() {
+      function renderControl796() {
         subs__.addSub((elements)(function(elements, callback) {
-          var root5604 = $("<span>");
+          var root5806 = $("<span>");
           var subs__ = new mobl.CompSubscription();
-          callback(root5604); return subs__;
+          callback(root5806); return subs__;
           return subs__;
         }, function(node) {
-          var oldNodes = nodes4345;
-          nodes4345 = node.contents();
-          oldNodes.replaceWith(nodes4345);
+          var oldNodes = nodes4481;
+          nodes4481 = node.contents();
+          oldNodes.replaceWith(nodes4481);
         }));
       }
-      renderControl750();
+      renderControl796();
       
       
     } else {
-      var nodes4346 = $("<span>");
-      node1906.append(nodes4346);
+      var nodes4482 = $("<span>");
+      node2019.append(nodes4482);
       subs__.addSub((mobl.block)(style, mobl.ref(null), mobl.ref(null), mobl.ref(null), function(_, callback) {
-        var root5605 = $("<span>");
+        var root5807 = $("<span>");
         var subs__ = new mobl.CompSubscription();
-        var nodes4347 = $("<span>");
-        root5605.append(nodes4347);
+        var nodes4483 = $("<span>");
+        root5807.append(nodes4483);
         subs__.addSub((mobl.label)(loadingMessage, mobl.ref(null), mobl.ref(null), function(_, callback) {
-          var root5606 = $("<span>");
+          var root5808 = $("<span>");
           var subs__ = new mobl.CompSubscription();
-          callback(root5606); return subs__;
+          callback(root5808); return subs__;
           return subs__;
         }, function(node) {
-          var oldNodes = nodes4347;
-          nodes4347 = node.contents();
-          oldNodes.replaceWith(nodes4347);
+          var oldNodes = nodes4483;
+          nodes4483 = node.contents();
+          oldNodes.replaceWith(nodes4483);
         }));
-        var nodes4348 = $("<span>");
-        root5605.append(nodes4348);
+        var nodes4484 = $("<span>");
+        root5807.append(nodes4484);
         subs__.addSub((ui.image)(mobl.ref("data:image/gif;base64,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"), mobl.ref(null), mobl.ref(null), mobl.ref(null), mobl.ref(null), mobl.ref("middle"), mobl.ref(null), function(_, callback) {
-          var root5607 = $("<span>");
+          var root5809 = $("<span>");
           var subs__ = new mobl.CompSubscription();
-          callback(root5607); return subs__;
+          callback(root5809); return subs__;
           return subs__;
         }, function(node) {
-          var oldNodes = nodes4348;
-          nodes4348 = node.contents();
-          oldNodes.replaceWith(nodes4348);
+          var oldNodes = nodes4484;
+          nodes4484 = node.contents();
+          oldNodes.replaceWith(nodes4484);
         }));
-        callback(root5605); return subs__;
+        callback(root5807); return subs__;
         
         
         return subs__;
       }, function(node) {
-        var oldNodes = nodes4346;
-        nodes4346 = node.contents();
-        oldNodes.replaceWith(nodes4346);
+        var oldNodes = nodes4482;
+        nodes4482 = node.contents();
+        oldNodes.replaceWith(nodes4482);
       }));
       
       
     }
   };
-  renderCond470();
+  renderCond497();
   subs__.addSub(value.addEventListener('change', function() {
-    renderCond470();
+    renderCond497();
   }));
   
-  callback(root5603); return subs__;
+  callback(root5805); return subs__;
   
   return subs__;
 };
@@ -100,129 +100,129 @@ ui.headerContainerStyle = 'ui__headerContainerStyle';
 ui.headerTextStyle = 'ui__headerTextStyle';
 
 ui.header = function(text, fixedPosition, onclick, elements, callback) {
-  var root5608 = $("<span>");
+  var root5810 = $("<span>");
   var subs__ = new mobl.CompSubscription();
   
-  var node1907 = $("<div>");
+  var node2020 = $("<div>");
   
-  var ref1853 = mobl.ref(ui.headerStyle);
-  if(ref1853.get() !== null) {
-    node1907.attr('class', ref1853.get());
-    subs__.addSub(ref1853.addEventListener('change', function(_, ref, val) {
-      node1907.attr('class', val);
+  var ref1965 = mobl.ref(ui.headerStyle);
+  if(ref1965.get() !== null) {
+    node2020.attr('class', ref1965.get());
+    subs__.addSub(ref1965.addEventListener('change', function(_, ref, val) {
+      node2020.attr('class', val);
     }));
     
   }
-  subs__.addSub(ref1853.rebind());
+  subs__.addSub(ref1965.rebind());
   
-  var val940 = onclick.get();
-  if(val940 !== null) {
-    subs__.addSub(mobl.domBind(node1907, 'tap', val940));
+  var val998 = onclick.get();
+  if(val998 !== null) {
+    subs__.addSub(mobl.domBind(node2020, 'tap', val998));
   }
   
-  var ref1854 = mobl.ref(fixedPosition.get() ? "position:fixed;" : null);
-  if(ref1854.get() !== null) {
-    node1907.attr('style', ref1854.get());
-    subs__.addSub(ref1854.addEventListener('change', function(_, ref, val) {
-      node1907.attr('style', val);
+  var ref1966 = mobl.ref(fixedPosition.get() ? "position:fixed;" : null);
+  if(ref1966.get() !== null) {
+    node2020.attr('style', ref1966.get());
+    subs__.addSub(ref1966.addEventListener('change', function(_, ref, val) {
+      node2020.attr('style', val);
     }));
     subs__.addSub(fixedPosition.addEventListener('change', function() {
-      node1907.attr('style', fixedPosition.get() ? "position:fixed;" : null);
+      node2020.attr('style', fixedPosition.get() ? "position:fixed;" : null);
     }));
     
   }
-  subs__.addSub(ref1854.rebind());
+  subs__.addSub(ref1966.rebind());
   
   
-  var node1910 = $("<div>");
+  var node2023 = $("<div>");
   
-  var ref1852 = mobl.ref(ui.headerContainerStyle);
-  if(ref1852.get() !== null) {
-    node1910.attr('class', ref1852.get());
-    subs__.addSub(ref1852.addEventListener('change', function(_, ref, val) {
-      node1910.attr('class', val);
+  var ref1964 = mobl.ref(ui.headerContainerStyle);
+  if(ref1964.get() !== null) {
+    node2023.attr('class', ref1964.get());
+    subs__.addSub(ref1964.addEventListener('change', function(_, ref, val) {
+      node2023.attr('class', val);
     }));
     
   }
-  subs__.addSub(ref1852.rebind());
+  subs__.addSub(ref1964.rebind());
   
   
-  var node1911 = $("<div>");
+  var node2024 = $("<div>");
   
-  var ref1850 = text;
-  node1911.text(""+ref1850.get());
-  var ignore364 = false;
-  subs__.addSub(ref1850.addEventListener('change', function(_, ref, val) {
-    if(ignore364) return;
-    node1911.text(""+val);
+  var ref1962 = text;
+  node2024.text(""+ref1962.get());
+  var ignore386 = false;
+  subs__.addSub(ref1962.addEventListener('change', function(_, ref, val) {
+    if(ignore386) return;
+    node2024.text(""+val);
   }));
-  subs__.addSub(ref1850.rebind());
+  subs__.addSub(ref1962.rebind());
   
   
-  var ref1851 = mobl.ref(ui.headerTextStyle);
-  if(ref1851.get() !== null) {
-    node1911.attr('class', ref1851.get());
-    subs__.addSub(ref1851.addEventListener('change', function(_, ref, val) {
-      node1911.attr('class', val);
+  var ref1963 = mobl.ref(ui.headerTextStyle);
+  if(ref1963.get() !== null) {
+    node2024.attr('class', ref1963.get());
+    subs__.addSub(ref1963.addEventListener('change', function(_, ref, val) {
+      node2024.attr('class', val);
     }));
     
   }
-  subs__.addSub(ref1851.rebind());
+  subs__.addSub(ref1963.rebind());
   
-  node1910.append(node1911);
-  node1907.append(node1910);
-  var nodes4349 = $("<span>");
-  node1907.append(nodes4349);
+  node2023.append(node2024);
+  node2020.append(node2023);
+  var nodes4485 = $("<span>");
+  node2020.append(nodes4485);
   subs__.addSub(mobl.ref(elements).addEventListener('change', function() {
-    renderControl751();
+    renderControl797();
   }));
   
-  function renderControl751() {
+  function renderControl797() {
     subs__.addSub((elements)(function(elements, callback) {
-      var root5609 = $("<span>");
+      var root5811 = $("<span>");
       var subs__ = new mobl.CompSubscription();
-      callback(root5609); return subs__;
+      callback(root5811); return subs__;
       return subs__;
     }, function(node) {
-      var oldNodes = nodes4349;
-      nodes4349 = node.contents();
-      oldNodes.replaceWith(nodes4349);
+      var oldNodes = nodes4485;
+      nodes4485 = node.contents();
+      oldNodes.replaceWith(nodes4485);
     }));
   }
-  renderControl751();
-  root5608.append(node1907);
+  renderControl797();
+  root5810.append(node2020);
   
-  var node1908 = $("<span>");
-  root5608.append(node1908);
-  var condSubs471 = new mobl.CompSubscription();
-  subs__.addSub(condSubs471);
-  var oldValue471;
-  var renderCond471 = function() {
-    var value2303 = fixedPosition.get();
-    if(oldValue471 === value2303) return;
-    oldValue471 = value2303;
-    var subs__ = condSubs471;
+  var node2021 = $("<span>");
+  root5810.append(node2021);
+  var condSubs498 = new mobl.CompSubscription();
+  subs__.addSub(condSubs498);
+  var oldValue498;
+  var renderCond498 = function() {
+    var value2402 = fixedPosition.get();
+    if(oldValue498 === value2402) return;
+    oldValue498 = value2402;
+    var subs__ = condSubs498;
     subs__.unsubscribe();
-    node1908.empty();
-    if(value2303) {
+    node2021.empty();
+    if(value2402) {
       
-      var node1909 = $("<div>");
-      node1909.attr('id', "hello");
-      node1909.attr('style', "height: 2.9em;");
+      var node2022 = $("<div>");
+      node2022.attr('id', "hello");
+      node2022.attr('style', "height: 2.9em;");
       
-      node1908.append(node1909);
+      node2021.append(node2022);
       
       
     } else {
       
     }
   };
-  renderCond471();
+  renderCond498();
   subs__.addSub(fixedPosition.addEventListener('change', function() {
-    renderCond471();
+    renderCond498();
   }));
   
-  callback(root5608); return subs__;
+  callback(root5810); return subs__;
   
   
   
@@ -236,17 +236,17 @@ ui.buttonStyle = 'ui__buttonStyle';
 ui.buttonPushedStyle = 'ui__buttonPushedStyle';
 
 ui.button = function(text, style, pushedStyle, onclick, elements, callback) {
-  var root5610 = $("<span>");
+  var root5812 = $("<span>");
   var subs__ = new mobl.CompSubscription();
   
   var pushed = mobl.ref(false);
   
   var sp = $("<span>");
   
-  var ref1855 = mobl.ref(pushed.get() ? pushedStyle.get() : style.get());
-  if(ref1855.get() !== null) {
-    sp.attr('class', ref1855.get());
-    subs__.addSub(ref1855.addEventListener('change', function(_, ref, val) {
+  var ref1967 = mobl.ref(pushed.get() ? pushedStyle.get() : style.get());
+  if(ref1967.get() !== null) {
+    sp.attr('class', ref1967.get());
+    subs__.addSub(ref1967.addEventListener('change', function(_, ref, val) {
       sp.attr('class', val);
     }));
     subs__.addSub(pushed.addEventListener('change', function() {
@@ -260,20 +260,20 @@ ui.button = function(text, style, pushedStyle, onclick, elements, callback) {
     }));
     
   }
-  subs__.addSub(ref1855.rebind());
+  subs__.addSub(ref1967.rebind());
   
-  var val941 = function(event, callback) {
+  var val999 = function(event, callback) {
                 if(event && event.stopPropagation) event.stopPropagation();
                 var result__ = event.preventDefault();
                 var result__ = true;
                 pushed.set(result__);
                 if(callback && callback.apply) callback(); return;
               };
-  if(val941 !== null) {
-    subs__.addSub(mobl.domBind(sp, 'touchdown', val941));
+  if(val999 !== null) {
+    subs__.addSub(mobl.domBind(sp, 'touchdown', val999));
   }
   
-  var val942 = function(event, callback) {
+  var val1000 = function(event, callback) {
                 if(event && event.stopPropagation) event.stopPropagation();
                 var result__ = event.y < 0 || event.y > sp.outerHeight() || event.x < 0 || event.x > sp.outerWidth();
                 if(result__) {
@@ -286,32 +286,32 @@ ui.button = function(text, style, pushedStyle, onclick, elements, callback) {
                   }
                 }
               };
-  if(val942 !== null) {
-    subs__.addSub(mobl.domBind(sp, 'touchdrag', val942));
+  if(val1000 !== null) {
+    subs__.addSub(mobl.domBind(sp, 'touchdrag', val1000));
   }
   
-  var val943 = function(event, callback) {
+  var val1001 = function(event, callback) {
                 if(event && event.stopPropagation) event.stopPropagation();
                 var result__ = pushed.get();
                 if(result__) {
                   var result__ = false;
                   pushed.set(result__);
-                  function after288(result__) {
-                    var tmp4038 = result__;
+                  function after306(result__) {
+                    var tmp4163 = result__;
                     if(callback && callback.apply) callback(); return;
                   }
-                  var result__ = onclick.get()(event, after288);if(result__ !== undefined) after288(result__);
+                  var result__ = onclick.get()(event, after306);if(result__ !== undefined) after306(result__);
                 } else {
                   {
                     if(callback && callback.apply) callback(); return;
                   }
                 }
               };
-  if(val943 !== null) {
-    subs__.addSub(mobl.domBind(sp, 'touchup', val943));
+  if(val1001 !== null) {
+    subs__.addSub(mobl.domBind(sp, 'touchup', val1001));
   }
   
-  var val944 = function(event, callback) {
+  var val1002 = function(event, callback) {
                 if(event && event.stopPropagation) event.stopPropagation();
                 var result__ = pushed.get();
                 if(result__) {
@@ -324,22 +324,22 @@ ui.button = function(text, style, pushedStyle, onclick, elements, callback) {
                   }
                 }
               };
-  if(val944 !== null) {
-    subs__.addSub(mobl.domBind(sp, 'mouseout', val944));
+  if(val1002 !== null) {
+    subs__.addSub(mobl.domBind(sp, 'mouseout', val1002));
   }
   
-  var ref1856 = text;
-  sp.text(""+ref1856.get());
-  var ignore365 = false;
-  subs__.addSub(ref1856.addEventListener('change', function(_, ref, val) {
-    if(ignore365) return;
+  var ref1968 = text;
+  sp.text(""+ref1968.get());
+  var ignore387 = false;
+  subs__.addSub(ref1968.addEventListener('change', function(_, ref, val) {
+    if(ignore387) return;
     sp.text(""+val);
   }));
-  subs__.addSub(ref1856.rebind());
+  subs__.addSub(ref1968.rebind());
   
   
-  root5610.append(sp);
-  callback(root5610); return subs__;
+  root5812.append(sp);
+  callback(root5812); return subs__;
   
   return subs__;
 };
@@ -347,21 +347,21 @@ ui.sideButtonStyle = 'ui__sideButtonStyle';
 ui.sideButtonPushedStyle = 'ui__sideButtonPushedStyle';
 
 ui.sideButton = function(text, style, pushedStyle, onclick, elements, callback) {
-  var root5611 = $("<span>");
+  var root5813 = $("<span>");
   var subs__ = new mobl.CompSubscription();
-  var nodes4350 = $("<span>");
-  root5611.append(nodes4350);
+  var nodes4486 = $("<span>");
+  root5813.append(nodes4486);
   subs__.addSub((ui.button)(text, style, pushedStyle, onclick, function(_, callback) {
-    var root5612 = $("<span>");
+    var root5814 = $("<span>");
     var subs__ = new mobl.CompSubscription();
-    callback(root5612); return subs__;
+    callback(root5814); return subs__;
     return subs__;
   }, function(node) {
-    var oldNodes = nodes4350;
-    nodes4350 = node.contents();
-    oldNodes.replaceWith(nodes4350);
+    var oldNodes = nodes4486;
+    nodes4486 = node.contents();
+    oldNodes.replaceWith(nodes4486);
   }));
-  callback(root5611); return subs__;
+  callback(root5813); return subs__;
   
   return subs__;
 };
@@ -371,141 +371,141 @@ ui.backButtonStyle = 'ui__backButtonStyle';
 ui.backButtonPushedStyle = 'ui__backButtonPushedStyle';
 
 ui.backButton = function(text, style, pushedStyle, onclick, elements, callback) {
-  var root5613 = $("<span>");
+  var root5815 = $("<span>");
   var subs__ = new mobl.CompSubscription();
-  var nodes4351 = $("<span>");
-  root5613.append(nodes4351);
+  var nodes4487 = $("<span>");
+  root5815.append(nodes4487);
   subs__.addSub((ui.button)(text, style, pushedStyle, onclick, function(_, callback) {
-    var root5614 = $("<span>");
+    var root5816 = $("<span>");
     var subs__ = new mobl.CompSubscription();
-    callback(root5614); return subs__;
+    callback(root5816); return subs__;
     return subs__;
   }, function(node) {
-    var oldNodes = nodes4351;
-    nodes4351 = node.contents();
-    oldNodes.replaceWith(nodes4351);
+    var oldNodes = nodes4487;
+    nodes4487 = node.contents();
+    oldNodes.replaceWith(nodes4487);
   }));
-  callback(root5613); return subs__;
+  callback(root5815); return subs__;
   
   return subs__;
 };
 ui.groupStyle = 'ui__groupStyle';
 
 ui.group = function(elements, callback) {
-  var root5615 = $("<span>");
+  var root5817 = $("<span>");
   var subs__ = new mobl.CompSubscription();
   
-  var node1912 = $("<ul>");
+  var node2025 = $("<ul>");
   
-  var ref1857 = mobl.ref(ui.groupStyle);
-  if(ref1857.get() !== null) {
-    node1912.attr('class', ref1857.get());
-    subs__.addSub(ref1857.addEventListener('change', function(_, ref, val) {
-      node1912.attr('class', val);
+  var ref1969 = mobl.ref(ui.groupStyle);
+  if(ref1969.get() !== null) {
+    node2025.attr('class', ref1969.get());
+    subs__.addSub(ref1969.addEventListener('change', function(_, ref, val) {
+      node2025.attr('class', val);
     }));
     
   }
-  subs__.addSub(ref1857.rebind());
+  subs__.addSub(ref1969.rebind());
   
-  var nodes4352 = $("<span>");
-  node1912.append(nodes4352);
+  var nodes4488 = $("<span>");
+  node2025.append(nodes4488);
   subs__.addSub(mobl.ref(elements).addEventListener('change', function() {
-    renderControl752();
+    renderControl798();
   }));
   
-  function renderControl752() {
+  function renderControl798() {
     subs__.addSub((elements)(function(elements, callback) {
-      var root5616 = $("<span>");
+      var root5818 = $("<span>");
       var subs__ = new mobl.CompSubscription();
-      callback(root5616); return subs__;
+      callback(root5818); return subs__;
       return subs__;
     }, function(node) {
-      var oldNodes = nodes4352;
-      nodes4352 = node.contents();
-      oldNodes.replaceWith(nodes4352);
+      var oldNodes = nodes4488;
+      nodes4488 = node.contents();
+      oldNodes.replaceWith(nodes4488);
     }));
   }
-  renderControl752();
-  root5615.append(node1912);
-  callback(root5615); return subs__;
+  renderControl798();
+  root5817.append(node2025);
+  callback(root5817); return subs__;
   
   
   return subs__;
 };
 
 ui.image = function(url, width, height, onclick, style, valign, align, elements, callback) {
-  var root5617 = $("<span>");
+  var root5819 = $("<span>");
   var subs__ = new mobl.CompSubscription();
   
-  var node1913 = $("<img>");
+  var node2026 = $("<img>");
   
-  var ref1858 = url;
-  if(ref1858.get() !== null) {
-    node1913.attr('src', ref1858.get());
-    subs__.addSub(ref1858.addEventListener('change', function(_, ref, val) {
-      node1913.attr('src', val);
+  var ref1970 = url;
+  if(ref1970.get() !== null) {
+    node2026.attr('src', ref1970.get());
+    subs__.addSub(ref1970.addEventListener('change', function(_, ref, val) {
+      node2026.attr('src', val);
     }));
     
   }
-  subs__.addSub(ref1858.rebind());
+  subs__.addSub(ref1970.rebind());
   
-  var ref1859 = width;
-  if(ref1859.get() !== null) {
-    node1913.attr('width', ref1859.get());
-    subs__.addSub(ref1859.addEventListener('change', function(_, ref, val) {
-      node1913.attr('width', val);
+  var ref1971 = width;
+  if(ref1971.get() !== null) {
+    node2026.attr('width', ref1971.get());
+    subs__.addSub(ref1971.addEventListener('change', function(_, ref, val) {
+      node2026.attr('width', val);
     }));
     
   }
-  subs__.addSub(ref1859.rebind());
+  subs__.addSub(ref1971.rebind());
   
-  var ref1860 = height;
-  if(ref1860.get() !== null) {
-    node1913.attr('height', ref1860.get());
-    subs__.addSub(ref1860.addEventListener('change', function(_, ref, val) {
-      node1913.attr('height', val);
+  var ref1972 = height;
+  if(ref1972.get() !== null) {
+    node2026.attr('height', ref1972.get());
+    subs__.addSub(ref1972.addEventListener('change', function(_, ref, val) {
+      node2026.attr('height', val);
     }));
     
   }
-  subs__.addSub(ref1860.rebind());
+  subs__.addSub(ref1972.rebind());
   
-  var ref1861 = style;
-  if(ref1861.get() !== null) {
-    node1913.attr('class', ref1861.get());
-    subs__.addSub(ref1861.addEventListener('change', function(_, ref, val) {
-      node1913.attr('class', val);
+  var ref1973 = style;
+  if(ref1973.get() !== null) {
+    node2026.attr('class', ref1973.get());
+    subs__.addSub(ref1973.addEventListener('change', function(_, ref, val) {
+      node2026.attr('class', val);
     }));
     
   }
-  subs__.addSub(ref1861.rebind());
+  subs__.addSub(ref1973.rebind());
   
-  var val945 = onclick.get();
-  if(val945 !== null) {
-    subs__.addSub(mobl.domBind(node1913, 'tap', val945));
+  var val1003 = onclick.get();
+  if(val1003 !== null) {
+    subs__.addSub(mobl.domBind(node2026, 'tap', val1003));
   }
   
-  var ref1862 = valign;
-  if(ref1862.get() !== null) {
-    node1913.attr('valign', ref1862.get());
-    subs__.addSub(ref1862.addEventListener('change', function(_, ref, val) {
-      node1913.attr('valign', val);
+  var ref1974 = valign;
+  if(ref1974.get() !== null) {
+    node2026.attr('valign', ref1974.get());
+    subs__.addSub(ref1974.addEventListener('change', function(_, ref, val) {
+      node2026.attr('valign', val);
     }));
     
   }
-  subs__.addSub(ref1862.rebind());
+  subs__.addSub(ref1974.rebind());
   
-  var ref1863 = align;
-  if(ref1863.get() !== null) {
-    node1913.attr('align', ref1863.get());
-    subs__.addSub(ref1863.addEventListener('change', function(_, ref, val) {
-      node1913.attr('align', val);
+  var ref1975 = align;
+  if(ref1975.get() !== null) {
+    node2026.attr('align', ref1975.get());
+    subs__.addSub(ref1975.addEventListener('change', function(_, ref, val) {
+      node2026.attr('align', val);
     }));
     
   }
-  subs__.addSub(ref1863.rebind());
+  subs__.addSub(ref1975.rebind());
   
-  root5617.append(node1913);
-  callback(root5617); return subs__;
+  root5819.append(node2026);
+  callback(root5819); return subs__;
   
   return subs__;
 };
@@ -515,27 +515,27 @@ ui.itemArrowStyle = 'ui__itemArrowStyle';
 ui.itemDownArrowStyle = 'ui__itemDownArrowStyle';
 
 ui.item = function(style, pushedStyle, onclick, onswipe, hideArrow, elements, callback) {
-  var root5618 = $("<span>");
+  var root5820 = $("<span>");
   var subs__ = new mobl.CompSubscription();
   
   var pushed = mobl.ref(false);
   
   var el = $("<li>");
   
-  var ref1864 = mobl.ref(ui.itemStyle);
-  if(ref1864.get() !== null) {
-    el.attr('class', ref1864.get());
-    subs__.addSub(ref1864.addEventListener('change', function(_, ref, val) {
+  var ref1976 = mobl.ref(ui.itemStyle);
+  if(ref1976.get() !== null) {
+    el.attr('class', ref1976.get());
+    subs__.addSub(ref1976.addEventListener('change', function(_, ref, val) {
       el.attr('class', val);
     }));
     
   }
-  subs__.addSub(ref1864.rebind());
+  subs__.addSub(ref1976.rebind());
   
-  var ref1865 = mobl.ref(onclick.get() && hideArrow.get() == false ? mobl.mergeStyles([pushed.get() ? pushedStyle.get() : style.get(), ui.itemArrowStyle]) : (pushed.get() ? pushedStyle.get() : style.get()));
-  if(ref1865.get() !== null) {
-    el.attr('class', ref1865.get());
-    subs__.addSub(ref1865.addEventListener('change', function(_, ref, val) {
+  var ref1977 = mobl.ref(onclick.get() && hideArrow.get() == false ? mobl.mergeStyles([pushed.get() ? pushedStyle.get() : style.get(), ui.itemArrowStyle]) : (pushed.get() ? pushedStyle.get() : style.get()));
+  if(ref1977.get() !== null) {
+    el.attr('class', ref1977.get());
+    subs__.addSub(ref1977.addEventListener('change', function(_, ref, val) {
       el.attr('class', val);
     }));
     subs__.addSub(onclick.addEventListener('change', function() {
@@ -558,26 +558,26 @@ ui.item = function(style, pushedStyle, onclick, onswipe, hideArrow, elements, ca
     }));
     
   }
-  subs__.addSub(ref1865.rebind());
+  subs__.addSub(ref1977.rebind());
   
-  var val946 = onswipe.get();
-  if(val946 !== null) {
-    subs__.addSub(mobl.domBind(el, 'swipe', val946));
+  var val1004 = onswipe.get();
+  if(val1004 !== null) {
+    subs__.addSub(mobl.domBind(el, 'swipe', val1004));
   }
   
-  var val947 = onclick.get() ? function(event, callback) {
+  var val1005 = onclick.get() ? function(event, callback) {
                                          if(event && event.stopPropagation) event.stopPropagation();
                                          var result__ = true;
                                          pushed.set(result__);
                                          mobl.sleep(100, function(result__) {
-                                           var tmp4039 = result__;
-                                           function after289(result__) {
-                                             var tmp4040 = result__;
+                                           var tmp4164 = result__;
+                                           function after307(result__) {
+                                             var tmp4165 = result__;
                                              
                                            }
-                                           var result__ = onclick.get()(event, after289);if(result__ !== undefined) after289(result__);
+                                           var result__ = onclick.get()(event, after307);if(result__ !== undefined) after307(result__);
                                            mobl.sleep(200, function(result__) {
-                                             var tmp4041 = result__;
+                                             var tmp4166 = result__;
                                              var result__ = false;
                                              pushed.set(result__);
                                              if(callback && callback.apply) callback(); return;
@@ -585,104 +585,104 @@ ui.item = function(style, pushedStyle, onclick, onswipe, hideArrow, elements, ca
                                            
                                          });
                                        } : null;
-  if(val947 !== null) {
-    subs__.addSub(mobl.domBind(el, 'tap', val947));
+  if(val1005 !== null) {
+    subs__.addSub(mobl.domBind(el, 'tap', val1005));
   }
   
-  var nodes4353 = $("<span>");
-  el.append(nodes4353);
+  var nodes4489 = $("<span>");
+  el.append(nodes4489);
   subs__.addSub(mobl.ref(elements).addEventListener('change', function() {
-    renderControl753();
+    renderControl799();
   }));
   
-  function renderControl753() {
+  function renderControl799() {
     subs__.addSub((elements)(function(elements, callback) {
-      var root5619 = $("<span>");
+      var root5821 = $("<span>");
       var subs__ = new mobl.CompSubscription();
-      callback(root5619); return subs__;
+      callback(root5821); return subs__;
       return subs__;
     }, function(node) {
-      var oldNodes = nodes4353;
-      nodes4353 = node.contents();
-      oldNodes.replaceWith(nodes4353);
+      var oldNodes = nodes4489;
+      nodes4489 = node.contents();
+      oldNodes.replaceWith(nodes4489);
     }));
   }
-  renderControl753();
-  root5618.append(el);
-  callback(root5618); return subs__;
+  renderControl799();
+  root5820.append(el);
+  callback(root5820); return subs__;
   
   
   return subs__;
 };
 
 ui.checkBox = function(b, label, onchange, elements, callback) {
-  var root5620 = $("<span>");
+  var root5822 = $("<span>");
   var subs__ = new mobl.CompSubscription();
   
-  var node1914 = $("<input>");
-  node1914.attr('type', "checkbox");
+  var node2027 = $("<input>");
+  node2027.attr('type', "checkbox");
   
-  var ref1867 = b;
-  node1914.attr('checked', !!ref1867.get());
-  subs__.addSub(ref1867.addEventListener('change', function(_, ref, val) {
-    if(ref === ref1867) node1914.attr('checked', !!val);
+  var ref1979 = b;
+  node2027.attr('checked', !!ref1979.get());
+  subs__.addSub(ref1979.addEventListener('change', function(_, ref, val) {
+    if(ref === ref1979) node2027.attr('checked', !!val);
   }));
-  subs__.addSub(mobl.domBind(node1914, 'change', function() {
-    b.set(!!node1914.attr('checked'));
+  subs__.addSub(mobl.domBind(node2027, 'change', function() {
+    b.set(!!node2027.attr('checked'));
   }));
   
-  var val949 = function(event, callback) {
+  var val1007 = function(event, callback) {
                 if(event && event.stopPropagation) event.stopPropagation();
                 if(callback && callback.apply) callback(); return;
               };
-  if(val949 !== null) {
-    subs__.addSub(mobl.domBind(node1914, 'tap', val949));
+  if(val1007 !== null) {
+    subs__.addSub(mobl.domBind(node2027, 'tap', val1007));
   }
   
-  var val950 = onchange.get();
-  if(val950 !== null) {
-    subs__.addSub(mobl.domBind(node1914, 'change', val950));
+  var val1008 = onchange.get();
+  if(val1008 !== null) {
+    subs__.addSub(mobl.domBind(node2027, 'change', val1008));
   }
   
-  root5620.append(node1914);
+  root5822.append(node2027);
   
-  root5620.append(" ");
+  root5822.append(" ");
   
-  var node1915 = $("<span>");
+  var node2028 = $("<span>");
   
-  var ref1866 = label;
-  node1915.text(""+ref1866.get());
-  var ignore366 = false;
-  subs__.addSub(ref1866.addEventListener('change', function(_, ref, val) {
-    if(ignore366) return;
-    node1915.text(""+val);
+  var ref1978 = label;
+  node2028.text(""+ref1978.get());
+  var ignore388 = false;
+  subs__.addSub(ref1978.addEventListener('change', function(_, ref, val) {
+    if(ignore388) return;
+    node2028.text(""+val);
   }));
-  subs__.addSub(ref1866.rebind());
+  subs__.addSub(ref1978.rebind());
   
   
-  var val948 = function(event, callback) {
+  var val1006 = function(event, callback) {
                 if(event && event.stopPropagation) event.stopPropagation();
                 var result__ = !b.get();
                 b.set(result__);
                 var result__ = onchange.get();
                 if(result__) {
-                  function after290(result__) {
-                    var tmp4042 = result__;
+                  function after308(result__) {
+                    var tmp4167 = result__;
                     if(callback && callback.apply) callback(); return;
                   }
-                  var result__ = onchange.get()(null, after290);if(result__ !== undefined) after290(result__);
+                  var result__ = onchange.get()(null, after308);if(result__ !== undefined) after308(result__);
                 } else {
                   {
                     if(callback && callback.apply) callback(); return;
                   }
                 }
               };
-  if(val948 !== null) {
-    subs__.addSub(mobl.domBind(node1915, 'tap', val948));
+  if(val1006 !== null) {
+    subs__.addSub(mobl.domBind(node2028, 'tap', val1006));
   }
   
-  root5620.append(node1915);
-  callback(root5620); return subs__;
+  root5822.append(node2028);
+  callback(root5822); return subs__;
   
   
   return subs__;
@@ -698,33 +698,33 @@ ui.alwaysOkValidator = function(s) {
 
 
 ui.textField = function(s, placeholder, label, inputType, validator, style, invalidStyle, onchange, onkeyup, elements, callback) {
-  var root5621 = $("<span>");
+  var root5823 = $("<span>");
   var subs__ = new mobl.CompSubscription();
   
-  var node1916 = $("<span>");
-  root5621.append(node1916);
-  var condSubs472 = new mobl.CompSubscription();
-  subs__.addSub(condSubs472);
-  var oldValue472;
-  var renderCond472 = function() {
-    var value2304 = label.get();
-    if(oldValue472 === value2304) return;
-    oldValue472 = value2304;
-    var subs__ = condSubs472;
+  var node2029 = $("<span>");
+  root5823.append(node2029);
+  var condSubs499 = new mobl.CompSubscription();
+  subs__.addSub(condSubs499);
+  var oldValue499;
+  var renderCond499 = function() {
+    var value2403 = label.get();
+    if(oldValue499 === value2403) return;
+    oldValue499 = value2403;
+    var subs__ = condSubs499;
     subs__.unsubscribe();
-    node1916.empty();
-    if(value2304) {
-      var nodes4354 = $("<span>");
-      node1916.append(nodes4354);
+    node2029.empty();
+    if(value2403) {
+      var nodes4490 = $("<span>");
+      node2029.append(nodes4490);
       subs__.addSub((mobl.label)(label, mobl.ref(ui.textFieldLabelStyle), mobl.ref(null), function(_, callback) {
-        var root5622 = $("<span>");
+        var root5824 = $("<span>");
         var subs__ = new mobl.CompSubscription();
-        callback(root5622); return subs__;
+        callback(root5824); return subs__;
         return subs__;
       }, function(node) {
-        var oldNodes = nodes4354;
-        nodes4354 = node.contents();
-        oldNodes.replaceWith(nodes4354);
+        var oldNodes = nodes4490;
+        nodes4490 = node.contents();
+        oldNodes.replaceWith(nodes4490);
       }));
       
       
@@ -732,109 +732,109 @@ ui.textField = function(s, placeholder, label, inputType, validator, style, inva
       
     }
   };
-  renderCond472();
+  renderCond499();
   subs__.addSub(label.addEventListener('change', function() {
-    renderCond472();
+    renderCond499();
   }));
   
   
-  var node1917 = $("<span>");
-  root5621.append(node1917);
-  var condSubs473 = new mobl.CompSubscription();
-  subs__.addSub(condSubs473);
-  var oldValue473;
-  var renderCond473 = function() {
-    var value2305 = validator.get();
-    if(oldValue473 === value2305) return;
-    oldValue473 = value2305;
-    var subs__ = condSubs473;
+  var node2030 = $("<span>");
+  root5823.append(node2030);
+  var condSubs500 = new mobl.CompSubscription();
+  subs__.addSub(condSubs500);
+  var oldValue500;
+  var renderCond500 = function() {
+    var value2404 = validator.get();
+    if(oldValue500 === value2404) return;
+    oldValue500 = value2404;
+    var subs__ = condSubs500;
     subs__.unsubscribe();
-    node1917.empty();
-    if(value2305) {
+    node2030.empty();
+    if(value2404) {
       
       var temp = mobl.ref(s.get());
       
       var identifier = mobl.ref(mobl.random(999));
-      function after294(result__) {
-        var tmp4043 = result__;
+      function after312(result__) {
+        var tmp4168 = result__;
         var validationMessage = mobl.ref(result__);
         mobl.sleep(200, function(result__) {
-          var tmp4044 = result__;
+          var tmp4169 = result__;
           var result__ = mobl.setValidationError(identifier.get(), !validationMessage.get());
           
         });
         
-        var node1918 = $("<input>");
+        var node2031 = $("<input>");
         
-        var ref1868 = inputType;
-        if(ref1868.get() !== null) {
-          node1918.attr('type', ref1868.get());
-          subs__.addSub(ref1868.addEventListener('change', function(_, ref, val) {
-            node1918.attr('type', val);
+        var ref1980 = inputType;
+        if(ref1980.get() !== null) {
+          node2031.attr('type', ref1980.get());
+          subs__.addSub(ref1980.addEventListener('change', function(_, ref, val) {
+            node2031.attr('type', val);
           }));
           
         }
-        subs__.addSub(ref1868.rebind());
+        subs__.addSub(ref1980.rebind());
         
-        var ref1869 = mobl.ref(validationMessage.get() ? invalidStyle.get() : style.get());
-        if(ref1869.get() !== null) {
-          node1918.attr('class', ref1869.get());
-          subs__.addSub(ref1869.addEventListener('change', function(_, ref, val) {
-            node1918.attr('class', val);
+        var ref1981 = mobl.ref(validationMessage.get() ? invalidStyle.get() : style.get());
+        if(ref1981.get() !== null) {
+          node2031.attr('class', ref1981.get());
+          subs__.addSub(ref1981.addEventListener('change', function(_, ref, val) {
+            node2031.attr('class', val);
           }));
           subs__.addSub(validationMessage.addEventListener('change', function() {
-            node1918.attr('class', validationMessage.get() ? invalidStyle.get() : style.get());
+            node2031.attr('class', validationMessage.get() ? invalidStyle.get() : style.get());
           }));
           subs__.addSub(invalidStyle.addEventListener('change', function() {
-            node1918.attr('class', validationMessage.get() ? invalidStyle.get() : style.get());
+            node2031.attr('class', validationMessage.get() ? invalidStyle.get() : style.get());
           }));
           subs__.addSub(style.addEventListener('change', function() {
-            node1918.attr('class', validationMessage.get() ? invalidStyle.get() : style.get());
+            node2031.attr('class', validationMessage.get() ? invalidStyle.get() : style.get());
           }));
           
         }
-        subs__.addSub(ref1869.rebind());
+        subs__.addSub(ref1981.rebind());
         
-        var ref1870 = placeholder;
-        if(ref1870.get() !== null) {
-          node1918.attr('placeholder', ref1870.get());
-          subs__.addSub(ref1870.addEventListener('change', function(_, ref, val) {
-            node1918.attr('placeholder', val);
+        var ref1982 = placeholder;
+        if(ref1982.get() !== null) {
+          node2031.attr('placeholder', ref1982.get());
+          subs__.addSub(ref1982.addEventListener('change', function(_, ref, val) {
+            node2031.attr('placeholder', val);
           }));
           
         }
-        subs__.addSub(ref1870.rebind());
+        subs__.addSub(ref1982.rebind());
         
-        var ref1871 = temp;
-        node1918.val(""+ref1871.get());
-        var ignore367 = false;
-        subs__.addSub(ref1871.addEventListener('change', function(_, ref, val) {
-          if(ignore367) return;
-          node1918.val(""+val);
+        var ref1983 = temp;
+        node2031.val(""+ref1983.get());
+        var ignore389 = false;
+        subs__.addSub(ref1983.addEventListener('change', function(_, ref, val) {
+          if(ignore389) return;
+          node2031.val(""+val);
         }));
-        subs__.addSub(ref1871.rebind());
+        subs__.addSub(ref1983.rebind());
         
-        subs__.addSub(mobl.domBind(node1918, 'keyup change', function() {
-          ignore367 = true;
-          temp.set(mobl.stringTomobl__String(node1918.val()));
-          ignore367 = false;
+        subs__.addSub(mobl.domBind(node2031, 'keyup change', function() {
+          ignore389 = true;
+          temp.set(mobl.stringTomobl__String(node2031.val()));
+          ignore389 = false;
         }));
         
         
-        var val951 = onchange.get();
-        if(val951 !== null) {
-          subs__.addSub(mobl.domBind(node1918, 'change', val951));
+        var val1009 = onchange.get();
+        if(val1009 !== null) {
+          subs__.addSub(mobl.domBind(node2031, 'change', val1009));
         }
         
-        var val952 = function(event, callback) {
+        var val1010 = function(event, callback) {
                       if(event && event.stopPropagation) event.stopPropagation();
                       var result__ = onkeyup.get();
                       if(result__) {
-                        function after291(result__) {
-                          var tmp4045 = result__;
-                          function after292(result__) {
-                            var tmp4046 = result__;
-                            var result__ = tmp4046;
+                        function after309(result__) {
+                          var tmp4170 = result__;
+                          function after310(result__) {
+                            var tmp4171 = result__;
+                            var result__ = tmp4171;
                             validationMessage.set(result__);
                             var result__ = !validationMessage.get();
                             if(result__) {
@@ -849,14 +849,14 @@ ui.textField = function(s, placeholder, label, inputType, validator, style, inva
                               }
                             }
                           }
-                          var result__ = validator.get()(temp.get(), after292);if(result__ !== undefined) after292(result__);
+                          var result__ = validator.get()(temp.get(), after310);if(result__ !== undefined) after310(result__);
                         }
-                        var result__ = onkeyup.get()(event, after291);if(result__ !== undefined) after291(result__);
+                        var result__ = onkeyup.get()(event, after309);if(result__ !== undefined) after309(result__);
                       } else {
                         {
-                          function after293(result__) {
-                            var tmp4046 = result__;
-                            var result__ = tmp4046;
+                          function after311(result__) {
+                            var tmp4171 = result__;
+                            var result__ = tmp4171;
                             validationMessage.set(result__);
                             var result__ = !validationMessage.get();
                             if(result__) {
@@ -871,195 +871,195 @@ ui.textField = function(s, placeholder, label, inputType, validator, style, inva
                               }
                             }
                           }
-                          var result__ = validator.get()(temp.get(), after293);if(result__ !== undefined) after293(result__);
+                          var result__ = validator.get()(temp.get(), after311);if(result__ !== undefined) after311(result__);
                         }
                       }
                     };
-        if(val952 !== null) {
-          subs__.addSub(mobl.domBind(node1918, 'keyup', val952));
+        if(val1010 !== null) {
+          subs__.addSub(mobl.domBind(node2031, 'keyup', val1010));
         }
         
-        var val953 = function(event, callback) {
+        var val1011 = function(event, callback) {
                       if(event && event.stopPropagation) event.stopPropagation();
                       var result__ = ui.scrollUp();
                       if(callback && callback.apply) callback(); return;
                     };
-        if(val953 !== null) {
-          subs__.addSub(mobl.domBind(node1918, 'blur', val953));
+        if(val1011 !== null) {
+          subs__.addSub(mobl.domBind(node2031, 'blur', val1011));
         }
         
-        node1917.append(node1918);
-        var nodes4355 = $("<span>");
-        node1917.append(nodes4355);
+        node2030.append(node2031);
+        var nodes4491 = $("<span>");
+        node2030.append(nodes4491);
         subs__.addSub((mobl.label)(validationMessage, mobl.ref(ui.validationMessageStyle), mobl.ref(null), function(_, callback) {
-          var root5623 = $("<span>");
+          var root5825 = $("<span>");
           var subs__ = new mobl.CompSubscription();
-          callback(root5623); return subs__;
+          callback(root5825); return subs__;
           return subs__;
         }, function(node) {
-          var oldNodes = nodes4355;
-          nodes4355 = node.contents();
-          oldNodes.replaceWith(nodes4355);
+          var oldNodes = nodes4491;
+          nodes4491 = node.contents();
+          oldNodes.replaceWith(nodes4491);
         }));
         
         
         
         
       }
-      var result__ = validator.get()(s.get(), after294);if(result__ !== undefined) after294(result__);
+      var result__ = validator.get()(s.get(), after312);if(result__ !== undefined) after312(result__);
     } else {
       
-      var node1919 = $("<input>");
+      var node2032 = $("<input>");
       
-      var ref1872 = inputType;
-      if(ref1872.get() !== null) {
-        node1919.attr('type', ref1872.get());
-        subs__.addSub(ref1872.addEventListener('change', function(_, ref, val) {
-          node1919.attr('type', val);
+      var ref1984 = inputType;
+      if(ref1984.get() !== null) {
+        node2032.attr('type', ref1984.get());
+        subs__.addSub(ref1984.addEventListener('change', function(_, ref, val) {
+          node2032.attr('type', val);
         }));
         
       }
-      subs__.addSub(ref1872.rebind());
+      subs__.addSub(ref1984.rebind());
       
-      var ref1873 = style;
-      if(ref1873.get() !== null) {
-        node1919.attr('class', ref1873.get());
-        subs__.addSub(ref1873.addEventListener('change', function(_, ref, val) {
-          node1919.attr('class', val);
+      var ref1985 = style;
+      if(ref1985.get() !== null) {
+        node2032.attr('class', ref1985.get());
+        subs__.addSub(ref1985.addEventListener('change', function(_, ref, val) {
+          node2032.attr('class', val);
         }));
         
       }
-      subs__.addSub(ref1873.rebind());
+      subs__.addSub(ref1985.rebind());
       
-      var ref1874 = placeholder;
-      if(ref1874.get() !== null) {
-        node1919.attr('placeholder', ref1874.get());
-        subs__.addSub(ref1874.addEventListener('change', function(_, ref, val) {
-          node1919.attr('placeholder', val);
+      var ref1986 = placeholder;
+      if(ref1986.get() !== null) {
+        node2032.attr('placeholder', ref1986.get());
+        subs__.addSub(ref1986.addEventListener('change', function(_, ref, val) {
+          node2032.attr('placeholder', val);
         }));
         
       }
-      subs__.addSub(ref1874.rebind());
+      subs__.addSub(ref1986.rebind());
       
-      var ref1875 = s;
-      node1919.val(""+ref1875.get());
-      var ignore368 = false;
-      subs__.addSub(ref1875.addEventListener('change', function(_, ref, val) {
-        if(ignore368) return;
-        node1919.val(""+val);
+      var ref1987 = s;
+      node2032.val(""+ref1987.get());
+      var ignore390 = false;
+      subs__.addSub(ref1987.addEventListener('change', function(_, ref, val) {
+        if(ignore390) return;
+        node2032.val(""+val);
       }));
-      subs__.addSub(ref1875.rebind());
+      subs__.addSub(ref1987.rebind());
       
-      subs__.addSub(mobl.domBind(node1919, 'keyup change', function() {
-        ignore368 = true;
-        s.set(mobl.stringTomobl__String(node1919.val()));
-        ignore368 = false;
+      subs__.addSub(mobl.domBind(node2032, 'keyup change', function() {
+        ignore390 = true;
+        s.set(mobl.stringTomobl__String(node2032.val()));
+        ignore390 = false;
       }));
       
       
-      var val954 = onchange.get();
-      if(val954 !== null) {
-        subs__.addSub(mobl.domBind(node1919, 'change', val954));
+      var val1012 = onchange.get();
+      if(val1012 !== null) {
+        subs__.addSub(mobl.domBind(node2032, 'change', val1012));
       }
       
-      var val955 = onkeyup.get();
-      if(val955 !== null) {
-        subs__.addSub(mobl.domBind(node1919, 'keyup', val955));
+      var val1013 = onkeyup.get();
+      if(val1013 !== null) {
+        subs__.addSub(mobl.domBind(node2032, 'keyup', val1013));
       }
       
-      var val956 = function(event, callback) {
+      var val1014 = function(event, callback) {
                     if(event && event.stopPropagation) event.stopPropagation();
                     var result__ = ui.scrollUp();
                     if(callback && callback.apply) callback(); return;
                   };
-      if(val956 !== null) {
-        subs__.addSub(mobl.domBind(node1919, 'blur', val956));
+      if(val1014 !== null) {
+        subs__.addSub(mobl.domBind(node2032, 'blur', val1014));
       }
       
-      node1917.append(node1919);
+      node2030.append(node2032);
       
       
     }
   };
-  renderCond473();
+  renderCond500();
   subs__.addSub(validator.addEventListener('change', function() {
-    renderCond473();
+    renderCond500();
   }));
   
-  callback(root5621); return subs__;
+  callback(root5823); return subs__;
   
   
   return subs__;
 };
 
 ui.emailField = function(s, placeholder, label, validator, style, invalidStyle, onchange, onkeyup, elements, callback) {
-  var root5624 = $("<span>");
+  var root5826 = $("<span>");
   var subs__ = new mobl.CompSubscription();
-  var nodes4356 = $("<span>");
-  root5624.append(nodes4356);
+  var nodes4492 = $("<span>");
+  root5826.append(nodes4492);
   subs__.addSub((ui.textField)(s, placeholder, label, mobl.ref("email"), validator, style, invalidStyle, onchange, onkeyup, function(_, callback) {
-    var root5625 = $("<span>");
+    var root5827 = $("<span>");
     var subs__ = new mobl.CompSubscription();
-    callback(root5625); return subs__;
+    callback(root5827); return subs__;
     return subs__;
   }, function(node) {
-    var oldNodes = nodes4356;
-    nodes4356 = node.contents();
-    oldNodes.replaceWith(nodes4356);
+    var oldNodes = nodes4492;
+    nodes4492 = node.contents();
+    oldNodes.replaceWith(nodes4492);
   }));
-  callback(root5624); return subs__;
+  callback(root5826); return subs__;
   
   return subs__;
 };
 
 ui.telField = function(phoneNumber, placeholder, label, validator, style, invalidStyle, onchange, onkeyup, elements, callback) {
-  var root5626 = $("<span>");
+  var root5828 = $("<span>");
   var subs__ = new mobl.CompSubscription();
-  var nodes4357 = $("<span>");
-  root5626.append(nodes4357);
+  var nodes4493 = $("<span>");
+  root5828.append(nodes4493);
   subs__.addSub((ui.textField)(phoneNumber, placeholder, label, mobl.ref("tel"), validator, style, invalidStyle, onchange, onkeyup, function(_, callback) {
-    var root5627 = $("<span>");
+    var root5829 = $("<span>");
     var subs__ = new mobl.CompSubscription();
-    callback(root5627); return subs__;
+    callback(root5829); return subs__;
     return subs__;
   }, function(node) {
-    var oldNodes = nodes4357;
-    nodes4357 = node.contents();
-    oldNodes.replaceWith(nodes4357);
+    var oldNodes = nodes4493;
+    nodes4493 = node.contents();
+    oldNodes.replaceWith(nodes4493);
   }));
-  callback(root5626); return subs__;
+  callback(root5828); return subs__;
   
   return subs__;
 };
 
 ui.rangeField = function(n, min, max, step, placeholder, label, onchange, onkeyup, elements, callback) {
-  var root5628 = $("<span>");
+  var root5830 = $("<span>");
   var subs__ = new mobl.CompSubscription();
   
-  var node1920 = $("<span>");
-  root5628.append(node1920);
-  var condSubs474 = new mobl.CompSubscription();
-  subs__.addSub(condSubs474);
-  var oldValue474;
-  var renderCond474 = function() {
-    var value2306 = label.get();
-    if(oldValue474 === value2306) return;
-    oldValue474 = value2306;
-    var subs__ = condSubs474;
+  var node2033 = $("<span>");
+  root5830.append(node2033);
+  var condSubs501 = new mobl.CompSubscription();
+  subs__.addSub(condSubs501);
+  var oldValue501;
+  var renderCond501 = function() {
+    var value2405 = label.get();
+    if(oldValue501 === value2405) return;
+    oldValue501 = value2405;
+    var subs__ = condSubs501;
     subs__.unsubscribe();
-    node1920.empty();
-    if(value2306) {
-      var nodes4358 = $("<span>");
-      node1920.append(nodes4358);
+    node2033.empty();
+    if(value2405) {
+      var nodes4494 = $("<span>");
+      node2033.append(nodes4494);
       subs__.addSub((mobl.label)(label, mobl.ref(ui.textFieldLabelStyle), mobl.ref(null), function(_, callback) {
-        var root5629 = $("<span>");
+        var root5831 = $("<span>");
         var subs__ = new mobl.CompSubscription();
-        callback(root5629); return subs__;
+        callback(root5831); return subs__;
         return subs__;
       }, function(node) {
-        var oldNodes = nodes4358;
-        nodes4358 = node.contents();
-        oldNodes.replaceWith(nodes4358);
+        var oldNodes = nodes4494;
+        nodes4494 = node.contents();
+        oldNodes.replaceWith(nodes4494);
       }));
       
       
@@ -1067,84 +1067,84 @@ ui.rangeField = function(n, min, max, step, placeholder, label, onchange, onkeyu
       
     }
   };
-  renderCond474();
+  renderCond501();
   subs__.addSub(label.addEventListener('change', function() {
-    renderCond474();
+    renderCond501();
   }));
   
   
-  var node1921 = $("<input>");
-  node1921.attr('type', "range");
+  var node2034 = $("<input>");
+  node2034.attr('type', "range");
   
-  var ref1876 = n;
-  node1921.val(""+ref1876.get());
-  var ignore369 = false;
-  subs__.addSub(ref1876.addEventListener('change', function(_, ref, val) {
-    if(ignore369) return;
-    node1921.val(""+val);
+  var ref1988 = n;
+  node2034.val(""+ref1988.get());
+  var ignore391 = false;
+  subs__.addSub(ref1988.addEventListener('change', function(_, ref, val) {
+    if(ignore391) return;
+    node2034.val(""+val);
   }));
-  subs__.addSub(ref1876.rebind());
+  subs__.addSub(ref1988.rebind());
   
-  subs__.addSub(mobl.domBind(node1921, 'keyup change', function() {
-    ignore369 = true;
-    n.set(mobl.stringTomobl__Num(node1921.val()));
-    ignore369 = false;
+  subs__.addSub(mobl.domBind(node2034, 'keyup change', function() {
+    ignore391 = true;
+    n.set(mobl.stringTomobl__Num(node2034.val()));
+    ignore391 = false;
   }));
   
   
-  var ref1877 = min;
-  if(ref1877.get() !== null) {
-    node1921.attr('min', ref1877.get());
-    subs__.addSub(ref1877.addEventListener('change', function(_, ref, val) {
-      node1921.attr('min', val);
+  var ref1989 = min;
+  if(ref1989.get() !== null) {
+    node2034.attr('min', ref1989.get());
+    subs__.addSub(ref1989.addEventListener('change', function(_, ref, val) {
+      node2034.attr('min', val);
     }));
     
   }
-  subs__.addSub(ref1877.rebind());
+  subs__.addSub(ref1989.rebind());
   
-  var ref1878 = max;
-  if(ref1878.get() !== null) {
-    node1921.attr('max', ref1878.get());
-    subs__.addSub(ref1878.addEventListener('change', function(_, ref, val) {
-      node1921.attr('max', val);
+  var ref1990 = max;
+  if(ref1990.get() !== null) {
+    node2034.attr('max', ref1990.get());
+    subs__.addSub(ref1990.addEventListener('change', function(_, ref, val) {
+      node2034.attr('max', val);
     }));
     
   }
-  subs__.addSub(ref1878.rebind());
+  subs__.addSub(ref1990.rebind());
   
-  var ref1879 = step;
-  if(ref1879.get() !== null) {
-    node1921.attr('step', ref1879.get());
-    subs__.addSub(ref1879.addEventListener('change', function(_, ref, val) {
-      node1921.attr('step', val);
+  var ref1991 = step;
+  if(ref1991.get() !== null) {
+    node2034.attr('step', ref1991.get());
+    subs__.addSub(ref1991.addEventListener('change', function(_, ref, val) {
+      node2034.attr('step', val);
     }));
     
   }
-  subs__.addSub(ref1879.rebind());
-  node1921.attr('style', "width: 99%;");
+  subs__.addSub(ref1991.rebind());
+  node2034.attr('style', "width: 99%;");
   
-  var val957 = onchange.get();
-  if(val957 !== null) {
-    subs__.addSub(mobl.domBind(node1921, 'change', val957));
+  var val1015 = onchange.get();
+  if(val1015 !== null) {
+    subs__.addSub(mobl.domBind(node2034, 'change', val1015));
   }
   
-  var val958 = onkeyup.get();
-  if(val958 !== null) {
-    subs__.addSub(mobl.domBind(node1921, 'keyup', val958));
+  var val1016 = onkeyup.get();
+  if(val1016 !== null) {
+    subs__.addSub(mobl.domBind(node2034, 'keyup', val1016));
   }
   
-  var ref1880 = placeholder;
-  if(ref1880.get() !== null) {
-    node1921.attr('placeholder', ref1880.get());
-    subs__.addSub(ref1880.addEventListener('change', function(_, ref, val) {
-      node1921.attr('placeholder', val);
+  var ref1992 = placeholder;
+  if(ref1992.get() !== null) {
+    node2034.attr('placeholder', ref1992.get());
+    subs__.addSub(ref1992.addEventListener('change', function(_, ref, val) {
+      node2034.attr('placeholder', val);
     }));
     
   }
-  subs__.addSub(ref1880.rebind());
+  subs__.addSub(ref1992.rebind());
   
-  root5628.append(node1921);
-  callback(root5628); return subs__;
+  root5830.append(node2034);
+  callback(root5830); return subs__;
   
   
   return subs__;
@@ -1156,16 +1156,16 @@ ui.validateNum = function(n) {
 
 
 ui.numField = function(n, label, placeholder, validator, style, invalidStyle, onchange, onkeyup, elements, callback) {
-  var root5630 = $("<span>");
+  var root5832 = $("<span>");
   var subs__ = new mobl.CompSubscription();
   
   var validator2 = function(s, callback) {
     var __this = this;
     var result__ = mobl.parseNum(s);
     var n2 = result__;
-    function after295(result__) {
-      var tmp4047 = result__;
-      var result__ = tmp4047;
+    function after313(result__) {
+      var tmp4172 = result__;
+      var result__ = tmp4172;
       var m = result__;
       var result__ = !m;
       if(result__) {
@@ -1184,328 +1184,328 @@ ui.numField = function(n, label, placeholder, validator, style, invalidStyle, on
         }
       }
     }
-    var result__ = validator.get()(n2, after295);if(result__ !== undefined) after295(result__);
+    var result__ = validator.get()(n2, after313);if(result__ !== undefined) after313(result__);
   };
   
   
   
   var s = mobl.ref("" + n.get());
-  var nodes4359 = $("<span>");
-  root5630.append(nodes4359);
+  var nodes4495 = $("<span>");
+  root5832.append(nodes4495);
   subs__.addSub((ui.textField)(s, placeholder, label, mobl.ref("number"), mobl.ref(validator2), style, invalidStyle, onchange, onkeyup, function(_, callback) {
-    var root5631 = $("<span>");
+    var root5833 = $("<span>");
     var subs__ = new mobl.CompSubscription();
-    callback(root5631); return subs__;
+    callback(root5833); return subs__;
     return subs__;
   }, function(node) {
-    var oldNodes = nodes4359;
-    nodes4359 = node.contents();
-    oldNodes.replaceWith(nodes4359);
+    var oldNodes = nodes4495;
+    nodes4495 = node.contents();
+    oldNodes.replaceWith(nodes4495);
   }));
-  callback(root5630); return subs__;
+  callback(root5832); return subs__;
   
   return subs__;
 };
 
 ui.passwordField = function(s, placeholder, label, style, onchange, onkeyup, elements, callback) {
-  var root5632 = $("<span>");
+  var root5834 = $("<span>");
   var subs__ = new mobl.CompSubscription();
   
-  var node1922 = $("<span>");
-  root5632.append(node1922);
-  var condSubs475 = new mobl.CompSubscription();
-  subs__.addSub(condSubs475);
-  var oldValue475;
-  var renderCond475 = function() {
-    var value2307 = label.get();
-    if(oldValue475 === value2307) return;
-    oldValue475 = value2307;
-    var subs__ = condSubs475;
+  var node2035 = $("<span>");
+  root5834.append(node2035);
+  var condSubs502 = new mobl.CompSubscription();
+  subs__.addSub(condSubs502);
+  var oldValue502;
+  var renderCond502 = function() {
+    var value2406 = label.get();
+    if(oldValue502 === value2406) return;
+    oldValue502 = value2406;
+    var subs__ = condSubs502;
     subs__.unsubscribe();
-    node1922.empty();
-    if(value2307) {
+    node2035.empty();
+    if(value2406) {
       
-      var node1923 = $("<span>");
-      node1923.attr('style', "float: left; margin-top: 0.2em; width: 5em; color: #666;");
+      var node2036 = $("<span>");
+      node2036.attr('style', "float: left; margin-top: 0.2em; width: 5em; color: #666;");
       
-      var ref1884 = label;
-      node1923.text(""+ref1884.get());
-      var ignore371 = false;
-      subs__.addSub(ref1884.addEventListener('change', function(_, ref, val) {
-        if(ignore371) return;
-        node1923.text(""+val);
+      var ref1996 = label;
+      node2036.text(""+ref1996.get());
+      var ignore393 = false;
+      subs__.addSub(ref1996.addEventListener('change', function(_, ref, val) {
+        if(ignore393) return;
+        node2036.text(""+val);
       }));
-      subs__.addSub(ref1884.rebind());
+      subs__.addSub(ref1996.rebind());
       
       
-      node1922.append(node1923);
+      node2035.append(node2036);
       
-      var node1924 = $("<span>");
-      node1924.attr('style', "float: left");
+      var node2037 = $("<span>");
+      node2037.attr('style', "float: left");
       
       
-      var node1925 = $("<input>");
-      node1925.attr('type', "password");
+      var node2038 = $("<input>");
+      node2038.attr('type', "password");
       
-      var ref1881 = style;
-      if(ref1881.get() !== null) {
-        node1925.attr('class', ref1881.get());
-        subs__.addSub(ref1881.addEventListener('change', function(_, ref, val) {
-          node1925.attr('class', val);
+      var ref1993 = style;
+      if(ref1993.get() !== null) {
+        node2038.attr('class', ref1993.get());
+        subs__.addSub(ref1993.addEventListener('change', function(_, ref, val) {
+          node2038.attr('class', val);
         }));
         
       }
-      subs__.addSub(ref1881.rebind());
+      subs__.addSub(ref1993.rebind());
       
-      var ref1882 = placeholder;
-      if(ref1882.get() !== null) {
-        node1925.attr('placeholder', ref1882.get());
-        subs__.addSub(ref1882.addEventListener('change', function(_, ref, val) {
-          node1925.attr('placeholder', val);
+      var ref1994 = placeholder;
+      if(ref1994.get() !== null) {
+        node2038.attr('placeholder', ref1994.get());
+        subs__.addSub(ref1994.addEventListener('change', function(_, ref, val) {
+          node2038.attr('placeholder', val);
         }));
         
       }
-      subs__.addSub(ref1882.rebind());
+      subs__.addSub(ref1994.rebind());
       
-      var ref1883 = s;
-      node1925.val(""+ref1883.get());
-      var ignore370 = false;
-      subs__.addSub(ref1883.addEventListener('change', function(_, ref, val) {
-        if(ignore370) return;
-        node1925.val(""+val);
+      var ref1995 = s;
+      node2038.val(""+ref1995.get());
+      var ignore392 = false;
+      subs__.addSub(ref1995.addEventListener('change', function(_, ref, val) {
+        if(ignore392) return;
+        node2038.val(""+val);
       }));
-      subs__.addSub(ref1883.rebind());
+      subs__.addSub(ref1995.rebind());
       
-      subs__.addSub(mobl.domBind(node1925, 'keyup change', function() {
-        ignore370 = true;
-        s.set(mobl.stringTomobl__String(node1925.val()));
-        ignore370 = false;
+      subs__.addSub(mobl.domBind(node2038, 'keyup change', function() {
+        ignore392 = true;
+        s.set(mobl.stringTomobl__String(node2038.val()));
+        ignore392 = false;
       }));
       
       
-      var val959 = onchange.get();
-      if(val959 !== null) {
-        subs__.addSub(mobl.domBind(node1925, 'change', val959));
+      var val1017 = onchange.get();
+      if(val1017 !== null) {
+        subs__.addSub(mobl.domBind(node2038, 'change', val1017));
       }
       
-      var val960 = onkeyup.get();
-      if(val960 !== null) {
-        subs__.addSub(mobl.domBind(node1925, 'keyup', val960));
+      var val1018 = onkeyup.get();
+      if(val1018 !== null) {
+        subs__.addSub(mobl.domBind(node2038, 'keyup', val1018));
       }
       
-      var val961 = function(event, callback) {
+      var val1019 = function(event, callback) {
                     if(event && event.stopPropagation) event.stopPropagation();
                     var result__ = ui.scrollUp();
                     if(callback && callback.apply) callback(); return;
                   };
-      if(val961 !== null) {
-        subs__.addSub(mobl.domBind(node1925, 'blur', val961));
+      if(val1019 !== null) {
+        subs__.addSub(mobl.domBind(node2038, 'blur', val1019));
       }
       
-      node1924.append(node1925);
-      node1922.append(node1924);
+      node2037.append(node2038);
+      node2035.append(node2037);
       
       
       
       
     } else {
       
-      var node1926 = $("<input>");
-      node1926.attr('type', "password");
+      var node2039 = $("<input>");
+      node2039.attr('type', "password");
       
-      var ref1885 = style;
-      if(ref1885.get() !== null) {
-        node1926.attr('class', ref1885.get());
-        subs__.addSub(ref1885.addEventListener('change', function(_, ref, val) {
-          node1926.attr('class', val);
+      var ref1997 = style;
+      if(ref1997.get() !== null) {
+        node2039.attr('class', ref1997.get());
+        subs__.addSub(ref1997.addEventListener('change', function(_, ref, val) {
+          node2039.attr('class', val);
         }));
         
       }
-      subs__.addSub(ref1885.rebind());
+      subs__.addSub(ref1997.rebind());
       
-      var ref1886 = placeholder;
-      if(ref1886.get() !== null) {
-        node1926.attr('placeholder', ref1886.get());
-        subs__.addSub(ref1886.addEventListener('change', function(_, ref, val) {
-          node1926.attr('placeholder', val);
+      var ref1998 = placeholder;
+      if(ref1998.get() !== null) {
+        node2039.attr('placeholder', ref1998.get());
+        subs__.addSub(ref1998.addEventListener('change', function(_, ref, val) {
+          node2039.attr('placeholder', val);
         }));
         
       }
-      subs__.addSub(ref1886.rebind());
+      subs__.addSub(ref1998.rebind());
       
-      var ref1887 = s;
-      node1926.val(""+ref1887.get());
-      var ignore372 = false;
-      subs__.addSub(ref1887.addEventListener('change', function(_, ref, val) {
-        if(ignore372) return;
-        node1926.val(""+val);
+      var ref1999 = s;
+      node2039.val(""+ref1999.get());
+      var ignore394 = false;
+      subs__.addSub(ref1999.addEventListener('change', function(_, ref, val) {
+        if(ignore394) return;
+        node2039.val(""+val);
       }));
-      subs__.addSub(ref1887.rebind());
+      subs__.addSub(ref1999.rebind());
       
-      subs__.addSub(mobl.domBind(node1926, 'keyup change', function() {
-        ignore372 = true;
-        s.set(mobl.stringTomobl__String(node1926.val()));
-        ignore372 = false;
+      subs__.addSub(mobl.domBind(node2039, 'keyup change', function() {
+        ignore394 = true;
+        s.set(mobl.stringTomobl__String(node2039.val()));
+        ignore394 = false;
       }));
       
       
-      var val962 = onchange.get();
-      if(val962 !== null) {
-        subs__.addSub(mobl.domBind(node1926, 'change', val962));
+      var val1020 = onchange.get();
+      if(val1020 !== null) {
+        subs__.addSub(mobl.domBind(node2039, 'change', val1020));
       }
       
-      var val963 = onkeyup.get();
-      if(val963 !== null) {
-        subs__.addSub(mobl.domBind(node1926, 'keyup', val963));
+      var val1021 = onkeyup.get();
+      if(val1021 !== null) {
+        subs__.addSub(mobl.domBind(node2039, 'keyup', val1021));
       }
       
-      var val964 = function(event, callback) {
+      var val1022 = function(event, callback) {
                     if(event && event.stopPropagation) event.stopPropagation();
                     var result__ = ui.scrollUp();
                     if(callback && callback.apply) callback(); return;
                   };
-      if(val964 !== null) {
-        subs__.addSub(mobl.domBind(node1926, 'blur', val964));
+      if(val1022 !== null) {
+        subs__.addSub(mobl.domBind(node2039, 'blur', val1022));
       }
       
-      node1922.append(node1926);
+      node2035.append(node2039);
       
       
     }
   };
-  renderCond475();
+  renderCond502();
   subs__.addSub(label.addEventListener('change', function() {
-    renderCond475();
+    renderCond502();
   }));
   
-  callback(root5632); return subs__;
+  callback(root5834); return subs__;
   
   return subs__;
 };
 ui.selectFieldStyle = 'ui__selectFieldStyle';
 
 ui.selectField = function(value, options, onchange, style, optionStyle, elements, callback) {
-  var root5633 = $("<span>");
+  var root5835 = $("<span>");
   var subs__ = new mobl.CompSubscription();
   
   var sel = $("<select>");
   
-  var ref1892 = style;
-  if(ref1892.get() !== null) {
-    sel.attr('class', ref1892.get());
-    subs__.addSub(ref1892.addEventListener('change', function(_, ref, val) {
+  var ref2004 = style;
+  if(ref2004.get() !== null) {
+    sel.attr('class', ref2004.get());
+    subs__.addSub(ref2004.addEventListener('change', function(_, ref, val) {
       sel.attr('class', val);
     }));
     
   }
-  subs__.addSub(ref1892.rebind());
+  subs__.addSub(ref2004.rebind());
   
-  var val965 = function(event, callback) {
+  var val1023 = function(event, callback) {
                 if(event && event.stopPropagation) event.stopPropagation();
                 var result__ = sel.val();
                 value.set(result__);
                 var result__ = onchange.get();
                 if(result__) {
-                  function after296(result__) {
-                    var tmp4049 = result__;
+                  function after314(result__) {
+                    var tmp4174 = result__;
                     if(callback && callback.apply) callback(); return;
                   }
-                  var result__ = onchange.get()(event, after296);if(result__ !== undefined) after296(result__);
+                  var result__ = onchange.get()(event, after314);if(result__ !== undefined) after314(result__);
                 } else {
                   {
                     if(callback && callback.apply) callback(); return;
                   }
                 }
               };
-  if(val965 !== null) {
-    subs__.addSub(mobl.domBind(sel, 'change', val965));
+  if(val1023 !== null) {
+    subs__.addSub(mobl.domBind(sel, 'change', val1023));
   }
   
   
-  var node1927 = mobl.loadingSpan();
-  sel.append(node1927);
-  var list323;
+  var node2040 = mobl.loadingSpan();
+  sel.append(node2040);
+  var list343;
   var listSubs__ = new mobl.CompSubscription();
   subs__.addSub(listSubs__);
-  var renderList323 = function() {
+  var renderList343 = function() {
     var subs__ = listSubs__;
-    list323 = options.get();
-    list323.list(function(results323) {
-      node1927.empty();
-      for(var i1169 = 0; i1169 < results323.length; i1169++) {
+    list343 = options.get();
+    list343.list(function(results343) {
+      node2040.empty();
+      for(var i1189 = 0; i1189 < results343.length; i1189++) {
         (function() {
-          var iternode323 = $("<span>");
-          node1927.append(iternode323);
+          var iternode343 = $("<span>");
+          node2040.append(iternode343);
           var optionValue;var optionDescription;
-          optionValue = mobl.ref(mobl.ref(mobl.ref(results323), i1169), "_1");optionDescription = mobl.ref(mobl.ref(mobl.ref(results323), i1169), "_2");
+          optionValue = mobl.ref(mobl.ref(mobl.ref(results343), i1189), "_1");optionDescription = mobl.ref(mobl.ref(mobl.ref(results343), i1189), "_2");
           
-          var node1928 = $("<option>");
+          var node2041 = $("<option>");
           
-          var ref1888 = optionDescription;
-          node1928.text(""+ref1888.get());
-          var ignore373 = false;
-          subs__.addSub(ref1888.addEventListener('change', function(_, ref, val) {
-            if(ignore373) return;
-            node1928.text(""+val);
+          var ref2000 = optionDescription;
+          node2041.text(""+ref2000.get());
+          var ignore395 = false;
+          subs__.addSub(ref2000.addEventListener('change', function(_, ref, val) {
+            if(ignore395) return;
+            node2041.text(""+val);
           }));
-          subs__.addSub(ref1888.rebind());
+          subs__.addSub(ref2000.rebind());
           
           
-          var ref1889 = optionStyle;
-          if(ref1889.get() !== null) {
-            node1928.attr('class', ref1889.get());
-            subs__.addSub(ref1889.addEventListener('change', function(_, ref, val) {
-              node1928.attr('class', val);
+          var ref2001 = optionStyle;
+          if(ref2001.get() !== null) {
+            node2041.attr('class', ref2001.get());
+            subs__.addSub(ref2001.addEventListener('change', function(_, ref, val) {
+              node2041.attr('class', val);
             }));
             
           }
-          subs__.addSub(ref1889.rebind());
+          subs__.addSub(ref2001.rebind());
           
-          var ref1890 = optionValue;
-          if(ref1890.get() !== null) {
-            node1928.attr('value', ref1890.get());
-            subs__.addSub(ref1890.addEventListener('change', function(_, ref, val) {
-              node1928.attr('value', val);
+          var ref2002 = optionValue;
+          if(ref2002.get() !== null) {
+            node2041.attr('value', ref2002.get());
+            subs__.addSub(ref2002.addEventListener('change', function(_, ref, val) {
+              node2041.attr('value', val);
             }));
             
           }
-          subs__.addSub(ref1890.rebind());
+          subs__.addSub(ref2002.rebind());
           
-          var ref1891 = mobl.ref(value.get() == optionValue.get() ? "selected" : "");
-          if(ref1891.get() !== null) {
-            node1928.attr('selected', ref1891.get());
-            subs__.addSub(ref1891.addEventListener('change', function(_, ref, val) {
-              node1928.attr('selected', val);
+          var ref2003 = mobl.ref(value.get() == optionValue.get() ? "selected" : "");
+          if(ref2003.get() !== null) {
+            node2041.attr('selected', ref2003.get());
+            subs__.addSub(ref2003.addEventListener('change', function(_, ref, val) {
+              node2041.attr('selected', val);
             }));
             subs__.addSub(value.addEventListener('change', function() {
-              node1928.attr('selected', value.get() == optionValue.get() ? "selected" : "");
+              node2041.attr('selected', value.get() == optionValue.get() ? "selected" : "");
             }));
             subs__.addSub(optionValue.addEventListener('change', function() {
-              node1928.attr('selected', value.get() == optionValue.get() ? "selected" : "");
+              node2041.attr('selected', value.get() == optionValue.get() ? "selected" : "");
             }));
             
           }
-          subs__.addSub(ref1891.rebind());
+          subs__.addSub(ref2003.rebind());
           
-          iternode323.append(node1928);
+          iternode343.append(node2041);
           
-          var oldNodes = iternode323;
-          iternode323 = iternode323.contents();
-          oldNodes.replaceWith(iternode323);
+          var oldNodes = iternode343;
+          iternode343 = iternode343.contents();
+          oldNodes.replaceWith(iternode343);
           
           
         }());
       }
       mobl.delayedUpdateScrollers();
-      subs__.addSub(list323.addEventListener('change', function() { listSubs__.unsubscribe(); renderList323(true); }));
-      subs__.addSub(options.addEventListener('change', function() { listSubs__.unsubscribe(); renderList323(true); }));
+      subs__.addSub(list343.addEventListener('change', function() { listSubs__.unsubscribe(); renderList343(true); }));
+      subs__.addSub(options.addEventListener('change', function() { listSubs__.unsubscribe(); renderList343(true); }));
     });
   };
-  renderList323();
+  renderList343();
   
-  root5633.append(sel);
+  root5835.append(sel);
   var result__ = sel.append(sel.children().eq(0).children());
-  callback(root5633); return subs__;
+  callback(root5835); return subs__;
   
   
   return subs__;
@@ -1517,7 +1517,7 @@ ui.inActiveTabStyle = 'ui__inActiveTabStyle';
 ui.activeTabStyle = 'ui__activeTabStyle';
 
 ui.tabSet = function(tabs, activeTab, elements, callback) {
-  var root5634 = $("<span>");
+  var root5836 = $("<span>");
   var subs__ = new mobl.CompSubscription();
   var result__ = activeTab.get() == null;
   if(result__) {
@@ -1525,41 +1525,41 @@ ui.tabSet = function(tabs, activeTab, elements, callback) {
     activeTab.set(result__);
     
     var s = mobl.ref("");
-    var nodes4360 = $("<span>");
-    root5634.append(nodes4360);
+    var nodes4496 = $("<span>");
+    root5836.append(nodes4496);
     subs__.addSub((mobl.block)(mobl.ref(ui.tabbarStyle), mobl.ref(null), mobl.ref(null), mobl.ref(null), function(_, callback) {
-      var root5635 = $("<span>");
+      var root5837 = $("<span>");
       var subs__ = new mobl.CompSubscription();
       
-      var node1929 = mobl.loadingSpan();
-      root5635.append(node1929);
-      var list324;
+      var node2042 = mobl.loadingSpan();
+      root5837.append(node2042);
+      var list344;
       var listSubs__ = new mobl.CompSubscription();
       subs__.addSub(listSubs__);
-      var renderList324 = function() {
+      var renderList344 = function() {
         var subs__ = listSubs__;
-        list324 = tabs.get();
-        list324.list(function(results324) {
-          node1929.empty();
-          for(var i1170 = 0; i1170 < results324.length; i1170++) {
+        list344 = tabs.get();
+        list344.list(function(results344) {
+          node2042.empty();
+          for(var i1190 = 0; i1190 < results344.length; i1190++) {
             (function() {
-              var iternode324 = $("<span>");
-              node1929.append(iternode324);
+              var iternode344 = $("<span>");
+              node2042.append(iternode344);
               var tabName;var tabIcon;var tabControl;
-              tabName = mobl.ref(mobl.ref(mobl.ref(results324), i1170), "_1");tabIcon = mobl.ref(mobl.ref(mobl.ref(results324), i1170), "_2");tabControl = mobl.ref(mobl.ref(mobl.ref(results324), i1170), "_3");
+              tabName = mobl.ref(mobl.ref(mobl.ref(results344), i1190), "_1");tabIcon = mobl.ref(mobl.ref(mobl.ref(results344), i1190), "_2");tabControl = mobl.ref(mobl.ref(mobl.ref(results344), i1190), "_3");
               var result__ = activeTab.get() == tabName.get() ? ui.activeTabButtonStyle : ui.inActiveTabButtonStyle;
-              var tmp4011 = mobl.ref(result__);
+              var tmp4136 = mobl.ref(result__);
               subs__.addSub(activeTab.addEventListener('change', function() {
-                tmp4011.set(activeTab.get() == tabName.get() ? ui.activeTabButtonStyle : ui.inActiveTabButtonStyle);
+                tmp4136.set(activeTab.get() == tabName.get() ? ui.activeTabButtonStyle : ui.inActiveTabButtonStyle);
               }));
               subs__.addSub(tabName.addEventListener('change', function() {
-                tmp4011.set(activeTab.get() == tabName.get() ? ui.activeTabButtonStyle : ui.inActiveTabButtonStyle);
+                tmp4136.set(activeTab.get() == tabName.get() ? ui.activeTabButtonStyle : ui.inActiveTabButtonStyle);
               }));
               subs__.addSub(mobl.ref(ui.activeTabButtonStyle).addEventListener('change', function() {
-                tmp4011.set(activeTab.get() == tabName.get() ? ui.activeTabButtonStyle : ui.inActiveTabButtonStyle);
+                tmp4136.set(activeTab.get() == tabName.get() ? ui.activeTabButtonStyle : ui.inActiveTabButtonStyle);
               }));
               subs__.addSub(mobl.ref(ui.inActiveTabButtonStyle).addEventListener('change', function() {
-                tmp4011.set(activeTab.get() == tabName.get() ? ui.activeTabButtonStyle : ui.inActiveTabButtonStyle);
+                tmp4136.set(activeTab.get() == tabName.get() ? ui.activeTabButtonStyle : ui.inActiveTabButtonStyle);
               }));
               
               var result__ = function(event, callback) {
@@ -1568,190 +1568,190 @@ ui.tabSet = function(tabs, activeTab, elements, callback) {
                                activeTab.set(result__);
                                if(callback && callback.apply) callback(); return;
                              };
-              var tmp4010 = mobl.ref(result__);
+              var tmp4135 = mobl.ref(result__);
               
-              var nodes4361 = $("<span>");
-              iternode324.append(nodes4361);
-              subs__.addSub((mobl.span)(tmp4011, mobl.ref(null), tmp4010, mobl.ref(null), function(_, callback) {
-                var root5636 = $("<span>");
+              var nodes4497 = $("<span>");
+              iternode344.append(nodes4497);
+              subs__.addSub((mobl.span)(tmp4136, mobl.ref(null), tmp4135, mobl.ref(null), function(_, callback) {
+                var root5838 = $("<span>");
                 var subs__ = new mobl.CompSubscription();
-                var nodes4362 = $("<span>");
-                root5636.append(nodes4362);
+                var nodes4498 = $("<span>");
+                root5838.append(nodes4498);
                 subs__.addSub((mobl.label)(tabName, mobl.ref(null), mobl.ref(null), function(_, callback) {
-                  var root5637 = $("<span>");
+                  var root5839 = $("<span>");
                   var subs__ = new mobl.CompSubscription();
-                  callback(root5637); return subs__;
+                  callback(root5839); return subs__;
                   return subs__;
                 }, function(node) {
-                  var oldNodes = nodes4362;
-                  nodes4362 = node.contents();
-                  oldNodes.replaceWith(nodes4362);
+                  var oldNodes = nodes4498;
+                  nodes4498 = node.contents();
+                  oldNodes.replaceWith(nodes4498);
                 }));
-                callback(root5636); return subs__;
+                callback(root5838); return subs__;
                 
                 return subs__;
               }, function(node) {
-                var oldNodes = nodes4361;
-                nodes4361 = node.contents();
-                oldNodes.replaceWith(nodes4361);
+                var oldNodes = nodes4497;
+                nodes4497 = node.contents();
+                oldNodes.replaceWith(nodes4497);
               }));
               
-              var oldNodes = iternode324;
-              iternode324 = iternode324.contents();
-              oldNodes.replaceWith(iternode324);
+              var oldNodes = iternode344;
+              iternode344 = iternode344.contents();
+              oldNodes.replaceWith(iternode344);
               
               
             }());
           }
           mobl.delayedUpdateScrollers();
-          subs__.addSub(list324.addEventListener('change', function() { listSubs__.unsubscribe(); renderList324(true); }));
-          subs__.addSub(tabs.addEventListener('change', function() { listSubs__.unsubscribe(); renderList324(true); }));
+          subs__.addSub(list344.addEventListener('change', function() { listSubs__.unsubscribe(); renderList344(true); }));
+          subs__.addSub(tabs.addEventListener('change', function() { listSubs__.unsubscribe(); renderList344(true); }));
         });
       };
-      renderList324();
+      renderList344();
       
-      callback(root5635); return subs__;
+      callback(root5837); return subs__;
       
       return subs__;
     }, function(node) {
-      var oldNodes = nodes4360;
-      nodes4360 = node.contents();
-      oldNodes.replaceWith(nodes4360);
+      var oldNodes = nodes4496;
+      nodes4496 = node.contents();
+      oldNodes.replaceWith(nodes4496);
     }));
     
-    var node1930 = mobl.loadingSpan();
-    root5634.append(node1930);
-    var list325;
+    var node2043 = mobl.loadingSpan();
+    root5836.append(node2043);
+    var list345;
     var listSubs__ = new mobl.CompSubscription();
     subs__.addSub(listSubs__);
-    var renderList325 = function() {
+    var renderList345 = function() {
       var subs__ = listSubs__;
-      list325 = tabs.get();
-      list325.list(function(results325) {
-        node1930.empty();
-        for(var i1171 = 0; i1171 < results325.length; i1171++) {
+      list345 = tabs.get();
+      list345.list(function(results345) {
+        node2043.empty();
+        for(var i1191 = 0; i1191 < results345.length; i1191++) {
           (function() {
-            var iternode325 = $("<span>");
-            node1930.append(iternode325);
+            var iternode345 = $("<span>");
+            node2043.append(iternode345);
             var tabName;var tabIcon;var tabControl;
-            tabName = mobl.ref(mobl.ref(mobl.ref(results325), i1171), "_1");tabIcon = mobl.ref(mobl.ref(mobl.ref(results325), i1171), "_2");tabControl = mobl.ref(mobl.ref(mobl.ref(results325), i1171), "_3");
+            tabName = mobl.ref(mobl.ref(mobl.ref(results345), i1191), "_1");tabIcon = mobl.ref(mobl.ref(mobl.ref(results345), i1191), "_2");tabControl = mobl.ref(mobl.ref(mobl.ref(results345), i1191), "_3");
             var result__ = activeTab.get() == tabName.get() ? ui.activeTabStyle : ui.inActiveTabStyle;
-            var tmp4012 = mobl.ref(result__);
+            var tmp4137 = mobl.ref(result__);
             subs__.addSub(activeTab.addEventListener('change', function() {
-              tmp4012.set(activeTab.get() == tabName.get() ? ui.activeTabStyle : ui.inActiveTabStyle);
+              tmp4137.set(activeTab.get() == tabName.get() ? ui.activeTabStyle : ui.inActiveTabStyle);
             }));
             subs__.addSub(tabName.addEventListener('change', function() {
-              tmp4012.set(activeTab.get() == tabName.get() ? ui.activeTabStyle : ui.inActiveTabStyle);
+              tmp4137.set(activeTab.get() == tabName.get() ? ui.activeTabStyle : ui.inActiveTabStyle);
             }));
             subs__.addSub(mobl.ref(ui.activeTabStyle).addEventListener('change', function() {
-              tmp4012.set(activeTab.get() == tabName.get() ? ui.activeTabStyle : ui.inActiveTabStyle);
+              tmp4137.set(activeTab.get() == tabName.get() ? ui.activeTabStyle : ui.inActiveTabStyle);
             }));
             subs__.addSub(mobl.ref(ui.inActiveTabStyle).addEventListener('change', function() {
-              tmp4012.set(activeTab.get() == tabName.get() ? ui.activeTabStyle : ui.inActiveTabStyle);
+              tmp4137.set(activeTab.get() == tabName.get() ? ui.activeTabStyle : ui.inActiveTabStyle);
             }));
             
-            var nodes4363 = $("<span>");
-            iternode325.append(nodes4363);
-            subs__.addSub((mobl.block)(tmp4012, mobl.ref(null), mobl.ref(null), mobl.ref(null), function(_, callback) {
-              var root5638 = $("<span>");
+            var nodes4499 = $("<span>");
+            iternode345.append(nodes4499);
+            subs__.addSub((mobl.block)(tmp4137, mobl.ref(null), mobl.ref(null), mobl.ref(null), function(_, callback) {
+              var root5840 = $("<span>");
               var subs__ = new mobl.CompSubscription();
-              var nodes4364 = $("<span>");
-              root5638.append(nodes4364);
+              var nodes4500 = $("<span>");
+              root5840.append(nodes4500);
               subs__.addSub((mobl.screenContext)(function(_, callback) {
-                var root5639 = $("<span>");
+                var root5841 = $("<span>");
                 var subs__ = new mobl.CompSubscription();
-                var nodes4365 = $("<span>");
-                root5639.append(nodes4365);
+                var nodes4501 = $("<span>");
+                root5841.append(nodes4501);
                 subs__.addSub(tabControl.addEventListener('change', function() {
-                  renderControl754();
+                  renderControl800();
                 }));
                 
-                function renderControl754() {
+                function renderControl800() {
                   subs__.addSub((tabControl.get())(function(elements, callback) {
-                    var root5640 = $("<span>");
+                    var root5842 = $("<span>");
                     var subs__ = new mobl.CompSubscription();
-                    callback(root5640); return subs__;
+                    callback(root5842); return subs__;
                     return subs__;
                   }, function(node) {
-                    var oldNodes = nodes4365;
-                    nodes4365 = node.contents();
-                    oldNodes.replaceWith(nodes4365);
+                    var oldNodes = nodes4501;
+                    nodes4501 = node.contents();
+                    oldNodes.replaceWith(nodes4501);
                   }));
                 }
-                renderControl754();
-                callback(root5639); return subs__;
+                renderControl800();
+                callback(root5841); return subs__;
                 
                 return subs__;
               }, function(node) {
-                var oldNodes = nodes4364;
-                nodes4364 = node.contents();
-                oldNodes.replaceWith(nodes4364);
+                var oldNodes = nodes4500;
+                nodes4500 = node.contents();
+                oldNodes.replaceWith(nodes4500);
               }));
-              callback(root5638); return subs__;
+              callback(root5840); return subs__;
               
               return subs__;
             }, function(node) {
-              var oldNodes = nodes4363;
-              nodes4363 = node.contents();
-              oldNodes.replaceWith(nodes4363);
+              var oldNodes = nodes4499;
+              nodes4499 = node.contents();
+              oldNodes.replaceWith(nodes4499);
             }));
             
-            var oldNodes = iternode325;
-            iternode325 = iternode325.contents();
-            oldNodes.replaceWith(iternode325);
+            var oldNodes = iternode345;
+            iternode345 = iternode345.contents();
+            oldNodes.replaceWith(iternode345);
             
             
           }());
         }
         mobl.delayedUpdateScrollers();
-        subs__.addSub(list325.addEventListener('change', function() { listSubs__.unsubscribe(); renderList325(true); }));
-        subs__.addSub(tabs.addEventListener('change', function() { listSubs__.unsubscribe(); renderList325(true); }));
+        subs__.addSub(list345.addEventListener('change', function() { listSubs__.unsubscribe(); renderList345(true); }));
+        subs__.addSub(tabs.addEventListener('change', function() { listSubs__.unsubscribe(); renderList345(true); }));
       });
     };
-    renderList325();
+    renderList345();
     
-    callback(root5634); return subs__;
+    callback(root5836); return subs__;
     
     
   } else {
     {
       
       var s = mobl.ref("");
-      var nodes4360 = $("<span>");
-      root5634.append(nodes4360);
+      var nodes4496 = $("<span>");
+      root5836.append(nodes4496);
       subs__.addSub((mobl.block)(mobl.ref(ui.tabbarStyle), mobl.ref(null), mobl.ref(null), mobl.ref(null), function(_, callback) {
-        var root5635 = $("<span>");
+        var root5837 = $("<span>");
         var subs__ = new mobl.CompSubscription();
         
-        var node1929 = mobl.loadingSpan();
-        root5635.append(node1929);
-        var list324;
+        var node2042 = mobl.loadingSpan();
+        root5837.append(node2042);
+        var list344;
         var listSubs__ = new mobl.CompSubscription();
         subs__.addSub(listSubs__);
-        var renderList324 = function() {
+        var renderList344 = function() {
           var subs__ = listSubs__;
-          list324 = tabs.get();
-          list324.list(function(results324) {
-            node1929.empty();
-            for(var i1170 = 0; i1170 < results324.length; i1170++) {
+          list344 = tabs.get();
+          list344.list(function(results344) {
+            node2042.empty();
+            for(var i1190 = 0; i1190 < results344.length; i1190++) {
               (function() {
-                var iternode324 = $("<span>");
-                node1929.append(iternode324);
+                var iternode344 = $("<span>");
+                node2042.append(iternode344);
                 var tabName;var tabIcon;var tabControl;
-                tabName = mobl.ref(mobl.ref(mobl.ref(results324), i1170), "_1");tabIcon = mobl.ref(mobl.ref(mobl.ref(results324), i1170), "_2");tabControl = mobl.ref(mobl.ref(mobl.ref(results324), i1170), "_3");
+                tabName = mobl.ref(mobl.ref(mobl.ref(results344), i1190), "_1");tabIcon = mobl.ref(mobl.ref(mobl.ref(results344), i1190), "_2");tabControl = mobl.ref(mobl.ref(mobl.ref(results344), i1190), "_3");
                 var result__ = activeTab.get() == tabName.get() ? ui.activeTabButtonStyle : ui.inActiveTabButtonStyle;
-                var tmp4011 = mobl.ref(result__);
+                var tmp4136 = mobl.ref(result__);
                 subs__.addSub(activeTab.addEventListener('change', function() {
-                  tmp4011.set(activeTab.get() == tabName.get() ? ui.activeTabButtonStyle : ui.inActiveTabButtonStyle);
+                  tmp4136.set(activeTab.get() == tabName.get() ? ui.activeTabButtonStyle : ui.inActiveTabButtonStyle);
                 }));
                 subs__.addSub(tabName.addEventListener('change', function() {
-                  tmp4011.set(activeTab.get() == tabName.get() ? ui.activeTabButtonStyle : ui.inActiveTabButtonStyle);
+                  tmp4136.set(activeTab.get() == tabName.get() ? ui.activeTabButtonStyle : ui.inActiveTabButtonStyle);
                 }));
                 subs__.addSub(mobl.ref(ui.activeTabButtonStyle).addEventListener('change', function() {
-                  tmp4011.set(activeTab.get() == tabName.get() ? ui.activeTabButtonStyle : ui.inActiveTabButtonStyle);
+                  tmp4136.set(activeTab.get() == tabName.get() ? ui.activeTabButtonStyle : ui.inActiveTabButtonStyle);
                 }));
                 subs__.addSub(mobl.ref(ui.inActiveTabButtonStyle).addEventListener('change', function() {
-                  tmp4011.set(activeTab.get() == tabName.get() ? ui.activeTabButtonStyle : ui.inActiveTabButtonStyle);
+                  tmp4136.set(activeTab.get() == tabName.get() ? ui.activeTabButtonStyle : ui.inActiveTabButtonStyle);
                 }));
                 
                 var result__ = function(event, callback) {
@@ -1760,149 +1760,149 @@ ui.tabSet = function(tabs, activeTab, elements, callback) {
                                  activeTab.set(result__);
                                  if(callback && callback.apply) callback(); return;
                                };
-                var tmp4010 = mobl.ref(result__);
+                var tmp4135 = mobl.ref(result__);
                 
-                var nodes4361 = $("<span>");
-                iternode324.append(nodes4361);
-                subs__.addSub((mobl.span)(tmp4011, mobl.ref(null), tmp4010, mobl.ref(null), function(_, callback) {
-                  var root5636 = $("<span>");
+                var nodes4497 = $("<span>");
+                iternode344.append(nodes4497);
+                subs__.addSub((mobl.span)(tmp4136, mobl.ref(null), tmp4135, mobl.ref(null), function(_, callback) {
+                  var root5838 = $("<span>");
                   var subs__ = new mobl.CompSubscription();
-                  var nodes4362 = $("<span>");
-                  root5636.append(nodes4362);
+                  var nodes4498 = $("<span>");
+                  root5838.append(nodes4498);
                   subs__.addSub((mobl.label)(tabName, mobl.ref(null), mobl.ref(null), function(_, callback) {
-                    var root5637 = $("<span>");
+                    var root5839 = $("<span>");
                     var subs__ = new mobl.CompSubscription();
-                    callback(root5637); return subs__;
+                    callback(root5839); return subs__;
                     return subs__;
                   }, function(node) {
-                    var oldNodes = nodes4362;
-                    nodes4362 = node.contents();
-                    oldNodes.replaceWith(nodes4362);
+                    var oldNodes = nodes4498;
+                    nodes4498 = node.contents();
+                    oldNodes.replaceWith(nodes4498);
                   }));
-                  callback(root5636); return subs__;
+                  callback(root5838); return subs__;
                   
                   return subs__;
                 }, function(node) {
-                  var oldNodes = nodes4361;
-                  nodes4361 = node.contents();
-                  oldNodes.replaceWith(nodes4361);
+                  var oldNodes = nodes4497;
+                  nodes4497 = node.contents();
+                  oldNodes.replaceWith(nodes4497);
                 }));
                 
-                var oldNodes = iternode324;
-                iternode324 = iternode324.contents();
-                oldNodes.replaceWith(iternode324);
+                var oldNodes = iternode344;
+                iternode344 = iternode344.contents();
+                oldNodes.replaceWith(iternode344);
                 
                 
               }());
             }
             mobl.delayedUpdateScrollers();
-            subs__.addSub(list324.addEventListener('change', function() { listSubs__.unsubscribe(); renderList324(true); }));
-            subs__.addSub(tabs.addEventListener('change', function() { listSubs__.unsubscribe(); renderList324(true); }));
+            subs__.addSub(list344.addEventListener('change', function() { listSubs__.unsubscribe(); renderList344(true); }));
+            subs__.addSub(tabs.addEventListener('change', function() { listSubs__.unsubscribe(); renderList344(true); }));
           });
         };
-        renderList324();
+        renderList344();
         
-        callback(root5635); return subs__;
+        callback(root5837); return subs__;
         
         return subs__;
       }, function(node) {
-        var oldNodes = nodes4360;
-        nodes4360 = node.contents();
-        oldNodes.replaceWith(nodes4360);
+        var oldNodes = nodes4496;
+        nodes4496 = node.contents();
+        oldNodes.replaceWith(nodes4496);
       }));
       
-      var node1930 = mobl.loadingSpan();
-      root5634.append(node1930);
-      var list325;
+      var node2043 = mobl.loadingSpan();
+      root5836.append(node2043);
+      var list345;
       var listSubs__ = new mobl.CompSubscription();
       subs__.addSub(listSubs__);
-      var renderList325 = function() {
+      var renderList345 = function() {
         var subs__ = listSubs__;
-        list325 = tabs.get();
-        list325.list(function(results325) {
-          node1930.empty();
-          for(var i1171 = 0; i1171 < results325.length; i1171++) {
+        list345 = tabs.get();
+        list345.list(function(results345) {
+          node2043.empty();
+          for(var i1191 = 0; i1191 < results345.length; i1191++) {
             (function() {
-              var iternode325 = $("<span>");
-              node1930.append(iternode325);
+              var iternode345 = $("<span>");
+              node2043.append(iternode345);
               var tabName;var tabIcon;var tabControl;
-              tabName = mobl.ref(mobl.ref(mobl.ref(results325), i1171), "_1");tabIcon = mobl.ref(mobl.ref(mobl.ref(results325), i1171), "_2");tabControl = mobl.ref(mobl.ref(mobl.ref(results325), i1171), "_3");
+              tabName = mobl.ref(mobl.ref(mobl.ref(results345), i1191), "_1");tabIcon = mobl.ref(mobl.ref(mobl.ref(results345), i1191), "_2");tabControl = mobl.ref(mobl.ref(mobl.ref(results345), i1191), "_3");
               var result__ = activeTab.get() == tabName.get() ? ui.activeTabStyle : ui.inActiveTabStyle;
-              var tmp4012 = mobl.ref(result__);
+              var tmp4137 = mobl.ref(result__);
               subs__.addSub(activeTab.addEventListener('change', function() {
-                tmp4012.set(activeTab.get() == tabName.get() ? ui.activeTabStyle : ui.inActiveTabStyle);
+                tmp4137.set(activeTab.get() == tabName.get() ? ui.activeTabStyle : ui.inActiveTabStyle);
               }));
               subs__.addSub(tabName.addEventListener('change', function() {
-                tmp4012.set(activeTab.get() == tabName.get() ? ui.activeTabStyle : ui.inActiveTabStyle);
+                tmp4137.set(activeTab.get() == tabName.get() ? ui.activeTabStyle : ui.inActiveTabStyle);
               }));
               subs__.addSub(mobl.ref(ui.activeTabStyle).addEventListener('change', function() {
-                tmp4012.set(activeTab.get() == tabName.get() ? ui.activeTabStyle : ui.inActiveTabStyle);
+                tmp4137.set(activeTab.get() == tabName.get() ? ui.activeTabStyle : ui.inActiveTabStyle);
               }));
               subs__.addSub(mobl.ref(ui.inActiveTabStyle).addEventListener('change', function() {
-                tmp4012.set(activeTab.get() == tabName.get() ? ui.activeTabStyle : ui.inActiveTabStyle);
+                tmp4137.set(activeTab.get() == tabName.get() ? ui.activeTabStyle : ui.inActiveTabStyle);
               }));
               
-              var nodes4363 = $("<span>");
-              iternode325.append(nodes4363);
-              subs__.addSub((mobl.block)(tmp4012, mobl.ref(null), mobl.ref(null), mobl.ref(null), function(_, callback) {
-                var root5638 = $("<span>");
+              var nodes4499 = $("<span>");
+              iternode345.append(nodes4499);
+              subs__.addSub((mobl.block)(tmp4137, mobl.ref(null), mobl.ref(null), mobl.ref(null), function(_, callback) {
+                var root5840 = $("<span>");
                 var subs__ = new mobl.CompSubscription();
-                var nodes4364 = $("<span>");
-                root5638.append(nodes4364);
+                var nodes4500 = $("<span>");
+                root5840.append(nodes4500);
                 subs__.addSub((mobl.screenContext)(function(_, callback) {
-                  var root5639 = $("<span>");
+                  var root5841 = $("<span>");
                   var subs__ = new mobl.CompSubscription();
-                  var nodes4365 = $("<span>");
-                  root5639.append(nodes4365);
+                  var nodes4501 = $("<span>");
+                  root5841.append(nodes4501);
                   subs__.addSub(tabControl.addEventListener('change', function() {
-                    renderControl754();
+                    renderControl800();
                   }));
                   
-                  function renderControl754() {
+                  function renderControl800() {
                     subs__.addSub((tabControl.get())(function(elements, callback) {
-                      var root5640 = $("<span>");
+                      var root5842 = $("<span>");
                       var subs__ = new mobl.CompSubscription();
-                      callback(root5640); return subs__;
+                      callback(root5842); return subs__;
                       return subs__;
                     }, function(node) {
-                      var oldNodes = nodes4365;
-                      nodes4365 = node.contents();
-                      oldNodes.replaceWith(nodes4365);
+                      var oldNodes = nodes4501;
+                      nodes4501 = node.contents();
+                      oldNodes.replaceWith(nodes4501);
                     }));
                   }
-                  renderControl754();
-                  callback(root5639); return subs__;
+                  renderControl800();
+                  callback(root5841); return subs__;
                   
                   return subs__;
                 }, function(node) {
-                  var oldNodes = nodes4364;
-                  nodes4364 = node.contents();
-                  oldNodes.replaceWith(nodes4364);
+                  var oldNodes = nodes4500;
+                  nodes4500 = node.contents();
+                  oldNodes.replaceWith(nodes4500);
                 }));
-                callback(root5638); return subs__;
+                callback(root5840); return subs__;
                 
                 return subs__;
               }, function(node) {
-                var oldNodes = nodes4363;
-                nodes4363 = node.contents();
-                oldNodes.replaceWith(nodes4363);
+                var oldNodes = nodes4499;
+                nodes4499 = node.contents();
+                oldNodes.replaceWith(nodes4499);
               }));
               
-              var oldNodes = iternode325;
-              iternode325 = iternode325.contents();
-              oldNodes.replaceWith(iternode325);
+              var oldNodes = iternode345;
+              iternode345 = iternode345.contents();
+              oldNodes.replaceWith(iternode345);
               
               
             }());
           }
           mobl.delayedUpdateScrollers();
-          subs__.addSub(list325.addEventListener('change', function() { listSubs__.unsubscribe(); renderList325(true); }));
-          subs__.addSub(tabs.addEventListener('change', function() { listSubs__.unsubscribe(); renderList325(true); }));
+          subs__.addSub(list345.addEventListener('change', function() { listSubs__.unsubscribe(); renderList345(true); }));
+          subs__.addSub(tabs.addEventListener('change', function() { listSubs__.unsubscribe(); renderList345(true); }));
         });
       };
-      renderList325();
+      renderList345();
       
-      callback(root5634); return subs__;
+      callback(root5836); return subs__;
       
       
     }
@@ -1913,77 +1913,77 @@ ui.searchboxStyle = 'ui__searchboxStyle';
 ui.searchBoxInputStyle = 'ui__searchBoxInputStyle';
 
 ui.searchBox = function(s, placeholder, onsearch, onkeyup, elements, callback) {
-  var root5641 = $("<span>");
+  var root5843 = $("<span>");
   var subs__ = new mobl.CompSubscription();
   
-  var node1931 = $("<div>");
+  var node2044 = $("<div>");
   
-  var ref1896 = mobl.ref(ui.searchboxStyle);
-  if(ref1896.get() !== null) {
-    node1931.attr('class', ref1896.get());
-    subs__.addSub(ref1896.addEventListener('change', function(_, ref, val) {
-      node1931.attr('class', val);
+  var ref2008 = mobl.ref(ui.searchboxStyle);
+  if(ref2008.get() !== null) {
+    node2044.attr('class', ref2008.get());
+    subs__.addSub(ref2008.addEventListener('change', function(_, ref, val) {
+      node2044.attr('class', val);
     }));
     
   }
-  subs__.addSub(ref1896.rebind());
+  subs__.addSub(ref2008.rebind());
   
   
-  var node1932 = $("<input>");
-  node1932.attr('type', "search");
+  var node2045 = $("<input>");
+  node2045.attr('type', "search");
   
-  var ref1893 = mobl.ref(ui.searchBoxInputStyle);
-  if(ref1893.get() !== null) {
-    node1932.attr('class', ref1893.get());
-    subs__.addSub(ref1893.addEventListener('change', function(_, ref, val) {
-      node1932.attr('class', val);
+  var ref2005 = mobl.ref(ui.searchBoxInputStyle);
+  if(ref2005.get() !== null) {
+    node2045.attr('class', ref2005.get());
+    subs__.addSub(ref2005.addEventListener('change', function(_, ref, val) {
+      node2045.attr('class', val);
     }));
     
   }
-  subs__.addSub(ref1893.rebind());
+  subs__.addSub(ref2005.rebind());
   
-  var ref1894 = placeholder;
-  if(ref1894.get() !== null) {
-    node1932.attr('placeholder', ref1894.get());
-    subs__.addSub(ref1894.addEventListener('change', function(_, ref, val) {
-      node1932.attr('placeholder', val);
+  var ref2006 = placeholder;
+  if(ref2006.get() !== null) {
+    node2045.attr('placeholder', ref2006.get());
+    subs__.addSub(ref2006.addEventListener('change', function(_, ref, val) {
+      node2045.attr('placeholder', val);
     }));
     
   }
-  subs__.addSub(ref1894.rebind());
+  subs__.addSub(ref2006.rebind());
   
-  var ref1895 = s;
-  node1932.val(""+ref1895.get());
-  var ignore374 = false;
-  subs__.addSub(ref1895.addEventListener('change', function(_, ref, val) {
-    if(ignore374) return;
-    node1932.val(""+val);
+  var ref2007 = s;
+  node2045.val(""+ref2007.get());
+  var ignore396 = false;
+  subs__.addSub(ref2007.addEventListener('change', function(_, ref, val) {
+    if(ignore396) return;
+    node2045.val(""+val);
   }));
-  subs__.addSub(ref1895.rebind());
+  subs__.addSub(ref2007.rebind());
   
-  subs__.addSub(mobl.domBind(node1932, 'keyup change', function() {
-    ignore374 = true;
-    s.set(mobl.stringTomobl__String(node1932.val()));
-    ignore374 = false;
+  subs__.addSub(mobl.domBind(node2045, 'keyup change', function() {
+    ignore396 = true;
+    s.set(mobl.stringTomobl__String(node2045.val()));
+    ignore396 = false;
   }));
   
   
-  var val966 = onsearch.get();
-  if(val966 !== null) {
-    subs__.addSub(mobl.domBind(node1932, 'change', val966));
+  var val1024 = onsearch.get();
+  if(val1024 !== null) {
+    subs__.addSub(mobl.domBind(node2045, 'change', val1024));
   }
   
-  var val967 = onkeyup.get();
-  if(val967 !== null) {
-    subs__.addSub(mobl.domBind(node1932, 'keyup', val967));
+  var val1025 = onkeyup.get();
+  if(val1025 !== null) {
+    subs__.addSub(mobl.domBind(node2045, 'keyup', val1025));
   }
-  node1932.attr('autocorrect', false);
-  node1932.attr('autocapitalize', false);
-  node1932.attr('autocomplete', false);
+  node2045.attr('autocorrect', false);
+  node2045.attr('autocapitalize', false);
+  node2045.attr('autocomplete', false);
   
-  node1931.append(node1932);
-  root5641.append(node1931);
-  callback(root5641); return subs__;
+  node2044.append(node2045);
+  root5843.append(node2044);
+  callback(root5843); return subs__;
   
   
   return subs__;
@@ -1993,48 +1993,48 @@ ui.buttonStyle = 'ui__buttonStyle';
 ui.buttonPushedStyle = 'ui__buttonPushedStyle';
 
 ui.contextMenu = function(elements, callback) {
-  var root5642 = $("<span>");
+  var root5844 = $("<span>");
   var subs__ = new mobl.CompSubscription();
   
   var menu = $("<div>");
   
-  var ref1897 = mobl.ref(ui.contextMenuStyle);
-  if(ref1897.get() !== null) {
-    menu.attr('class', ref1897.get());
-    subs__.addSub(ref1897.addEventListener('change', function(_, ref, val) {
+  var ref2009 = mobl.ref(ui.contextMenuStyle);
+  if(ref2009.get() !== null) {
+    menu.attr('class', ref2009.get());
+    subs__.addSub(ref2009.addEventListener('change', function(_, ref, val) {
       menu.attr('class', val);
     }));
     
   }
-  subs__.addSub(ref1897.rebind());
+  subs__.addSub(ref2009.rebind());
   
-  var nodes4366 = $("<span>");
-  menu.append(nodes4366);
+  var nodes4502 = $("<span>");
+  menu.append(nodes4502);
   subs__.addSub(mobl.ref(elements).addEventListener('change', function() {
-    renderControl755();
+    renderControl801();
   }));
   
-  function renderControl755() {
+  function renderControl801() {
     subs__.addSub((elements)(function(elements, callback) {
-      var root5643 = $("<span>");
+      var root5845 = $("<span>");
       var subs__ = new mobl.CompSubscription();
-      callback(root5643); return subs__;
+      callback(root5845); return subs__;
       return subs__;
     }, function(node) {
-      var oldNodes = nodes4366;
-      nodes4366 = node.contents();
-      oldNodes.replaceWith(nodes4366);
+      var oldNodes = nodes4502;
+      nodes4502 = node.contents();
+      oldNodes.replaceWith(nodes4502);
     }));
   }
-  renderControl755();
-  root5642.append(menu);
+  renderControl801();
+  root5844.append(menu);
   var result__ = menu.hide();
   
   var img = $("<img>");
   img.attr('src', "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAA0AAAANABeWPPlAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAEuSURBVDiNrdSrTkNBEMbx35aLIhUNEl4CsCSkmgfBoOoJz0B4BhSSBEcQSMA3GBJE34Br6CA6heWUA4huMuLszvc/c9stEaG5Sil97GADm7l9g1tcRsTFjCgiPg09nCDSxhimjav9E/S+aSvINkbpeIU+utV5N/eu0meE7W+gjGSEFwzQqf/WiLqTPi+p6dWgaTqDNsAPwME0zWmd+1U6rZG0RDZNs9/J7sBBRIxnutGy0vcgP3cWTVocuC6lLGD9H5z3iHjAdWo3ZMGGVchHvtrcZnuV/zAZM6CCUzz9AHjGYaNWn6Azk2GrZ2YJlw3YI44bkG5qzzomY1+wVRXyDbu4w2sCz7HfqNVWam/5pf1YxX2eLf/W/j8HEmtY+XMg53pF5nZp5/GMlHk9bB8Ws56C3JDK8wAAAABJRU5ErkJggg==");
   img.attr('style', "float: right;");
   
-  var val968 = function(event, callback) {
+  var val1026 = function(event, callback) {
                 if(event && event.stopPropagation) event.stopPropagation();
                 var result__ = img.parent();
                 var target = result__;
@@ -2044,16 +2044,16 @@ ui.contextMenu = function(elements, callback) {
                 var result__ = menu.css("top", "5px");
                 var result__ = menu.show();
                 mobl.sleep(500, function(result__) {
-                  var tmp4052 = result__;
+                  var tmp4177 = result__;
                   var result__ = mobl.$("body").bind("tap", removeMenu);
                   if(callback && callback.apply) callback(); return;
                 });
               };
-  if(val968 !== null) {
-    subs__.addSub(mobl.domBind(img, 'tap', val968));
+  if(val1026 !== null) {
+    subs__.addSub(mobl.domBind(img, 'tap', val1026));
   }
   
-  root5642.append(img);
+  root5844.append(img);
   
   var removeMenu = function(evt) {
      var __this = this;
@@ -2063,7 +2063,7 @@ ui.contextMenu = function(elements, callback) {
   };
   
   
-  callback(root5642); return subs__;
+  callback(root5844); return subs__;
   
   
   
@@ -2071,115 +2071,115 @@ ui.contextMenu = function(elements, callback) {
 };
 
 ui.masterDetail = function(items, masterItem, detail, elements, callback) {
-  var root5644 = $("<span>");
+  var root5846 = $("<span>");
   var subs__ = new mobl.CompSubscription();
   var result__ = mobl.window.get().innerWidth > 500;
-  var tmp4037 = mobl.ref(result__);
+  var tmp4162 = mobl.ref(result__);
   subs__.addSub(mobl.ref(mobl.window, 'innerWidth').addEventListener('change', function() {
-    tmp4037.set(mobl.window.get().innerWidth > 500);
+    tmp4162.set(mobl.window.get().innerWidth > 500);
   }));
   
   
-  var node1933 = $("<span>");
-  root5644.append(node1933);
-  var condSubs476 = new mobl.CompSubscription();
-  subs__.addSub(condSubs476);
-  var oldValue476;
-  var renderCond476 = function() {
-    var value2308 = tmp4037.get();
-    if(oldValue476 === value2308) return;
-    oldValue476 = value2308;
-    var subs__ = condSubs476;
+  var node2046 = $("<span>");
+  root5846.append(node2046);
+  var condSubs503 = new mobl.CompSubscription();
+  subs__.addSub(condSubs503);
+  var oldValue503;
+  var renderCond503 = function() {
+    var value2407 = tmp4162.get();
+    if(oldValue503 === value2407) return;
+    oldValue503 = value2407;
+    var subs__ = condSubs503;
     subs__.unsubscribe();
-    node1933.empty();
-    if(value2308) {
+    node2046.empty();
+    if(value2407) {
       items.get().one(function(result__) {
-        var tmp4053 = result__;
+        var tmp4178 = result__;
         var current = mobl.ref(result__);
         
-        var node1934 = $("<div>");
-        node1934.attr('width', "100%");
+        var node2047 = $("<div>");
+        node2047.attr('width', "100%");
         
         
-        var node1935 = $("<div>");
-        node1935.attr('style', "float:left; width:33%; position:relative; border-right: solid 1px #cccccc;");
+        var node2048 = $("<div>");
+        node2048.attr('style', "float:left; width:33%; position:relative; border-right: solid 1px #cccccc;");
         
-        var nodes4369 = $("<span>");
-        node1935.append(nodes4369);
+        var nodes4505 = $("<span>");
+        node2048.append(nodes4505);
         subs__.addSub((ui.group)(function(_, callback) {
-          var root5647 = $("<span>");
+          var root5849 = $("<span>");
           var subs__ = new mobl.CompSubscription();
           
-          var node1938 = mobl.loadingSpan();
-          root5647.append(node1938);
-          var list326;
+          var node2051 = mobl.loadingSpan();
+          root5849.append(node2051);
+          var list346;
           var listSubs__ = new mobl.CompSubscription();
           subs__.addSub(listSubs__);
-          var renderList326 = function() {
+          var renderList346 = function() {
             var subs__ = listSubs__;
-            list326 = items.get();
-            list326.list(function(results326) {
-              node1938.empty();
-              for(var i1172 = 0; i1172 < results326.length; i1172++) {
+            list346 = items.get();
+            list346.list(function(results346) {
+              node2051.empty();
+              for(var i1192 = 0; i1192 < results346.length; i1192++) {
                 (function() {
-                  var iternode326 = $("<span>");
-                  node1938.append(iternode326);
+                  var iternode346 = $("<span>");
+                  node2051.append(iternode346);
                   var it;
-                  it = mobl.ref(mobl.ref(results326), i1172);
+                  it = mobl.ref(mobl.ref(results346), i1192);
                   var result__ = it.get() == current.get();
-                  var tmp4018 = mobl.ref(result__);
+                  var tmp4143 = mobl.ref(result__);
                   subs__.addSub(it.addEventListener('change', function() {
-                    tmp4018.set(it.get() == current.get());
+                    tmp4143.set(it.get() == current.get());
                   }));
                   subs__.addSub(current.addEventListener('change', function() {
-                    tmp4018.set(it.get() == current.get());
+                    tmp4143.set(it.get() == current.get());
                   }));
                   
                   
-                  var node1939 = $("<span>");
-                  iternode326.append(node1939);
-                  var condSubs478 = new mobl.CompSubscription();
-                  subs__.addSub(condSubs478);
-                  var oldValue478;
-                  var renderCond478 = function() {
-                    var value2310 = tmp4018.get();
-                    if(oldValue478 === value2310) return;
-                    oldValue478 = value2310;
-                    var subs__ = condSubs478;
+                  var node2052 = $("<span>");
+                  iternode346.append(node2052);
+                  var condSubs505 = new mobl.CompSubscription();
+                  subs__.addSub(condSubs505);
+                  var oldValue505;
+                  var renderCond505 = function() {
+                    var value2409 = tmp4143.get();
+                    if(oldValue505 === value2409) return;
+                    oldValue505 = value2409;
+                    var subs__ = condSubs505;
                     subs__.unsubscribe();
-                    node1939.empty();
-                    if(value2310) {
-                      var nodes4370 = $("<span>");
-                      node1939.append(nodes4370);
+                    node2052.empty();
+                    if(value2409) {
+                      var nodes4506 = $("<span>");
+                      node2052.append(nodes4506);
                       subs__.addSub((ui.item)(mobl.ref(ui.selectedItemStyle), mobl.ref(ui.itemPushedStyle), mobl.ref(null), mobl.ref(null), mobl.ref(false), function(_, callback) {
-                        var root5648 = $("<span>");
+                        var root5850 = $("<span>");
                         var subs__ = new mobl.CompSubscription();
-                        var nodes4371 = $("<span>");
-                        root5648.append(nodes4371);
+                        var nodes4507 = $("<span>");
+                        root5850.append(nodes4507);
                         subs__.addSub(masterItem.addEventListener('change', function() {
-                          renderControl757();
+                          renderControl803();
                         }));
                         
-                        function renderControl757() {
+                        function renderControl803() {
                           subs__.addSub((masterItem.get())(it, function(elements, callback) {
-                            var root5649 = $("<span>");
+                            var root5851 = $("<span>");
                             var subs__ = new mobl.CompSubscription();
-                            callback(root5649); return subs__;
+                            callback(root5851); return subs__;
                             return subs__;
                           }, function(node) {
-                            var oldNodes = nodes4371;
-                            nodes4371 = node.contents();
-                            oldNodes.replaceWith(nodes4371);
+                            var oldNodes = nodes4507;
+                            nodes4507 = node.contents();
+                            oldNodes.replaceWith(nodes4507);
                           }));
                         }
-                        renderControl757();
-                        callback(root5648); return subs__;
+                        renderControl803();
+                        callback(root5850); return subs__;
                         
                         return subs__;
                       }, function(node) {
-                        var oldNodes = nodes4370;
-                        nodes4370 = node.contents();
-                        oldNodes.replaceWith(nodes4370);
+                        var oldNodes = nodes4506;
+                        nodes4506 = node.contents();
+                        oldNodes.replaceWith(nodes4506);
                       }));
                       
                       
@@ -2191,139 +2191,139 @@ ui.masterDetail = function(items, masterItem, detail, elements, callback) {
                                        var result__ = ui.scrollUp();
                                        if(callback && callback.apply) callback(); return;
                                      };
-                      var tmp4017 = mobl.ref(result__);
+                      var tmp4142 = mobl.ref(result__);
                       
-                      var nodes4372 = $("<span>");
-                      node1939.append(nodes4372);
-                      subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp4017, mobl.ref(null), mobl.ref(true), function(_, callback) {
-                        var root5650 = $("<span>");
+                      var nodes4508 = $("<span>");
+                      node2052.append(nodes4508);
+                      subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp4142, mobl.ref(null), mobl.ref(true), function(_, callback) {
+                        var root5852 = $("<span>");
                         var subs__ = new mobl.CompSubscription();
-                        var nodes4373 = $("<span>");
-                        root5650.append(nodes4373);
+                        var nodes4509 = $("<span>");
+                        root5852.append(nodes4509);
                         subs__.addSub(masterItem.addEventListener('change', function() {
-                          renderControl758();
+                          renderControl804();
                         }));
                         
-                        function renderControl758() {
+                        function renderControl804() {
                           subs__.addSub((masterItem.get())(it, function(elements, callback) {
-                            var root5651 = $("<span>");
+                            var root5853 = $("<span>");
                             var subs__ = new mobl.CompSubscription();
-                            callback(root5651); return subs__;
+                            callback(root5853); return subs__;
                             return subs__;
                           }, function(node) {
-                            var oldNodes = nodes4373;
-                            nodes4373 = node.contents();
-                            oldNodes.replaceWith(nodes4373);
+                            var oldNodes = nodes4509;
+                            nodes4509 = node.contents();
+                            oldNodes.replaceWith(nodes4509);
                           }));
                         }
-                        renderControl758();
-                        callback(root5650); return subs__;
+                        renderControl804();
+                        callback(root5852); return subs__;
                         
                         return subs__;
                       }, function(node) {
-                        var oldNodes = nodes4372;
-                        nodes4372 = node.contents();
-                        oldNodes.replaceWith(nodes4372);
+                        var oldNodes = nodes4508;
+                        nodes4508 = node.contents();
+                        oldNodes.replaceWith(nodes4508);
                       }));
                       
                       
                     }
                   };
-                  renderCond478();
-                  subs__.addSub(tmp4018.addEventListener('change', function() {
-                    renderCond478();
+                  renderCond505();
+                  subs__.addSub(tmp4143.addEventListener('change', function() {
+                    renderCond505();
                   }));
                   
                   
-                  var oldNodes = iternode326;
-                  iternode326 = iternode326.contents();
-                  oldNodes.replaceWith(iternode326);
+                  var oldNodes = iternode346;
+                  iternode346 = iternode346.contents();
+                  oldNodes.replaceWith(iternode346);
                   
                   
                 }());
               }
               mobl.delayedUpdateScrollers();
-              subs__.addSub(list326.addEventListener('change', function() { listSubs__.unsubscribe(); renderList326(true); }));
-              subs__.addSub(items.addEventListener('change', function() { listSubs__.unsubscribe(); renderList326(true); }));
+              subs__.addSub(list346.addEventListener('change', function() { listSubs__.unsubscribe(); renderList346(true); }));
+              subs__.addSub(items.addEventListener('change', function() { listSubs__.unsubscribe(); renderList346(true); }));
             });
           };
-          renderList326();
+          renderList346();
           
-          callback(root5647); return subs__;
+          callback(root5849); return subs__;
           
           return subs__;
         }, function(node) {
-          var oldNodes = nodes4369;
-          nodes4369 = node.contents();
-          oldNodes.replaceWith(nodes4369);
+          var oldNodes = nodes4505;
+          nodes4505 = node.contents();
+          oldNodes.replaceWith(nodes4505);
         }));
-        node1934.append(node1935);
+        node2047.append(node2048);
         
-        var node1936 = $("<div>");
-        node1936.attr('style', "float:left; width:66.5%; position:relative; margin-left: 0.5%;");
+        var node2049 = $("<div>");
+        node2049.attr('style', "float:left; width:66.5%; position:relative; margin-left: 0.5%;");
         
         
-        var node1937 = $("<span>");
-        node1936.append(node1937);
-        var condSubs477 = new mobl.CompSubscription();
-        subs__.addSub(condSubs477);
-        var oldValue477;
-        var renderCond477 = function() {
-          var value2309 = current.get();
-          if(oldValue477 === value2309) return;
-          oldValue477 = value2309;
-          var subs__ = condSubs477;
+        var node2050 = $("<span>");
+        node2049.append(node2050);
+        var condSubs504 = new mobl.CompSubscription();
+        subs__.addSub(condSubs504);
+        var oldValue504;
+        var renderCond504 = function() {
+          var value2408 = current.get();
+          if(oldValue504 === value2408) return;
+          oldValue504 = value2408;
+          var subs__ = condSubs504;
           subs__.unsubscribe();
-          node1937.empty();
-          if(value2309) {
-            var nodes4367 = $("<span>");
-            node1937.append(nodes4367);
+          node2050.empty();
+          if(value2408) {
+            var nodes4503 = $("<span>");
+            node2050.append(nodes4503);
             subs__.addSub(detail.addEventListener('change', function() {
-              renderControl756();
+              renderControl802();
             }));
             
-            function renderControl756() {
+            function renderControl802() {
               subs__.addSub((detail.get())(current, function(elements, callback) {
-                var root5645 = $("<span>");
+                var root5847 = $("<span>");
                 var subs__ = new mobl.CompSubscription();
-                callback(root5645); return subs__;
+                callback(root5847); return subs__;
                 return subs__;
               }, function(node) {
-                var oldNodes = nodes4367;
-                nodes4367 = node.contents();
-                oldNodes.replaceWith(nodes4367);
+                var oldNodes = nodes4503;
+                nodes4503 = node.contents();
+                oldNodes.replaceWith(nodes4503);
               }));
             }
-            renderControl756();
+            renderControl802();
             
             
           } else {
             var result__ = mobl._("Select an item on the left", []);
-            var tmp4019 = mobl.ref(result__);
+            var tmp4144 = mobl.ref(result__);
             
-            var nodes4368 = $("<span>");
-            node1937.append(nodes4368);
-            subs__.addSub((mobl.label)(tmp4019, mobl.ref(null), mobl.ref(null), function(_, callback) {
-              var root5646 = $("<span>");
+            var nodes4504 = $("<span>");
+            node2050.append(nodes4504);
+            subs__.addSub((mobl.label)(tmp4144, mobl.ref(null), mobl.ref(null), function(_, callback) {
+              var root5848 = $("<span>");
               var subs__ = new mobl.CompSubscription();
-              callback(root5646); return subs__;
+              callback(root5848); return subs__;
               return subs__;
             }, function(node) {
-              var oldNodes = nodes4368;
-              nodes4368 = node.contents();
-              oldNodes.replaceWith(nodes4368);
+              var oldNodes = nodes4504;
+              nodes4504 = node.contents();
+              oldNodes.replaceWith(nodes4504);
             }));
             
             
           }
         };
-        renderCond477();
+        renderCond504();
         subs__.addSub(current.addEventListener('change', function() {
-          renderCond477();
+          renderCond504();
         }));
         
-        node1934.append(node1936);
-        node1933.append(node1934);
+        node2047.append(node2049);
+        node2046.append(node2047);
         
         
         
@@ -2332,116 +2332,116 @@ ui.masterDetail = function(items, masterItem, detail, elements, callback) {
         
       });
     } else {
-      var nodes4374 = $("<span>");
-      node1933.append(nodes4374);
+      var nodes4510 = $("<span>");
+      node2046.append(nodes4510);
       subs__.addSub((ui.group)(function(_, callback) {
-        var root5652 = $("<span>");
+        var root5854 = $("<span>");
         var subs__ = new mobl.CompSubscription();
         
-        var node1940 = mobl.loadingSpan();
-        root5652.append(node1940);
-        var list327;
+        var node2053 = mobl.loadingSpan();
+        root5854.append(node2053);
+        var list347;
         var listSubs__ = new mobl.CompSubscription();
         subs__.addSub(listSubs__);
-        var renderList327 = function() {
+        var renderList347 = function() {
           var subs__ = listSubs__;
-          list327 = items.get();
-          list327.list(function(results327) {
-            node1940.empty();
-            for(var i1173 = 0; i1173 < results327.length; i1173++) {
+          list347 = items.get();
+          list347.list(function(results347) {
+            node2053.empty();
+            for(var i1193 = 0; i1193 < results347.length; i1193++) {
               (function() {
-                var iternode327 = $("<span>");
-                node1940.append(iternode327);
+                var iternode347 = $("<span>");
+                node2053.append(iternode347);
                 var it;
-                it = mobl.ref(mobl.ref(results327), i1173);
+                it = mobl.ref(mobl.ref(results347), i1193);
                 var result__ = function(event, callback) {
                                  if(event && event.stopPropagation) event.stopPropagation();
                                  mobl.call('ui.detailScreen', [it, detail, mobl.ref(false), mobl.ref("slide")], function(result__) {
-                                 var tmp4054 = result__;
+                                 var tmp4179 = result__;
                                  if(callback && callback.apply) callback(); return;
                                  });
                                };
-                var tmp4013 = mobl.ref(result__);
+                var tmp4138 = mobl.ref(result__);
                 
-                var nodes4375 = $("<span>");
-                iternode327.append(nodes4375);
-                subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp4013, mobl.ref(null), mobl.ref(false), function(_, callback) {
-                  var root5653 = $("<span>");
+                var nodes4511 = $("<span>");
+                iternode347.append(nodes4511);
+                subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp4138, mobl.ref(null), mobl.ref(false), function(_, callback) {
+                  var root5855 = $("<span>");
                   var subs__ = new mobl.CompSubscription();
-                  var nodes4376 = $("<span>");
-                  root5653.append(nodes4376);
+                  var nodes4512 = $("<span>");
+                  root5855.append(nodes4512);
                   subs__.addSub(masterItem.addEventListener('change', function() {
-                    renderControl759();
+                    renderControl805();
                   }));
                   
-                  function renderControl759() {
+                  function renderControl805() {
                     subs__.addSub((masterItem.get())(it, function(elements, callback) {
-                      var root5654 = $("<span>");
+                      var root5856 = $("<span>");
                       var subs__ = new mobl.CompSubscription();
-                      callback(root5654); return subs__;
+                      callback(root5856); return subs__;
                       return subs__;
                     }, function(node) {
-                      var oldNodes = nodes4376;
-                      nodes4376 = node.contents();
-                      oldNodes.replaceWith(nodes4376);
+                      var oldNodes = nodes4512;
+                      nodes4512 = node.contents();
+                      oldNodes.replaceWith(nodes4512);
                     }));
                   }
-                  renderControl759();
-                  callback(root5653); return subs__;
+                  renderControl805();
+                  callback(root5855); return subs__;
                   
                   return subs__;
                 }, function(node) {
-                  var oldNodes = nodes4375;
-                  nodes4375 = node.contents();
-                  oldNodes.replaceWith(nodes4375);
+                  var oldNodes = nodes4511;
+                  nodes4511 = node.contents();
+                  oldNodes.replaceWith(nodes4511);
                 }));
                 
-                var oldNodes = iternode327;
-                iternode327 = iternode327.contents();
-                oldNodes.replaceWith(iternode327);
+                var oldNodes = iternode347;
+                iternode347 = iternode347.contents();
+                oldNodes.replaceWith(iternode347);
                 
                 
               }());
             }
             mobl.delayedUpdateScrollers();
-            subs__.addSub(list327.addEventListener('change', function() { listSubs__.unsubscribe(); renderList327(true); }));
-            subs__.addSub(items.addEventListener('change', function() { listSubs__.unsubscribe(); renderList327(true); }));
+            subs__.addSub(list347.addEventListener('change', function() { listSubs__.unsubscribe(); renderList347(true); }));
+            subs__.addSub(items.addEventListener('change', function() { listSubs__.unsubscribe(); renderList347(true); }));
           });
         };
-        renderList327();
+        renderList347();
         
-        callback(root5652); return subs__;
+        callback(root5854); return subs__;
         
         return subs__;
       }, function(node) {
-        var oldNodes = nodes4374;
-        nodes4374 = node.contents();
-        oldNodes.replaceWith(nodes4374);
+        var oldNodes = nodes4510;
+        nodes4510 = node.contents();
+        oldNodes.replaceWith(nodes4510);
       }));
       
       
     }
   };
-  renderCond476();
-  subs__.addSub(tmp4037.addEventListener('change', function() {
-    renderCond476();
+  renderCond503();
+  subs__.addSub(tmp4162.addEventListener('change', function() {
+    renderCond503();
   }));
   
-  callback(root5644); return subs__;
+  callback(root5846); return subs__;
   
   return subs__;
 };
 
 ui.detailScreen = function(it, detail, callback, screenCallback) {
-  var root5655 = $("<div>");
+  var root5857 = $("<div>");
   var subs__ = new mobl.CompSubscription();
   var result__ = mobl._("Detail", []);
-  var tmp4016 = mobl.ref(result__);
+  var tmp4141 = mobl.ref(result__);
   
-  var nodes4377 = $("<span>");
-  root5655.append(nodes4377);
-  subs__.addSub((ui.header)(tmp4016, mobl.ref(false), mobl.ref(null), function(_, callback) {
-    var root5656 = $("<span>");
+  var nodes4513 = $("<span>");
+  root5857.append(nodes4513);
+  subs__.addSub((ui.header)(tmp4141, mobl.ref(false), mobl.ref(null), function(_, callback) {
+    var root5858 = $("<span>");
     var subs__ = new mobl.CompSubscription();
     var result__ = function(event, callback) {
                      if(event && event.stopPropagation) event.stopPropagation();
@@ -2449,51 +2449,51 @@ ui.detailScreen = function(it, detail, callback, screenCallback) {
                      return;
                      if(callback && callback.apply) callback(); return;
                    };
-    var tmp4015 = mobl.ref(result__);
+    var tmp4140 = mobl.ref(result__);
     
     var result__ = mobl._("Back", []);
-    var tmp4014 = mobl.ref(result__);
+    var tmp4139 = mobl.ref(result__);
     
-    var nodes4378 = $("<span>");
-    root5656.append(nodes4378);
-    subs__.addSub((ui.backButton)(tmp4014, mobl.ref(ui.backButtonStyle), mobl.ref(ui.backButtonPushedStyle), tmp4015, function(_, callback) {
-      var root5657 = $("<span>");
+    var nodes4514 = $("<span>");
+    root5858.append(nodes4514);
+    subs__.addSub((ui.backButton)(tmp4139, mobl.ref(ui.backButtonStyle), mobl.ref(ui.backButtonPushedStyle), tmp4140, function(_, callback) {
+      var root5859 = $("<span>");
       var subs__ = new mobl.CompSubscription();
-      callback(root5657); return subs__;
+      callback(root5859); return subs__;
       return subs__;
     }, function(node) {
-      var oldNodes = nodes4378;
-      nodes4378 = node.contents();
-      oldNodes.replaceWith(nodes4378);
+      var oldNodes = nodes4514;
+      nodes4514 = node.contents();
+      oldNodes.replaceWith(nodes4514);
     }));
-    callback(root5656); return subs__;
+    callback(root5858); return subs__;
     
     return subs__;
   }, function(node) {
-    var oldNodes = nodes4377;
-    nodes4377 = node.contents();
-    oldNodes.replaceWith(nodes4377);
+    var oldNodes = nodes4513;
+    nodes4513 = node.contents();
+    oldNodes.replaceWith(nodes4513);
   }));
-  var nodes4379 = $("<span>");
-  root5655.append(nodes4379);
+  var nodes4515 = $("<span>");
+  root5857.append(nodes4515);
   subs__.addSub(detail.addEventListener('change', function() {
-    renderControl760();
+    renderControl806();
   }));
   
-  function renderControl760() {
+  function renderControl806() {
     subs__.addSub((detail.get())(it, function(elements, callback) {
-      var root5658 = $("<span>");
+      var root5860 = $("<span>");
       var subs__ = new mobl.CompSubscription();
-      callback(root5658); return subs__;
+      callback(root5860); return subs__;
       return subs__;
     }, function(node) {
-      var oldNodes = nodes4379;
-      nodes4379 = node.contents();
-      oldNodes.replaceWith(nodes4379);
+      var oldNodes = nodes4515;
+      nodes4515 = node.contents();
+      oldNodes.replaceWith(nodes4515);
     }));
   }
-  renderControl760();
-  callback(root5655); return subs__;
+  renderControl806();
+  callback(root5857); return subs__;
   
   
   return subs__;
@@ -2501,86 +2501,86 @@ ui.detailScreen = function(it, detail, callback, screenCallback) {
 ui.selectedItemStyle = 'ui__selectedItemStyle';
 
 ui.zoomList = function(coll, listCtrl, zoomCtrl, elements, callback) {
-  var root5659 = $("<span>");
+  var root5861 = $("<span>");
   var subs__ = new mobl.CompSubscription();
   
   var selected = mobl.ref(null);
-  var nodes4380 = $("<span>");
-  root5659.append(nodes4380);
+  var nodes4516 = $("<span>");
+  root5861.append(nodes4516);
   subs__.addSub((ui.group)(function(_, callback) {
-    var root5660 = $("<span>");
+    var root5862 = $("<span>");
     var subs__ = new mobl.CompSubscription();
     
-    var node1941 = mobl.loadingSpan();
-    root5660.append(node1941);
-    var list328;
+    var node2054 = mobl.loadingSpan();
+    root5862.append(node2054);
+    var list348;
     var listSubs__ = new mobl.CompSubscription();
     subs__.addSub(listSubs__);
-    var renderList328 = function() {
+    var renderList348 = function() {
       var subs__ = listSubs__;
-      list328 = coll.get();
-      list328.list(function(results328) {
-        node1941.empty();
-        for(var i1174 = 0; i1174 < results328.length; i1174++) {
+      list348 = coll.get();
+      list348.list(function(results348) {
+        node2054.empty();
+        for(var i1194 = 0; i1194 < results348.length; i1194++) {
           (function() {
-            var iternode328 = $("<span>");
-            node1941.append(iternode328);
+            var iternode348 = $("<span>");
+            node2054.append(iternode348);
             var it;
-            it = mobl.ref(mobl.ref(results328), i1174);
+            it = mobl.ref(mobl.ref(results348), i1194);
             var result__ = it.get() == selected.get();
-            var tmp4021 = mobl.ref(result__);
+            var tmp4146 = mobl.ref(result__);
             subs__.addSub(it.addEventListener('change', function() {
-              tmp4021.set(it.get() == selected.get());
+              tmp4146.set(it.get() == selected.get());
             }));
             subs__.addSub(selected.addEventListener('change', function() {
-              tmp4021.set(it.get() == selected.get());
+              tmp4146.set(it.get() == selected.get());
             }));
             
             
-            var node1942 = $("<span>");
-            iternode328.append(node1942);
-            var condSubs479 = new mobl.CompSubscription();
-            subs__.addSub(condSubs479);
-            var oldValue479;
-            var renderCond479 = function() {
-              var value2311 = tmp4021.get();
-              if(oldValue479 === value2311) return;
-              oldValue479 = value2311;
-              var subs__ = condSubs479;
+            var node2055 = $("<span>");
+            iternode348.append(node2055);
+            var condSubs506 = new mobl.CompSubscription();
+            subs__.addSub(condSubs506);
+            var oldValue506;
+            var renderCond506 = function() {
+              var value2410 = tmp4146.get();
+              if(oldValue506 === value2410) return;
+              oldValue506 = value2410;
+              var subs__ = condSubs506;
               subs__.unsubscribe();
-              node1942.empty();
-              if(value2311) {
-                var nodes4381 = $("<span>");
-                node1942.append(nodes4381);
+              node2055.empty();
+              if(value2410) {
+                var nodes4517 = $("<span>");
+                node2055.append(nodes4517);
                 subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), mobl.ref(null), mobl.ref(null), mobl.ref(false), function(_, callback) {
-                  var root5661 = $("<span>");
+                  var root5863 = $("<span>");
                   var subs__ = new mobl.CompSubscription();
-                  var nodes4382 = $("<span>");
-                  root5661.append(nodes4382);
+                  var nodes4518 = $("<span>");
+                  root5863.append(nodes4518);
                   subs__.addSub(zoomCtrl.addEventListener('change', function() {
-                    renderControl761();
+                    renderControl807();
                   }));
                   
-                  function renderControl761() {
+                  function renderControl807() {
                     subs__.addSub((zoomCtrl.get())(it, function(elements, callback) {
-                      var root5662 = $("<span>");
+                      var root5864 = $("<span>");
                       var subs__ = new mobl.CompSubscription();
-                      callback(root5662); return subs__;
+                      callback(root5864); return subs__;
                       return subs__;
                     }, function(node) {
-                      var oldNodes = nodes4382;
-                      nodes4382 = node.contents();
-                      oldNodes.replaceWith(nodes4382);
+                      var oldNodes = nodes4518;
+                      nodes4518 = node.contents();
+                      oldNodes.replaceWith(nodes4518);
                     }));
                   }
-                  renderControl761();
-                  callback(root5661); return subs__;
+                  renderControl807();
+                  callback(root5863); return subs__;
                   
                   return subs__;
                 }, function(node) {
-                  var oldNodes = nodes4381;
-                  nodes4381 = node.contents();
-                  oldNodes.replaceWith(nodes4381);
+                  var oldNodes = nodes4517;
+                  nodes4517 = node.contents();
+                  oldNodes.replaceWith(nodes4517);
                 }));
                 
                 
@@ -2591,204 +2591,204 @@ ui.zoomList = function(coll, listCtrl, zoomCtrl, elements, callback) {
                                  selected.set(result__);
                                  if(callback && callback.apply) callback(); return;
                                };
-                var tmp4020 = mobl.ref(result__);
+                var tmp4145 = mobl.ref(result__);
                 
-                var nodes4383 = $("<span>");
-                node1942.append(nodes4383);
-                subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp4020, mobl.ref(null), mobl.ref(true), function(_, callback) {
-                  var root5663 = $("<span>");
+                var nodes4519 = $("<span>");
+                node2055.append(nodes4519);
+                subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp4145, mobl.ref(null), mobl.ref(true), function(_, callback) {
+                  var root5865 = $("<span>");
                   var subs__ = new mobl.CompSubscription();
-                  var nodes4384 = $("<span>");
-                  root5663.append(nodes4384);
+                  var nodes4520 = $("<span>");
+                  root5865.append(nodes4520);
                   subs__.addSub(listCtrl.addEventListener('change', function() {
-                    renderControl762();
+                    renderControl808();
                   }));
                   
-                  function renderControl762() {
+                  function renderControl808() {
                     subs__.addSub((listCtrl.get())(it, function(elements, callback) {
-                      var root5664 = $("<span>");
+                      var root5866 = $("<span>");
                       var subs__ = new mobl.CompSubscription();
-                      callback(root5664); return subs__;
+                      callback(root5866); return subs__;
                       return subs__;
                     }, function(node) {
-                      var oldNodes = nodes4384;
-                      nodes4384 = node.contents();
-                      oldNodes.replaceWith(nodes4384);
+                      var oldNodes = nodes4520;
+                      nodes4520 = node.contents();
+                      oldNodes.replaceWith(nodes4520);
                     }));
                   }
-                  renderControl762();
-                  callback(root5663); return subs__;
+                  renderControl808();
+                  callback(root5865); return subs__;
                   
                   return subs__;
                 }, function(node) {
-                  var oldNodes = nodes4383;
-                  nodes4383 = node.contents();
-                  oldNodes.replaceWith(nodes4383);
+                  var oldNodes = nodes4519;
+                  nodes4519 = node.contents();
+                  oldNodes.replaceWith(nodes4519);
                 }));
                 
                 
               }
             };
-            renderCond479();
-            subs__.addSub(tmp4021.addEventListener('change', function() {
-              renderCond479();
+            renderCond506();
+            subs__.addSub(tmp4146.addEventListener('change', function() {
+              renderCond506();
             }));
             
             
-            var oldNodes = iternode328;
-            iternode328 = iternode328.contents();
-            oldNodes.replaceWith(iternode328);
+            var oldNodes = iternode348;
+            iternode348 = iternode348.contents();
+            oldNodes.replaceWith(iternode348);
             
             
           }());
         }
         mobl.delayedUpdateScrollers();
-        subs__.addSub(list328.addEventListener('change', function() { listSubs__.unsubscribe(); renderList328(true); }));
-        subs__.addSub(coll.addEventListener('change', function() { listSubs__.unsubscribe(); renderList328(true); }));
+        subs__.addSub(list348.addEventListener('change', function() { listSubs__.unsubscribe(); renderList348(true); }));
+        subs__.addSub(coll.addEventListener('change', function() { listSubs__.unsubscribe(); renderList348(true); }));
       });
     };
-    renderList328();
+    renderList348();
     
-    callback(root5660); return subs__;
+    callback(root5862); return subs__;
     
     return subs__;
   }, function(node) {
-    var oldNodes = nodes4380;
-    nodes4380 = node.contents();
-    oldNodes.replaceWith(nodes4380);
+    var oldNodes = nodes4516;
+    nodes4516 = node.contents();
+    oldNodes.replaceWith(nodes4516);
   }));
-  callback(root5659); return subs__;
+  callback(root5861); return subs__;
   
   return subs__;
 };
 ui.loadMoreStyle = 'ui__loadMoreStyle';
 
 ui.stagedList = function(coll, listCtrl, initialItems, step, moreLabel, moreStyle, elements, callback) {
-  var root5665 = $("<span>");
+  var root5867 = $("<span>");
   var subs__ = new mobl.CompSubscription();
   
   var n = mobl.ref(initialItems.get());
   coll.get().count(function(result__) {
-    var tmp4055 = result__;
+    var tmp4180 = result__;
     var total = mobl.ref(result__);
     var result__ = coll.get().limit(n.get());
-    var tmp4022 = mobl.ref(result__);
+    var tmp4147 = mobl.ref(result__);
     subs__.addSub(mobl.ref(coll.get().limit(n.get())).addEventListener('change', function() {
-      tmp4022.set(coll.get().limit(n.get()));
+      tmp4147.set(coll.get().limit(n.get()));
     }));
     subs__.addSub(coll.addEventListener('change', function() {
-      tmp4022.set(coll.get().limit(n.get()));
+      tmp4147.set(coll.get().limit(n.get()));
     }));
     subs__.addSub(n.addEventListener('change', function() {
-      tmp4022.set(coll.get().limit(n.get()));
+      tmp4147.set(coll.get().limit(n.get()));
     }));
     
     
-    var node1943 = mobl.loadingSpan();
-    root5665.append(node1943);
-    var list329;
+    var node2056 = mobl.loadingSpan();
+    root5867.append(node2056);
+    var list349;
     var listSubs__ = new mobl.CompSubscription();
     subs__.addSub(listSubs__);
-    var renderList329 = function() {
+    var renderList349 = function() {
       var subs__ = listSubs__;
-      list329 = tmp4022.get();
-      list329.list(function(results329) {
-        node1943.empty();
-        for(var i1175 = 0; i1175 < results329.length; i1175++) {
+      list349 = tmp4147.get();
+      list349.list(function(results349) {
+        node2056.empty();
+        for(var i1195 = 0; i1195 < results349.length; i1195++) {
           (function() {
-            var iternode329 = $("<span>");
-            node1943.append(iternode329);
+            var iternode349 = $("<span>");
+            node2056.append(iternode349);
             var it;
-            it = mobl.ref(mobl.ref(results329), i1175);
-            var nodes4385 = $("<span>");
-            iternode329.append(nodes4385);
+            it = mobl.ref(mobl.ref(results349), i1195);
+            var nodes4521 = $("<span>");
+            iternode349.append(nodes4521);
             subs__.addSub(listCtrl.addEventListener('change', function() {
-              renderControl763();
+              renderControl809();
             }));
             
-            function renderControl763() {
+            function renderControl809() {
               subs__.addSub((listCtrl.get())(it, function(elements, callback) {
-                var root5666 = $("<span>");
+                var root5868 = $("<span>");
                 var subs__ = new mobl.CompSubscription();
-                callback(root5666); return subs__;
+                callback(root5868); return subs__;
                 return subs__;
               }, function(node) {
-                var oldNodes = nodes4385;
-                nodes4385 = node.contents();
-                oldNodes.replaceWith(nodes4385);
+                var oldNodes = nodes4521;
+                nodes4521 = node.contents();
+                oldNodes.replaceWith(nodes4521);
               }));
             }
-            renderControl763();
+            renderControl809();
             
-            var oldNodes = iternode329;
-            iternode329 = iternode329.contents();
-            oldNodes.replaceWith(iternode329);
+            var oldNodes = iternode349;
+            iternode349 = iternode349.contents();
+            oldNodes.replaceWith(iternode349);
             
             
           }());
         }
         mobl.delayedUpdateScrollers();
-        subs__.addSub(list329.addEventListener('change', function() { listSubs__.unsubscribe(); renderList329(true); }));
-        subs__.addSub(tmp4022.addEventListener('change', function() { listSubs__.unsubscribe(); renderList329(true); }));
+        subs__.addSub(list349.addEventListener('change', function() { listSubs__.unsubscribe(); renderList349(true); }));
+        subs__.addSub(tmp4147.addEventListener('change', function() { listSubs__.unsubscribe(); renderList349(true); }));
       });
     };
-    renderList329();
+    renderList349();
     
     var result__ = n.get() < total.get();
-    var tmp4024 = mobl.ref(result__);
+    var tmp4149 = mobl.ref(result__);
     subs__.addSub(n.addEventListener('change', function() {
-      tmp4024.set(n.get() < total.get());
+      tmp4149.set(n.get() < total.get());
     }));
     subs__.addSub(total.addEventListener('change', function() {
-      tmp4024.set(n.get() < total.get());
+      tmp4149.set(n.get() < total.get());
     }));
     
     
-    var node1944 = $("<span>");
-    root5665.append(node1944);
-    var condSubs480 = new mobl.CompSubscription();
-    subs__.addSub(condSubs480);
-    var oldValue480;
-    var renderCond480 = function() {
-      var value2312 = tmp4024.get();
-      if(oldValue480 === value2312) return;
-      oldValue480 = value2312;
-      var subs__ = condSubs480;
+    var node2057 = $("<span>");
+    root5867.append(node2057);
+    var condSubs507 = new mobl.CompSubscription();
+    subs__.addSub(condSubs507);
+    var oldValue507;
+    var renderCond507 = function() {
+      var value2411 = tmp4149.get();
+      if(oldValue507 === value2411) return;
+      oldValue507 = value2411;
+      var subs__ = condSubs507;
       subs__.unsubscribe();
-      node1944.empty();
-      if(value2312) {
+      node2057.empty();
+      if(value2411) {
         var result__ = function(event, callback) {
                          if(event && event.stopPropagation) event.stopPropagation();
                          var result__ = n.get() + step.get();
                          n.set(result__);
                          if(callback && callback.apply) callback(); return;
                        };
-        var tmp4023 = mobl.ref(result__);
+        var tmp4148 = mobl.ref(result__);
         
-        var nodes4386 = $("<span>");
-        node1944.append(nodes4386);
-        subs__.addSub((mobl.block)(moreStyle, mobl.ref(null), tmp4023, mobl.ref(null), function(_, callback) {
-          var root5667 = $("<span>");
+        var nodes4522 = $("<span>");
+        node2057.append(nodes4522);
+        subs__.addSub((mobl.block)(moreStyle, mobl.ref(null), tmp4148, mobl.ref(null), function(_, callback) {
+          var root5869 = $("<span>");
           var subs__ = new mobl.CompSubscription();
-          var nodes4387 = $("<span>");
-          root5667.append(nodes4387);
+          var nodes4523 = $("<span>");
+          root5869.append(nodes4523);
           subs__.addSub((mobl.label)(moreLabel, mobl.ref(null), mobl.ref(null), function(_, callback) {
-            var root5668 = $("<span>");
+            var root5870 = $("<span>");
             var subs__ = new mobl.CompSubscription();
-            callback(root5668); return subs__;
+            callback(root5870); return subs__;
             return subs__;
           }, function(node) {
-            var oldNodes = nodes4387;
-            nodes4387 = node.contents();
-            oldNodes.replaceWith(nodes4387);
+            var oldNodes = nodes4523;
+            nodes4523 = node.contents();
+            oldNodes.replaceWith(nodes4523);
           }));
-          callback(root5667); return subs__;
+          callback(root5869); return subs__;
           
           return subs__;
         }, function(node) {
-          var oldNodes = nodes4386;
-          nodes4386 = node.contents();
-          oldNodes.replaceWith(nodes4386);
+          var oldNodes = nodes4522;
+          nodes4522 = node.contents();
+          oldNodes.replaceWith(nodes4522);
         }));
         
         
@@ -2796,12 +2796,12 @@ ui.stagedList = function(coll, listCtrl, initialItems, step, moreLabel, moreStyl
         
       }
     };
-    renderCond480();
-    subs__.addSub(tmp4024.addEventListener('change', function() {
-      renderCond480();
+    renderCond507();
+    subs__.addSub(tmp4149.addEventListener('change', function() {
+      renderCond507();
     }));
     
-    callback(root5665); return subs__;
+    callback(root5867); return subs__;
     
     
   });
@@ -2809,104 +2809,104 @@ ui.stagedList = function(coll, listCtrl, initialItems, step, moreLabel, moreStyl
 };
 
 ui.markableList = function(items, elements, callback) {
-  var root5669 = $("<span>");
+  var root5871 = $("<span>");
   var subs__ = new mobl.CompSubscription();
-  var nodes4388 = $("<span>");
-  root5669.append(nodes4388);
+  var nodes4524 = $("<span>");
+  root5871.append(nodes4524);
   subs__.addSub((ui.group)(function(_, callback) {
-    var root5670 = $("<span>");
+    var root5872 = $("<span>");
     var subs__ = new mobl.CompSubscription();
     
-    var node1945 = mobl.loadingSpan();
-    root5670.append(node1945);
-    var list330;
+    var node2058 = mobl.loadingSpan();
+    root5872.append(node2058);
+    var list350;
     var listSubs__ = new mobl.CompSubscription();
     subs__.addSub(listSubs__);
-    var renderList330 = function() {
+    var renderList350 = function() {
       var subs__ = listSubs__;
-      list330 = items.get();
-      list330.list(function(results330) {
-        node1945.empty();
-        for(var i1176 = 0; i1176 < results330.length; i1176++) {
+      list350 = items.get();
+      list350.list(function(results350) {
+        node2058.empty();
+        for(var i1196 = 0; i1196 < results350.length; i1196++) {
           (function() {
-            var iternode330 = $("<span>");
-            node1945.append(iternode330);
+            var iternode350 = $("<span>");
+            node2058.append(iternode350);
             var checked;var it;
-            checked = mobl.ref(mobl.ref(mobl.ref(results330), i1176), "_1");it = mobl.ref(mobl.ref(mobl.ref(results330), i1176), "_2");
-            var nodes4389 = $("<span>");
-            iternode330.append(nodes4389);
+            checked = mobl.ref(mobl.ref(mobl.ref(results350), i1196), "_1");it = mobl.ref(mobl.ref(mobl.ref(results350), i1196), "_2");
+            var nodes4525 = $("<span>");
+            iternode350.append(nodes4525);
             subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), mobl.ref(null), mobl.ref(null), mobl.ref(false), function(_, callback) {
-              var root5671 = $("<span>");
+              var root5873 = $("<span>");
               var subs__ = new mobl.CompSubscription();
-              var nodes4390 = $("<span>");
-              root5671.append(nodes4390);
+              var nodes4526 = $("<span>");
+              root5873.append(nodes4526);
               subs__.addSub((ui.checkBox)(checked, it, mobl.ref(null), function(_, callback) {
-                var root5672 = $("<span>");
+                var root5874 = $("<span>");
                 var subs__ = new mobl.CompSubscription();
-                callback(root5672); return subs__;
+                callback(root5874); return subs__;
                 return subs__;
               }, function(node) {
-                var oldNodes = nodes4390;
-                nodes4390 = node.contents();
-                oldNodes.replaceWith(nodes4390);
+                var oldNodes = nodes4526;
+                nodes4526 = node.contents();
+                oldNodes.replaceWith(nodes4526);
               }));
-              callback(root5671); return subs__;
+              callback(root5873); return subs__;
               
               return subs__;
             }, function(node) {
-              var oldNodes = nodes4389;
-              nodes4389 = node.contents();
-              oldNodes.replaceWith(nodes4389);
+              var oldNodes = nodes4525;
+              nodes4525 = node.contents();
+              oldNodes.replaceWith(nodes4525);
             }));
             
-            var oldNodes = iternode330;
-            iternode330 = iternode330.contents();
-            oldNodes.replaceWith(iternode330);
+            var oldNodes = iternode350;
+            iternode350 = iternode350.contents();
+            oldNodes.replaceWith(iternode350);
             
             
           }());
         }
         mobl.delayedUpdateScrollers();
-        subs__.addSub(list330.addEventListener('change', function() { listSubs__.unsubscribe(); renderList330(true); }));
-        subs__.addSub(items.addEventListener('change', function() { listSubs__.unsubscribe(); renderList330(true); }));
+        subs__.addSub(list350.addEventListener('change', function() { listSubs__.unsubscribe(); renderList350(true); }));
+        subs__.addSub(items.addEventListener('change', function() { listSubs__.unsubscribe(); renderList350(true); }));
       });
     };
-    renderList330();
+    renderList350();
     
-    callback(root5670); return subs__;
+    callback(root5872); return subs__;
     
     return subs__;
   }, function(node) {
-    var oldNodes = nodes4388;
-    nodes4388 = node.contents();
-    oldNodes.replaceWith(nodes4388);
+    var oldNodes = nodes4524;
+    nodes4524 = node.contents();
+    oldNodes.replaceWith(nodes4524);
   }));
-  callback(root5669); return subs__;
+  callback(root5871); return subs__;
   
   return subs__;
 };
 
 ui.selectList = function(title, coll, doneButtonLabel, callback, screenCallback) {
-  var root5673 = $("<div>");
+  var root5875 = $("<div>");
   var subs__ = new mobl.CompSubscription();
   
   var items = mobl.ref([]);
   var result__ = coll.get();
-  coll.get().list(function(coll2928) {
-    coll2928 = coll2928.reverse();
-    function processOne180() {
+  coll.get().list(function(coll3042) {
+    coll3042 = coll3042.reverse();
+    function processOne186() {
       var it;
-      it = coll2928.pop();
+      it = coll3042.pop();
       var result__ = items.get().push(new mobl.Tuple(false, it));
       
-      if(coll2928.length > 0) processOne180(); else rest180();
+      if(coll3042.length > 0) processOne186(); else rest186();
       
     }
-    function rest180() {
-      var nodes4391 = $("<span>");
-      root5673.append(nodes4391);
+    function rest186() {
+      var nodes4527 = $("<span>");
+      root5875.append(nodes4527);
       subs__.addSub((ui.header)(title, mobl.ref(false), mobl.ref(null), function(_, callback) {
-        var root5674 = $("<span>");
+        var root5876 = $("<span>");
         var subs__ = new mobl.CompSubscription();
         var result__ = function(event, callback) {
                          if(event && event.stopPropagation) event.stopPropagation();
@@ -2915,151 +2915,151 @@ ui.selectList = function(title, coll, doneButtonLabel, callback, screenCallback)
                          return;
                          if(callback && callback.apply) callback(); return;
                        };
-        var tmp4025 = mobl.ref(result__);
+        var tmp4150 = mobl.ref(result__);
         
         var result__ = mobl._("Back", []);
-        var tmp4026 = mobl.ref(result__);
+        var tmp4151 = mobl.ref(result__);
         
-        var nodes4392 = $("<span>");
-        root5674.append(nodes4392);
-        subs__.addSub((ui.backButton)(tmp4026, mobl.ref(ui.backButtonStyle), mobl.ref(ui.backButtonPushedStyle), tmp4025, function(_, callback) {
-          var root5675 = $("<span>");
+        var nodes4528 = $("<span>");
+        root5876.append(nodes4528);
+        subs__.addSub((ui.backButton)(tmp4151, mobl.ref(ui.backButtonStyle), mobl.ref(ui.backButtonPushedStyle), tmp4150, function(_, callback) {
+          var root5877 = $("<span>");
           var subs__ = new mobl.CompSubscription();
-          callback(root5675); return subs__;
+          callback(root5877); return subs__;
           return subs__;
         }, function(node) {
-          var oldNodes = nodes4392;
-          nodes4392 = node.contents();
-          oldNodes.replaceWith(nodes4392);
+          var oldNodes = nodes4528;
+          nodes4528 = node.contents();
+          oldNodes.replaceWith(nodes4528);
         }));
         var result__ = function(event, callback) {
                          if(event && event.stopPropagation) event.stopPropagation();
                          var result__ = [];
                          var selected = result__;
                          var result__ = items.get();
-                         items.get().list(function(coll2927) {
-                           coll2927 = coll2927.reverse();
-                           function processOne179() {
+                         items.get().list(function(coll3041) {
+                           coll3041 = coll3041.reverse();
+                           function processOne185() {
                              var checked;var it;
-                             var tmp4057 = coll2927.pop();
-                             checked = tmp4057._1;it = tmp4057._2;
+                             var tmp4182 = coll3041.pop();
+                             checked = tmp4182._1;it = tmp4182._2;
                              var result__ = checked;
                              if(result__) {
                                var result__ = selected.push(it);
                                
-                               if(coll2927.length > 0) processOne179(); else rest179();
+                               if(coll3041.length > 0) processOne185(); else rest185();
                                
                              } else {
                                {
                                  
-                                 if(coll2927.length > 0) processOne179(); else rest179();
+                                 if(coll3041.length > 0) processOne185(); else rest185();
                                  
                                }
                              }
                            }
-                           function rest179() {
+                           function rest185() {
                              var result__ = selected;
                              if(screenCallback) screenCallback(result__);
                              return;
                              if(callback && callback.apply) callback(); return;
                            }
-                           if(coll2927.length > 0) processOne179(); else rest179();
+                           if(coll3041.length > 0) processOne185(); else rest185();
                          });
                          
                        };
-        var tmp4027 = mobl.ref(result__);
+        var tmp4152 = mobl.ref(result__);
         
-        var nodes4393 = $("<span>");
-        root5674.append(nodes4393);
-        subs__.addSub((ui.button)(doneButtonLabel, mobl.ref(ui.buttonStyle), mobl.ref(ui.buttonPushedStyle), tmp4027, function(_, callback) {
-          var root5676 = $("<span>");
+        var nodes4529 = $("<span>");
+        root5876.append(nodes4529);
+        subs__.addSub((ui.button)(doneButtonLabel, mobl.ref(ui.buttonStyle), mobl.ref(ui.buttonPushedStyle), tmp4152, function(_, callback) {
+          var root5878 = $("<span>");
           var subs__ = new mobl.CompSubscription();
-          callback(root5676); return subs__;
+          callback(root5878); return subs__;
           return subs__;
         }, function(node) {
-          var oldNodes = nodes4393;
-          nodes4393 = node.contents();
-          oldNodes.replaceWith(nodes4393);
+          var oldNodes = nodes4529;
+          nodes4529 = node.contents();
+          oldNodes.replaceWith(nodes4529);
         }));
-        callback(root5674); return subs__;
+        callback(root5876); return subs__;
         
         
         return subs__;
       }, function(node) {
-        var oldNodes = nodes4391;
-        nodes4391 = node.contents();
-        oldNodes.replaceWith(nodes4391);
+        var oldNodes = nodes4527;
+        nodes4527 = node.contents();
+        oldNodes.replaceWith(nodes4527);
       }));
-      var nodes4394 = $("<span>");
-      root5673.append(nodes4394);
+      var nodes4530 = $("<span>");
+      root5875.append(nodes4530);
       subs__.addSub((ui.markableList)(items, function(_, callback) {
-        var root5677 = $("<span>");
+        var root5879 = $("<span>");
         var subs__ = new mobl.CompSubscription();
-        callback(root5677); return subs__;
+        callback(root5879); return subs__;
         return subs__;
       }, function(node) {
-        var oldNodes = nodes4394;
-        nodes4394 = node.contents();
-        oldNodes.replaceWith(nodes4394);
+        var oldNodes = nodes4530;
+        nodes4530 = node.contents();
+        oldNodes.replaceWith(nodes4530);
       }));
-      callback(root5673); return subs__;
+      callback(root5875); return subs__;
       
       
     }
-    if(coll2928.length > 0) processOne180(); else rest180();
+    if(coll3042.length > 0) processOne186(); else rest186();
   });
   
   return subs__;
 };
 
 ui.searchList = function(Ent, masterItem, detailItem, resultLimit, searchTermPlaceholder, elements, callback) {
-  var root5678 = $("<span>");
+  var root5880 = $("<span>");
   var subs__ = new mobl.CompSubscription();
   
   var phrase = mobl.ref("");
-  var nodes4395 = $("<span>");
-  root5678.append(nodes4395);
+  var nodes4531 = $("<span>");
+  root5880.append(nodes4531);
   subs__.addSub((ui.searchBox)(phrase, searchTermPlaceholder, mobl.ref(null), mobl.ref(null), function(_, callback) {
-    var root5679 = $("<span>");
+    var root5881 = $("<span>");
     var subs__ = new mobl.CompSubscription();
-    callback(root5679); return subs__;
+    callback(root5881); return subs__;
     return subs__;
   }, function(node) {
-    var oldNodes = nodes4395;
-    nodes4395 = node.contents();
-    oldNodes.replaceWith(nodes4395);
+    var oldNodes = nodes4531;
+    nodes4531 = node.contents();
+    oldNodes.replaceWith(nodes4531);
   }));
   var result__ = Ent.get().searchPrefix(phrase.get()).limit(resultLimit.get());
-  var tmp4028 = mobl.ref(result__);
+  var tmp4153 = mobl.ref(result__);
   subs__.addSub(mobl.ref(Ent.get().searchPrefix(phrase.get()).limit(resultLimit.get())).addEventListener('change', function() {
-    tmp4028.set(Ent.get().searchPrefix(phrase.get()).limit(resultLimit.get()));
+    tmp4153.set(Ent.get().searchPrefix(phrase.get()).limit(resultLimit.get()));
   }));
   subs__.addSub(mobl.ref(Ent.get().searchPrefix(phrase.get())).addEventListener('change', function() {
-    tmp4028.set(Ent.get().searchPrefix(phrase.get()).limit(resultLimit.get()));
+    tmp4153.set(Ent.get().searchPrefix(phrase.get()).limit(resultLimit.get()));
   }));
   subs__.addSub(Ent.addEventListener('change', function() {
-    tmp4028.set(Ent.get().searchPrefix(phrase.get()).limit(resultLimit.get()));
+    tmp4153.set(Ent.get().searchPrefix(phrase.get()).limit(resultLimit.get()));
   }));
   subs__.addSub(phrase.addEventListener('change', function() {
-    tmp4028.set(Ent.get().searchPrefix(phrase.get()).limit(resultLimit.get()));
+    tmp4153.set(Ent.get().searchPrefix(phrase.get()).limit(resultLimit.get()));
   }));
   subs__.addSub(resultLimit.addEventListener('change', function() {
-    tmp4028.set(Ent.get().searchPrefix(phrase.get()).limit(resultLimit.get()));
+    tmp4153.set(Ent.get().searchPrefix(phrase.get()).limit(resultLimit.get()));
   }));
   
-  var nodes4396 = $("<span>");
-  root5678.append(nodes4396);
-  subs__.addSub((ui.masterDetail)(tmp4028, masterItem, detailItem, function(_, callback) {
-    var root5680 = $("<span>");
+  var nodes4532 = $("<span>");
+  root5880.append(nodes4532);
+  subs__.addSub((ui.masterDetail)(tmp4153, masterItem, detailItem, function(_, callback) {
+    var root5882 = $("<span>");
     var subs__ = new mobl.CompSubscription();
-    callback(root5680); return subs__;
+    callback(root5882); return subs__;
     return subs__;
   }, function(node) {
-    var oldNodes = nodes4396;
-    nodes4396 = node.contents();
-    oldNodes.replaceWith(nodes4396);
+    var oldNodes = nodes4532;
+    nodes4532 = node.contents();
+    oldNodes.replaceWith(nodes4532);
   }));
-  callback(root5678); return subs__;
+  callback(root5880); return subs__;
   
   
   return subs__;
@@ -3132,45 +3132,45 @@ ui.inActiveSectionStyle = 'ui__inActiveSectionStyle';
 ui.activeSectionStyle = 'ui__activeSectionStyle';
 
 ui.accordion = function(sections, activeSection, elements, callback) {
-  var root5681 = $("<span>");
+  var root5883 = $("<span>");
   var subs__ = new mobl.CompSubscription();
   
   var activeSection = mobl.ref(activeSection.get() ? activeSection.get() : sections.get().get(0)._1);
-  var nodes4397 = $("<span>");
-  root5681.append(nodes4397);
+  var nodes4533 = $("<span>");
+  root5883.append(nodes4533);
   subs__.addSub((mobl.block)(mobl.ref(ui.accordionStyle), mobl.ref(null), mobl.ref(null), mobl.ref(null), function(_, callback) {
-    var root5682 = $("<span>");
+    var root5884 = $("<span>");
     var subs__ = new mobl.CompSubscription();
     
-    var node1946 = mobl.loadingSpan();
-    root5682.append(node1946);
-    var list331;
+    var node2059 = mobl.loadingSpan();
+    root5884.append(node2059);
+    var list351;
     var listSubs__ = new mobl.CompSubscription();
     subs__.addSub(listSubs__);
-    var renderList331 = function() {
+    var renderList351 = function() {
       var subs__ = listSubs__;
-      list331 = sections.get();
-      list331.list(function(results331) {
-        node1946.empty();
-        for(var i1177 = 0; i1177 < results331.length; i1177++) {
+      list351 = sections.get();
+      list351.list(function(results351) {
+        node2059.empty();
+        for(var i1197 = 0; i1197 < results351.length; i1197++) {
           (function() {
-            var iternode331 = $("<span>");
-            node1946.append(iternode331);
+            var iternode351 = $("<span>");
+            node2059.append(iternode351);
             var sectionName;var sectionControl;
-            sectionName = mobl.ref(mobl.ref(mobl.ref(results331), i1177), "_1");sectionControl = mobl.ref(mobl.ref(mobl.ref(results331), i1177), "_2");
+            sectionName = mobl.ref(mobl.ref(mobl.ref(results351), i1197), "_1");sectionControl = mobl.ref(mobl.ref(mobl.ref(results351), i1197), "_2");
             var result__ = activeSection.get() == sectionName.get() ? ui.activeSectionHeaderStyle : ui.inActiveSectionHeaderStyle;
-            var tmp4030 = mobl.ref(result__);
+            var tmp4155 = mobl.ref(result__);
             subs__.addSub(activeSection.addEventListener('change', function() {
-              tmp4030.set(activeSection.get() == sectionName.get() ? ui.activeSectionHeaderStyle : ui.inActiveSectionHeaderStyle);
+              tmp4155.set(activeSection.get() == sectionName.get() ? ui.activeSectionHeaderStyle : ui.inActiveSectionHeaderStyle);
             }));
             subs__.addSub(sectionName.addEventListener('change', function() {
-              tmp4030.set(activeSection.get() == sectionName.get() ? ui.activeSectionHeaderStyle : ui.inActiveSectionHeaderStyle);
+              tmp4155.set(activeSection.get() == sectionName.get() ? ui.activeSectionHeaderStyle : ui.inActiveSectionHeaderStyle);
             }));
             subs__.addSub(mobl.ref(ui.activeSectionHeaderStyle).addEventListener('change', function() {
-              tmp4030.set(activeSection.get() == sectionName.get() ? ui.activeSectionHeaderStyle : ui.inActiveSectionHeaderStyle);
+              tmp4155.set(activeSection.get() == sectionName.get() ? ui.activeSectionHeaderStyle : ui.inActiveSectionHeaderStyle);
             }));
             subs__.addSub(mobl.ref(ui.inActiveSectionHeaderStyle).addEventListener('change', function() {
-              tmp4030.set(activeSection.get() == sectionName.get() ? ui.activeSectionHeaderStyle : ui.inActiveSectionHeaderStyle);
+              tmp4155.set(activeSection.get() == sectionName.get() ? ui.activeSectionHeaderStyle : ui.inActiveSectionHeaderStyle);
             }));
             
             var result__ = function(event, callback) {
@@ -3179,105 +3179,105 @@ ui.accordion = function(sections, activeSection, elements, callback) {
                              activeSection.set(result__);
                              if(callback && callback.apply) callback(); return;
                            };
-            var tmp4029 = mobl.ref(result__);
+            var tmp4154 = mobl.ref(result__);
             
-            var nodes4398 = $("<span>");
-            iternode331.append(nodes4398);
-            subs__.addSub((mobl.span)(tmp4030, mobl.ref(null), tmp4029, mobl.ref(null), function(_, callback) {
-              var root5683 = $("<span>");
+            var nodes4534 = $("<span>");
+            iternode351.append(nodes4534);
+            subs__.addSub((mobl.span)(tmp4155, mobl.ref(null), tmp4154, mobl.ref(null), function(_, callback) {
+              var root5885 = $("<span>");
               var subs__ = new mobl.CompSubscription();
-              var nodes4399 = $("<span>");
-              root5683.append(nodes4399);
+              var nodes4535 = $("<span>");
+              root5885.append(nodes4535);
               subs__.addSub((mobl.label)(sectionName, mobl.ref(null), mobl.ref(null), function(_, callback) {
-                var root5684 = $("<span>");
+                var root5886 = $("<span>");
                 var subs__ = new mobl.CompSubscription();
-                callback(root5684); return subs__;
+                callback(root5886); return subs__;
                 return subs__;
               }, function(node) {
-                var oldNodes = nodes4399;
-                nodes4399 = node.contents();
-                oldNodes.replaceWith(nodes4399);
+                var oldNodes = nodes4535;
+                nodes4535 = node.contents();
+                oldNodes.replaceWith(nodes4535);
               }));
-              callback(root5683); return subs__;
+              callback(root5885); return subs__;
               
               return subs__;
             }, function(node) {
-              var oldNodes = nodes4398;
-              nodes4398 = node.contents();
-              oldNodes.replaceWith(nodes4398);
+              var oldNodes = nodes4534;
+              nodes4534 = node.contents();
+              oldNodes.replaceWith(nodes4534);
             }));
             var result__ = activeSection.get() == sectionName.get() ? ui.activeSectionStyle : ui.inActiveSectionStyle;
-            var tmp4031 = mobl.ref(result__);
+            var tmp4156 = mobl.ref(result__);
             subs__.addSub(activeSection.addEventListener('change', function() {
-              tmp4031.set(activeSection.get() == sectionName.get() ? ui.activeSectionStyle : ui.inActiveSectionStyle);
+              tmp4156.set(activeSection.get() == sectionName.get() ? ui.activeSectionStyle : ui.inActiveSectionStyle);
             }));
             subs__.addSub(sectionName.addEventListener('change', function() {
-              tmp4031.set(activeSection.get() == sectionName.get() ? ui.activeSectionStyle : ui.inActiveSectionStyle);
+              tmp4156.set(activeSection.get() == sectionName.get() ? ui.activeSectionStyle : ui.inActiveSectionStyle);
             }));
             subs__.addSub(mobl.ref(ui.activeSectionStyle).addEventListener('change', function() {
-              tmp4031.set(activeSection.get() == sectionName.get() ? ui.activeSectionStyle : ui.inActiveSectionStyle);
+              tmp4156.set(activeSection.get() == sectionName.get() ? ui.activeSectionStyle : ui.inActiveSectionStyle);
             }));
             subs__.addSub(mobl.ref(ui.inActiveSectionStyle).addEventListener('change', function() {
-              tmp4031.set(activeSection.get() == sectionName.get() ? ui.activeSectionStyle : ui.inActiveSectionStyle);
+              tmp4156.set(activeSection.get() == sectionName.get() ? ui.activeSectionStyle : ui.inActiveSectionStyle);
             }));
             
-            var nodes4400 = $("<span>");
-            iternode331.append(nodes4400);
-            subs__.addSub((mobl.block)(tmp4031, mobl.ref(null), mobl.ref(null), mobl.ref(null), function(_, callback) {
-              var root5685 = $("<span>");
+            var nodes4536 = $("<span>");
+            iternode351.append(nodes4536);
+            subs__.addSub((mobl.block)(tmp4156, mobl.ref(null), mobl.ref(null), mobl.ref(null), function(_, callback) {
+              var root5887 = $("<span>");
               var subs__ = new mobl.CompSubscription();
-              var nodes4401 = $("<span>");
-              root5685.append(nodes4401);
+              var nodes4537 = $("<span>");
+              root5887.append(nodes4537);
               subs__.addSub(sectionControl.addEventListener('change', function() {
-                renderControl764();
+                renderControl810();
               }));
               
-              function renderControl764() {
+              function renderControl810() {
                 subs__.addSub((sectionControl.get())(function(elements, callback) {
-                  var root5686 = $("<span>");
+                  var root5888 = $("<span>");
                   var subs__ = new mobl.CompSubscription();
-                  callback(root5686); return subs__;
+                  callback(root5888); return subs__;
                   return subs__;
                 }, function(node) {
-                  var oldNodes = nodes4401;
-                  nodes4401 = node.contents();
-                  oldNodes.replaceWith(nodes4401);
+                  var oldNodes = nodes4537;
+                  nodes4537 = node.contents();
+                  oldNodes.replaceWith(nodes4537);
                 }));
               }
-              renderControl764();
-              callback(root5685); return subs__;
+              renderControl810();
+              callback(root5887); return subs__;
               
               return subs__;
             }, function(node) {
-              var oldNodes = nodes4400;
-              nodes4400 = node.contents();
-              oldNodes.replaceWith(nodes4400);
+              var oldNodes = nodes4536;
+              nodes4536 = node.contents();
+              oldNodes.replaceWith(nodes4536);
             }));
             
-            var oldNodes = iternode331;
-            iternode331 = iternode331.contents();
-            oldNodes.replaceWith(iternode331);
+            var oldNodes = iternode351;
+            iternode351 = iternode351.contents();
+            oldNodes.replaceWith(iternode351);
             
             
             
           }());
         }
         mobl.delayedUpdateScrollers();
-        subs__.addSub(list331.addEventListener('change', function() { listSubs__.unsubscribe(); renderList331(true); }));
-        subs__.addSub(sections.addEventListener('change', function() { listSubs__.unsubscribe(); renderList331(true); }));
+        subs__.addSub(list351.addEventListener('change', function() { listSubs__.unsubscribe(); renderList351(true); }));
+        subs__.addSub(sections.addEventListener('change', function() { listSubs__.unsubscribe(); renderList351(true); }));
       });
     };
-    renderList331();
+    renderList351();
     
-    callback(root5682); return subs__;
+    callback(root5884); return subs__;
     
     return subs__;
   }, function(node) {
-    var oldNodes = nodes4397;
-    nodes4397 = node.contents();
-    oldNodes.replaceWith(nodes4397);
+    var oldNodes = nodes4533;
+    nodes4533 = node.contents();
+    oldNodes.replaceWith(nodes4533);
   }));
-  callback(root5681); return subs__;
+  callback(root5883); return subs__;
   
   return subs__;
 };
@@ -3296,244 +3296,244 @@ ui.tdStyle = 'ui__tdStyle';
 ui.tdStyle = 'ui__tdStyle';
 
 ui.table = function(style, elements, callback) {
-  var root5687 = $("<span>");
+  var root5889 = $("<span>");
   var subs__ = new mobl.CompSubscription();
   
-  var node1947 = $("<table>");
+  var node2060 = $("<table>");
   
-  var ref1898 = style;
-  if(ref1898.get() !== null) {
-    node1947.attr('class', ref1898.get());
-    subs__.addSub(ref1898.addEventListener('change', function(_, ref, val) {
-      node1947.attr('class', val);
+  var ref2010 = style;
+  if(ref2010.get() !== null) {
+    node2060.attr('class', ref2010.get());
+    subs__.addSub(ref2010.addEventListener('change', function(_, ref, val) {
+      node2060.attr('class', val);
     }));
     
   }
-  subs__.addSub(ref1898.rebind());
+  subs__.addSub(ref2010.rebind());
   
-  var nodes4402 = $("<span>");
-  node1947.append(nodes4402);
+  var nodes4538 = $("<span>");
+  node2060.append(nodes4538);
   subs__.addSub(mobl.ref(elements).addEventListener('change', function() {
-    renderControl765();
+    renderControl811();
   }));
   
-  function renderControl765() {
+  function renderControl811() {
     subs__.addSub((elements)(function(elements, callback) {
-      var root5688 = $("<span>");
+      var root5890 = $("<span>");
       var subs__ = new mobl.CompSubscription();
-      callback(root5688); return subs__;
+      callback(root5890); return subs__;
       return subs__;
     }, function(node) {
-      var oldNodes = nodes4402;
-      nodes4402 = node.contents();
-      oldNodes.replaceWith(nodes4402);
+      var oldNodes = nodes4538;
+      nodes4538 = node.contents();
+      oldNodes.replaceWith(nodes4538);
     }));
   }
-  renderControl765();
-  root5687.append(node1947);
-  callback(root5687); return subs__;
+  renderControl811();
+  root5889.append(node2060);
+  callback(root5889); return subs__;
   
   
   return subs__;
 };
 
 ui.row = function(style, elements, callback) {
-  var root5689 = $("<span>");
+  var root5891 = $("<span>");
   var subs__ = new mobl.CompSubscription();
   
-  var node1948 = $("<tr>");
+  var node2061 = $("<tr>");
   
-  var ref1899 = style;
-  if(ref1899.get() !== null) {
-    node1948.attr('class', ref1899.get());
-    subs__.addSub(ref1899.addEventListener('change', function(_, ref, val) {
-      node1948.attr('class', val);
+  var ref2011 = style;
+  if(ref2011.get() !== null) {
+    node2061.attr('class', ref2011.get());
+    subs__.addSub(ref2011.addEventListener('change', function(_, ref, val) {
+      node2061.attr('class', val);
     }));
     
   }
-  subs__.addSub(ref1899.rebind());
+  subs__.addSub(ref2011.rebind());
   
-  var nodes4403 = $("<span>");
-  node1948.append(nodes4403);
+  var nodes4539 = $("<span>");
+  node2061.append(nodes4539);
   subs__.addSub(mobl.ref(elements).addEventListener('change', function() {
-    renderControl766();
+    renderControl812();
   }));
   
-  function renderControl766() {
+  function renderControl812() {
     subs__.addSub((elements)(function(elements, callback) {
-      var root5690 = $("<span>");
+      var root5892 = $("<span>");
       var subs__ = new mobl.CompSubscription();
-      callback(root5690); return subs__;
+      callback(root5892); return subs__;
       return subs__;
     }, function(node) {
-      var oldNodes = nodes4403;
-      nodes4403 = node.contents();
-      oldNodes.replaceWith(nodes4403);
+      var oldNodes = nodes4539;
+      nodes4539 = node.contents();
+      oldNodes.replaceWith(nodes4539);
     }));
   }
-  renderControl766();
-  root5689.append(node1948);
-  callback(root5689); return subs__;
+  renderControl812();
+  root5891.append(node2061);
+  callback(root5891); return subs__;
   
   
   return subs__;
 };
 
 ui.cell = function(width, style, elements, callback) {
-  var root5691 = $("<span>");
+  var root5893 = $("<span>");
   var subs__ = new mobl.CompSubscription();
   
-  var node1949 = $("<td>");
+  var node2062 = $("<td>");
   
-  var ref1900 = width;
-  if(ref1900.get() !== null) {
-    node1949.attr('width', ref1900.get());
-    subs__.addSub(ref1900.addEventListener('change', function(_, ref, val) {
-      node1949.attr('width', val);
+  var ref2012 = width;
+  if(ref2012.get() !== null) {
+    node2062.attr('width', ref2012.get());
+    subs__.addSub(ref2012.addEventListener('change', function(_, ref, val) {
+      node2062.attr('width', val);
     }));
     
   }
-  subs__.addSub(ref1900.rebind());
+  subs__.addSub(ref2012.rebind());
   
-  var ref1901 = style;
-  if(ref1901.get() !== null) {
-    node1949.attr('class', ref1901.get());
-    subs__.addSub(ref1901.addEventListener('change', function(_, ref, val) {
-      node1949.attr('class', val);
+  var ref2013 = style;
+  if(ref2013.get() !== null) {
+    node2062.attr('class', ref2013.get());
+    subs__.addSub(ref2013.addEventListener('change', function(_, ref, val) {
+      node2062.attr('class', val);
     }));
     
   }
-  subs__.addSub(ref1901.rebind());
+  subs__.addSub(ref2013.rebind());
   
-  var nodes4404 = $("<span>");
-  node1949.append(nodes4404);
+  var nodes4540 = $("<span>");
+  node2062.append(nodes4540);
   subs__.addSub(mobl.ref(elements).addEventListener('change', function() {
-    renderControl767();
+    renderControl813();
   }));
   
-  function renderControl767() {
+  function renderControl813() {
     subs__.addSub((elements)(function(elements, callback) {
-      var root5692 = $("<span>");
+      var root5894 = $("<span>");
       var subs__ = new mobl.CompSubscription();
-      callback(root5692); return subs__;
+      callback(root5894); return subs__;
       return subs__;
     }, function(node) {
-      var oldNodes = nodes4404;
-      nodes4404 = node.contents();
-      oldNodes.replaceWith(nodes4404);
+      var oldNodes = nodes4540;
+      nodes4540 = node.contents();
+      oldNodes.replaceWith(nodes4540);
     }));
   }
-  renderControl767();
-  root5691.append(node1949);
-  callback(root5691); return subs__;
+  renderControl813();
+  root5893.append(node2062);
+  callback(root5893); return subs__;
   
   
   return subs__;
 };
 
 ui.col = function(width, style, elements, callback) {
-  var root5693 = $("<span>");
+  var root5895 = $("<span>");
   var subs__ = new mobl.CompSubscription();
   
-  var node1950 = $("<td>");
+  var node2063 = $("<td>");
   
-  var ref1902 = width;
-  if(ref1902.get() !== null) {
-    node1950.attr('width', ref1902.get());
-    subs__.addSub(ref1902.addEventListener('change', function(_, ref, val) {
-      node1950.attr('width', val);
+  var ref2014 = width;
+  if(ref2014.get() !== null) {
+    node2063.attr('width', ref2014.get());
+    subs__.addSub(ref2014.addEventListener('change', function(_, ref, val) {
+      node2063.attr('width', val);
     }));
     
   }
-  subs__.addSub(ref1902.rebind());
+  subs__.addSub(ref2014.rebind());
   
-  var ref1903 = style;
-  if(ref1903.get() !== null) {
-    node1950.attr('class', ref1903.get());
-    subs__.addSub(ref1903.addEventListener('change', function(_, ref, val) {
-      node1950.attr('class', val);
+  var ref2015 = style;
+  if(ref2015.get() !== null) {
+    node2063.attr('class', ref2015.get());
+    subs__.addSub(ref2015.addEventListener('change', function(_, ref, val) {
+      node2063.attr('class', val);
     }));
     
   }
-  subs__.addSub(ref1903.rebind());
+  subs__.addSub(ref2015.rebind());
   
-  var nodes4405 = $("<span>");
-  node1950.append(nodes4405);
+  var nodes4541 = $("<span>");
+  node2063.append(nodes4541);
   subs__.addSub(mobl.ref(elements).addEventListener('change', function() {
-    renderControl768();
+    renderControl814();
   }));
   
-  function renderControl768() {
+  function renderControl814() {
     subs__.addSub((elements)(function(elements, callback) {
-      var root5694 = $("<span>");
+      var root5896 = $("<span>");
       var subs__ = new mobl.CompSubscription();
-      callback(root5694); return subs__;
+      callback(root5896); return subs__;
       return subs__;
     }, function(node) {
-      var oldNodes = nodes4405;
-      nodes4405 = node.contents();
-      oldNodes.replaceWith(nodes4405);
+      var oldNodes = nodes4541;
+      nodes4541 = node.contents();
+      oldNodes.replaceWith(nodes4541);
     }));
   }
-  renderControl768();
-  root5693.append(node1950);
-  callback(root5693); return subs__;
+  renderControl814();
+  root5895.append(node2063);
+  callback(root5895); return subs__;
   
   
   return subs__;
 };
 
 ui.headerCol = function(width, style, elements, callback) {
-  var root5695 = $("<span>");
+  var root5897 = $("<span>");
   var subs__ = new mobl.CompSubscription();
   
-  var node1951 = $("<td>");
+  var node2064 = $("<td>");
   
-  var ref1904 = width;
-  if(ref1904.get() !== null) {
-    node1951.attr('width', ref1904.get());
-    subs__.addSub(ref1904.addEventListener('change', function(_, ref, val) {
-      node1951.attr('width', val);
+  var ref2016 = width;
+  if(ref2016.get() !== null) {
+    node2064.attr('width', ref2016.get());
+    subs__.addSub(ref2016.addEventListener('change', function(_, ref, val) {
+      node2064.attr('width', val);
     }));
     
   }
-  subs__.addSub(ref1904.rebind());
+  subs__.addSub(ref2016.rebind());
   
-  var ref1905 = style;
-  if(ref1905.get() !== null) {
-    node1951.attr('class', ref1905.get());
-    subs__.addSub(ref1905.addEventListener('change', function(_, ref, val) {
-      node1951.attr('class', val);
+  var ref2017 = style;
+  if(ref2017.get() !== null) {
+    node2064.attr('class', ref2017.get());
+    subs__.addSub(ref2017.addEventListener('change', function(_, ref, val) {
+      node2064.attr('class', val);
     }));
     
   }
-  subs__.addSub(ref1905.rebind());
+  subs__.addSub(ref2017.rebind());
   
   
-  var node1952 = $("<strong>");
+  var node2065 = $("<strong>");
   
-  var nodes4406 = $("<span>");
-  node1952.append(nodes4406);
+  var nodes4542 = $("<span>");
+  node2065.append(nodes4542);
   subs__.addSub(mobl.ref(elements).addEventListener('change', function() {
-    renderControl769();
+    renderControl815();
   }));
   
-  function renderControl769() {
+  function renderControl815() {
     subs__.addSub((elements)(function(elements, callback) {
-      var root5696 = $("<span>");
+      var root5898 = $("<span>");
       var subs__ = new mobl.CompSubscription();
-      callback(root5696); return subs__;
+      callback(root5898); return subs__;
       return subs__;
     }, function(node) {
-      var oldNodes = nodes4406;
-      nodes4406 = node.contents();
-      oldNodes.replaceWith(nodes4406);
+      var oldNodes = nodes4542;
+      nodes4542 = node.contents();
+      oldNodes.replaceWith(nodes4542);
     }));
   }
-  renderControl769();
-  node1951.append(node1952);
-  root5695.append(node1951);
-  callback(root5695); return subs__;
+  renderControl815();
+  node2064.append(node2065);
+  root5897.append(node2064);
+  callback(root5897); return subs__;
   
   
   
@@ -3566,11 +3566,11 @@ __ns.setupScrollers = function() {
   var result__ = 1;
   var counter = result__;
   var result__ = items;
-  items.list(function(coll2929) {
-    coll2929 = coll2929.reverse();
-    function processOne181() {
+  items.list(function(coll3043) {
+    coll3043 = coll3043.reverse();
+    function processOne187() {
       var item;
-      item = coll2929.pop();
+      item = coll3043.pop();
       var result__ = item == it;
       if(result__) {
         var result__ = counter;
@@ -3579,141 +3579,141 @@ __ns.setupScrollers = function() {
         var result__ = counter + 1;
         counter = result__;
         
-        if(coll2929.length > 0) processOne181(); else rest181();
+        if(coll3043.length > 0) processOne187(); else rest187();
         
       } else {
         {
           var result__ = counter + 1;
           counter = result__;
           
-          if(coll2929.length > 0) processOne181(); else rest181();
+          if(coll3043.length > 0) processOne187(); else rest187();
           
         }
       }
     }
-    function rest181() {
+    function rest187() {
       var result__ = -1;
       if(callback && callback.apply) callback(result__);
       return;
       if(callback && callback.apply) callback(); return;
     }
-    if(coll2929.length > 0) processOne181(); else rest181();
+    if(coll3043.length > 0) processOne187(); else rest187();
   });
   
 };
 
 
 ui.mMasterDetail = function(items, masterItem, detail, elements, callback) {
-  var root5697 = $("<span>");
+  var root5899 = $("<span>");
   var subs__ = new mobl.CompSubscription();
   items.get().one(function(result__) {
-    var tmp4059 = result__;
+    var tmp4184 = result__;
     var current = mobl.ref(result__);
     
-    var node1953 = $("<div>");
-    node1953.attr('width', "100%");
+    var node2066 = $("<div>");
+    node2066.attr('width', "100%");
     
     
-    var node1954 = $("<div>");
-    node1954.attr('style', "float:left; width:33%; position:relative; border-right: solid 1px #cccccc;");
+    var node2067 = $("<div>");
+    node2067.attr('style', "float:left; width:33%; position:relative; border-right: solid 1px #cccccc;");
     
-    var nodes4408 = $("<span>");
-    node1954.append(nodes4408);
+    var nodes4544 = $("<span>");
+    node2067.append(nodes4544);
     subs__.addSub((ui.group)(function(_, callback) {
-      var root5699 = $("<span>");
+      var root5901 = $("<span>");
       var subs__ = new mobl.CompSubscription();
       
-      var node1962 = mobl.loadingSpan();
-      root5699.append(node1962);
-      var list332;
+      var node2072 = mobl.loadingSpan();
+      root5901.append(node2072);
+      var list352;
       var listSubs__ = new mobl.CompSubscription();
       subs__.addSub(listSubs__);
-      var renderList332 = function() {
+      var renderList352 = function() {
         var subs__ = listSubs__;
-        list332 = items.get();
-        list332.list(function(results332) {
-          node1962.empty();
-          for(var i1178 = 0; i1178 < results332.length; i1178++) {
+        list352 = items.get();
+        list352.list(function(results352) {
+          node2072.empty();
+          for(var i1198 = 0; i1198 < results352.length; i1198++) {
             (function() {
-              var iternode332 = $("<span>");
-              node1962.append(iternode332);
+              var iternode352 = $("<span>");
+              node2072.append(iternode352);
               var it;
-              it = mobl.ref(mobl.ref(results332), i1178);
+              it = mobl.ref(mobl.ref(results352), i1198);
               var result__ = it.get() == current.get();
-              var tmp4035 = mobl.ref(result__);
+              var tmp4160 = mobl.ref(result__);
               subs__.addSub(it.addEventListener('change', function() {
-                tmp4035.set(it.get() == current.get());
+                tmp4160.set(it.get() == current.get());
               }));
               subs__.addSub(current.addEventListener('change', function() {
-                tmp4035.set(it.get() == current.get());
+                tmp4160.set(it.get() == current.get());
               }));
               
               
-              var node1963 = $("<span>");
-              iternode332.append(node1963);
-              var condSubs483 = new mobl.CompSubscription();
-              subs__.addSub(condSubs483);
-              var oldValue483;
-              var renderCond483 = function() {
-                var value2315 = tmp4035.get();
-                if(oldValue483 === value2315) return;
-                oldValue483 = value2315;
-                var subs__ = condSubs483;
+              var node2073 = $("<span>");
+              iternode352.append(node2073);
+              var condSubs509 = new mobl.CompSubscription();
+              subs__.addSub(condSubs509);
+              var oldValue509;
+              var renderCond509 = function() {
+                var value2413 = tmp4160.get();
+                if(oldValue509 === value2413) return;
+                oldValue509 = value2413;
+                var subs__ = condSubs509;
                 subs__.unsubscribe();
-                node1963.empty();
-                if(value2315) {
-                  var nodes4409 = $("<span>");
-                  node1963.append(nodes4409);
+                node2073.empty();
+                if(value2413) {
+                  var nodes4545 = $("<span>");
+                  node2073.append(nodes4545);
                   subs__.addSub((ui.item)(mobl.ref(ui.selectedItemStyle), mobl.ref(ui.itemPushedStyle), mobl.ref(null), mobl.ref(null), mobl.ref(false), function(_, callback) {
-                    var root5700 = $("<span>");
+                    var root5902 = $("<span>");
                     var subs__ = new mobl.CompSubscription();
                     ui.indexOf(it.get(), items.get(), function(result__) {
-                      var tmp4066 = result__;
-                      var tmp4032 = mobl.ref(result__);
+                      var tmp4196 = result__;
+                      var tmp4157 = mobl.ref(result__);
                       subs__.addSub(it.addEventListener('change', function() {
                         ui.indexOf(it.get(), items.get(), function(result__) {
-                          var tmp4064 = result__;
-                          var result__ = tmp4064;
-                          tmp4032.set(result__);
+                          var tmp4194 = result__;
+                          var result__ = tmp4194;
+                          tmp4157.set(result__);
                           
                         });
                       }));
                       subs__.addSub(items.addEventListener('change', function() {
                         ui.indexOf(it.get(), items.get(), function(result__) {
-                          var tmp4065 = result__;
-                          var result__ = tmp4065;
-                          tmp4032.set(result__);
+                          var tmp4195 = result__;
+                          var result__ = tmp4195;
+                          tmp4157.set(result__);
                           
                         });
                       }));
                       
-                      var nodes4410 = $("<span>");
-                      root5700.append(nodes4410);
+                      var nodes4546 = $("<span>");
+                      root5902.append(nodes4546);
                       subs__.addSub(masterItem.addEventListener('change', function() {
-                        renderControl771();
+                        renderControl817();
                       }));
                       
-                      function renderControl771() {
-                        subs__.addSub((masterItem.get())(it, tmp4032, function(elements, callback) {
-                          var root5701 = $("<span>");
+                      function renderControl817() {
+                        subs__.addSub((masterItem.get())(it, tmp4157, function(elements, callback) {
+                          var root5903 = $("<span>");
                           var subs__ = new mobl.CompSubscription();
-                          callback(root5701); return subs__;
+                          callback(root5903); return subs__;
                           return subs__;
                         }, function(node) {
-                          var oldNodes = nodes4410;
-                          nodes4410 = node.contents();
-                          oldNodes.replaceWith(nodes4410);
+                          var oldNodes = nodes4546;
+                          nodes4546 = node.contents();
+                          oldNodes.replaceWith(nodes4546);
                         }));
                       }
-                      renderControl771();
-                      callback(root5700); return subs__;
+                      renderControl817();
+                      callback(root5902); return subs__;
                       
                     });
                     return subs__;
                   }, function(node) {
-                    var oldNodes = nodes4409;
-                    nodes4409 = node.contents();
-                    oldNodes.replaceWith(nodes4409);
+                    var oldNodes = nodes4545;
+                    nodes4545 = node.contents();
+                    oldNodes.replaceWith(nodes4545);
                   }));
                   
                   
@@ -3725,212 +3725,190 @@ ui.mMasterDetail = function(items, masterItem, detail, elements, callback) {
                                    var result__ = ui.scrollUp();
                                    if(callback && callback.apply) callback(); return;
                                  };
-                  var tmp4034 = mobl.ref(result__);
+                  var tmp4159 = mobl.ref(result__);
                   
-                  var nodes4411 = $("<span>");
-                  node1963.append(nodes4411);
-                  subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp4034, mobl.ref(null), mobl.ref(true), function(_, callback) {
-                    var root5702 = $("<span>");
+                  var nodes4547 = $("<span>");
+                  node2073.append(nodes4547);
+                  subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp4159, mobl.ref(null), mobl.ref(true), function(_, callback) {
+                    var root5904 = $("<span>");
                     var subs__ = new mobl.CompSubscription();
                     ui.indexOf(it.get(), items.get(), function(result__) {
-                      var tmp4069 = result__;
-                      var tmp4033 = mobl.ref(result__);
+                      var tmp4199 = result__;
+                      var tmp4158 = mobl.ref(result__);
                       subs__.addSub(it.addEventListener('change', function() {
                         ui.indexOf(it.get(), items.get(), function(result__) {
-                          var tmp4067 = result__;
-                          var result__ = tmp4067;
-                          tmp4033.set(result__);
+                          var tmp4197 = result__;
+                          var result__ = tmp4197;
+                          tmp4158.set(result__);
                           
                         });
                       }));
                       subs__.addSub(items.addEventListener('change', function() {
                         ui.indexOf(it.get(), items.get(), function(result__) {
-                          var tmp4068 = result__;
-                          var result__ = tmp4068;
-                          tmp4033.set(result__);
+                          var tmp4198 = result__;
+                          var result__ = tmp4198;
+                          tmp4158.set(result__);
                           
                         });
                       }));
                       
-                      var nodes4412 = $("<span>");
-                      root5702.append(nodes4412);
+                      var nodes4548 = $("<span>");
+                      root5904.append(nodes4548);
                       subs__.addSub(masterItem.addEventListener('change', function() {
-                        renderControl772();
+                        renderControl818();
                       }));
                       
-                      function renderControl772() {
-                        subs__.addSub((masterItem.get())(it, tmp4033, function(elements, callback) {
-                          var root5703 = $("<span>");
+                      function renderControl818() {
+                        subs__.addSub((masterItem.get())(it, tmp4158, function(elements, callback) {
+                          var root5905 = $("<span>");
                           var subs__ = new mobl.CompSubscription();
-                          callback(root5703); return subs__;
+                          callback(root5905); return subs__;
                           return subs__;
                         }, function(node) {
-                          var oldNodes = nodes4412;
-                          nodes4412 = node.contents();
-                          oldNodes.replaceWith(nodes4412);
+                          var oldNodes = nodes4548;
+                          nodes4548 = node.contents();
+                          oldNodes.replaceWith(nodes4548);
                         }));
                       }
-                      renderControl772();
-                      callback(root5702); return subs__;
+                      renderControl818();
+                      callback(root5904); return subs__;
                       
                     });
                     return subs__;
                   }, function(node) {
-                    var oldNodes = nodes4411;
-                    nodes4411 = node.contents();
-                    oldNodes.replaceWith(nodes4411);
+                    var oldNodes = nodes4547;
+                    nodes4547 = node.contents();
+                    oldNodes.replaceWith(nodes4547);
                   }));
                   
                   
                 }
               };
-              renderCond483();
-              subs__.addSub(tmp4035.addEventListener('change', function() {
-                renderCond483();
+              renderCond509();
+              subs__.addSub(tmp4160.addEventListener('change', function() {
+                renderCond509();
               }));
               
               
-              var oldNodes = iternode332;
-              iternode332 = iternode332.contents();
-              oldNodes.replaceWith(iternode332);
+              var oldNodes = iternode352;
+              iternode352 = iternode352.contents();
+              oldNodes.replaceWith(iternode352);
               
               
             }());
           }
           mobl.delayedUpdateScrollers();
-          subs__.addSub(list332.addEventListener('change', function() { listSubs__.unsubscribe(); renderList332(true); }));
-          subs__.addSub(items.addEventListener('change', function() { listSubs__.unsubscribe(); renderList332(true); }));
+          subs__.addSub(list352.addEventListener('change', function() { listSubs__.unsubscribe(); renderList352(true); }));
+          subs__.addSub(items.addEventListener('change', function() { listSubs__.unsubscribe(); renderList352(true); }));
         });
       };
-      renderList332();
+      renderList352();
       
-      callback(root5699); return subs__;
+      callback(root5901); return subs__;
       
       return subs__;
     }, function(node) {
-      var oldNodes = nodes4408;
-      nodes4408 = node.contents();
-      oldNodes.replaceWith(nodes4408);
+      var oldNodes = nodes4544;
+      nodes4544 = node.contents();
+      oldNodes.replaceWith(nodes4544);
     }));
-    node1953.append(node1954);
+    node2066.append(node2067);
     
-    var node1955 = $("<div>");
-    node1955.attr('style', "float:left; width:66.5%; position:relative; margin-left: 0.5%;");
+    var node2068 = $("<div>");
+    node2068.attr('style', "float:left; width:66.5%; position:relative; margin-left: 0.5%;");
     
     items.get().count(function(result__) {
-      var tmp4063 = result__;
-      var result__ = tmp4063 > 0;
-      var tmp4062 = result__;
-      var tmp4036 = mobl.ref(result__);
+      var tmp4193 = result__;
+      var result__ = tmp4193 != 0;
+      var tmp4192 = result__;
+      var result__ = current.get() && tmp4192;
+      var tmp4191 = result__;
+      var tmp4161 = mobl.ref(result__);
+      subs__.addSub(current.addEventListener('change', function() {
+        items.get().count(function(result__) {
+          var tmp4187 = result__;
+          var result__ = tmp4187 != 0;
+          var tmp4186 = result__;
+          var result__ = current.get() && tmp4186;
+          var tmp4185 = result__;
+          var result__ = tmp4185;
+          tmp4161.set(result__);
+          
+        });
+      }));
       subs__.addSub(items.addEventListener('change', function() {
         items.get().count(function(result__) {
-          var tmp4061 = result__;
-          var result__ = tmp4061 > 0;
-          var tmp4060 = result__;
-          var result__ = tmp4060;
-          tmp4036.set(result__);
+          var tmp4190 = result__;
+          var result__ = tmp4190 != 0;
+          var tmp4189 = result__;
+          var result__ = current.get() && tmp4189;
+          var tmp4188 = result__;
+          var result__ = tmp4188;
+          tmp4161.set(result__);
           
         });
       }));
       
       
-      var node1956 = $("<span>");
-      node1955.append(node1956);
-      var condSubs481 = new mobl.CompSubscription();
-      subs__.addSub(condSubs481);
-      var oldValue481;
-      var renderCond481 = function() {
-        var value2313 = tmp4036.get();
-        if(oldValue481 === value2313) return;
-        oldValue481 = value2313;
-        var subs__ = condSubs481;
+      var node2069 = $("<span>");
+      node2068.append(node2069);
+      var condSubs508 = new mobl.CompSubscription();
+      subs__.addSub(condSubs508);
+      var oldValue508;
+      var renderCond508 = function() {
+        var value2412 = tmp4161.get();
+        if(oldValue508 === value2412) return;
+        oldValue508 = value2412;
+        var subs__ = condSubs508;
         subs__.unsubscribe();
-        node1956.empty();
-        if(value2313) {
-          
-          var node1957 = $("<span>");
-          node1956.append(node1957);
-          var condSubs482 = new mobl.CompSubscription();
-          subs__.addSub(condSubs482);
-          var oldValue482;
-          var renderCond482 = function() {
-            var value2314 = current.get();
-            if(oldValue482 === value2314) return;
-            oldValue482 = value2314;
-            var subs__ = condSubs482;
-            subs__.unsubscribe();
-            node1957.empty();
-            if(value2314) {
-              var nodes4407 = $("<span>");
-              node1957.append(nodes4407);
-              subs__.addSub(detail.addEventListener('change', function() {
-                renderControl770();
-              }));
-              
-              function renderControl770() {
-                subs__.addSub((detail.get())(current, function(elements, callback) {
-                  var root5698 = $("<span>");
-                  var subs__ = new mobl.CompSubscription();
-                  callback(root5698); return subs__;
-                  return subs__;
-                }, function(node) {
-                  var oldNodes = nodes4407;
-                  nodes4407 = node.contents();
-                  oldNodes.replaceWith(nodes4407);
-                }));
-              }
-              renderControl770();
-              
-              
-            } else {
-              
-              var node1958 = $("<div>");
-              node1958.attr('style', "padding:20px");
-              
-              
-              var node1959 = $("<h2>");
-              
-              
-              node1959.append("Add more questions.");
-              node1958.append(node1959);
-              node1957.append(node1958);
-              
-              
-              
-            }
-          };
-          renderCond482();
-          subs__.addSub(current.addEventListener('change', function() {
-            renderCond482();
+        node2069.empty();
+        if(value2412) {
+          var nodes4543 = $("<span>");
+          node2069.append(nodes4543);
+          subs__.addSub(detail.addEventListener('change', function() {
+            renderControl816();
           }));
           
+          function renderControl816() {
+            subs__.addSub((detail.get())(current, function(elements, callback) {
+              var root5900 = $("<span>");
+              var subs__ = new mobl.CompSubscription();
+              callback(root5900); return subs__;
+              return subs__;
+            }, function(node) {
+              var oldNodes = nodes4543;
+              nodes4543 = node.contents();
+              oldNodes.replaceWith(nodes4543);
+            }));
+          }
+          renderControl816();
           
           
         } else {
           
-          var node1960 = $("<div>");
-          node1960.attr('style', "padding:20px");
+          var node2070 = $("<div>");
+          node2070.attr('style', "padding:20px");
           
           
-          var node1961 = $("<h2>");
+          var node2071 = $("<h2>");
           
           
-          node1961.append("Add more questions.");
-          node1960.append(node1961);
-          node1956.append(node1960);
+          node2071.append("Add more questions.");
+          node2070.append(node2071);
+          node2069.append(node2070);
           
           
           
         }
       };
-      renderCond481();
-      subs__.addSub(tmp4036.addEventListener('change', function() {
-        renderCond481();
+      renderCond508();
+      subs__.addSub(tmp4161.addEventListener('change', function() {
+        renderCond508();
       }));
       
-      node1953.append(node1955);
-      root5697.append(node1953);
-      callback(root5697); return subs__;
+      node2066.append(node2068);
+      root5899.append(node2066);
+      callback(root5899); return subs__;
       
     });
     

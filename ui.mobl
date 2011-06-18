@@ -22,6 +22,15 @@ function hasItem(it : Dynamic, items : Collection<Dynamic>) : Bool {
   return false;
 }
 
+function referenceItem(it : Dynamic, items : Collection<Dynamic>) : Dynamic {
+  foreach (item in items) {
+    if (item == it) {
+      return item;
+    }
+  }
+  return null;
+}
+
 control mMasterDetail(items : Collection<?>, masterItem : Control2<Dynamic, Num>, detail : Control1<Dynamic>) {
   var current : Dynamic = items.one()
   <div width="100%">
@@ -41,19 +50,13 @@ control mMasterDetail(items : Collection<?>, masterItem : Control2<Dynamic, Num>
       }
     </div>
     <div style="float:left; width:66.5%; position:relative; margin-left: 0.5%;">
-      list(it in items) {
-        when(it == current) {
-	        detail(it)
-        }
+      when(current) {
+        detail(referenceItem(current, items))
+      } else {
+        <div style="padding:20px">
+        <h2>"Add more questions."</h2>
+        </div>
       }
-
-      // when(current) {
-      //   detail(current)
-      // } else {
-      //   <div style="padding:20px">
-      //   <h2>"Add more questions."</h2>
-      //   </div>
-      // }
     </div>
   </div>
 }

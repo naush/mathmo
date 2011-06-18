@@ -7,6 +7,7 @@ ui.loadingStyle = 'ui__loadingStyle';
 
 ui.whenLoaded = function(value, style, loadingMessage, elements, callback) {
 <<<<<<< HEAD
+<<<<<<< HEAD
   var root9634 = $("<span>");
   var subs__ = new mobl.CompSubscription();
   
@@ -77,78 +78,86 @@ ui.whenLoaded = function(value, style, loadingMessage, elements, callback) {
         callback(root9636); return subs__;
 =======
   var root361 = $("<span>");
+=======
+  var root765 = $("<span>");
+>>>>>>> adcc239... Has item specify
   var subs__ = new mobl.CompSubscription();
   
-  var node21 = $("<span>");
-  root361.append(node21);
-  var condSubs7 = new mobl.CompSubscription();
-  subs__.addSub(condSubs7);
-  var oldValue7;
-  var renderCond7 = function() {
-    var value103 = value.get();
-    if(oldValue7 === value103) return;
-    oldValue7 = value103;
-    var subs__ = condSubs7;
+  var node241 = $("<span>");
+  root765.append(node241);
+  var condSubs59 = new mobl.CompSubscription();
+  subs__.addSub(condSubs59);
+  var oldValue59;
+  var renderCond59 = function() {
+    var value551 = value.get();
+    if(oldValue59 === value551) return;
+    oldValue59 = value551;
+    var subs__ = condSubs59;
     subs__.unsubscribe();
-    node21.empty();
-    if(value103) {
-      var nodes333 = $("<span>");
-      node21.append(nodes333);
+    node241.empty();
+    if(value551) {
+      var nodes605 = $("<span>");
+      node241.append(nodes605);
       subs__.addSub(mobl.ref(elements).addEventListener('change', function() {
-        renderControl2();
+        renderControl94();
       }));
       
-      function renderControl2() {
+      function renderControl94() {
         subs__.addSub((elements)(function(elements, callback) {
-          var root362 = $("<span>");
+          var root766 = $("<span>");
           var subs__ = new mobl.CompSubscription();
-          callback(root362); return subs__;
+          callback(root766); return subs__;
           return subs__;
         }, function(node) {
-          var oldNodes = nodes333;
-          nodes333 = node.contents();
-          oldNodes.replaceWith(nodes333);
+          var oldNodes = nodes605;
+          nodes605 = node.contents();
+          oldNodes.replaceWith(nodes605);
         }));
       }
-      renderControl2();
+      renderControl94();
       
       
     } else {
-      var nodes334 = $("<span>");
-      node21.append(nodes334);
+      var nodes606 = $("<span>");
+      node241.append(nodes606);
       subs__.addSub((mobl.block)(style, mobl.ref(null), mobl.ref(null), mobl.ref(null), function(_, callback) {
-        var root363 = $("<span>");
+        var root767 = $("<span>");
         var subs__ = new mobl.CompSubscription();
-        var nodes335 = $("<span>");
-        root363.append(nodes335);
+        var nodes607 = $("<span>");
+        root767.append(nodes607);
         subs__.addSub((mobl.label)(loadingMessage, mobl.ref(null), mobl.ref(null), function(_, callback) {
-          var root364 = $("<span>");
+          var root768 = $("<span>");
           var subs__ = new mobl.CompSubscription();
-          callback(root364); return subs__;
+          callback(root768); return subs__;
           return subs__;
         }, function(node) {
-          var oldNodes = nodes335;
-          nodes335 = node.contents();
-          oldNodes.replaceWith(nodes335);
+          var oldNodes = nodes607;
+          nodes607 = node.contents();
+          oldNodes.replaceWith(nodes607);
         }));
-        var nodes336 = $("<span>");
-        root363.append(nodes336);
+        var nodes608 = $("<span>");
+        root767.append(nodes608);
         subs__.addSub((ui.image)(mobl.ref("data:image/gif;base64,R0lGODlhIAAgAOf2AAAAAAEBAQICAgMDAwQEBAUFBQYGBgcHBwgICAkJCQoKCgsLCwwMDA0NDQ4ODg8PDxAQEBERERISEhMTExQUFBUVFRYWFhcXFxgYGBkZGRoaGhsbGxwcHB0dHR4eHh8fHyAgICEhISIiIiMjIyQkJCUlJSYmJicnJygoKCkpKSoqKisrKywsLC0tLS4uLi8vLzAwMDExMTIyMjMzMzQ0NDU1NTY2Njc3Nzg4ODk5OTo6Ojs7Ozw8PD09PT4+Pj8/P0BAQEFBQUJCQkNDQ0REREVFRUZGRkdHR0hISElJSUpKSktLS0xMTE1NTU5OTk9PT1BQUFFRUVJSUlNTU1RUVFVVVVZWVldXV1hYWFlZWVpaWltbW1xcXF1dXV5eXl9fX2BgYGFhYWJiYmNjY2RkZGVlZWZmZmdnZ2hoaGlpaWpqamtra2xsbG1tbW5ubm9vb3BwcHFxcXJycnNzc3R0dHV1dXZ2dnd3d3h4eHl5eXp6ent7e3x8fH19fX5+fn9/f4CAgIGBgYKCgoODg4SEhIWFhYaGhoeHh4iIiImJiYqKiouLi4yMjI2NjY6Ojo+Pj5CQkJGRkZKSkpOTk5SUlJWVlZaWlpeXl5iYmJmZmZqampubm5ycnJ2dnZ6enp+fn6CgoKGhoaKioqOjo6SkpKWlpaampqenp6ioqKmpqaqqqqurq6ysrK2tra6urq+vr7CwsLGxsbKysrOzs7S0tLW1tba2tre3t7i4uLm5ubq6uru7u7y8vL29vb6+vr+/v8DAwMHBwcLCwsPDw8TExMXFxcbGxsfHx8jIyMnJycrKysvLy8zMzM3Nzc7Ozs/Pz9DQ0NHR0dLS0tPT09TU1NXV1dbW1tfX19jY2NnZ2dra2tvb29zc3N3d3d7e3t/f3+Dg4OHh4eLi4uPj4+Tk5OXl5ebm5ufn5+jo6Onp6erq6uvr6+zs7O3t7e7u7u/v7/Dw8PHx8fLy8vPz8/T09PX19f///////////////////////////////////////yH/C05FVFNDQVBFMi4wAwEAAAAh+QQFBQD/ACwAAAAAIAAgAAAI/gABCBxIsKDBgwgTKlzIsKHDhxAjSiSoYc+bCBMFbqCSY4DAApTgyQOUcUGkZcXAeHxQLB49SgI+xnSYAdYxZsjCDHgQLN48NAEEaFAh4oDDA3+EIXO2rAiAN96owQBQ4YVVCg87XBKWLNofAAROlAgAwIPVFxAgmrAkzJgWgxZcvADhESKGKk2MFhTgIAKBhwweNCjAMICBvwoPHMkDCNCYBwoLhFhxIm3CFYEIGUKkiIfCC2dLzDyI4k6e03hqKLQQerTBAkHCgOFCREHkDydGQFYoYAGDBK4RBiX78ACFBsQJBoAAIThDAyVguMBaEIPcEIgbBjBrtQOAAAoSTAgEcXZ3QwEnrLqQAMD6CgdUz1J3yOFFCwwBBqR/ESJoBhUk6OXQABAwQBYBKVhFAnEF1JURAB9YhcGDByHgwQUOUqjhhhx26KGGAQEAIfkEBQUA/wAsBQADABQAGAAACMwA/wkcSDDABg8BCCpc+I+KMmhKGEpcAAsdu1MFJGZwUmOgg14WgS1gqIDQLltZBoJsB0wBwwugbPXSpeXfAlro3LXKONCAQANzYt361QvIPzXZvHlROGGghkSxcgm7IzBGjQESBYpAFMsWlawMLTQx4hOsQAUNFhAwOzBAjTJs2lRhwPYfhDBs3MCRI6NuAilfAn9RUReACCFIisxAUBgAAQQGEtZVaKDp5IEkXjQGAIDDZYIlPg+84EL0PwEOTC/0ILDCZwMZKAhYGBAAIfkEBQUA/wAsBQADABIAFgAACMsA/wkcSBBDnDMQCCokGOBPt295FkpsEKubOFsKFlowAkOAwAi4uo3zxUBhgjupTEXx6GCWyFwCCTgQSOERqVWqpghQsKobuVP/GADSIrCAmU6lWrXa8e8MtWtb/r3pVGPghTyeTsFq8+9ADh3/Aqj5odADHk+lmiwMIXECEbISCRJQkCBAXIIAMBSxYgVIxrv/BuyQQsVKFhOAA9MgwpjIh8T/IKx40SJEAcj/BBQggLlz3Mue/2UIHWBE6H8UWEAGwJq1gr8ERRAMCAAh+QQFBQD/ACwFAAMAFAAWAAAIzgD/CRxI8IKaMA8IKlz47w60aXMYSmRgCpq1VhL/GUhBYiAEVtCu1VrAcEAVSJKSCGyAKiSsBAI3OBho4M2jS5iWCPwEDdsngYSswfogMMAURJA0bbLxLwwyZlf+tXFHLx2QgRTOIJLUSYxGGzcEbqL3jY4EghnMIIpEZOEcaGUYQtBxo8BCBCIUCjBwICPDBC14/IDR169AACBs4NDRI4Phwx1gSIYx4bFABCBUpPBAwHJRz6BDh8bAsLBCAKgBeGCowjCEFSxE/zuAwHJAACH5BAUFAP8ALAYAAwATABgAAAjSAP8JHDiwwhcpDggqXNgGWDE2CyP+W5AJGDJRCRQC2KiAwUYADjwFQ6Zq4UYOZuT4EMhAU7BkpgZqmPBvoxA8gQYF+ZdAUrBllggs+OOsVomNM+DkIYToxb8suX5J+ZemHLt3ZwQ2oBJnDyIrAmXMEGiJHbx3UwZSmNJ1x8I36uKRgkCwwQsXBBYqQHLFgsAABAh8HEwYgMACHlKo+JBXIkEKLyK/iOD4seQXEioPLPBBYIcBmkOLHk1a4oXSnlH/Y4BihWYRCgsY0BxAdejTEQMCACH5BAUFAP8ALAYAAwAVABYAAAjMAP8JHDhwgpUlCwgqXChwzCtaWhhK/KdA0atblhAwBMARQICBDRy9wtVJgUAFLTgQJDBjyYuPCxa9yqVJYwZI1X7JGOihC5o2NwIgGPRqFyOBj76NMxdnYAcrYNjIQfEPSipYTP6d2bb0HJSBCX5cEQMnyb8CLl4IOABKnLl0nyAQfNDjypgYC+eUSwcKw8IEI0YMWAjhypcKAzlO/PvAwD8BGFCg6LD4nwEbNlA4kFtZ4oPOEgWoBD1QRAPSqFOrXs1wA2uKJ14TSB0QACH5BAUFAP8ALAYAAwAWABYAAAjdAP8JHDiwAAsWAggqBMCwYcMlljYVUUiRYoI8m0oFKlDxn0OHC/pwMvUogcAERqI8ENjwwgsOJ/NwOsXowL8LiJxZo0NwgQ8nVFj8OzCHE6o/Ag1Ju7bNFIKBDXIUiaIFxD8jlj5NDOOMabczBAmY2HHEig6BKVb8M2DJ2rZvmFYSTIBiRxITFNlo+5bpQkUDFzIkVPhgyhYKHRMTVPDB778AihV6SMXtGJJ/DFxEHuiGnDZqmxIs0Lz534klQnioeJwhRYrSAxd4BECAAOzbuHPr3r1ZhWPdBRjCDggAIfkEBQUA/wAsBgADABYAFQAACNQAAQgcSFDBAYIIAfxbyJDhCDZoRDScSHEhAS6GIHFJOLDivwNnDEXSc2AhgiBLHEw0YCGCSTOGJAVC8K+CH2DI2jQcQGJGjg//DIQxRIlOAQV8iCVz1qmkyRYwbPzA8C+Hn0U2/mn5hcwZtDANBYh4EUOHin8COoRYuKirNEgqJ5ogq4FimWbTIlXwWEFCAIoOnliZ4LFwwwQeLDBUbJhhh1HVghn5l6BFY4Z13sGDx2tB5csL6dAbfUsBaIYcENGapeP0xAM0XcueTbu27X8hDDAMCAAh+QQFBQD/ACwGAAMAFgAVAAAIywABCBxIsKBBAP8SKlS4AEcOBgsjSkwo4IebPEUmakxoQIobPWgMKORRpEHEAQ0WCDwwxQ2fNwf+TZgDCxeZhQE8uGBRAeETN37IEEgQZ1YuX5EWFlDx4kWLB/9aoLnj4l8UV7h8CdMisekLDv8CYABb4M8tX8MMmZzogoLELr2IHXI7kQJUiQ2SQJGwsa/CDhUSAgjsN+EGTsx6MfmHgEXhhHDMnTtXS0Hjx//gsNtsK6EFFI83eDImawlmpXdPq17NurXrfx8KKAwIACH5BAUFAP8ALAYABAAXABMAAAjSAP8JHDhQAIYMAQgq/AegoUOHJaJoUbGwokICO6iEiTJA4IEWPhgsDKAggcACPKiM2WLgXwQznExtGegQw78VAgngoFJmygAEZD6dakWoZUETCkNAAYMUySZTrWJNodnww0IJFwIQiFOq1aw9Ii3+k7BwCitafMiKtchgiJIIa+P+Q8CBRAWjcgeGmBQsGa9HEg7gzNtnGzdu3bQZMTBY7h1xkMVxOwKAwom8HDD98uVLDgKBHfP+c0A6tOgdUhyIXijk0SYKqxXGEPMi9sIKBAMCACH5BAUFAP8ALAYABAAYABUAAAjRAAEIHEhQAQKCCAf+W8iQoYUZPDA0nEix4YATOIzsELDQQIkQHCsmMLBwQAocSIwQ+OcAC6JENipaaKGiJEYlQAQYqKJIUqYwBCsutGDjiId/PQxFyuQpidCGAhlEWBgGUiZQbhY8fZoEUyg4U7cKVcBjyAOxaP9pEBECQtqJJRzR4tXL04u3CwPwaebsGTRokgoQQPHWj7XDhyWtnPD2Q6RatWg5IoyXYYPLBSoniBKl8kQx7tqV8szwhq5675yQXnhkWD0zqxcaKdQhdkmKAQEAIfkEBQUA/wAsBgAEABgAFQAACNgA/wkcSLAAAYIIEyZ8kOIEA4UQCQoo8QJGiQACBSQwAKCjR48FCJ6o2ELAvwVBylB5mDBCCoQvYrD4V8DInD2CXiQMMCIhixcU/sl4o2cQIRMRBWoQqGABgAFQ8gxS5CVkUggJewhiJMZB0ogJaOho8LXsAQwfPjwYOKGsQBGCSrFyJWnFPwIo3P6b4+sXMGDBDh3U+88OMmTHDiMSiNVtB0SrVKUqhJQwQgaD9SJw4oSsZYEB8pwr96nt5wGk4rU7t+SzQDfw4rkT4/rkIGudagsksOFAwoAAIfkEBQUA/wAsBwAEABYAFQAACMIA/wkcODBAAIIIExJkICLEAYUQBQYI8eLFBgAYAQTIiDFixRICDaz4geIgQQcJK44IQIBGFjFhIiAEMRDlPxYsIPwjUSXMGjUTEHYYmEEgAgX/AuwAs2bOEwIRFcZQU2cKg6gKD6RgsQBrVAMVOGxo8E+n138e6lDa1InQibMC0bBq5eoVrD1w/7G5xZdvn7wb/Hjq1GnPiLz/CDBYjFiJEsQD63TTdkkC5E/oyHFDAnkNusxeIP/78wwVSNEaEiAMCAAh+QQFBQD/ACwIAAQAFgAXAAAIzQD/CRw4EIDBgwgPEhy4IMSHhRAj/gNRMGFCiQsHYCgB4SJGgQJC8DiSQwBBAB4+XtBhBMqSAws5SDRYoggULTkCLDxQAiOIJ1yEKPgYccCHEQmIfiwgAQMGBEoJajATCFEiNyKiCuSCKdMmTpzcDNAaplQpUmbhjI2KYc6jR47ePNQqcMGCoVohXJnigO5AOtWeObKgNUKAA6i6YZvGiEHUR0z+ufHWLRu0IVERrSrw7xG4yl2iltn8T8KhZ7ZWRKVSZmCBEhi0ZsCLMSAAIfkEBQUA/wAsCQAEABUAFwAACNgAAQgcSLCgwX8IEx7woKFAwocQIX5AmCGiRQIWEQp4QAHjwwYnUmT818EFjA8BRkas8AJGDRcCHmpQ6cGlDxEFDai0UAMIDIcqIQqokEFn0IwEHkxoYPToPwtV2Mh5s6WC039OBA0qZOiQEgBOqUAaO7YJ2KMVzPzx4yfMhKv/BiSYO8ApBStMGsBF+AZZsEEUggqYUeLfgn/QlBET5EClCGXXlPxLMw3aMmJeVLpIJs/UPwWHqEFjZunAyBrU5CWsEGmaMzSas8FjkxACkyV6R0KYoyb3yIAAIfkEBQUA/wAsCQAFABQAFgAACMsA/wkcaADDBQIDEypcyHDhgIYDGzQQkHCBCRQQ/7lwcQGARwAcMv57QXJEgIEZRJJ8UUGkQpIgHrocCCECwpkKByx4kMDjTAdArGyxIoOiwI9IP/JIs6aNmzMRZv7IQzXPmwkzIVxxA8eMjJM4ESw44DOjBCdFGOAUeAYXrDsSMiKwQeKfgk7BdNGy06BhgD3mnh35J6ZYsF20rDSEoAxeuk//EvwxFoyXIgMML0iDp46UwAmIiv0C03DAJsdoBj44YkRtQw90zogMCAAh+QQFBQD/ACwIAAUAFQAWAAAIswD/CRz4rwDBgwgPekjIsKHAAAoUAJg40eHADf9YRLAoUMWDgx8oAmB44ADHkyhTohSAQIEBlQha9BCyw8LIkyqeRJlCZcgAlDLACAVzhECJkw2QZMHSBAMAASsPGPh5MoKRHgpU/utiipMaCBxpiPiXABIsVKHSLHB4p1uxIf+20IKVKlQTh8TOfbsksE4tWKr4NLTA7Bw4TgIl9Jnl6opDS+e8jRnoAAeQtQ07vBHDwGFAACH5BAUFAP8ALAkABQAUABgAAAjRAP8JHCiwwgCCCP8BWMiQQ8KHEBEmMBAxYgsVDipGdKixY0cXHhNmDJkwgAEDAkgaCLGChQgEITnQqHEDxwcAHkcU2VmEBM6OCWwQGSIjAcl/BQqk7OiABw2jD2XoYMhwSqRDW0YKpCBwTiOBOmAMQCCI06RFWxQgvAKtyz851IYh+SdFFKdKjYIQdNFJD4IHvLZJSyQAgZpRnCydOSgQQYaDH55xm/bvwD8IcUBtagJRQzJu1DhZ/sdARg61Dx/Y4latz1Eqw2jhOBqAwwWNAQEAIfkEBQUA/wAsCQAFABMAGAAACMwA/wkc+O8CBYIIExK8oLChwgMOHbJAoSDivxQJNVgsYLGjx48fCQQAKTDFBwIeM7xY+QJCShgwXzzwaIBEixUfBnwMMGDAyIEjECRM8EIFRIIl1jxDk9BIHjhKFgy0cEecPEn/DtxoIeCAHEN96CwR+k/LuXnptPxjc6yWkH9IHBnyY8eGQBzIqtn550CWs2F+snZxdOgPEwAACnIQiMGXs2KQDPD9osiPDIUXejkzNklyVhUjBCikgMvZMUUoOw44tPkKSA1jrkhtGBAAIfkEBQUA/wAsCQAFABMAGAAACMMA/wkc+K/CBIIIEypcyHCgAQINFa4wgSCiQgsWE0LIyLGjRwAAPP7TIECkCwcZLbxY6aJBxgIfTpioEKCjAAEg/4UgU0ThARIfChD0sGueOTIJc4SxgqOiQDXy3qlrJHBGin8EtLwhs8UGxH+K3q0DZ+VfGVyldvzzceeNGS4cBNoI1kyOQFO/ZMkJYOBJWzMhBlrQINBCrF+0BAlUoAQNEgUXD9cyNHBAgwEgQxKUsOqXLT8DOPb5VetJRwxcoEBeGBAAIfkEBQUA/wAsCQAHABMAFgAACLcA/wkcSPAfAAAFBhRcWFCDChIHGEqcSLGixYsYM2q8EEDjPxYRNa4IibGEBAAeB4IQM4TkwAEYKCgc2KHWum5gFqoosoNEgYFz1JkDZ+ifARck/gUYUiXJjxEd/x0yF65alH9dTk2i8S/GlypLfCgQSCPXMDYHGGRq9YnMvwJAvFQhkmBghQwCKYxqFWrOTwQugoA4iJIgBVGtRtkpQFgA4cIDI3RqRQoORgFzEh/JaGEKkroSAwIAIfkEBQUA/wAsBwAHABUAFgAACMwA/wkcSLDgPwEGEyYUYUChw4EQHj58ILGixYsYMxYYWAEAxgsDVRhg0UOIE5AWRdoYdStRA4sjBjaosNFigIIfzERRYFDAhAkJR7gKZ02MQQ4wXoQoiGEUOG3T/vwrgOJDgAAwcsR4sQGA139ivmmrlswKgCmU/rD4R4KIVhQDBv7ZZs1ZnX8LFGVSVOXfgBdDcpRAKFAGrF9sXkqYpImRGAL/DIQIsaAghQ6Q/0mIpMlRGQJeQ4dO+KCRpkdgMv4Lc7qHaghFdiBwGBAAIfkEBQUA/wAsBgAOABYADwAACLwA/1lYkeKfwYMIE/6bIFCVLUqAVCic+A8FAQzO6NGLx4WiwhMD/lHx1WwSBI8JHyCkgLLlvw5gmrhUGKIUtWRbFGJ48WKihU3TmhWrY1CEhn8ARPB8kQFhADnSmhnT9eRfkj9pRvy7sLSEgIMKUDU79kuMAQV5CMkh8k9ABxcvOACY+2+AnmPB4ij4BwEQoTpPQgp4MIFASiNEGBh84IfQnSghZxpMYIcQHiUBJB9EEkiOCc0HDZj4kJliQAAh+QQFBQD/ACwGAAcAFgAWAAAIzAD/CRxIsOA/AgYHkkg4EAMKhhAjSpxIsaLFgRUsDLj4L0AVZtEyYagYQeCyeCivVDwx4AIyduzUaalYQsC/KLeKOeIokMEEngQ5aEGSwGAACBBsGvywyViuKQldMKwQiVgvWmoOYvj5LwRENcN62UJ15F+PM1E0/LMwUEQAgpx63XKVpQACM2uyyADwj8O/FhUICohzC5aZohHesNmyQ6kDBm8JOgDiY4FAB2vYdOmhtOIBLmy+wABAurTp06U/TBFSkiFq0wUEvC4dEAAh+QQFBQD/ACwGAA0AFgAQAAAIsAD//aNQQaDBgwgRSjG2rNKFhBBPQPhXgRi6dOmoQIRYQoCFX+LEgbuysWQTV7wOPSjJUgLLl/8yTAmCACbCDo5qoVrCkgDCCYVosQrl5d8ACQwAADhoAWEYWaxGVfLxL0aTGysPdlC6NIEjVqQ0Ofl3IEqUHiAMtmAx8aAZUpuw1HSQJQoQEwEELlDAdem/BjlqGBCoYIoUIXhtGgywQ8oQDYoPMlDhYUDJvpgzaw4IACH5BAUFAP8ALAUACQAWABMAAAjDAP8J/FekxsCDCBMK3CPJoMKHA0PkgjQDokUQYjRYRGhgwoV/BzYivPBIGLJilyyIFOjACzdu3bx9C7NSoBZrOK1V61JzBIZFuHLJIkRhpYgF/wpYwDCBQE2FF5boCPn0n4ZAoigFqRoBTyhMjKD8E8AgAUQAaK98wuQIEI1/I2iscIBQ40AEfzBBKjSEQIEdNmCECCCQBQqkB7VAMrQkJIIegUsIDHCgQMIFMlpYToojsIiqAkPQaAEB9NgHDNCqXh0QACH5BAUFAP8ALAQABwAYABUAAAjaAP8JHNigwMCDCBMOxIHrjMKHCRvRc4YEosV/f+LR+8Th4kMQu+J9m+Hx4YczTAyWHCjBAoWVCHdgutVrF6QLKxv8U/Dp2TNo0aS5WTkiQIJLyJImDbNSRIB/NS6tYlVKD86SCgYqqGAhAkyIFITMMPB14IU4jfzYKPvvQZpFguoE+Rcgq0AQLBUyUSToDhoV/zC4GFhhYIaEBMoIytPGxoABKF68MLziRIKBADID8FGHTQ+DBVRIJvEvM9mHBDxwGCBwwAnJHzTLnk07s4UVKBhArD3bgMqHAQEAIfkEBQUA/wAsBAAHABUAFQAACLYA/wkc+MBCgIEIEya08c8ZmwEDFEoUiIgdPHRIJk7Uk65dPEAaJX6glY7clJASPYxJgnJggQgVJBhoOfBGo1WxXh2yQDPBpF/AggkjZoYmgkW3buFKqoXmvxiJNnGq9KaC038JJlB4cFVhBBwqCnSdAMbOGRVXE1yhk2YLjJAREMKQk8aLkw0hLwDYC+BFGjBUVgj4d4ImAyJMUhBoyXcvgQMHBZoQqKHrPwgmSiSw/G/AYIUBAQAh+QQFBQD/ACwEAAcAFwAVAAAIswD/CRwoocLAgwgTDsx1LI3ChwcFiTsHzghEiHS8jUPH5+LDDqu8bYPi8aMXiyUPQpgQISVCGYE6jRLFR4LLBQgKuXIFK5YsKi5FHOhTqmjRKC4FrtCjSBEhMTaT/kMAIYKDAVITOmgRQkDWfxCadGGyIeuAIVueAAFx8UHCC1WeDKER9SGFhBSYFMHBIcBDFSQOJBQQYsUFrA8LIP4HoLHjAI4FjPh6kMEIDwYo/wvg92FAACH5BAUFAP8ALAQABQAVABcAAAjRAP8JHEjw34YpFAQUXJihQwCBAR7dirGwIJBdxMgM+PcgWS0ZFQcGMGRNWzUz/yAgWxWSoJxo1rhdQ/JPDqeWAzeQinbNm6F/BDrgHJhiVLRpYIYu3MBlygGlQB1EeFAAqsAWdBpJkhQnAtQDdjRt4uTp0xKoBtpAWrv2iNUSau7ciUMFgtV/Bxw8WKDwLsEFHyo8vKsgh5AZFO4KaPGDBgyhVhfkcOzCb4EVMFxgwPmhAIDPnxlkoPCQQIqKD0GrBh0ghF+CCDxALri6tm3QAQEAIfkEAQUA/wAsBAAFABUAFgAACMYA/wkcSPCfhjVZGBQsaIFKjgEDF8V7N2fhwAOBlhUDM3BYPHqKLAqUgOpYs2Rh/j0IFm9eGZH/BOQRhuzZsiL/3nh7BgPmvw6XhCWL9kfgCQ4BfP4zYUmYMS1KF2Ko0iTqQAYPHFgdWOHLHkCAxjywGiAKoUKHECkKQtZJnrdveWylwCRMGC5EGmyNuYBBgr0LD1DQC9hACRguAAfwAOPFC8ADTjiOCoGggBAvWkQlUNAABYVRAYgeTRrAB4EYAAvkcAFiwYAAOw=="), mobl.ref(null), mobl.ref(null), mobl.ref(null), mobl.ref(null), mobl.ref("middle"), mobl.ref(null), function(_, callback) {
-          var root365 = $("<span>");
+          var root769 = $("<span>");
           var subs__ = new mobl.CompSubscription();
-          callback(root365); return subs__;
+          callback(root769); return subs__;
           return subs__;
         }, function(node) {
-          var oldNodes = nodes336;
-          nodes336 = node.contents();
-          oldNodes.replaceWith(nodes336);
+          var oldNodes = nodes608;
+          nodes608 = node.contents();
+          oldNodes.replaceWith(nodes608);
         }));
+<<<<<<< HEAD
         callback(root363); return subs__;
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+        callback(root767); return subs__;
+>>>>>>> adcc239... Has item specify
         
         
         return subs__;
       }, function(node) {
+<<<<<<< HEAD
 <<<<<<< HEAD
         var oldNodes = nodes7190;
         nodes7190 = node.contents();
@@ -158,11 +167,17 @@ ui.whenLoaded = function(value, style, loadingMessage, elements, callback) {
         nodes334 = node.contents();
         oldNodes.replaceWith(nodes334);
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+        var oldNodes = nodes606;
+        nodes606 = node.contents();
+        oldNodes.replaceWith(nodes606);
+>>>>>>> adcc239... Has item specify
       }));
       
       
     }
   };
+<<<<<<< HEAD
 <<<<<<< HEAD
   renderCond921();
   subs__.addSub(value.addEventListener('change', function() {
@@ -172,12 +187,19 @@ ui.whenLoaded = function(value, style, loadingMessage, elements, callback) {
   callback(root9634); return subs__;
 =======
   renderCond7();
+=======
+  renderCond59();
+>>>>>>> adcc239... Has item specify
   subs__.addSub(value.addEventListener('change', function() {
-    renderCond7();
+    renderCond59();
   }));
   
+<<<<<<< HEAD
   callback(root361); return subs__;
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+  callback(root765); return subs__;
+>>>>>>> adcc239... Has item specify
   
   return subs__;
 };
@@ -186,6 +208,7 @@ ui.headerContainerStyle = 'ui__headerContainerStyle';
 ui.headerTextStyle = 'ui__headerTextStyle';
 
 ui.header = function(text, fixedPosition, onclick, elements, callback) {
+<<<<<<< HEAD
 <<<<<<< HEAD
   var root9639 = $("<span>");
   var subs__ = new mobl.CompSubscription();
@@ -300,123 +323,131 @@ ui.header = function(text, fixedPosition, onclick, elements, callback) {
       node3797.append(node3798);
 =======
   var root366 = $("<span>");
+=======
+  var root770 = $("<span>");
+>>>>>>> adcc239... Has item specify
   var subs__ = new mobl.CompSubscription();
   
-  var node22 = $("<div>");
+  var node242 = $("<div>");
   
-  var ref12 = mobl.ref(ui.headerStyle);
-  if(ref12.get() !== null) {
-    node22.attr('class', ref12.get());
-    subs__.addSub(ref12.addEventListener('change', function(_, ref, val) {
-      node22.attr('class', val);
+  var ref236 = mobl.ref(ui.headerStyle);
+  if(ref236.get() !== null) {
+    node242.attr('class', ref236.get());
+    subs__.addSub(ref236.addEventListener('change', function(_, ref, val) {
+      node242.attr('class', val);
     }));
     
   }
-  subs__.addSub(ref12.rebind());
+  subs__.addSub(ref236.rebind());
   
-  var val2 = onclick.get();
-  if(val2 !== null) {
-    subs__.addSub(mobl.domBind(node22, 'tap', val2));
+  var val118 = onclick.get();
+  if(val118 !== null) {
+    subs__.addSub(mobl.domBind(node242, 'tap', val118));
   }
   
-  var ref13 = mobl.ref(fixedPosition.get() ? "position:fixed;" : null);
-  if(ref13.get() !== null) {
-    node22.attr('style', ref13.get());
-    subs__.addSub(ref13.addEventListener('change', function(_, ref, val) {
-      node22.attr('style', val);
+  var ref237 = mobl.ref(fixedPosition.get() ? "position:fixed;" : null);
+  if(ref237.get() !== null) {
+    node242.attr('style', ref237.get());
+    subs__.addSub(ref237.addEventListener('change', function(_, ref, val) {
+      node242.attr('style', val);
     }));
     subs__.addSub(fixedPosition.addEventListener('change', function() {
-      node22.attr('style', fixedPosition.get() ? "position:fixed;" : null);
+      node242.attr('style', fixedPosition.get() ? "position:fixed;" : null);
     }));
     
   }
-  subs__.addSub(ref13.rebind());
+  subs__.addSub(ref237.rebind());
   
   
-  var node25 = $("<div>");
+  var node245 = $("<div>");
   
-  var ref11 = mobl.ref(ui.headerContainerStyle);
-  if(ref11.get() !== null) {
-    node25.attr('class', ref11.get());
-    subs__.addSub(ref11.addEventListener('change', function(_, ref, val) {
-      node25.attr('class', val);
+  var ref235 = mobl.ref(ui.headerContainerStyle);
+  if(ref235.get() !== null) {
+    node245.attr('class', ref235.get());
+    subs__.addSub(ref235.addEventListener('change', function(_, ref, val) {
+      node245.attr('class', val);
     }));
     
   }
-  subs__.addSub(ref11.rebind());
+  subs__.addSub(ref235.rebind());
   
   
-  var node26 = $("<div>");
+  var node246 = $("<div>");
   
-  var ref9 = text;
-  node26.text(""+ref9.get());
-  var ignore2 = false;
-  subs__.addSub(ref9.addEventListener('change', function(_, ref, val) {
-    if(ignore2) return;
-    node26.text(""+val);
+  var ref233 = text;
+  node246.text(""+ref233.get());
+  var ignore46 = false;
+  subs__.addSub(ref233.addEventListener('change', function(_, ref, val) {
+    if(ignore46) return;
+    node246.text(""+val);
   }));
-  subs__.addSub(ref9.rebind());
+  subs__.addSub(ref233.rebind());
   
   
-  var ref10 = mobl.ref(ui.headerTextStyle);
-  if(ref10.get() !== null) {
-    node26.attr('class', ref10.get());
-    subs__.addSub(ref10.addEventListener('change', function(_, ref, val) {
-      node26.attr('class', val);
+  var ref234 = mobl.ref(ui.headerTextStyle);
+  if(ref234.get() !== null) {
+    node246.attr('class', ref234.get());
+    subs__.addSub(ref234.addEventListener('change', function(_, ref, val) {
+      node246.attr('class', val);
     }));
     
   }
-  subs__.addSub(ref10.rebind());
+  subs__.addSub(ref234.rebind());
   
-  node25.append(node26);
-  node22.append(node25);
-  var nodes337 = $("<span>");
-  node22.append(nodes337);
+  node245.append(node246);
+  node242.append(node245);
+  var nodes609 = $("<span>");
+  node242.append(nodes609);
   subs__.addSub(mobl.ref(elements).addEventListener('change', function() {
-    renderControl3();
+    renderControl95();
   }));
   
-  function renderControl3() {
+  function renderControl95() {
     subs__.addSub((elements)(function(elements, callback) {
-      var root367 = $("<span>");
+      var root771 = $("<span>");
       var subs__ = new mobl.CompSubscription();
-      callback(root367); return subs__;
+      callback(root771); return subs__;
       return subs__;
     }, function(node) {
-      var oldNodes = nodes337;
-      nodes337 = node.contents();
-      oldNodes.replaceWith(nodes337);
+      var oldNodes = nodes609;
+      nodes609 = node.contents();
+      oldNodes.replaceWith(nodes609);
     }));
   }
-  renderControl3();
-  root366.append(node22);
+  renderControl95();
+  root770.append(node242);
   
-  var node23 = $("<span>");
-  root366.append(node23);
-  var condSubs8 = new mobl.CompSubscription();
-  subs__.addSub(condSubs8);
-  var oldValue8;
-  var renderCond8 = function() {
-    var value104 = fixedPosition.get();
-    if(oldValue8 === value104) return;
-    oldValue8 = value104;
-    var subs__ = condSubs8;
+  var node243 = $("<span>");
+  root770.append(node243);
+  var condSubs60 = new mobl.CompSubscription();
+  subs__.addSub(condSubs60);
+  var oldValue60;
+  var renderCond60 = function() {
+    var value552 = fixedPosition.get();
+    if(oldValue60 === value552) return;
+    oldValue60 = value552;
+    var subs__ = condSubs60;
     subs__.unsubscribe();
-    node23.empty();
-    if(value104) {
+    node243.empty();
+    if(value552) {
       
-      var node24 = $("<div>");
-      node24.attr('id', "hello");
-      node24.attr('style', "height: 2.9em;");
+      var node244 = $("<div>");
+      node244.attr('id', "hello");
+      node244.attr('style', "height: 2.9em;");
       
+<<<<<<< HEAD
       node23.append(node24);
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+      node243.append(node244);
+>>>>>>> adcc239... Has item specify
       
       
     } else {
       
     }
   };
+<<<<<<< HEAD
 <<<<<<< HEAD
   renderCond922();
   subs__.addSub(fixedPosition.addEventListener('change', function() {
@@ -426,12 +457,19 @@ ui.header = function(text, fixedPosition, onclick, elements, callback) {
   callback(root9639); return subs__;
 =======
   renderCond8();
+=======
+  renderCond60();
+>>>>>>> adcc239... Has item specify
   subs__.addSub(fixedPosition.addEventListener('change', function() {
-    renderCond8();
+    renderCond60();
   }));
   
+<<<<<<< HEAD
   callback(root366); return subs__;
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+  callback(root770); return subs__;
+>>>>>>> adcc239... Has item specify
   
   
   
@@ -446,16 +484,21 @@ ui.buttonPushedStyle = 'ui__buttonPushedStyle';
 
 ui.button = function(text, style, pushedStyle, onclick, elements, callback) {
 <<<<<<< HEAD
+<<<<<<< HEAD
   var root9641 = $("<span>");
 =======
   var root368 = $("<span>");
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+  var root772 = $("<span>");
+>>>>>>> adcc239... Has item specify
   var subs__ = new mobl.CompSubscription();
   
   var pushed = mobl.ref(false);
   
   var sp = $("<span>");
   
+<<<<<<< HEAD
 <<<<<<< HEAD
   var ref3769 = mobl.ref(pushed.get() ? pushedStyle.get() : style.get());
   if(ref3769.get() !== null) {
@@ -467,6 +510,12 @@ ui.button = function(text, style, pushedStyle, onclick, elements, callback) {
     sp.attr('class', ref14.get());
     subs__.addSub(ref14.addEventListener('change', function(_, ref, val) {
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+  var ref238 = mobl.ref(pushed.get() ? pushedStyle.get() : style.get());
+  if(ref238.get() !== null) {
+    sp.attr('class', ref238.get());
+    subs__.addSub(ref238.addEventListener('change', function(_, ref, val) {
+>>>>>>> adcc239... Has item specify
       sp.attr('class', val);
     }));
     subs__.addSub(pushed.addEventListener('change', function() {
@@ -481,6 +530,7 @@ ui.button = function(text, style, pushedStyle, onclick, elements, callback) {
     
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
   subs__.addSub(ref3769.rebind());
   
   var val1929 = function(event, callback) {
@@ -489,12 +539,18 @@ ui.button = function(text, style, pushedStyle, onclick, elements, callback) {
   
   var val3 = function(event, callback) {
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+  subs__.addSub(ref238.rebind());
+  
+  var val119 = function(event, callback) {
+>>>>>>> adcc239... Has item specify
                 if(event && event.stopPropagation) event.stopPropagation();
                 var result__ = event.preventDefault();
                 var result__ = true;
                 pushed.set(result__);
                 if(callback && callback.apply) callback(); return;
               };
+<<<<<<< HEAD
 <<<<<<< HEAD
   if(val1929 !== null) {
     subs__.addSub(mobl.domBind(sp, 'touchdown', val1929));
@@ -508,6 +564,13 @@ ui.button = function(text, style, pushedStyle, onclick, elements, callback) {
   
   var val4 = function(event, callback) {
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+  if(val119 !== null) {
+    subs__.addSub(mobl.domBind(sp, 'touchdown', val119));
+  }
+  
+  var val120 = function(event, callback) {
+>>>>>>> adcc239... Has item specify
                 if(event && event.stopPropagation) event.stopPropagation();
                 var result__ = event.y < 0 || event.y > sp.outerHeight() || event.x < 0 || event.x > sp.outerWidth();
                 if(result__) {
@@ -521,6 +584,7 @@ ui.button = function(text, style, pushedStyle, onclick, elements, callback) {
                 }
               };
 <<<<<<< HEAD
+<<<<<<< HEAD
   if(val1930 !== null) {
     subs__.addSub(mobl.domBind(sp, 'touchdrag', val1930));
   }
@@ -533,11 +597,19 @@ ui.button = function(text, style, pushedStyle, onclick, elements, callback) {
   
   var val5 = function(event, callback) {
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+  if(val120 !== null) {
+    subs__.addSub(mobl.domBind(sp, 'touchdrag', val120));
+  }
+  
+  var val121 = function(event, callback) {
+>>>>>>> adcc239... Has item specify
                 if(event && event.stopPropagation) event.stopPropagation();
                 var result__ = pushed.get();
                 if(result__) {
                   var result__ = false;
                   pushed.set(result__);
+<<<<<<< HEAD
 <<<<<<< HEAD
                   function after594(result__) {
                     var tmp6489 = result__;
@@ -551,12 +623,20 @@ ui.button = function(text, style, pushedStyle, onclick, elements, callback) {
                   }
                   var result__ = onclick.get()(event, after0);if(result__ !== undefined) after0(result__);
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+                  function after36(result__) {
+                    var tmp626 = result__;
+                    if(callback && callback.apply) callback(); return;
+                  }
+                  var result__ = onclick.get()(event, after36);if(result__ !== undefined) after36(result__);
+>>>>>>> adcc239... Has item specify
                 } else {
                   {
                     if(callback && callback.apply) callback(); return;
                   }
                 }
               };
+<<<<<<< HEAD
 <<<<<<< HEAD
   if(val1931 !== null) {
     subs__.addSub(mobl.domBind(sp, 'touchup', val1931));
@@ -570,6 +650,13 @@ ui.button = function(text, style, pushedStyle, onclick, elements, callback) {
   
   var val6 = function(event, callback) {
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+  if(val121 !== null) {
+    subs__.addSub(mobl.domBind(sp, 'touchup', val121));
+  }
+  
+  var val122 = function(event, callback) {
+>>>>>>> adcc239... Has item specify
                 if(event && event.stopPropagation) event.stopPropagation();
                 var result__ = pushed.get();
                 if(result__) {
@@ -582,6 +669,7 @@ ui.button = function(text, style, pushedStyle, onclick, elements, callback) {
                   }
                 }
               };
+<<<<<<< HEAD
 <<<<<<< HEAD
   if(val1932 !== null) {
     subs__.addSub(mobl.domBind(sp, 'mouseout', val1932));
@@ -602,21 +690,30 @@ ui.button = function(text, style, pushedStyle, onclick, elements, callback) {
 =======
   if(val6 !== null) {
     subs__.addSub(mobl.domBind(sp, 'mouseout', val6));
+=======
+  if(val122 !== null) {
+    subs__.addSub(mobl.domBind(sp, 'mouseout', val122));
+>>>>>>> adcc239... Has item specify
   }
   
-  var ref15 = text;
-  sp.text(""+ref15.get());
-  var ignore3 = false;
-  subs__.addSub(ref15.addEventListener('change', function(_, ref, val) {
-    if(ignore3) return;
+  var ref239 = text;
+  sp.text(""+ref239.get());
+  var ignore47 = false;
+  subs__.addSub(ref239.addEventListener('change', function(_, ref, val) {
+    if(ignore47) return;
     sp.text(""+val);
   }));
-  subs__.addSub(ref15.rebind());
+  subs__.addSub(ref239.rebind());
   
   
+<<<<<<< HEAD
   root368.append(sp);
   callback(root368); return subs__;
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+  root772.append(sp);
+  callback(root772); return subs__;
+>>>>>>> adcc239... Has item specify
   
   return subs__;
 };
@@ -624,6 +721,7 @@ ui.sideButtonStyle = 'ui__sideButtonStyle';
 ui.sideButtonPushedStyle = 'ui__sideButtonPushedStyle';
 
 ui.sideButton = function(text, style, pushedStyle, onclick, elements, callback) {
+<<<<<<< HEAD
 <<<<<<< HEAD
   var root9642 = $("<span>");
   var subs__ = new mobl.CompSubscription();
@@ -642,21 +740,28 @@ ui.sideButton = function(text, style, pushedStyle, onclick, elements, callback) 
   callback(root9642); return subs__;
 =======
   var root369 = $("<span>");
+=======
+  var root773 = $("<span>");
+>>>>>>> adcc239... Has item specify
   var subs__ = new mobl.CompSubscription();
-  var nodes338 = $("<span>");
-  root369.append(nodes338);
+  var nodes610 = $("<span>");
+  root773.append(nodes610);
   subs__.addSub((ui.button)(text, style, pushedStyle, onclick, function(_, callback) {
-    var root370 = $("<span>");
+    var root774 = $("<span>");
     var subs__ = new mobl.CompSubscription();
-    callback(root370); return subs__;
+    callback(root774); return subs__;
     return subs__;
   }, function(node) {
-    var oldNodes = nodes338;
-    nodes338 = node.contents();
-    oldNodes.replaceWith(nodes338);
+    var oldNodes = nodes610;
+    nodes610 = node.contents();
+    oldNodes.replaceWith(nodes610);
   }));
+<<<<<<< HEAD
   callback(root369); return subs__;
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+  callback(root773); return subs__;
+>>>>>>> adcc239... Has item specify
   
   return subs__;
 };
@@ -666,6 +771,7 @@ ui.backButtonStyle = 'ui__backButtonStyle';
 ui.backButtonPushedStyle = 'ui__backButtonPushedStyle';
 
 ui.backButton = function(text, style, pushedStyle, onclick, elements, callback) {
+<<<<<<< HEAD
 <<<<<<< HEAD
   var root9644 = $("<span>");
   var subs__ = new mobl.CompSubscription();
@@ -684,27 +790,35 @@ ui.backButton = function(text, style, pushedStyle, onclick, elements, callback) 
   callback(root9644); return subs__;
 =======
   var root371 = $("<span>");
+=======
+  var root775 = $("<span>");
+>>>>>>> adcc239... Has item specify
   var subs__ = new mobl.CompSubscription();
-  var nodes339 = $("<span>");
-  root371.append(nodes339);
+  var nodes611 = $("<span>");
+  root775.append(nodes611);
   subs__.addSub((ui.button)(text, style, pushedStyle, onclick, function(_, callback) {
-    var root372 = $("<span>");
+    var root776 = $("<span>");
     var subs__ = new mobl.CompSubscription();
-    callback(root372); return subs__;
+    callback(root776); return subs__;
     return subs__;
   }, function(node) {
-    var oldNodes = nodes339;
-    nodes339 = node.contents();
-    oldNodes.replaceWith(nodes339);
+    var oldNodes = nodes611;
+    nodes611 = node.contents();
+    oldNodes.replaceWith(nodes611);
   }));
+<<<<<<< HEAD
   callback(root371); return subs__;
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+  callback(root775); return subs__;
+>>>>>>> adcc239... Has item specify
   
   return subs__;
 };
 ui.groupStyle = 'ui__groupStyle';
 
 ui.group = function(elements, callback) {
+<<<<<<< HEAD
 <<<<<<< HEAD
   var root9646 = $("<span>");
   var subs__ = new mobl.CompSubscription();
@@ -744,48 +858,58 @@ ui.group = function(elements, callback) {
   callback(root9646); return subs__;
 =======
   var root373 = $("<span>");
+=======
+  var root777 = $("<span>");
+>>>>>>> adcc239... Has item specify
   var subs__ = new mobl.CompSubscription();
   
-  var node27 = $("<ul>");
+  var node247 = $("<ul>");
   
-  var ref16 = mobl.ref(ui.groupStyle);
-  if(ref16.get() !== null) {
-    node27.attr('class', ref16.get());
-    subs__.addSub(ref16.addEventListener('change', function(_, ref, val) {
-      node27.attr('class', val);
+  var ref240 = mobl.ref(ui.groupStyle);
+  if(ref240.get() !== null) {
+    node247.attr('class', ref240.get());
+    subs__.addSub(ref240.addEventListener('change', function(_, ref, val) {
+      node247.attr('class', val);
     }));
     
   }
-  subs__.addSub(ref16.rebind());
+  subs__.addSub(ref240.rebind());
   
-  var nodes340 = $("<span>");
-  node27.append(nodes340);
+  var nodes612 = $("<span>");
+  node247.append(nodes612);
   subs__.addSub(mobl.ref(elements).addEventListener('change', function() {
-    renderControl4();
+    renderControl96();
   }));
   
-  function renderControl4() {
+  function renderControl96() {
     subs__.addSub((elements)(function(elements, callback) {
-      var root374 = $("<span>");
+      var root778 = $("<span>");
       var subs__ = new mobl.CompSubscription();
-      callback(root374); return subs__;
+      callback(root778); return subs__;
       return subs__;
     }, function(node) {
-      var oldNodes = nodes340;
-      nodes340 = node.contents();
-      oldNodes.replaceWith(nodes340);
+      var oldNodes = nodes612;
+      nodes612 = node.contents();
+      oldNodes.replaceWith(nodes612);
     }));
   }
+<<<<<<< HEAD
   renderControl4();
   root373.append(node27);
   callback(root373); return subs__;
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+  renderControl96();
+  root777.append(node247);
+  callback(root777); return subs__;
+>>>>>>> adcc239... Has item specify
   
   
   return subs__;
 };
 
 ui.image = function(url, width, height, onclick, style, valign, align, elements, callback) {
+<<<<<<< HEAD
 <<<<<<< HEAD
   var root9648 = $("<span>");
   var subs__ = new mobl.CompSubscription();
@@ -861,78 +985,86 @@ ui.image = function(url, width, height, onclick, style, valign, align, elements,
   callback(root9648); return subs__;
 =======
   var root375 = $("<span>");
+=======
+  var root779 = $("<span>");
+>>>>>>> adcc239... Has item specify
   var subs__ = new mobl.CompSubscription();
   
-  var node28 = $("<img>");
+  var node248 = $("<img>");
   
-  var ref17 = url;
-  if(ref17.get() !== null) {
-    node28.attr('src', ref17.get());
-    subs__.addSub(ref17.addEventListener('change', function(_, ref, val) {
-      node28.attr('src', val);
+  var ref241 = url;
+  if(ref241.get() !== null) {
+    node248.attr('src', ref241.get());
+    subs__.addSub(ref241.addEventListener('change', function(_, ref, val) {
+      node248.attr('src', val);
     }));
     
   }
-  subs__.addSub(ref17.rebind());
+  subs__.addSub(ref241.rebind());
   
-  var ref18 = width;
-  if(ref18.get() !== null) {
-    node28.attr('width', ref18.get());
-    subs__.addSub(ref18.addEventListener('change', function(_, ref, val) {
-      node28.attr('width', val);
+  var ref242 = width;
+  if(ref242.get() !== null) {
+    node248.attr('width', ref242.get());
+    subs__.addSub(ref242.addEventListener('change', function(_, ref, val) {
+      node248.attr('width', val);
     }));
     
   }
-  subs__.addSub(ref18.rebind());
+  subs__.addSub(ref242.rebind());
   
-  var ref19 = height;
-  if(ref19.get() !== null) {
-    node28.attr('height', ref19.get());
-    subs__.addSub(ref19.addEventListener('change', function(_, ref, val) {
-      node28.attr('height', val);
+  var ref243 = height;
+  if(ref243.get() !== null) {
+    node248.attr('height', ref243.get());
+    subs__.addSub(ref243.addEventListener('change', function(_, ref, val) {
+      node248.attr('height', val);
     }));
     
   }
-  subs__.addSub(ref19.rebind());
+  subs__.addSub(ref243.rebind());
   
-  var ref20 = style;
-  if(ref20.get() !== null) {
-    node28.attr('class', ref20.get());
-    subs__.addSub(ref20.addEventListener('change', function(_, ref, val) {
-      node28.attr('class', val);
+  var ref244 = style;
+  if(ref244.get() !== null) {
+    node248.attr('class', ref244.get());
+    subs__.addSub(ref244.addEventListener('change', function(_, ref, val) {
+      node248.attr('class', val);
     }));
     
   }
-  subs__.addSub(ref20.rebind());
+  subs__.addSub(ref244.rebind());
   
-  var val7 = onclick.get();
-  if(val7 !== null) {
-    subs__.addSub(mobl.domBind(node28, 'tap', val7));
+  var val123 = onclick.get();
+  if(val123 !== null) {
+    subs__.addSub(mobl.domBind(node248, 'tap', val123));
   }
   
-  var ref21 = valign;
-  if(ref21.get() !== null) {
-    node28.attr('valign', ref21.get());
-    subs__.addSub(ref21.addEventListener('change', function(_, ref, val) {
-      node28.attr('valign', val);
+  var ref245 = valign;
+  if(ref245.get() !== null) {
+    node248.attr('valign', ref245.get());
+    subs__.addSub(ref245.addEventListener('change', function(_, ref, val) {
+      node248.attr('valign', val);
     }));
     
   }
-  subs__.addSub(ref21.rebind());
+  subs__.addSub(ref245.rebind());
   
-  var ref22 = align;
-  if(ref22.get() !== null) {
-    node28.attr('align', ref22.get());
-    subs__.addSub(ref22.addEventListener('change', function(_, ref, val) {
-      node28.attr('align', val);
+  var ref246 = align;
+  if(ref246.get() !== null) {
+    node248.attr('align', ref246.get());
+    subs__.addSub(ref246.addEventListener('change', function(_, ref, val) {
+      node248.attr('align', val);
     }));
     
   }
-  subs__.addSub(ref22.rebind());
+  subs__.addSub(ref246.rebind());
   
+<<<<<<< HEAD
   root375.append(node28);
   callback(root375); return subs__;
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+  root779.append(node248);
+  callback(root779); return subs__;
+>>>>>>> adcc239... Has item specify
   
   return subs__;
 };
@@ -943,16 +1075,21 @@ ui.itemDownArrowStyle = 'ui__itemDownArrowStyle';
 
 ui.item = function(style, pushedStyle, onclick, onswipe, hideArrow, elements, callback) {
 <<<<<<< HEAD
+<<<<<<< HEAD
   var root9649 = $("<span>");
 =======
   var root376 = $("<span>");
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+  var root780 = $("<span>");
+>>>>>>> adcc239... Has item specify
   var subs__ = new mobl.CompSubscription();
   
   var pushed = mobl.ref(false);
   
   var el = $("<li>");
   
+<<<<<<< HEAD
 <<<<<<< HEAD
   var ref3778 = mobl.ref(ui.itemStyle);
   if(ref3778.get() !== null) {
@@ -964,10 +1101,17 @@ ui.item = function(style, pushedStyle, onclick, onswipe, hideArrow, elements, ca
     el.attr('class', ref23.get());
     subs__.addSub(ref23.addEventListener('change', function(_, ref, val) {
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+  var ref247 = mobl.ref(ui.itemStyle);
+  if(ref247.get() !== null) {
+    el.attr('class', ref247.get());
+    subs__.addSub(ref247.addEventListener('change', function(_, ref, val) {
+>>>>>>> adcc239... Has item specify
       el.attr('class', val);
     }));
     
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
   subs__.addSub(ref3778.rebind());
   
@@ -983,6 +1127,14 @@ ui.item = function(style, pushedStyle, onclick, onswipe, hideArrow, elements, ca
     el.attr('class', ref24.get());
     subs__.addSub(ref24.addEventListener('change', function(_, ref, val) {
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+  subs__.addSub(ref247.rebind());
+  
+  var ref248 = mobl.ref(onclick.get() && hideArrow.get() == false ? mobl.mergeStyles([pushed.get() ? pushedStyle.get() : style.get(), ui.itemArrowStyle]) : (pushed.get() ? pushedStyle.get() : style.get()));
+  if(ref248.get() !== null) {
+    el.attr('class', ref248.get());
+    subs__.addSub(ref248.addEventListener('change', function(_, ref, val) {
+>>>>>>> adcc239... Has item specify
       el.attr('class', val);
     }));
     subs__.addSub(onclick.addEventListener('change', function() {
@@ -1006,6 +1158,7 @@ ui.item = function(style, pushedStyle, onclick, onswipe, hideArrow, elements, ca
     
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
   subs__.addSub(ref3779.rebind());
   
   var val1934 = onswipe.get();
@@ -1016,18 +1169,26 @@ ui.item = function(style, pushedStyle, onclick, onswipe, hideArrow, elements, ca
   var val1935 = onclick.get() ? function(event, callback) {
 =======
   subs__.addSub(ref24.rebind());
+=======
+  subs__.addSub(ref248.rebind());
+>>>>>>> adcc239... Has item specify
   
-  var val8 = onswipe.get();
-  if(val8 !== null) {
-    subs__.addSub(mobl.domBind(el, 'swipe', val8));
+  var val124 = onswipe.get();
+  if(val124 !== null) {
+    subs__.addSub(mobl.domBind(el, 'swipe', val124));
   }
   
+<<<<<<< HEAD
   var val9 = onclick.get() ? function(event, callback) {
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+  var val125 = onclick.get() ? function(event, callback) {
+>>>>>>> adcc239... Has item specify
                                          if(event && event.stopPropagation) event.stopPropagation();
                                          var result__ = true;
                                          pushed.set(result__);
                                          mobl.sleep(100, function(result__) {
+<<<<<<< HEAD
 <<<<<<< HEAD
                                            var tmp6490 = result__;
                                            function after595(result__) {
@@ -1041,12 +1202,21 @@ ui.item = function(style, pushedStyle, onclick, onswipe, hideArrow, elements, ca
                                            var tmp397 = result__;
                                            function after1(result__) {
                                              var tmp398 = result__;
+=======
+                                           var tmp627 = result__;
+                                           function after37(result__) {
+                                             var tmp628 = result__;
+>>>>>>> adcc239... Has item specify
                                              
                                            }
-                                           var result__ = onclick.get()(event, after1);if(result__ !== undefined) after1(result__);
+                                           var result__ = onclick.get()(event, after37);if(result__ !== undefined) after37(result__);
                                            mobl.sleep(200, function(result__) {
+<<<<<<< HEAD
                                              var tmp399 = result__;
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+                                             var tmp629 = result__;
+>>>>>>> adcc239... Has item specify
                                              var result__ = false;
                                              pushed.set(result__);
                                              if(callback && callback.apply) callback(); return;
@@ -1054,6 +1224,7 @@ ui.item = function(style, pushedStyle, onclick, onswipe, hideArrow, elements, ca
                                            
                                          });
                                        } : null;
+<<<<<<< HEAD
 <<<<<<< HEAD
   if(val1935 !== null) {
     subs__.addSub(mobl.domBind(el, 'tap', val1935));
@@ -1083,36 +1254,47 @@ ui.item = function(style, pushedStyle, onclick, onswipe, hideArrow, elements, ca
 =======
   if(val9 !== null) {
     subs__.addSub(mobl.domBind(el, 'tap', val9));
+=======
+  if(val125 !== null) {
+    subs__.addSub(mobl.domBind(el, 'tap', val125));
+>>>>>>> adcc239... Has item specify
   }
   
-  var nodes341 = $("<span>");
-  el.append(nodes341);
+  var nodes613 = $("<span>");
+  el.append(nodes613);
   subs__.addSub(mobl.ref(elements).addEventListener('change', function() {
-    renderControl5();
+    renderControl97();
   }));
   
-  function renderControl5() {
+  function renderControl97() {
     subs__.addSub((elements)(function(elements, callback) {
-      var root377 = $("<span>");
+      var root781 = $("<span>");
       var subs__ = new mobl.CompSubscription();
-      callback(root377); return subs__;
+      callback(root781); return subs__;
       return subs__;
     }, function(node) {
-      var oldNodes = nodes341;
-      nodes341 = node.contents();
-      oldNodes.replaceWith(nodes341);
+      var oldNodes = nodes613;
+      nodes613 = node.contents();
+      oldNodes.replaceWith(nodes613);
     }));
   }
+<<<<<<< HEAD
   renderControl5();
   root376.append(el);
   callback(root376); return subs__;
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+  renderControl97();
+  root780.append(el);
+  callback(root780); return subs__;
+>>>>>>> adcc239... Has item specify
   
   
   return subs__;
 };
 
 ui.checkBox = function(b, label, onchange, elements, callback) {
+<<<<<<< HEAD
 <<<<<<< HEAD
   var root9651 = $("<span>");
   var subs__ = new mobl.CompSubscription();
@@ -1161,56 +1343,64 @@ ui.checkBox = function(b, label, onchange, elements, callback) {
   var val1936 = function(event, callback) {
 =======
   var root378 = $("<span>");
+=======
+  var root782 = $("<span>");
+>>>>>>> adcc239... Has item specify
   var subs__ = new mobl.CompSubscription();
   
-  var node29 = $("<input>");
-  node29.attr('type', "checkbox");
+  var node249 = $("<input>");
+  node249.attr('type', "checkbox");
   
-  var ref26 = b;
-  node29.attr('checked', !!ref26.get());
-  subs__.addSub(ref26.addEventListener('change', function(_, ref, val) {
-    if(ref === ref26) node29.attr('checked', !!val);
+  var ref250 = b;
+  node249.attr('checked', !!ref250.get());
+  subs__.addSub(ref250.addEventListener('change', function(_, ref, val) {
+    if(ref === ref250) node249.attr('checked', !!val);
   }));
-  subs__.addSub(mobl.domBind(node29, 'change', function() {
-    b.set(!!node29.attr('checked'));
+  subs__.addSub(mobl.domBind(node249, 'change', function() {
+    b.set(!!node249.attr('checked'));
   }));
   
-  var val11 = function(event, callback) {
+  var val127 = function(event, callback) {
                 if(event && event.stopPropagation) event.stopPropagation();
                 if(callback && callback.apply) callback(); return;
               };
-  if(val11 !== null) {
-    subs__.addSub(mobl.domBind(node29, 'tap', val11));
+  if(val127 !== null) {
+    subs__.addSub(mobl.domBind(node249, 'tap', val127));
   }
   
-  var val12 = onchange.get();
-  if(val12 !== null) {
-    subs__.addSub(mobl.domBind(node29, 'change', val12));
+  var val128 = onchange.get();
+  if(val128 !== null) {
+    subs__.addSub(mobl.domBind(node249, 'change', val128));
   }
   
-  root378.append(node29);
+  root782.append(node249);
   
-  root378.append(" ");
+  root782.append(" ");
   
-  var node30 = $("<span>");
+  var node250 = $("<span>");
   
-  var ref25 = label;
-  node30.text(""+ref25.get());
-  var ignore4 = false;
-  subs__.addSub(ref25.addEventListener('change', function(_, ref, val) {
-    if(ignore4) return;
-    node30.text(""+val);
+  var ref249 = label;
+  node250.text(""+ref249.get());
+  var ignore48 = false;
+  subs__.addSub(ref249.addEventListener('change', function(_, ref, val) {
+    if(ignore48) return;
+    node250.text(""+val);
   }));
-  subs__.addSub(ref25.rebind());
+  subs__.addSub(ref249.rebind());
   
   
+<<<<<<< HEAD
   var val10 = function(event, callback) {
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+  var val126 = function(event, callback) {
+>>>>>>> adcc239... Has item specify
                 if(event && event.stopPropagation) event.stopPropagation();
                 var result__ = !b.get();
                 b.set(result__);
                 var result__ = onchange.get();
                 if(result__) {
+<<<<<<< HEAD
 <<<<<<< HEAD
                   function after596(result__) {
                     var tmp6493 = result__;
@@ -1224,12 +1414,20 @@ ui.checkBox = function(b, label, onchange, elements, callback) {
                   }
                   var result__ = onchange.get()(null, after2);if(result__ !== undefined) after2(result__);
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+                  function after38(result__) {
+                    var tmp630 = result__;
+                    if(callback && callback.apply) callback(); return;
+                  }
+                  var result__ = onchange.get()(null, after38);if(result__ !== undefined) after38(result__);
+>>>>>>> adcc239... Has item specify
                 } else {
                   {
                     if(callback && callback.apply) callback(); return;
                   }
                 }
               };
+<<<<<<< HEAD
 <<<<<<< HEAD
   if(val1936 !== null) {
     subs__.addSub(mobl.domBind(node3804, 'tap', val1936));
@@ -1245,6 +1443,14 @@ ui.checkBox = function(b, label, onchange, elements, callback) {
   root378.append(node30);
   callback(root378); return subs__;
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+  if(val126 !== null) {
+    subs__.addSub(mobl.domBind(node250, 'tap', val126));
+  }
+  
+  root782.append(node250);
+  callback(root782); return subs__;
+>>>>>>> adcc239... Has item specify
   
   
   return subs__;
@@ -1260,6 +1466,7 @@ ui.alwaysOkValidator = function(s) {
 
 
 ui.textField = function(s, placeholder, label, inputType, validator, style, invalidStyle, onchange, onkeyup, elements, callback) {
+<<<<<<< HEAD
 <<<<<<< HEAD
   var root9652 = $("<span>");
   var subs__ = new mobl.CompSubscription();
@@ -1290,33 +1497,42 @@ ui.textField = function(s, placeholder, label, inputType, validator, style, inva
         oldNodes.replaceWith(nodes7198);
 =======
   var root379 = $("<span>");
+=======
+  var root783 = $("<span>");
+>>>>>>> adcc239... Has item specify
   var subs__ = new mobl.CompSubscription();
   
-  var node31 = $("<span>");
-  root379.append(node31);
-  var condSubs9 = new mobl.CompSubscription();
-  subs__.addSub(condSubs9);
-  var oldValue9;
-  var renderCond9 = function() {
-    var value105 = label.get();
-    if(oldValue9 === value105) return;
-    oldValue9 = value105;
-    var subs__ = condSubs9;
+  var node251 = $("<span>");
+  root783.append(node251);
+  var condSubs61 = new mobl.CompSubscription();
+  subs__.addSub(condSubs61);
+  var oldValue61;
+  var renderCond61 = function() {
+    var value553 = label.get();
+    if(oldValue61 === value553) return;
+    oldValue61 = value553;
+    var subs__ = condSubs61;
     subs__.unsubscribe();
-    node31.empty();
-    if(value105) {
-      var nodes342 = $("<span>");
-      node31.append(nodes342);
+    node251.empty();
+    if(value553) {
+      var nodes614 = $("<span>");
+      node251.append(nodes614);
       subs__.addSub((mobl.label)(label, mobl.ref(ui.textFieldLabelStyle), mobl.ref(null), function(_, callback) {
-        var root380 = $("<span>");
+        var root784 = $("<span>");
         var subs__ = new mobl.CompSubscription();
-        callback(root380); return subs__;
+        callback(root784); return subs__;
         return subs__;
       }, function(node) {
+<<<<<<< HEAD
         var oldNodes = nodes342;
         nodes342 = node.contents();
         oldNodes.replaceWith(nodes342);
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+        var oldNodes = nodes614;
+        nodes614 = node.contents();
+        oldNodes.replaceWith(nodes614);
+>>>>>>> adcc239... Has item specify
       }));
       
       
@@ -1324,6 +1540,7 @@ ui.textField = function(s, placeholder, label, inputType, validator, style, inva
       
     }
   };
+<<<<<<< HEAD
 <<<<<<< HEAD
   renderCond923();
   subs__.addSub(label.addEventListener('change', function() {
@@ -1346,29 +1563,38 @@ ui.textField = function(s, placeholder, label, inputType, validator, style, inva
     if(value4144) {
 =======
   renderCond9();
+=======
+  renderCond61();
+>>>>>>> adcc239... Has item specify
   subs__.addSub(label.addEventListener('change', function() {
-    renderCond9();
+    renderCond61();
   }));
   
   
-  var node32 = $("<span>");
-  root379.append(node32);
-  var condSubs10 = new mobl.CompSubscription();
-  subs__.addSub(condSubs10);
-  var oldValue10;
-  var renderCond10 = function() {
-    var value106 = validator.get();
-    if(oldValue10 === value106) return;
-    oldValue10 = value106;
-    var subs__ = condSubs10;
+  var node252 = $("<span>");
+  root783.append(node252);
+  var condSubs62 = new mobl.CompSubscription();
+  subs__.addSub(condSubs62);
+  var oldValue62;
+  var renderCond62 = function() {
+    var value554 = validator.get();
+    if(oldValue62 === value554) return;
+    oldValue62 = value554;
+    var subs__ = condSubs62;
     subs__.unsubscribe();
+<<<<<<< HEAD
     node32.empty();
     if(value106) {
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+    node252.empty();
+    if(value554) {
+>>>>>>> adcc239... Has item specify
       
       var temp = mobl.ref(s.get());
       
       var identifier = mobl.ref(mobl.random(999));
+<<<<<<< HEAD
 <<<<<<< HEAD
       function after600(result__) {
         var tmp6494 = result__;
@@ -1382,10 +1608,18 @@ ui.textField = function(s, placeholder, label, inputType, validator, style, inva
         mobl.sleep(200, function(result__) {
           var tmp402 = result__;
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+      function after42(result__) {
+        var tmp631 = result__;
+        var validationMessage = mobl.ref(result__);
+        mobl.sleep(200, function(result__) {
+          var tmp632 = result__;
+>>>>>>> adcc239... Has item specify
           var result__ = mobl.setValidationError(identifier.get(), !validationMessage.get());
           
         });
         
+<<<<<<< HEAD
 <<<<<<< HEAD
         var node3807 = $("<input>");
         
@@ -1460,77 +1694,88 @@ ui.textField = function(s, placeholder, label, inputType, validator, style, inva
                             var result__ = tmp6497;
 =======
         var node33 = $("<input>");
+=======
+        var node253 = $("<input>");
+>>>>>>> adcc239... Has item specify
         
-        var ref27 = inputType;
-        if(ref27.get() !== null) {
-          node33.attr('type', ref27.get());
-          subs__.addSub(ref27.addEventListener('change', function(_, ref, val) {
-            node33.attr('type', val);
+        var ref251 = inputType;
+        if(ref251.get() !== null) {
+          node253.attr('type', ref251.get());
+          subs__.addSub(ref251.addEventListener('change', function(_, ref, val) {
+            node253.attr('type', val);
           }));
           
         }
-        subs__.addSub(ref27.rebind());
+        subs__.addSub(ref251.rebind());
         
-        var ref28 = mobl.ref(validationMessage.get() ? invalidStyle.get() : style.get());
-        if(ref28.get() !== null) {
-          node33.attr('class', ref28.get());
-          subs__.addSub(ref28.addEventListener('change', function(_, ref, val) {
-            node33.attr('class', val);
+        var ref252 = mobl.ref(validationMessage.get() ? invalidStyle.get() : style.get());
+        if(ref252.get() !== null) {
+          node253.attr('class', ref252.get());
+          subs__.addSub(ref252.addEventListener('change', function(_, ref, val) {
+            node253.attr('class', val);
           }));
           subs__.addSub(validationMessage.addEventListener('change', function() {
-            node33.attr('class', validationMessage.get() ? invalidStyle.get() : style.get());
+            node253.attr('class', validationMessage.get() ? invalidStyle.get() : style.get());
           }));
           subs__.addSub(invalidStyle.addEventListener('change', function() {
-            node33.attr('class', validationMessage.get() ? invalidStyle.get() : style.get());
+            node253.attr('class', validationMessage.get() ? invalidStyle.get() : style.get());
           }));
           subs__.addSub(style.addEventListener('change', function() {
-            node33.attr('class', validationMessage.get() ? invalidStyle.get() : style.get());
+            node253.attr('class', validationMessage.get() ? invalidStyle.get() : style.get());
           }));
           
         }
-        subs__.addSub(ref28.rebind());
+        subs__.addSub(ref252.rebind());
         
-        var ref29 = placeholder;
-        if(ref29.get() !== null) {
-          node33.attr('placeholder', ref29.get());
-          subs__.addSub(ref29.addEventListener('change', function(_, ref, val) {
-            node33.attr('placeholder', val);
+        var ref253 = placeholder;
+        if(ref253.get() !== null) {
+          node253.attr('placeholder', ref253.get());
+          subs__.addSub(ref253.addEventListener('change', function(_, ref, val) {
+            node253.attr('placeholder', val);
           }));
           
         }
-        subs__.addSub(ref29.rebind());
+        subs__.addSub(ref253.rebind());
         
-        var ref30 = temp;
-        node33.val(""+ref30.get());
-        var ignore5 = false;
-        subs__.addSub(ref30.addEventListener('change', function(_, ref, val) {
-          if(ignore5) return;
-          node33.val(""+val);
+        var ref254 = temp;
+        node253.val(""+ref254.get());
+        var ignore49 = false;
+        subs__.addSub(ref254.addEventListener('change', function(_, ref, val) {
+          if(ignore49) return;
+          node253.val(""+val);
         }));
-        subs__.addSub(ref30.rebind());
+        subs__.addSub(ref254.rebind());
         
-        subs__.addSub(mobl.domBind(node33, 'keyup change', function() {
-          ignore5 = true;
-          temp.set(mobl.stringTomobl__String(node33.val()));
-          ignore5 = false;
+        subs__.addSub(mobl.domBind(node253, 'keyup change', function() {
+          ignore49 = true;
+          temp.set(mobl.stringTomobl__String(node253.val()));
+          ignore49 = false;
         }));
         
         
-        var val13 = onchange.get();
-        if(val13 !== null) {
-          subs__.addSub(mobl.domBind(node33, 'change', val13));
+        var val129 = onchange.get();
+        if(val129 !== null) {
+          subs__.addSub(mobl.domBind(node253, 'change', val129));
         }
         
-        var val14 = function(event, callback) {
+        var val130 = function(event, callback) {
                       if(event && event.stopPropagation) event.stopPropagation();
                       var result__ = onkeyup.get();
                       if(result__) {
+<<<<<<< HEAD
                         function after3(result__) {
                           var tmp403 = result__;
                           function after4(result__) {
                             var tmp404 = result__;
                             var result__ = tmp404;
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+                        function after39(result__) {
+                          var tmp633 = result__;
+                          function after40(result__) {
+                            var tmp634 = result__;
+                            var result__ = tmp634;
+>>>>>>> adcc239... Has item specify
                             validationMessage.set(result__);
                             var result__ = !validationMessage.get();
                             if(result__) {
@@ -1546,6 +1791,7 @@ ui.textField = function(s, placeholder, label, inputType, validator, style, inva
                             }
                           }
 <<<<<<< HEAD
+<<<<<<< HEAD
                           var result__ = validator.get()(temp.get(), after598);if(result__ !== undefined) after598(result__);
                         }
                         var result__ = onkeyup.get()(event, after597);if(result__ !== undefined) after597(result__);
@@ -1556,14 +1802,23 @@ ui.textField = function(s, placeholder, label, inputType, validator, style, inva
                             var result__ = tmp6497;
 =======
                           var result__ = validator.get()(temp.get(), after4);if(result__ !== undefined) after4(result__);
+=======
+                          var result__ = validator.get()(temp.get(), after40);if(result__ !== undefined) after40(result__);
+>>>>>>> adcc239... Has item specify
                         }
-                        var result__ = onkeyup.get()(event, after3);if(result__ !== undefined) after3(result__);
+                        var result__ = onkeyup.get()(event, after39);if(result__ !== undefined) after39(result__);
                       } else {
                         {
+<<<<<<< HEAD
                           function after5(result__) {
                             var tmp404 = result__;
                             var result__ = tmp404;
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+                          function after41(result__) {
+                            var tmp634 = result__;
+                            var result__ = tmp634;
+>>>>>>> adcc239... Has item specify
                             validationMessage.set(result__);
                             var result__ = !validationMessage.get();
                             if(result__) {
@@ -1578,6 +1833,7 @@ ui.textField = function(s, placeholder, label, inputType, validator, style, inva
                               }
                             }
                           }
+<<<<<<< HEAD
 <<<<<<< HEAD
                           var result__ = validator.get()(temp.get(), after599);if(result__ !== undefined) after599(result__);
                         }
@@ -1590,19 +1846,27 @@ ui.textField = function(s, placeholder, label, inputType, validator, style, inva
         var val1941 = function(event, callback) {
 =======
                           var result__ = validator.get()(temp.get(), after5);if(result__ !== undefined) after5(result__);
+=======
+                          var result__ = validator.get()(temp.get(), after41);if(result__ !== undefined) after41(result__);
+>>>>>>> adcc239... Has item specify
                         }
                       }
                     };
-        if(val14 !== null) {
-          subs__.addSub(mobl.domBind(node33, 'keyup', val14));
+        if(val130 !== null) {
+          subs__.addSub(mobl.domBind(node253, 'keyup', val130));
         }
         
+<<<<<<< HEAD
         var val15 = function(event, callback) {
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+        var val131 = function(event, callback) {
+>>>>>>> adcc239... Has item specify
                       if(event && event.stopPropagation) event.stopPropagation();
                       var result__ = ui.scrollUp();
                       if(callback && callback.apply) callback(); return;
                     };
+<<<<<<< HEAD
 <<<<<<< HEAD
         if(val1941 !== null) {
           subs__.addSub(mobl.domBind(node3807, 'blur', val1941));
@@ -1623,27 +1887,38 @@ ui.textField = function(s, placeholder, label, inputType, validator, style, inva
 =======
         if(val15 !== null) {
           subs__.addSub(mobl.domBind(node33, 'blur', val15));
+=======
+        if(val131 !== null) {
+          subs__.addSub(mobl.domBind(node253, 'blur', val131));
+>>>>>>> adcc239... Has item specify
         }
         
-        node32.append(node33);
-        var nodes343 = $("<span>");
-        node32.append(nodes343);
+        node252.append(node253);
+        var nodes615 = $("<span>");
+        node252.append(nodes615);
         subs__.addSub((mobl.label)(validationMessage, mobl.ref(ui.validationMessageStyle), mobl.ref(null), function(_, callback) {
-          var root381 = $("<span>");
+          var root785 = $("<span>");
           var subs__ = new mobl.CompSubscription();
-          callback(root381); return subs__;
+          callback(root785); return subs__;
           return subs__;
         }, function(node) {
+<<<<<<< HEAD
           var oldNodes = nodes343;
           nodes343 = node.contents();
           oldNodes.replaceWith(nodes343);
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+          var oldNodes = nodes615;
+          nodes615 = node.contents();
+          oldNodes.replaceWith(nodes615);
+>>>>>>> adcc239... Has item specify
         }));
         
         
         
         
       }
+<<<<<<< HEAD
 <<<<<<< HEAD
       var result__ = validator.get()(s.get(), after600);if(result__ !== undefined) after600(result__);
     } else {
@@ -1728,53 +2003,80 @@ ui.textField = function(s, placeholder, label, inputType, validator, style, inva
         node34.attr('class', ref32.get());
         subs__.addSub(ref32.addEventListener('change', function(_, ref, val) {
           node34.attr('class', val);
+=======
+      var result__ = validator.get()(s.get(), after42);if(result__ !== undefined) after42(result__);
+    } else {
+      
+      var node254 = $("<input>");
+      
+      var ref255 = inputType;
+      if(ref255.get() !== null) {
+        node254.attr('type', ref255.get());
+        subs__.addSub(ref255.addEventListener('change', function(_, ref, val) {
+          node254.attr('type', val);
         }));
         
       }
-      subs__.addSub(ref32.rebind());
+      subs__.addSub(ref255.rebind());
       
-      var ref33 = placeholder;
-      if(ref33.get() !== null) {
-        node34.attr('placeholder', ref33.get());
-        subs__.addSub(ref33.addEventListener('change', function(_, ref, val) {
-          node34.attr('placeholder', val);
+      var ref256 = style;
+      if(ref256.get() !== null) {
+        node254.attr('class', ref256.get());
+        subs__.addSub(ref256.addEventListener('change', function(_, ref, val) {
+          node254.attr('class', val);
+>>>>>>> adcc239... Has item specify
         }));
         
       }
-      subs__.addSub(ref33.rebind());
+      subs__.addSub(ref256.rebind());
       
-      var ref34 = s;
-      node34.val(""+ref34.get());
-      var ignore6 = false;
-      subs__.addSub(ref34.addEventListener('change', function(_, ref, val) {
-        if(ignore6) return;
-        node34.val(""+val);
+      var ref257 = placeholder;
+      if(ref257.get() !== null) {
+        node254.attr('placeholder', ref257.get());
+        subs__.addSub(ref257.addEventListener('change', function(_, ref, val) {
+          node254.attr('placeholder', val);
+        }));
+        
+      }
+      subs__.addSub(ref257.rebind());
+      
+      var ref258 = s;
+      node254.val(""+ref258.get());
+      var ignore50 = false;
+      subs__.addSub(ref258.addEventListener('change', function(_, ref, val) {
+        if(ignore50) return;
+        node254.val(""+val);
       }));
-      subs__.addSub(ref34.rebind());
+      subs__.addSub(ref258.rebind());
       
-      subs__.addSub(mobl.domBind(node34, 'keyup change', function() {
-        ignore6 = true;
-        s.set(mobl.stringTomobl__String(node34.val()));
-        ignore6 = false;
+      subs__.addSub(mobl.domBind(node254, 'keyup change', function() {
+        ignore50 = true;
+        s.set(mobl.stringTomobl__String(node254.val()));
+        ignore50 = false;
       }));
       
       
-      var val16 = onchange.get();
-      if(val16 !== null) {
-        subs__.addSub(mobl.domBind(node34, 'change', val16));
+      var val132 = onchange.get();
+      if(val132 !== null) {
+        subs__.addSub(mobl.domBind(node254, 'change', val132));
       }
       
-      var val17 = onkeyup.get();
-      if(val17 !== null) {
-        subs__.addSub(mobl.domBind(node34, 'keyup', val17));
+      var val133 = onkeyup.get();
+      if(val133 !== null) {
+        subs__.addSub(mobl.domBind(node254, 'keyup', val133));
       }
       
+<<<<<<< HEAD
       var val18 = function(event, callback) {
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+      var val134 = function(event, callback) {
+>>>>>>> adcc239... Has item specify
                     if(event && event.stopPropagation) event.stopPropagation();
                     var result__ = ui.scrollUp();
                     if(callback && callback.apply) callback(); return;
                   };
+<<<<<<< HEAD
 <<<<<<< HEAD
       if(val1944 !== null) {
         subs__.addSub(mobl.domBind(node3808, 'blur', val1944));
@@ -1788,10 +2090,18 @@ ui.textField = function(s, placeholder, label, inputType, validator, style, inva
       
       node32.append(node34);
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+      if(val134 !== null) {
+        subs__.addSub(mobl.domBind(node254, 'blur', val134));
+      }
+      
+      node252.append(node254);
+>>>>>>> adcc239... Has item specify
       
       
     }
   };
+<<<<<<< HEAD
 <<<<<<< HEAD
   renderCond924();
   subs__.addSub(validator.addEventListener('change', function() {
@@ -1801,18 +2111,26 @@ ui.textField = function(s, placeholder, label, inputType, validator, style, inva
   callback(root9652); return subs__;
 =======
   renderCond10();
+=======
+  renderCond62();
+>>>>>>> adcc239... Has item specify
   subs__.addSub(validator.addEventListener('change', function() {
-    renderCond10();
+    renderCond62();
   }));
   
+<<<<<<< HEAD
   callback(root379); return subs__;
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+  callback(root783); return subs__;
+>>>>>>> adcc239... Has item specify
   
   
   return subs__;
 };
 
 ui.emailField = function(s, placeholder, label, validator, style, invalidStyle, onchange, onkeyup, elements, callback) {
+<<<<<<< HEAD
 <<<<<<< HEAD
   var root9655 = $("<span>");
   var subs__ = new mobl.CompSubscription();
@@ -1831,26 +2149,34 @@ ui.emailField = function(s, placeholder, label, validator, style, invalidStyle, 
   callback(root9655); return subs__;
 =======
   var root382 = $("<span>");
+=======
+  var root786 = $("<span>");
+>>>>>>> adcc239... Has item specify
   var subs__ = new mobl.CompSubscription();
-  var nodes344 = $("<span>");
-  root382.append(nodes344);
+  var nodes616 = $("<span>");
+  root786.append(nodes616);
   subs__.addSub((ui.textField)(s, placeholder, label, mobl.ref("email"), validator, style, invalidStyle, onchange, onkeyup, function(_, callback) {
-    var root383 = $("<span>");
+    var root787 = $("<span>");
     var subs__ = new mobl.CompSubscription();
-    callback(root383); return subs__;
+    callback(root787); return subs__;
     return subs__;
   }, function(node) {
-    var oldNodes = nodes344;
-    nodes344 = node.contents();
-    oldNodes.replaceWith(nodes344);
+    var oldNodes = nodes616;
+    nodes616 = node.contents();
+    oldNodes.replaceWith(nodes616);
   }));
+<<<<<<< HEAD
   callback(root382); return subs__;
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+  callback(root786); return subs__;
+>>>>>>> adcc239... Has item specify
   
   return subs__;
 };
 
 ui.telField = function(phoneNumber, placeholder, label, validator, style, invalidStyle, onchange, onkeyup, elements, callback) {
+<<<<<<< HEAD
 <<<<<<< HEAD
   var root9657 = $("<span>");
   var subs__ = new mobl.CompSubscription();
@@ -1869,26 +2195,34 @@ ui.telField = function(phoneNumber, placeholder, label, validator, style, invali
   callback(root9657); return subs__;
 =======
   var root384 = $("<span>");
+=======
+  var root788 = $("<span>");
+>>>>>>> adcc239... Has item specify
   var subs__ = new mobl.CompSubscription();
-  var nodes345 = $("<span>");
-  root384.append(nodes345);
+  var nodes617 = $("<span>");
+  root788.append(nodes617);
   subs__.addSub((ui.textField)(phoneNumber, placeholder, label, mobl.ref("tel"), validator, style, invalidStyle, onchange, onkeyup, function(_, callback) {
-    var root385 = $("<span>");
+    var root789 = $("<span>");
     var subs__ = new mobl.CompSubscription();
-    callback(root385); return subs__;
+    callback(root789); return subs__;
     return subs__;
   }, function(node) {
-    var oldNodes = nodes345;
-    nodes345 = node.contents();
-    oldNodes.replaceWith(nodes345);
+    var oldNodes = nodes617;
+    nodes617 = node.contents();
+    oldNodes.replaceWith(nodes617);
   }));
+<<<<<<< HEAD
   callback(root384); return subs__;
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+  callback(root788); return subs__;
+>>>>>>> adcc239... Has item specify
   
   return subs__;
 };
 
 ui.rangeField = function(n, min, max, step, placeholder, label, onchange, onkeyup, elements, callback) {
+<<<<<<< HEAD
 <<<<<<< HEAD
   var root9659 = $("<span>");
   var subs__ = new mobl.CompSubscription();
@@ -1919,33 +2253,42 @@ ui.rangeField = function(n, min, max, step, placeholder, label, onchange, onkeyu
         oldNodes.replaceWith(nodes7202);
 =======
   var root386 = $("<span>");
+=======
+  var root790 = $("<span>");
+>>>>>>> adcc239... Has item specify
   var subs__ = new mobl.CompSubscription();
   
-  var node35 = $("<span>");
-  root386.append(node35);
-  var condSubs11 = new mobl.CompSubscription();
-  subs__.addSub(condSubs11);
-  var oldValue11;
-  var renderCond11 = function() {
-    var value107 = label.get();
-    if(oldValue11 === value107) return;
-    oldValue11 = value107;
-    var subs__ = condSubs11;
+  var node255 = $("<span>");
+  root790.append(node255);
+  var condSubs63 = new mobl.CompSubscription();
+  subs__.addSub(condSubs63);
+  var oldValue63;
+  var renderCond63 = function() {
+    var value555 = label.get();
+    if(oldValue63 === value555) return;
+    oldValue63 = value555;
+    var subs__ = condSubs63;
     subs__.unsubscribe();
-    node35.empty();
-    if(value107) {
-      var nodes346 = $("<span>");
-      node35.append(nodes346);
+    node255.empty();
+    if(value555) {
+      var nodes618 = $("<span>");
+      node255.append(nodes618);
       subs__.addSub((mobl.label)(label, mobl.ref(ui.textFieldLabelStyle), mobl.ref(null), function(_, callback) {
-        var root387 = $("<span>");
+        var root791 = $("<span>");
         var subs__ = new mobl.CompSubscription();
-        callback(root387); return subs__;
+        callback(root791); return subs__;
         return subs__;
       }, function(node) {
+<<<<<<< HEAD
         var oldNodes = nodes346;
         nodes346 = node.contents();
         oldNodes.replaceWith(nodes346);
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+        var oldNodes = nodes618;
+        nodes618 = node.contents();
+        oldNodes.replaceWith(nodes618);
+>>>>>>> adcc239... Has item specify
       }));
       
       
@@ -1953,6 +2296,7 @@ ui.rangeField = function(n, min, max, step, placeholder, label, onchange, onkeyu
       
     }
   };
+<<<<<<< HEAD
 <<<<<<< HEAD
   renderCond925();
   subs__.addSub(label.addEventListener('change', function() {
@@ -2034,84 +2378,92 @@ ui.rangeField = function(n, min, max, step, placeholder, label, onchange, onkeyu
   callback(root9659); return subs__;
 =======
   renderCond11();
+=======
+  renderCond63();
+>>>>>>> adcc239... Has item specify
   subs__.addSub(label.addEventListener('change', function() {
-    renderCond11();
+    renderCond63();
   }));
   
   
-  var node36 = $("<input>");
-  node36.attr('type', "range");
+  var node256 = $("<input>");
+  node256.attr('type', "range");
   
-  var ref35 = n;
-  node36.val(""+ref35.get());
-  var ignore7 = false;
-  subs__.addSub(ref35.addEventListener('change', function(_, ref, val) {
-    if(ignore7) return;
-    node36.val(""+val);
+  var ref259 = n;
+  node256.val(""+ref259.get());
+  var ignore51 = false;
+  subs__.addSub(ref259.addEventListener('change', function(_, ref, val) {
+    if(ignore51) return;
+    node256.val(""+val);
   }));
-  subs__.addSub(ref35.rebind());
+  subs__.addSub(ref259.rebind());
   
-  subs__.addSub(mobl.domBind(node36, 'keyup change', function() {
-    ignore7 = true;
-    n.set(mobl.stringTomobl__Num(node36.val()));
-    ignore7 = false;
+  subs__.addSub(mobl.domBind(node256, 'keyup change', function() {
+    ignore51 = true;
+    n.set(mobl.stringTomobl__Num(node256.val()));
+    ignore51 = false;
   }));
   
   
-  var ref36 = min;
-  if(ref36.get() !== null) {
-    node36.attr('min', ref36.get());
-    subs__.addSub(ref36.addEventListener('change', function(_, ref, val) {
-      node36.attr('min', val);
+  var ref260 = min;
+  if(ref260.get() !== null) {
+    node256.attr('min', ref260.get());
+    subs__.addSub(ref260.addEventListener('change', function(_, ref, val) {
+      node256.attr('min', val);
     }));
     
   }
-  subs__.addSub(ref36.rebind());
+  subs__.addSub(ref260.rebind());
   
-  var ref37 = max;
-  if(ref37.get() !== null) {
-    node36.attr('max', ref37.get());
-    subs__.addSub(ref37.addEventListener('change', function(_, ref, val) {
-      node36.attr('max', val);
+  var ref261 = max;
+  if(ref261.get() !== null) {
+    node256.attr('max', ref261.get());
+    subs__.addSub(ref261.addEventListener('change', function(_, ref, val) {
+      node256.attr('max', val);
     }));
     
   }
-  subs__.addSub(ref37.rebind());
+  subs__.addSub(ref261.rebind());
   
-  var ref38 = step;
-  if(ref38.get() !== null) {
-    node36.attr('step', ref38.get());
-    subs__.addSub(ref38.addEventListener('change', function(_, ref, val) {
-      node36.attr('step', val);
+  var ref262 = step;
+  if(ref262.get() !== null) {
+    node256.attr('step', ref262.get());
+    subs__.addSub(ref262.addEventListener('change', function(_, ref, val) {
+      node256.attr('step', val);
     }));
     
   }
-  subs__.addSub(ref38.rebind());
-  node36.attr('style', "width: 99%;");
+  subs__.addSub(ref262.rebind());
+  node256.attr('style', "width: 99%;");
   
-  var val19 = onchange.get();
-  if(val19 !== null) {
-    subs__.addSub(mobl.domBind(node36, 'change', val19));
+  var val135 = onchange.get();
+  if(val135 !== null) {
+    subs__.addSub(mobl.domBind(node256, 'change', val135));
   }
   
-  var val20 = onkeyup.get();
-  if(val20 !== null) {
-    subs__.addSub(mobl.domBind(node36, 'keyup', val20));
+  var val136 = onkeyup.get();
+  if(val136 !== null) {
+    subs__.addSub(mobl.domBind(node256, 'keyup', val136));
   }
   
-  var ref39 = placeholder;
-  if(ref39.get() !== null) {
-    node36.attr('placeholder', ref39.get());
-    subs__.addSub(ref39.addEventListener('change', function(_, ref, val) {
-      node36.attr('placeholder', val);
+  var ref263 = placeholder;
+  if(ref263.get() !== null) {
+    node256.attr('placeholder', ref263.get());
+    subs__.addSub(ref263.addEventListener('change', function(_, ref, val) {
+      node256.attr('placeholder', val);
     }));
     
   }
-  subs__.addSub(ref39.rebind());
+  subs__.addSub(ref263.rebind());
   
+<<<<<<< HEAD
   root386.append(node36);
   callback(root386); return subs__;
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+  root790.append(node256);
+  callback(root790); return subs__;
+>>>>>>> adcc239... Has item specify
   
   
   return subs__;
@@ -2124,16 +2476,21 @@ ui.validateNum = function(n) {
 
 ui.numField = function(n, label, placeholder, validator, style, invalidStyle, onchange, onkeyup, elements, callback) {
 <<<<<<< HEAD
+<<<<<<< HEAD
   var root9661 = $("<span>");
 =======
   var root388 = $("<span>");
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+  var root792 = $("<span>");
+>>>>>>> adcc239... Has item specify
   var subs__ = new mobl.CompSubscription();
   
   var validator2 = function(s, callback) {
     var __this = this;
     var result__ = mobl.parseNum(s);
     var n2 = result__;
+<<<<<<< HEAD
 <<<<<<< HEAD
     function after601(result__) {
       var tmp6498 = result__;
@@ -2143,6 +2500,11 @@ ui.numField = function(n, label, placeholder, validator, style, invalidStyle, on
       var tmp405 = result__;
       var result__ = tmp405;
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+    function after43(result__) {
+      var tmp635 = result__;
+      var result__ = tmp635;
+>>>>>>> adcc239... Has item specify
       var m = result__;
       var result__ = !m;
       if(result__) {
@@ -2162,15 +2524,20 @@ ui.numField = function(n, label, placeholder, validator, style, invalidStyle, on
       }
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
     var result__ = validator.get()(n2, after601);if(result__ !== undefined) after601(result__);
 =======
     var result__ = validator.get()(n2, after7);if(result__ !== undefined) after7(result__);
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+    var result__ = validator.get()(n2, after43);if(result__ !== undefined) after43(result__);
+>>>>>>> adcc239... Has item specify
   };
   
   
   
   var s = mobl.ref("" + n.get());
+<<<<<<< HEAD
 <<<<<<< HEAD
   var nodes7203 = $("<span>");
   root9661.append(nodes7203);
@@ -2188,23 +2555,32 @@ ui.numField = function(n, label, placeholder, validator, style, invalidStyle, on
 =======
   var nodes347 = $("<span>");
   root388.append(nodes347);
+=======
+  var nodes619 = $("<span>");
+  root792.append(nodes619);
+>>>>>>> adcc239... Has item specify
   subs__.addSub((ui.textField)(s, placeholder, label, mobl.ref("number"), mobl.ref(validator2), style, invalidStyle, onchange, onkeyup, function(_, callback) {
-    var root389 = $("<span>");
+    var root793 = $("<span>");
     var subs__ = new mobl.CompSubscription();
-    callback(root389); return subs__;
+    callback(root793); return subs__;
     return subs__;
   }, function(node) {
-    var oldNodes = nodes347;
-    nodes347 = node.contents();
-    oldNodes.replaceWith(nodes347);
+    var oldNodes = nodes619;
+    nodes619 = node.contents();
+    oldNodes.replaceWith(nodes619);
   }));
+<<<<<<< HEAD
   callback(root388); return subs__;
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+  callback(root792); return subs__;
+>>>>>>> adcc239... Has item specify
   
   return subs__;
 };
 
 ui.passwordField = function(s, placeholder, label, style, onchange, onkeyup, elements, callback) {
+<<<<<<< HEAD
 <<<<<<< HEAD
   var root9663 = $("<span>");
   var subs__ = new mobl.CompSubscription();
@@ -2294,96 +2670,104 @@ ui.passwordField = function(s, placeholder, label, style, onchange, onkeyup, ele
       var val1949 = function(event, callback) {
 =======
   var root390 = $("<span>");
+=======
+  var root794 = $("<span>");
+>>>>>>> adcc239... Has item specify
   var subs__ = new mobl.CompSubscription();
   
-  var node37 = $("<span>");
-  root390.append(node37);
-  var condSubs12 = new mobl.CompSubscription();
-  subs__.addSub(condSubs12);
-  var oldValue12;
-  var renderCond12 = function() {
-    var value108 = label.get();
-    if(oldValue12 === value108) return;
-    oldValue12 = value108;
-    var subs__ = condSubs12;
+  var node257 = $("<span>");
+  root794.append(node257);
+  var condSubs64 = new mobl.CompSubscription();
+  subs__.addSub(condSubs64);
+  var oldValue64;
+  var renderCond64 = function() {
+    var value556 = label.get();
+    if(oldValue64 === value556) return;
+    oldValue64 = value556;
+    var subs__ = condSubs64;
     subs__.unsubscribe();
-    node37.empty();
-    if(value108) {
+    node257.empty();
+    if(value556) {
       
-      var node38 = $("<span>");
-      node38.attr('style', "float: left; margin-top: 0.2em; width: 5em; color: #666;");
+      var node258 = $("<span>");
+      node258.attr('style', "float: left; margin-top: 0.2em; width: 5em; color: #666;");
       
-      var ref43 = label;
-      node38.text(""+ref43.get());
-      var ignore9 = false;
-      subs__.addSub(ref43.addEventListener('change', function(_, ref, val) {
-        if(ignore9) return;
-        node38.text(""+val);
+      var ref267 = label;
+      node258.text(""+ref267.get());
+      var ignore53 = false;
+      subs__.addSub(ref267.addEventListener('change', function(_, ref, val) {
+        if(ignore53) return;
+        node258.text(""+val);
       }));
-      subs__.addSub(ref43.rebind());
+      subs__.addSub(ref267.rebind());
       
       
-      node37.append(node38);
+      node257.append(node258);
       
-      var node39 = $("<span>");
-      node39.attr('style', "float: left");
+      var node259 = $("<span>");
+      node259.attr('style', "float: left");
       
       
-      var node40 = $("<input>");
-      node40.attr('type', "password");
+      var node260 = $("<input>");
+      node260.attr('type', "password");
       
-      var ref40 = style;
-      if(ref40.get() !== null) {
-        node40.attr('class', ref40.get());
-        subs__.addSub(ref40.addEventListener('change', function(_, ref, val) {
-          node40.attr('class', val);
+      var ref264 = style;
+      if(ref264.get() !== null) {
+        node260.attr('class', ref264.get());
+        subs__.addSub(ref264.addEventListener('change', function(_, ref, val) {
+          node260.attr('class', val);
         }));
         
       }
-      subs__.addSub(ref40.rebind());
+      subs__.addSub(ref264.rebind());
       
-      var ref41 = placeholder;
-      if(ref41.get() !== null) {
-        node40.attr('placeholder', ref41.get());
-        subs__.addSub(ref41.addEventListener('change', function(_, ref, val) {
-          node40.attr('placeholder', val);
+      var ref265 = placeholder;
+      if(ref265.get() !== null) {
+        node260.attr('placeholder', ref265.get());
+        subs__.addSub(ref265.addEventListener('change', function(_, ref, val) {
+          node260.attr('placeholder', val);
         }));
         
       }
-      subs__.addSub(ref41.rebind());
+      subs__.addSub(ref265.rebind());
       
-      var ref42 = s;
-      node40.val(""+ref42.get());
-      var ignore8 = false;
-      subs__.addSub(ref42.addEventListener('change', function(_, ref, val) {
-        if(ignore8) return;
-        node40.val(""+val);
+      var ref266 = s;
+      node260.val(""+ref266.get());
+      var ignore52 = false;
+      subs__.addSub(ref266.addEventListener('change', function(_, ref, val) {
+        if(ignore52) return;
+        node260.val(""+val);
       }));
-      subs__.addSub(ref42.rebind());
+      subs__.addSub(ref266.rebind());
       
-      subs__.addSub(mobl.domBind(node40, 'keyup change', function() {
-        ignore8 = true;
-        s.set(mobl.stringTomobl__String(node40.val()));
-        ignore8 = false;
+      subs__.addSub(mobl.domBind(node260, 'keyup change', function() {
+        ignore52 = true;
+        s.set(mobl.stringTomobl__String(node260.val()));
+        ignore52 = false;
       }));
       
       
-      var val21 = onchange.get();
-      if(val21 !== null) {
-        subs__.addSub(mobl.domBind(node40, 'change', val21));
+      var val137 = onchange.get();
+      if(val137 !== null) {
+        subs__.addSub(mobl.domBind(node260, 'change', val137));
       }
       
-      var val22 = onkeyup.get();
-      if(val22 !== null) {
-        subs__.addSub(mobl.domBind(node40, 'keyup', val22));
+      var val138 = onkeyup.get();
+      if(val138 !== null) {
+        subs__.addSub(mobl.domBind(node260, 'keyup', val138));
       }
       
+<<<<<<< HEAD
       var val23 = function(event, callback) {
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+      var val139 = function(event, callback) {
+>>>>>>> adcc239... Has item specify
                     if(event && event.stopPropagation) event.stopPropagation();
                     var result__ = ui.scrollUp();
                     if(callback && callback.apply) callback(); return;
                   };
+<<<<<<< HEAD
 <<<<<<< HEAD
       if(val1949 !== null) {
         subs__.addSub(mobl.domBind(node3814, 'blur', val1949));
@@ -2399,12 +2783,21 @@ ui.passwordField = function(s, placeholder, label, style, onchange, onkeyup, ele
       node39.append(node40);
       node37.append(node39);
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+      if(val139 !== null) {
+        subs__.addSub(mobl.domBind(node260, 'blur', val139));
+      }
+      
+      node259.append(node260);
+      node257.append(node259);
+>>>>>>> adcc239... Has item specify
       
       
       
       
     } else {
       
+<<<<<<< HEAD
 <<<<<<< HEAD
       var node3815 = $("<input>");
       node3815.attr('type', "password");
@@ -2459,59 +2852,68 @@ ui.passwordField = function(s, placeholder, label, style, onchange, onkeyup, ele
 =======
       var node41 = $("<input>");
       node41.attr('type', "password");
+=======
+      var node261 = $("<input>");
+      node261.attr('type', "password");
+>>>>>>> adcc239... Has item specify
       
-      var ref44 = style;
-      if(ref44.get() !== null) {
-        node41.attr('class', ref44.get());
-        subs__.addSub(ref44.addEventListener('change', function(_, ref, val) {
-          node41.attr('class', val);
+      var ref268 = style;
+      if(ref268.get() !== null) {
+        node261.attr('class', ref268.get());
+        subs__.addSub(ref268.addEventListener('change', function(_, ref, val) {
+          node261.attr('class', val);
         }));
         
       }
-      subs__.addSub(ref44.rebind());
+      subs__.addSub(ref268.rebind());
       
-      var ref45 = placeholder;
-      if(ref45.get() !== null) {
-        node41.attr('placeholder', ref45.get());
-        subs__.addSub(ref45.addEventListener('change', function(_, ref, val) {
-          node41.attr('placeholder', val);
+      var ref269 = placeholder;
+      if(ref269.get() !== null) {
+        node261.attr('placeholder', ref269.get());
+        subs__.addSub(ref269.addEventListener('change', function(_, ref, val) {
+          node261.attr('placeholder', val);
         }));
         
       }
-      subs__.addSub(ref45.rebind());
+      subs__.addSub(ref269.rebind());
       
-      var ref46 = s;
-      node41.val(""+ref46.get());
-      var ignore10 = false;
-      subs__.addSub(ref46.addEventListener('change', function(_, ref, val) {
-        if(ignore10) return;
-        node41.val(""+val);
+      var ref270 = s;
+      node261.val(""+ref270.get());
+      var ignore54 = false;
+      subs__.addSub(ref270.addEventListener('change', function(_, ref, val) {
+        if(ignore54) return;
+        node261.val(""+val);
       }));
-      subs__.addSub(ref46.rebind());
+      subs__.addSub(ref270.rebind());
       
-      subs__.addSub(mobl.domBind(node41, 'keyup change', function() {
-        ignore10 = true;
-        s.set(mobl.stringTomobl__String(node41.val()));
-        ignore10 = false;
+      subs__.addSub(mobl.domBind(node261, 'keyup change', function() {
+        ignore54 = true;
+        s.set(mobl.stringTomobl__String(node261.val()));
+        ignore54 = false;
       }));
       
       
-      var val24 = onchange.get();
-      if(val24 !== null) {
-        subs__.addSub(mobl.domBind(node41, 'change', val24));
+      var val140 = onchange.get();
+      if(val140 !== null) {
+        subs__.addSub(mobl.domBind(node261, 'change', val140));
       }
       
-      var val25 = onkeyup.get();
-      if(val25 !== null) {
-        subs__.addSub(mobl.domBind(node41, 'keyup', val25));
+      var val141 = onkeyup.get();
+      if(val141 !== null) {
+        subs__.addSub(mobl.domBind(node261, 'keyup', val141));
       }
       
+<<<<<<< HEAD
       var val26 = function(event, callback) {
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+      var val142 = function(event, callback) {
+>>>>>>> adcc239... Has item specify
                     if(event && event.stopPropagation) event.stopPropagation();
                     var result__ = ui.scrollUp();
                     if(callback && callback.apply) callback(); return;
                   };
+<<<<<<< HEAD
 <<<<<<< HEAD
       if(val1952 !== null) {
         subs__.addSub(mobl.domBind(node3815, 'blur', val1952));
@@ -2525,10 +2927,18 @@ ui.passwordField = function(s, placeholder, label, style, onchange, onkeyup, ele
       
       node37.append(node41);
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+      if(val142 !== null) {
+        subs__.addSub(mobl.domBind(node261, 'blur', val142));
+      }
+      
+      node257.append(node261);
+>>>>>>> adcc239... Has item specify
       
       
     }
   };
+<<<<<<< HEAD
 <<<<<<< HEAD
   renderCond926();
   subs__.addSub(label.addEventListener('change', function() {
@@ -2538,12 +2948,19 @@ ui.passwordField = function(s, placeholder, label, style, onchange, onkeyup, ele
   callback(root9663); return subs__;
 =======
   renderCond12();
+=======
+  renderCond64();
+>>>>>>> adcc239... Has item specify
   subs__.addSub(label.addEventListener('change', function() {
-    renderCond12();
+    renderCond64();
   }));
   
+<<<<<<< HEAD
   callback(root390); return subs__;
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+  callback(root794); return subs__;
+>>>>>>> adcc239... Has item specify
   
   return subs__;
 };
@@ -2551,14 +2968,19 @@ ui.selectFieldStyle = 'ui__selectFieldStyle';
 
 ui.selectField = function(value, options, onchange, style, optionStyle, elements, callback) {
 <<<<<<< HEAD
+<<<<<<< HEAD
   var root9664 = $("<span>");
 =======
   var root391 = $("<span>");
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+  var root795 = $("<span>");
+>>>>>>> adcc239... Has item specify
   var subs__ = new mobl.CompSubscription();
   
   var sel = $("<select>");
   
+<<<<<<< HEAD
 <<<<<<< HEAD
   var ref3806 = style;
   if(ref3806.get() !== null) {
@@ -2570,10 +2992,17 @@ ui.selectField = function(value, options, onchange, style, optionStyle, elements
     sel.attr('class', ref51.get());
     subs__.addSub(ref51.addEventListener('change', function(_, ref, val) {
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+  var ref275 = style;
+  if(ref275.get() !== null) {
+    sel.attr('class', ref275.get());
+    subs__.addSub(ref275.addEventListener('change', function(_, ref, val) {
+>>>>>>> adcc239... Has item specify
       sel.attr('class', val);
     }));
     
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
   subs__.addSub(ref3806.rebind());
   
@@ -2583,11 +3012,17 @@ ui.selectField = function(value, options, onchange, style, optionStyle, elements
   
   var val27 = function(event, callback) {
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+  subs__.addSub(ref275.rebind());
+  
+  var val143 = function(event, callback) {
+>>>>>>> adcc239... Has item specify
                 if(event && event.stopPropagation) event.stopPropagation();
                 var result__ = sel.val();
                 value.set(result__);
                 var result__ = onchange.get();
                 if(result__) {
+<<<<<<< HEAD
 <<<<<<< HEAD
                   function after602(result__) {
                     var tmp6500 = result__;
@@ -2601,12 +3036,20 @@ ui.selectField = function(value, options, onchange, style, optionStyle, elements
                   }
                   var result__ = onchange.get()(event, after8);if(result__ !== undefined) after8(result__);
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+                  function after44(result__) {
+                    var tmp637 = result__;
+                    if(callback && callback.apply) callback(); return;
+                  }
+                  var result__ = onchange.get()(event, after44);if(result__ !== undefined) after44(result__);
+>>>>>>> adcc239... Has item specify
                 } else {
                   {
                     if(callback && callback.apply) callback(); return;
                   }
                 }
               };
+<<<<<<< HEAD
 <<<<<<< HEAD
   if(val1953 !== null) {
     subs__.addSub(mobl.domBind(sel, 'change', val1953));
@@ -2686,85 +3129,96 @@ ui.selectField = function(value, options, onchange, style, optionStyle, elements
 =======
   if(val27 !== null) {
     subs__.addSub(mobl.domBind(sel, 'change', val27));
+=======
+  if(val143 !== null) {
+    subs__.addSub(mobl.domBind(sel, 'change', val143));
+>>>>>>> adcc239... Has item specify
   }
   
   
-  var node42 = mobl.loadingSpan();
-  sel.append(node42);
-  var list0;
+  var node262 = mobl.loadingSpan();
+  sel.append(node262);
+  var list40;
   var listSubs__ = new mobl.CompSubscription();
   subs__.addSub(listSubs__);
-  var renderList0 = function() {
+  var renderList40 = function() {
     var subs__ = listSubs__;
-    list0 = options.get();
-    list0.list(function(results0) {
-      node42.empty();
-      for(var i126 = 0; i126 < results0.length; i126++) {
+    list40 = options.get();
+    list40.list(function(results40) {
+      node262.empty();
+      for(var i172 = 0; i172 < results40.length; i172++) {
         (function() {
-          var iternode0 = $("<span>");
-          node42.append(iternode0);
+          var iternode40 = $("<span>");
+          node262.append(iternode40);
           var optionValue;var optionDescription;
-          optionValue = mobl.ref(mobl.ref(mobl.ref(results0), i126), "_1");optionDescription = mobl.ref(mobl.ref(mobl.ref(results0), i126), "_2");
+          optionValue = mobl.ref(mobl.ref(mobl.ref(results40), i172), "_1");optionDescription = mobl.ref(mobl.ref(mobl.ref(results40), i172), "_2");
           
-          var node43 = $("<option>");
+          var node263 = $("<option>");
           
-          var ref47 = optionDescription;
-          node43.text(""+ref47.get());
-          var ignore11 = false;
-          subs__.addSub(ref47.addEventListener('change', function(_, ref, val) {
-            if(ignore11) return;
-            node43.text(""+val);
+          var ref271 = optionDescription;
+          node263.text(""+ref271.get());
+          var ignore55 = false;
+          subs__.addSub(ref271.addEventListener('change', function(_, ref, val) {
+            if(ignore55) return;
+            node263.text(""+val);
           }));
-          subs__.addSub(ref47.rebind());
+          subs__.addSub(ref271.rebind());
           
           
-          var ref48 = optionStyle;
-          if(ref48.get() !== null) {
-            node43.attr('class', ref48.get());
-            subs__.addSub(ref48.addEventListener('change', function(_, ref, val) {
-              node43.attr('class', val);
+          var ref272 = optionStyle;
+          if(ref272.get() !== null) {
+            node263.attr('class', ref272.get());
+            subs__.addSub(ref272.addEventListener('change', function(_, ref, val) {
+              node263.attr('class', val);
             }));
             
           }
-          subs__.addSub(ref48.rebind());
+          subs__.addSub(ref272.rebind());
           
-          var ref49 = optionValue;
-          if(ref49.get() !== null) {
-            node43.attr('value', ref49.get());
-            subs__.addSub(ref49.addEventListener('change', function(_, ref, val) {
-              node43.attr('value', val);
+          var ref273 = optionValue;
+          if(ref273.get() !== null) {
+            node263.attr('value', ref273.get());
+            subs__.addSub(ref273.addEventListener('change', function(_, ref, val) {
+              node263.attr('value', val);
             }));
             
           }
-          subs__.addSub(ref49.rebind());
+          subs__.addSub(ref273.rebind());
           
-          var ref50 = mobl.ref(value.get() == optionValue.get() ? "selected" : "");
-          if(ref50.get() !== null) {
-            node43.attr('selected', ref50.get());
-            subs__.addSub(ref50.addEventListener('change', function(_, ref, val) {
-              node43.attr('selected', val);
+          var ref274 = mobl.ref(value.get() == optionValue.get() ? "selected" : "");
+          if(ref274.get() !== null) {
+            node263.attr('selected', ref274.get());
+            subs__.addSub(ref274.addEventListener('change', function(_, ref, val) {
+              node263.attr('selected', val);
             }));
             subs__.addSub(value.addEventListener('change', function() {
-              node43.attr('selected', value.get() == optionValue.get() ? "selected" : "");
+              node263.attr('selected', value.get() == optionValue.get() ? "selected" : "");
             }));
             subs__.addSub(optionValue.addEventListener('change', function() {
-              node43.attr('selected', value.get() == optionValue.get() ? "selected" : "");
+              node263.attr('selected', value.get() == optionValue.get() ? "selected" : "");
             }));
             
           }
-          subs__.addSub(ref50.rebind());
+          subs__.addSub(ref274.rebind());
           
-          iternode0.append(node43);
+          iternode40.append(node263);
           
+<<<<<<< HEAD
           var oldNodes = iternode0;
           iternode0 = iternode0.contents();
           oldNodes.replaceWith(iternode0);
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+          var oldNodes = iternode40;
+          iternode40 = iternode40.contents();
+          oldNodes.replaceWith(iternode40);
+>>>>>>> adcc239... Has item specify
           
           
         }());
       }
       mobl.delayedUpdateScrollers();
+<<<<<<< HEAD
 <<<<<<< HEAD
       subs__.addSub(list671.addEventListener('change', function() { listSubs__.unsubscribe(); renderList671(true); }));
       subs__.addSub(options.addEventListener('change', function() { listSubs__.unsubscribe(); renderList671(true); }));
@@ -2778,14 +3232,22 @@ ui.selectField = function(value, options, onchange, style, optionStyle, elements
 =======
       subs__.addSub(list0.addEventListener('change', function() { listSubs__.unsubscribe(); renderList0(true); }));
       subs__.addSub(options.addEventListener('change', function() { listSubs__.unsubscribe(); renderList0(true); }));
+=======
+      subs__.addSub(list40.addEventListener('change', function() { listSubs__.unsubscribe(); renderList40(true); }));
+      subs__.addSub(options.addEventListener('change', function() { listSubs__.unsubscribe(); renderList40(true); }));
+>>>>>>> adcc239... Has item specify
     });
   };
-  renderList0();
+  renderList40();
   
-  root391.append(sel);
+  root795.append(sel);
   var result__ = sel.append(sel.children().eq(0).children());
+<<<<<<< HEAD
   callback(root391); return subs__;
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+  callback(root795); return subs__;
+>>>>>>> adcc239... Has item specify
   
   
   return subs__;
@@ -2798,10 +3260,14 @@ ui.activeTabStyle = 'ui__activeTabStyle';
 
 ui.tabSet = function(tabs, activeTab, elements, callback) {
 <<<<<<< HEAD
+<<<<<<< HEAD
   var root9665 = $("<span>");
 =======
   var root392 = $("<span>");
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+  var root796 = $("<span>");
+>>>>>>> adcc239... Has item specify
   var subs__ = new mobl.CompSubscription();
   var result__ = activeTab.get() == null;
   if(result__) {
@@ -2809,6 +3275,7 @@ ui.tabSet = function(tabs, activeTab, elements, callback) {
     activeTab.set(result__);
     
     var s = mobl.ref("");
+<<<<<<< HEAD
 <<<<<<< HEAD
     var nodes7204 = $("<span>");
     root9665.append(nodes7204);
@@ -2848,40 +3315,48 @@ ui.tabSet = function(tabs, activeTab, elements, callback) {
 =======
     var nodes348 = $("<span>");
     root392.append(nodes348);
+=======
+    var nodes620 = $("<span>");
+    root796.append(nodes620);
+>>>>>>> adcc239... Has item specify
     subs__.addSub((mobl.block)(mobl.ref(ui.tabbarStyle), mobl.ref(null), mobl.ref(null), mobl.ref(null), function(_, callback) {
-      var root393 = $("<span>");
+      var root797 = $("<span>");
       var subs__ = new mobl.CompSubscription();
       
-      var node44 = mobl.loadingSpan();
-      root393.append(node44);
-      var list1;
+      var node264 = mobl.loadingSpan();
+      root797.append(node264);
+      var list41;
       var listSubs__ = new mobl.CompSubscription();
       subs__.addSub(listSubs__);
-      var renderList1 = function() {
+      var renderList41 = function() {
         var subs__ = listSubs__;
-        list1 = tabs.get();
-        list1.list(function(results1) {
-          node44.empty();
-          for(var i127 = 0; i127 < results1.length; i127++) {
+        list41 = tabs.get();
+        list41.list(function(results41) {
+          node264.empty();
+          for(var i173 = 0; i173 < results41.length; i173++) {
             (function() {
-              var iternode1 = $("<span>");
-              node44.append(iternode1);
+              var iternode41 = $("<span>");
+              node264.append(iternode41);
               var tabName;var tabIcon;var tabControl;
-              tabName = mobl.ref(mobl.ref(mobl.ref(results1), i127), "_1");tabIcon = mobl.ref(mobl.ref(mobl.ref(results1), i127), "_2");tabControl = mobl.ref(mobl.ref(mobl.ref(results1), i127), "_3");
+              tabName = mobl.ref(mobl.ref(mobl.ref(results41), i173), "_1");tabIcon = mobl.ref(mobl.ref(mobl.ref(results41), i173), "_2");tabControl = mobl.ref(mobl.ref(mobl.ref(results41), i173), "_3");
               var result__ = activeTab.get() == tabName.get() ? ui.activeTabButtonStyle : ui.inActiveTabButtonStyle;
-              var tmp369 = mobl.ref(result__);
+              var tmp599 = mobl.ref(result__);
               subs__.addSub(activeTab.addEventListener('change', function() {
-                tmp369.set(activeTab.get() == tabName.get() ? ui.activeTabButtonStyle : ui.inActiveTabButtonStyle);
+                tmp599.set(activeTab.get() == tabName.get() ? ui.activeTabButtonStyle : ui.inActiveTabButtonStyle);
               }));
               subs__.addSub(tabName.addEventListener('change', function() {
-                tmp369.set(activeTab.get() == tabName.get() ? ui.activeTabButtonStyle : ui.inActiveTabButtonStyle);
+                tmp599.set(activeTab.get() == tabName.get() ? ui.activeTabButtonStyle : ui.inActiveTabButtonStyle);
               }));
               subs__.addSub(mobl.ref(ui.activeTabButtonStyle).addEventListener('change', function() {
-                tmp369.set(activeTab.get() == tabName.get() ? ui.activeTabButtonStyle : ui.inActiveTabButtonStyle);
+                tmp599.set(activeTab.get() == tabName.get() ? ui.activeTabButtonStyle : ui.inActiveTabButtonStyle);
               }));
               subs__.addSub(mobl.ref(ui.inActiveTabButtonStyle).addEventListener('change', function() {
+<<<<<<< HEAD
                 tmp369.set(activeTab.get() == tabName.get() ? ui.activeTabButtonStyle : ui.inActiveTabButtonStyle);
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+                tmp599.set(activeTab.get() == tabName.get() ? ui.activeTabButtonStyle : ui.inActiveTabButtonStyle);
+>>>>>>> adcc239... Has item specify
               }));
               
               var result__ = function(event, callback) {
@@ -2890,6 +3365,7 @@ ui.tabSet = function(tabs, activeTab, elements, callback) {
                                activeTab.set(result__);
                                if(callback && callback.apply) callback(); return;
                              };
+<<<<<<< HEAD
 <<<<<<< HEAD
               var tmp6461 = mobl.ref(result__);
               
@@ -2924,42 +3400,52 @@ ui.tabSet = function(tabs, activeTab, elements, callback) {
               oldNodes.replaceWith(iternode672);
 =======
               var tmp368 = mobl.ref(result__);
+=======
+              var tmp598 = mobl.ref(result__);
+>>>>>>> adcc239... Has item specify
               
-              var nodes349 = $("<span>");
-              iternode1.append(nodes349);
-              subs__.addSub((mobl.span)(tmp369, mobl.ref(null), tmp368, mobl.ref(null), function(_, callback) {
-                var root394 = $("<span>");
+              var nodes621 = $("<span>");
+              iternode41.append(nodes621);
+              subs__.addSub((mobl.span)(tmp599, mobl.ref(null), tmp598, mobl.ref(null), function(_, callback) {
+                var root798 = $("<span>");
                 var subs__ = new mobl.CompSubscription();
-                var nodes350 = $("<span>");
-                root394.append(nodes350);
+                var nodes622 = $("<span>");
+                root798.append(nodes622);
                 subs__.addSub((mobl.label)(tabName, mobl.ref(null), mobl.ref(null), function(_, callback) {
-                  var root395 = $("<span>");
+                  var root799 = $("<span>");
                   var subs__ = new mobl.CompSubscription();
-                  callback(root395); return subs__;
+                  callback(root799); return subs__;
                   return subs__;
                 }, function(node) {
-                  var oldNodes = nodes350;
-                  nodes350 = node.contents();
-                  oldNodes.replaceWith(nodes350);
+                  var oldNodes = nodes622;
+                  nodes622 = node.contents();
+                  oldNodes.replaceWith(nodes622);
                 }));
-                callback(root394); return subs__;
+                callback(root798); return subs__;
                 
                 return subs__;
               }, function(node) {
-                var oldNodes = nodes349;
-                nodes349 = node.contents();
-                oldNodes.replaceWith(nodes349);
+                var oldNodes = nodes621;
+                nodes621 = node.contents();
+                oldNodes.replaceWith(nodes621);
               }));
               
+<<<<<<< HEAD
               var oldNodes = iternode1;
               iternode1 = iternode1.contents();
               oldNodes.replaceWith(iternode1);
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+              var oldNodes = iternode41;
+              iternode41 = iternode41.contents();
+              oldNodes.replaceWith(iternode41);
+>>>>>>> adcc239... Has item specify
               
               
             }());
           }
           mobl.delayedUpdateScrollers();
+<<<<<<< HEAD
 <<<<<<< HEAD
           subs__.addSub(list672.addEventListener('change', function() { listSubs__.unsubscribe(); renderList672(true); }));
           subs__.addSub(tabs.addEventListener('change', function() { listSubs__.unsubscribe(); renderList672(true); }));
@@ -3059,105 +3545,116 @@ ui.tabSet = function(tabs, activeTab, elements, callback) {
 =======
           subs__.addSub(list1.addEventListener('change', function() { listSubs__.unsubscribe(); renderList1(true); }));
           subs__.addSub(tabs.addEventListener('change', function() { listSubs__.unsubscribe(); renderList1(true); }));
+=======
+          subs__.addSub(list41.addEventListener('change', function() { listSubs__.unsubscribe(); renderList41(true); }));
+          subs__.addSub(tabs.addEventListener('change', function() { listSubs__.unsubscribe(); renderList41(true); }));
+>>>>>>> adcc239... Has item specify
         });
       };
-      renderList1();
+      renderList41();
       
-      callback(root393); return subs__;
+      callback(root797); return subs__;
       
       return subs__;
     }, function(node) {
-      var oldNodes = nodes348;
-      nodes348 = node.contents();
-      oldNodes.replaceWith(nodes348);
+      var oldNodes = nodes620;
+      nodes620 = node.contents();
+      oldNodes.replaceWith(nodes620);
     }));
     
-    var node45 = mobl.loadingSpan();
-    root392.append(node45);
-    var list2;
+    var node265 = mobl.loadingSpan();
+    root796.append(node265);
+    var list42;
     var listSubs__ = new mobl.CompSubscription();
     subs__.addSub(listSubs__);
-    var renderList2 = function() {
+    var renderList42 = function() {
       var subs__ = listSubs__;
-      list2 = tabs.get();
-      list2.list(function(results2) {
-        node45.empty();
-        for(var i128 = 0; i128 < results2.length; i128++) {
+      list42 = tabs.get();
+      list42.list(function(results42) {
+        node265.empty();
+        for(var i174 = 0; i174 < results42.length; i174++) {
           (function() {
-            var iternode2 = $("<span>");
-            node45.append(iternode2);
+            var iternode42 = $("<span>");
+            node265.append(iternode42);
             var tabName;var tabIcon;var tabControl;
-            tabName = mobl.ref(mobl.ref(mobl.ref(results2), i128), "_1");tabIcon = mobl.ref(mobl.ref(mobl.ref(results2), i128), "_2");tabControl = mobl.ref(mobl.ref(mobl.ref(results2), i128), "_3");
+            tabName = mobl.ref(mobl.ref(mobl.ref(results42), i174), "_1");tabIcon = mobl.ref(mobl.ref(mobl.ref(results42), i174), "_2");tabControl = mobl.ref(mobl.ref(mobl.ref(results42), i174), "_3");
             var result__ = activeTab.get() == tabName.get() ? ui.activeTabStyle : ui.inActiveTabStyle;
-            var tmp370 = mobl.ref(result__);
+            var tmp600 = mobl.ref(result__);
             subs__.addSub(activeTab.addEventListener('change', function() {
-              tmp370.set(activeTab.get() == tabName.get() ? ui.activeTabStyle : ui.inActiveTabStyle);
+              tmp600.set(activeTab.get() == tabName.get() ? ui.activeTabStyle : ui.inActiveTabStyle);
             }));
             subs__.addSub(tabName.addEventListener('change', function() {
-              tmp370.set(activeTab.get() == tabName.get() ? ui.activeTabStyle : ui.inActiveTabStyle);
+              tmp600.set(activeTab.get() == tabName.get() ? ui.activeTabStyle : ui.inActiveTabStyle);
             }));
             subs__.addSub(mobl.ref(ui.activeTabStyle).addEventListener('change', function() {
-              tmp370.set(activeTab.get() == tabName.get() ? ui.activeTabStyle : ui.inActiveTabStyle);
+              tmp600.set(activeTab.get() == tabName.get() ? ui.activeTabStyle : ui.inActiveTabStyle);
             }));
             subs__.addSub(mobl.ref(ui.inActiveTabStyle).addEventListener('change', function() {
-              tmp370.set(activeTab.get() == tabName.get() ? ui.activeTabStyle : ui.inActiveTabStyle);
+              tmp600.set(activeTab.get() == tabName.get() ? ui.activeTabStyle : ui.inActiveTabStyle);
             }));
             
-            var nodes351 = $("<span>");
-            iternode2.append(nodes351);
-            subs__.addSub((mobl.block)(tmp370, mobl.ref(null), mobl.ref(null), mobl.ref(null), function(_, callback) {
-              var root396 = $("<span>");
+            var nodes623 = $("<span>");
+            iternode42.append(nodes623);
+            subs__.addSub((mobl.block)(tmp600, mobl.ref(null), mobl.ref(null), mobl.ref(null), function(_, callback) {
+              var root800 = $("<span>");
               var subs__ = new mobl.CompSubscription();
-              var nodes352 = $("<span>");
-              root396.append(nodes352);
+              var nodes624 = $("<span>");
+              root800.append(nodes624);
               subs__.addSub((mobl.screenContext)(function(_, callback) {
-                var root397 = $("<span>");
+                var root801 = $("<span>");
                 var subs__ = new mobl.CompSubscription();
-                var nodes353 = $("<span>");
-                root397.append(nodes353);
+                var nodes625 = $("<span>");
+                root801.append(nodes625);
                 subs__.addSub(tabControl.addEventListener('change', function() {
-                  renderControl6();
+                  renderControl98();
                 }));
                 
-                function renderControl6() {
+                function renderControl98() {
                   subs__.addSub((tabControl.get())(function(elements, callback) {
-                    var root398 = $("<span>");
+                    var root802 = $("<span>");
                     var subs__ = new mobl.CompSubscription();
-                    callback(root398); return subs__;
+                    callback(root802); return subs__;
                     return subs__;
                   }, function(node) {
-                    var oldNodes = nodes353;
-                    nodes353 = node.contents();
-                    oldNodes.replaceWith(nodes353);
+                    var oldNodes = nodes625;
+                    nodes625 = node.contents();
+                    oldNodes.replaceWith(nodes625);
                   }));
                 }
-                renderControl6();
-                callback(root397); return subs__;
+                renderControl98();
+                callback(root801); return subs__;
                 
                 return subs__;
               }, function(node) {
-                var oldNodes = nodes352;
-                nodes352 = node.contents();
-                oldNodes.replaceWith(nodes352);
+                var oldNodes = nodes624;
+                nodes624 = node.contents();
+                oldNodes.replaceWith(nodes624);
               }));
-              callback(root396); return subs__;
+              callback(root800); return subs__;
               
               return subs__;
             }, function(node) {
-              var oldNodes = nodes351;
-              nodes351 = node.contents();
-              oldNodes.replaceWith(nodes351);
+              var oldNodes = nodes623;
+              nodes623 = node.contents();
+              oldNodes.replaceWith(nodes623);
             }));
             
+<<<<<<< HEAD
             var oldNodes = iternode2;
             iternode2 = iternode2.contents();
             oldNodes.replaceWith(iternode2);
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+            var oldNodes = iternode42;
+            iternode42 = iternode42.contents();
+            oldNodes.replaceWith(iternode42);
+>>>>>>> adcc239... Has item specify
             
             
           }());
         }
         mobl.delayedUpdateScrollers();
+<<<<<<< HEAD
 <<<<<<< HEAD
         subs__.addSub(list673.addEventListener('change', function() { listSubs__.unsubscribe(); renderList673(true); }));
         subs__.addSub(tabs.addEventListener('change', function() { listSubs__.unsubscribe(); renderList673(true); }));
@@ -3169,18 +3666,27 @@ ui.tabSet = function(tabs, activeTab, elements, callback) {
 =======
         subs__.addSub(list2.addEventListener('change', function() { listSubs__.unsubscribe(); renderList2(true); }));
         subs__.addSub(tabs.addEventListener('change', function() { listSubs__.unsubscribe(); renderList2(true); }));
+=======
+        subs__.addSub(list42.addEventListener('change', function() { listSubs__.unsubscribe(); renderList42(true); }));
+        subs__.addSub(tabs.addEventListener('change', function() { listSubs__.unsubscribe(); renderList42(true); }));
+>>>>>>> adcc239... Has item specify
       });
     };
-    renderList2();
+    renderList42();
     
+<<<<<<< HEAD
     callback(root392); return subs__;
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+    callback(root796); return subs__;
+>>>>>>> adcc239... Has item specify
     
     
   } else {
     {
       
       var s = mobl.ref("");
+<<<<<<< HEAD
 <<<<<<< HEAD
       var nodes7204 = $("<span>");
       root9665.append(nodes7204);
@@ -3220,40 +3726,48 @@ ui.tabSet = function(tabs, activeTab, elements, callback) {
 =======
       var nodes348 = $("<span>");
       root392.append(nodes348);
+=======
+      var nodes620 = $("<span>");
+      root796.append(nodes620);
+>>>>>>> adcc239... Has item specify
       subs__.addSub((mobl.block)(mobl.ref(ui.tabbarStyle), mobl.ref(null), mobl.ref(null), mobl.ref(null), function(_, callback) {
-        var root393 = $("<span>");
+        var root797 = $("<span>");
         var subs__ = new mobl.CompSubscription();
         
-        var node44 = mobl.loadingSpan();
-        root393.append(node44);
-        var list1;
+        var node264 = mobl.loadingSpan();
+        root797.append(node264);
+        var list41;
         var listSubs__ = new mobl.CompSubscription();
         subs__.addSub(listSubs__);
-        var renderList1 = function() {
+        var renderList41 = function() {
           var subs__ = listSubs__;
-          list1 = tabs.get();
-          list1.list(function(results1) {
-            node44.empty();
-            for(var i127 = 0; i127 < results1.length; i127++) {
+          list41 = tabs.get();
+          list41.list(function(results41) {
+            node264.empty();
+            for(var i173 = 0; i173 < results41.length; i173++) {
               (function() {
-                var iternode1 = $("<span>");
-                node44.append(iternode1);
+                var iternode41 = $("<span>");
+                node264.append(iternode41);
                 var tabName;var tabIcon;var tabControl;
-                tabName = mobl.ref(mobl.ref(mobl.ref(results1), i127), "_1");tabIcon = mobl.ref(mobl.ref(mobl.ref(results1), i127), "_2");tabControl = mobl.ref(mobl.ref(mobl.ref(results1), i127), "_3");
+                tabName = mobl.ref(mobl.ref(mobl.ref(results41), i173), "_1");tabIcon = mobl.ref(mobl.ref(mobl.ref(results41), i173), "_2");tabControl = mobl.ref(mobl.ref(mobl.ref(results41), i173), "_3");
                 var result__ = activeTab.get() == tabName.get() ? ui.activeTabButtonStyle : ui.inActiveTabButtonStyle;
-                var tmp369 = mobl.ref(result__);
+                var tmp599 = mobl.ref(result__);
                 subs__.addSub(activeTab.addEventListener('change', function() {
-                  tmp369.set(activeTab.get() == tabName.get() ? ui.activeTabButtonStyle : ui.inActiveTabButtonStyle);
+                  tmp599.set(activeTab.get() == tabName.get() ? ui.activeTabButtonStyle : ui.inActiveTabButtonStyle);
                 }));
                 subs__.addSub(tabName.addEventListener('change', function() {
-                  tmp369.set(activeTab.get() == tabName.get() ? ui.activeTabButtonStyle : ui.inActiveTabButtonStyle);
+                  tmp599.set(activeTab.get() == tabName.get() ? ui.activeTabButtonStyle : ui.inActiveTabButtonStyle);
                 }));
                 subs__.addSub(mobl.ref(ui.activeTabButtonStyle).addEventListener('change', function() {
-                  tmp369.set(activeTab.get() == tabName.get() ? ui.activeTabButtonStyle : ui.inActiveTabButtonStyle);
+                  tmp599.set(activeTab.get() == tabName.get() ? ui.activeTabButtonStyle : ui.inActiveTabButtonStyle);
                 }));
                 subs__.addSub(mobl.ref(ui.inActiveTabButtonStyle).addEventListener('change', function() {
+<<<<<<< HEAD
                   tmp369.set(activeTab.get() == tabName.get() ? ui.activeTabButtonStyle : ui.inActiveTabButtonStyle);
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+                  tmp599.set(activeTab.get() == tabName.get() ? ui.activeTabButtonStyle : ui.inActiveTabButtonStyle);
+>>>>>>> adcc239... Has item specify
                 }));
                 
                 var result__ = function(event, callback) {
@@ -3262,6 +3776,7 @@ ui.tabSet = function(tabs, activeTab, elements, callback) {
                                  activeTab.set(result__);
                                  if(callback && callback.apply) callback(); return;
                                };
+<<<<<<< HEAD
 <<<<<<< HEAD
                 var tmp6461 = mobl.ref(result__);
                 
@@ -3296,42 +3811,52 @@ ui.tabSet = function(tabs, activeTab, elements, callback) {
                 oldNodes.replaceWith(iternode672);
 =======
                 var tmp368 = mobl.ref(result__);
+=======
+                var tmp598 = mobl.ref(result__);
+>>>>>>> adcc239... Has item specify
                 
-                var nodes349 = $("<span>");
-                iternode1.append(nodes349);
-                subs__.addSub((mobl.span)(tmp369, mobl.ref(null), tmp368, mobl.ref(null), function(_, callback) {
-                  var root394 = $("<span>");
+                var nodes621 = $("<span>");
+                iternode41.append(nodes621);
+                subs__.addSub((mobl.span)(tmp599, mobl.ref(null), tmp598, mobl.ref(null), function(_, callback) {
+                  var root798 = $("<span>");
                   var subs__ = new mobl.CompSubscription();
-                  var nodes350 = $("<span>");
-                  root394.append(nodes350);
+                  var nodes622 = $("<span>");
+                  root798.append(nodes622);
                   subs__.addSub((mobl.label)(tabName, mobl.ref(null), mobl.ref(null), function(_, callback) {
-                    var root395 = $("<span>");
+                    var root799 = $("<span>");
                     var subs__ = new mobl.CompSubscription();
-                    callback(root395); return subs__;
+                    callback(root799); return subs__;
                     return subs__;
                   }, function(node) {
-                    var oldNodes = nodes350;
-                    nodes350 = node.contents();
-                    oldNodes.replaceWith(nodes350);
+                    var oldNodes = nodes622;
+                    nodes622 = node.contents();
+                    oldNodes.replaceWith(nodes622);
                   }));
-                  callback(root394); return subs__;
+                  callback(root798); return subs__;
                   
                   return subs__;
                 }, function(node) {
-                  var oldNodes = nodes349;
-                  nodes349 = node.contents();
-                  oldNodes.replaceWith(nodes349);
+                  var oldNodes = nodes621;
+                  nodes621 = node.contents();
+                  oldNodes.replaceWith(nodes621);
                 }));
                 
+<<<<<<< HEAD
                 var oldNodes = iternode1;
                 iternode1 = iternode1.contents();
                 oldNodes.replaceWith(iternode1);
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+                var oldNodes = iternode41;
+                iternode41 = iternode41.contents();
+                oldNodes.replaceWith(iternode41);
+>>>>>>> adcc239... Has item specify
                 
                 
               }());
             }
             mobl.delayedUpdateScrollers();
+<<<<<<< HEAD
 <<<<<<< HEAD
             subs__.addSub(list672.addEventListener('change', function() { listSubs__.unsubscribe(); renderList672(true); }));
             subs__.addSub(tabs.addEventListener('change', function() { listSubs__.unsubscribe(); renderList672(true); }));
@@ -3431,105 +3956,116 @@ ui.tabSet = function(tabs, activeTab, elements, callback) {
 =======
             subs__.addSub(list1.addEventListener('change', function() { listSubs__.unsubscribe(); renderList1(true); }));
             subs__.addSub(tabs.addEventListener('change', function() { listSubs__.unsubscribe(); renderList1(true); }));
+=======
+            subs__.addSub(list41.addEventListener('change', function() { listSubs__.unsubscribe(); renderList41(true); }));
+            subs__.addSub(tabs.addEventListener('change', function() { listSubs__.unsubscribe(); renderList41(true); }));
+>>>>>>> adcc239... Has item specify
           });
         };
-        renderList1();
+        renderList41();
         
-        callback(root393); return subs__;
+        callback(root797); return subs__;
         
         return subs__;
       }, function(node) {
-        var oldNodes = nodes348;
-        nodes348 = node.contents();
-        oldNodes.replaceWith(nodes348);
+        var oldNodes = nodes620;
+        nodes620 = node.contents();
+        oldNodes.replaceWith(nodes620);
       }));
       
-      var node45 = mobl.loadingSpan();
-      root392.append(node45);
-      var list2;
+      var node265 = mobl.loadingSpan();
+      root796.append(node265);
+      var list42;
       var listSubs__ = new mobl.CompSubscription();
       subs__.addSub(listSubs__);
-      var renderList2 = function() {
+      var renderList42 = function() {
         var subs__ = listSubs__;
-        list2 = tabs.get();
-        list2.list(function(results2) {
-          node45.empty();
-          for(var i128 = 0; i128 < results2.length; i128++) {
+        list42 = tabs.get();
+        list42.list(function(results42) {
+          node265.empty();
+          for(var i174 = 0; i174 < results42.length; i174++) {
             (function() {
-              var iternode2 = $("<span>");
-              node45.append(iternode2);
+              var iternode42 = $("<span>");
+              node265.append(iternode42);
               var tabName;var tabIcon;var tabControl;
-              tabName = mobl.ref(mobl.ref(mobl.ref(results2), i128), "_1");tabIcon = mobl.ref(mobl.ref(mobl.ref(results2), i128), "_2");tabControl = mobl.ref(mobl.ref(mobl.ref(results2), i128), "_3");
+              tabName = mobl.ref(mobl.ref(mobl.ref(results42), i174), "_1");tabIcon = mobl.ref(mobl.ref(mobl.ref(results42), i174), "_2");tabControl = mobl.ref(mobl.ref(mobl.ref(results42), i174), "_3");
               var result__ = activeTab.get() == tabName.get() ? ui.activeTabStyle : ui.inActiveTabStyle;
-              var tmp370 = mobl.ref(result__);
+              var tmp600 = mobl.ref(result__);
               subs__.addSub(activeTab.addEventListener('change', function() {
-                tmp370.set(activeTab.get() == tabName.get() ? ui.activeTabStyle : ui.inActiveTabStyle);
+                tmp600.set(activeTab.get() == tabName.get() ? ui.activeTabStyle : ui.inActiveTabStyle);
               }));
               subs__.addSub(tabName.addEventListener('change', function() {
-                tmp370.set(activeTab.get() == tabName.get() ? ui.activeTabStyle : ui.inActiveTabStyle);
+                tmp600.set(activeTab.get() == tabName.get() ? ui.activeTabStyle : ui.inActiveTabStyle);
               }));
               subs__.addSub(mobl.ref(ui.activeTabStyle).addEventListener('change', function() {
-                tmp370.set(activeTab.get() == tabName.get() ? ui.activeTabStyle : ui.inActiveTabStyle);
+                tmp600.set(activeTab.get() == tabName.get() ? ui.activeTabStyle : ui.inActiveTabStyle);
               }));
               subs__.addSub(mobl.ref(ui.inActiveTabStyle).addEventListener('change', function() {
-                tmp370.set(activeTab.get() == tabName.get() ? ui.activeTabStyle : ui.inActiveTabStyle);
+                tmp600.set(activeTab.get() == tabName.get() ? ui.activeTabStyle : ui.inActiveTabStyle);
               }));
               
-              var nodes351 = $("<span>");
-              iternode2.append(nodes351);
-              subs__.addSub((mobl.block)(tmp370, mobl.ref(null), mobl.ref(null), mobl.ref(null), function(_, callback) {
-                var root396 = $("<span>");
+              var nodes623 = $("<span>");
+              iternode42.append(nodes623);
+              subs__.addSub((mobl.block)(tmp600, mobl.ref(null), mobl.ref(null), mobl.ref(null), function(_, callback) {
+                var root800 = $("<span>");
                 var subs__ = new mobl.CompSubscription();
-                var nodes352 = $("<span>");
-                root396.append(nodes352);
+                var nodes624 = $("<span>");
+                root800.append(nodes624);
                 subs__.addSub((mobl.screenContext)(function(_, callback) {
-                  var root397 = $("<span>");
+                  var root801 = $("<span>");
                   var subs__ = new mobl.CompSubscription();
-                  var nodes353 = $("<span>");
-                  root397.append(nodes353);
+                  var nodes625 = $("<span>");
+                  root801.append(nodes625);
                   subs__.addSub(tabControl.addEventListener('change', function() {
-                    renderControl6();
+                    renderControl98();
                   }));
                   
-                  function renderControl6() {
+                  function renderControl98() {
                     subs__.addSub((tabControl.get())(function(elements, callback) {
-                      var root398 = $("<span>");
+                      var root802 = $("<span>");
                       var subs__ = new mobl.CompSubscription();
-                      callback(root398); return subs__;
+                      callback(root802); return subs__;
                       return subs__;
                     }, function(node) {
-                      var oldNodes = nodes353;
-                      nodes353 = node.contents();
-                      oldNodes.replaceWith(nodes353);
+                      var oldNodes = nodes625;
+                      nodes625 = node.contents();
+                      oldNodes.replaceWith(nodes625);
                     }));
                   }
-                  renderControl6();
-                  callback(root397); return subs__;
+                  renderControl98();
+                  callback(root801); return subs__;
                   
                   return subs__;
                 }, function(node) {
-                  var oldNodes = nodes352;
-                  nodes352 = node.contents();
-                  oldNodes.replaceWith(nodes352);
+                  var oldNodes = nodes624;
+                  nodes624 = node.contents();
+                  oldNodes.replaceWith(nodes624);
                 }));
-                callback(root396); return subs__;
+                callback(root800); return subs__;
                 
                 return subs__;
               }, function(node) {
-                var oldNodes = nodes351;
-                nodes351 = node.contents();
-                oldNodes.replaceWith(nodes351);
+                var oldNodes = nodes623;
+                nodes623 = node.contents();
+                oldNodes.replaceWith(nodes623);
               }));
               
+<<<<<<< HEAD
               var oldNodes = iternode2;
               iternode2 = iternode2.contents();
               oldNodes.replaceWith(iternode2);
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+              var oldNodes = iternode42;
+              iternode42 = iternode42.contents();
+              oldNodes.replaceWith(iternode42);
+>>>>>>> adcc239... Has item specify
               
               
             }());
           }
           mobl.delayedUpdateScrollers();
+<<<<<<< HEAD
 <<<<<<< HEAD
           subs__.addSub(list673.addEventListener('change', function() { listSubs__.unsubscribe(); renderList673(true); }));
           subs__.addSub(tabs.addEventListener('change', function() { listSubs__.unsubscribe(); renderList673(true); }));
@@ -3541,12 +4077,20 @@ ui.tabSet = function(tabs, activeTab, elements, callback) {
 =======
           subs__.addSub(list2.addEventListener('change', function() { listSubs__.unsubscribe(); renderList2(true); }));
           subs__.addSub(tabs.addEventListener('change', function() { listSubs__.unsubscribe(); renderList2(true); }));
+=======
+          subs__.addSub(list42.addEventListener('change', function() { listSubs__.unsubscribe(); renderList42(true); }));
+          subs__.addSub(tabs.addEventListener('change', function() { listSubs__.unsubscribe(); renderList42(true); }));
+>>>>>>> adcc239... Has item specify
         });
       };
-      renderList2();
+      renderList42();
       
+<<<<<<< HEAD
       callback(root392); return subs__;
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+      callback(root796); return subs__;
+>>>>>>> adcc239... Has item specify
       
       
     }
@@ -3557,6 +4101,7 @@ ui.searchboxStyle = 'ui__searchboxStyle';
 ui.searchBoxInputStyle = 'ui__searchBoxInputStyle';
 
 ui.searchBox = function(s, placeholder, onsearch, onkeyup, elements, callback) {
+<<<<<<< HEAD
 <<<<<<< HEAD
   var root9672 = $("<span>");
   var subs__ = new mobl.CompSubscription();
@@ -3631,77 +4176,86 @@ ui.searchBox = function(s, placeholder, onsearch, onkeyup, elements, callback) {
   callback(root9672); return subs__;
 =======
   var root399 = $("<span>");
+=======
+  var root803 = $("<span>");
+>>>>>>> adcc239... Has item specify
   var subs__ = new mobl.CompSubscription();
   
-  var node46 = $("<div>");
+  var node266 = $("<div>");
   
-  var ref55 = mobl.ref(ui.searchboxStyle);
-  if(ref55.get() !== null) {
-    node46.attr('class', ref55.get());
-    subs__.addSub(ref55.addEventListener('change', function(_, ref, val) {
-      node46.attr('class', val);
+  var ref279 = mobl.ref(ui.searchboxStyle);
+  if(ref279.get() !== null) {
+    node266.attr('class', ref279.get());
+    subs__.addSub(ref279.addEventListener('change', function(_, ref, val) {
+      node266.attr('class', val);
     }));
     
   }
-  subs__.addSub(ref55.rebind());
+  subs__.addSub(ref279.rebind());
   
   
-  var node47 = $("<input>");
-  node47.attr('type', "search");
+  var node267 = $("<input>");
+  node267.attr('type', "search");
   
-  var ref52 = mobl.ref(ui.searchBoxInputStyle);
-  if(ref52.get() !== null) {
-    node47.attr('class', ref52.get());
-    subs__.addSub(ref52.addEventListener('change', function(_, ref, val) {
-      node47.attr('class', val);
+  var ref276 = mobl.ref(ui.searchBoxInputStyle);
+  if(ref276.get() !== null) {
+    node267.attr('class', ref276.get());
+    subs__.addSub(ref276.addEventListener('change', function(_, ref, val) {
+      node267.attr('class', val);
     }));
     
   }
-  subs__.addSub(ref52.rebind());
+  subs__.addSub(ref276.rebind());
   
-  var ref53 = placeholder;
-  if(ref53.get() !== null) {
-    node47.attr('placeholder', ref53.get());
-    subs__.addSub(ref53.addEventListener('change', function(_, ref, val) {
-      node47.attr('placeholder', val);
+  var ref277 = placeholder;
+  if(ref277.get() !== null) {
+    node267.attr('placeholder', ref277.get());
+    subs__.addSub(ref277.addEventListener('change', function(_, ref, val) {
+      node267.attr('placeholder', val);
     }));
     
   }
-  subs__.addSub(ref53.rebind());
+  subs__.addSub(ref277.rebind());
   
-  var ref54 = s;
-  node47.val(""+ref54.get());
-  var ignore12 = false;
-  subs__.addSub(ref54.addEventListener('change', function(_, ref, val) {
-    if(ignore12) return;
-    node47.val(""+val);
+  var ref278 = s;
+  node267.val(""+ref278.get());
+  var ignore56 = false;
+  subs__.addSub(ref278.addEventListener('change', function(_, ref, val) {
+    if(ignore56) return;
+    node267.val(""+val);
   }));
-  subs__.addSub(ref54.rebind());
+  subs__.addSub(ref278.rebind());
   
-  subs__.addSub(mobl.domBind(node47, 'keyup change', function() {
-    ignore12 = true;
-    s.set(mobl.stringTomobl__String(node47.val()));
-    ignore12 = false;
+  subs__.addSub(mobl.domBind(node267, 'keyup change', function() {
+    ignore56 = true;
+    s.set(mobl.stringTomobl__String(node267.val()));
+    ignore56 = false;
   }));
   
   
-  var val28 = onsearch.get();
-  if(val28 !== null) {
-    subs__.addSub(mobl.domBind(node47, 'change', val28));
+  var val144 = onsearch.get();
+  if(val144 !== null) {
+    subs__.addSub(mobl.domBind(node267, 'change', val144));
   }
   
-  var val29 = onkeyup.get();
-  if(val29 !== null) {
-    subs__.addSub(mobl.domBind(node47, 'keyup', val29));
+  var val145 = onkeyup.get();
+  if(val145 !== null) {
+    subs__.addSub(mobl.domBind(node267, 'keyup', val145));
   }
-  node47.attr('autocorrect', false);
-  node47.attr('autocapitalize', false);
-  node47.attr('autocomplete', false);
+  node267.attr('autocorrect', false);
+  node267.attr('autocapitalize', false);
+  node267.attr('autocomplete', false);
   
+<<<<<<< HEAD
   node46.append(node47);
   root399.append(node46);
   callback(root399); return subs__;
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+  node266.append(node267);
+  root803.append(node266);
+  callback(root803); return subs__;
+>>>>>>> adcc239... Has item specify
   
   
   return subs__;
@@ -3712,14 +4266,19 @@ ui.buttonPushedStyle = 'ui__buttonPushedStyle';
 
 ui.contextMenu = function(elements, callback) {
 <<<<<<< HEAD
+<<<<<<< HEAD
   var root9673 = $("<span>");
 =======
   var root400 = $("<span>");
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+  var root804 = $("<span>");
+>>>>>>> adcc239... Has item specify
   var subs__ = new mobl.CompSubscription();
   
   var menu = $("<div>");
   
+<<<<<<< HEAD
 <<<<<<< HEAD
   var ref3811 = mobl.ref(ui.contextMenuStyle);
   if(ref3811.get() !== null) {
@@ -3731,10 +4290,17 @@ ui.contextMenu = function(elements, callback) {
     menu.attr('class', ref56.get());
     subs__.addSub(ref56.addEventListener('change', function(_, ref, val) {
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+  var ref280 = mobl.ref(ui.contextMenuStyle);
+  if(ref280.get() !== null) {
+    menu.attr('class', ref280.get());
+    subs__.addSub(ref280.addEventListener('change', function(_, ref, val) {
+>>>>>>> adcc239... Has item specify
       menu.attr('class', val);
     }));
     
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
   subs__.addSub(ref3811.rebind());
   
@@ -3760,28 +4326,36 @@ ui.contextMenu = function(elements, callback) {
   root9673.append(menu);
 =======
   subs__.addSub(ref56.rebind());
+=======
+  subs__.addSub(ref280.rebind());
+>>>>>>> adcc239... Has item specify
   
-  var nodes354 = $("<span>");
-  menu.append(nodes354);
+  var nodes626 = $("<span>");
+  menu.append(nodes626);
   subs__.addSub(mobl.ref(elements).addEventListener('change', function() {
-    renderControl7();
+    renderControl99();
   }));
   
-  function renderControl7() {
+  function renderControl99() {
     subs__.addSub((elements)(function(elements, callback) {
-      var root401 = $("<span>");
+      var root805 = $("<span>");
       var subs__ = new mobl.CompSubscription();
-      callback(root401); return subs__;
+      callback(root805); return subs__;
       return subs__;
     }, function(node) {
-      var oldNodes = nodes354;
-      nodes354 = node.contents();
-      oldNodes.replaceWith(nodes354);
+      var oldNodes = nodes626;
+      nodes626 = node.contents();
+      oldNodes.replaceWith(nodes626);
     }));
   }
+<<<<<<< HEAD
   renderControl7();
   root400.append(menu);
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+  renderControl99();
+  root804.append(menu);
+>>>>>>> adcc239... Has item specify
   var result__ = menu.hide();
   
   var img = $("<img>");
@@ -3789,10 +4363,14 @@ ui.contextMenu = function(elements, callback) {
   img.attr('style', "float: right;");
   
 <<<<<<< HEAD
+<<<<<<< HEAD
   var val1956 = function(event, callback) {
 =======
   var val30 = function(event, callback) {
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+  var val146 = function(event, callback) {
+>>>>>>> adcc239... Has item specify
                 if(event && event.stopPropagation) event.stopPropagation();
                 var result__ = img.parent();
                 var target = result__;
@@ -3803,14 +4381,19 @@ ui.contextMenu = function(elements, callback) {
                 var result__ = menu.show();
                 mobl.sleep(500, function(result__) {
 <<<<<<< HEAD
+<<<<<<< HEAD
                   var tmp6503 = result__;
 =======
                   var tmp410 = result__;
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+                  var tmp640 = result__;
+>>>>>>> adcc239... Has item specify
                   var result__ = mobl.$("body").bind("tap", removeMenu);
                   if(callback && callback.apply) callback(); return;
                 });
               };
+<<<<<<< HEAD
 <<<<<<< HEAD
   if(val1956 !== null) {
     subs__.addSub(mobl.domBind(img, 'tap', val1956));
@@ -3824,6 +4407,13 @@ ui.contextMenu = function(elements, callback) {
   
   root400.append(img);
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+  if(val146 !== null) {
+    subs__.addSub(mobl.domBind(img, 'tap', val146));
+  }
+  
+  root804.append(img);
+>>>>>>> adcc239... Has item specify
   
   var removeMenu = function(evt) {
      var __this = this;
@@ -3834,10 +4424,14 @@ ui.contextMenu = function(elements, callback) {
   
   
 <<<<<<< HEAD
+<<<<<<< HEAD
   callback(root9673); return subs__;
 =======
   callback(root400); return subs__;
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+  callback(root804); return subs__;
+>>>>>>> adcc239... Has item specify
   
   
   
@@ -3845,6 +4439,7 @@ ui.contextMenu = function(elements, callback) {
 };
 
 ui.masterDetail = function(items, masterItem, detail, elements, callback) {
+<<<<<<< HEAD
 <<<<<<< HEAD
   var root9675 = $("<span>");
   var subs__ = new mobl.CompSubscription();
@@ -3957,115 +4552,124 @@ ui.masterDetail = function(items, masterItem, detail, elements, callback) {
                         oldNodes.replaceWith(nodes7214);
 =======
   var root402 = $("<span>");
+=======
+  var root806 = $("<span>");
+>>>>>>> adcc239... Has item specify
   var subs__ = new mobl.CompSubscription();
   var result__ = mobl.window.get().innerWidth > 500;
-  var tmp395 = mobl.ref(result__);
+  var tmp625 = mobl.ref(result__);
   subs__.addSub(mobl.ref(mobl.window, 'innerWidth').addEventListener('change', function() {
-    tmp395.set(mobl.window.get().innerWidth > 500);
+    tmp625.set(mobl.window.get().innerWidth > 500);
   }));
   
   
-  var node48 = $("<span>");
-  root402.append(node48);
-  var condSubs13 = new mobl.CompSubscription();
-  subs__.addSub(condSubs13);
-  var oldValue13;
-  var renderCond13 = function() {
-    var value109 = tmp395.get();
-    if(oldValue13 === value109) return;
-    oldValue13 = value109;
-    var subs__ = condSubs13;
+  var node268 = $("<span>");
+  root806.append(node268);
+  var condSubs65 = new mobl.CompSubscription();
+  subs__.addSub(condSubs65);
+  var oldValue65;
+  var renderCond65 = function() {
+    var value557 = tmp625.get();
+    if(oldValue65 === value557) return;
+    oldValue65 = value557;
+    var subs__ = condSubs65;
     subs__.unsubscribe();
-    node48.empty();
-    if(value109) {
+    node268.empty();
+    if(value557) {
       items.get().one(function(result__) {
-        var tmp411 = result__;
+        var tmp641 = result__;
         var current = mobl.ref(result__);
         
-        var node49 = $("<div>");
-        node49.attr('width', "100%");
+        var node269 = $("<div>");
+        node269.attr('width', "100%");
         
         
-        var node50 = $("<div>");
-        node50.attr('style', "float:left; width:33%; position:relative; border-right: solid 1px #cccccc;");
+        var node270 = $("<div>");
+        node270.attr('style', "float:left; width:33%; position:relative; border-right: solid 1px #cccccc;");
         
-        var nodes357 = $("<span>");
-        node50.append(nodes357);
+        var nodes629 = $("<span>");
+        node270.append(nodes629);
         subs__.addSub((ui.group)(function(_, callback) {
-          var root405 = $("<span>");
+          var root809 = $("<span>");
           var subs__ = new mobl.CompSubscription();
           
-          var node53 = mobl.loadingSpan();
-          root405.append(node53);
-          var list3;
+          var node273 = mobl.loadingSpan();
+          root809.append(node273);
+          var list43;
           var listSubs__ = new mobl.CompSubscription();
           subs__.addSub(listSubs__);
-          var renderList3 = function() {
+          var renderList43 = function() {
             var subs__ = listSubs__;
-            list3 = items.get();
-            list3.list(function(results3) {
-              node53.empty();
-              for(var i129 = 0; i129 < results3.length; i129++) {
+            list43 = items.get();
+            list43.list(function(results43) {
+              node273.empty();
+              for(var i175 = 0; i175 < results43.length; i175++) {
                 (function() {
-                  var iternode3 = $("<span>");
-                  node53.append(iternode3);
+                  var iternode43 = $("<span>");
+                  node273.append(iternode43);
                   var it;
-                  it = mobl.ref(mobl.ref(results3), i129);
+                  it = mobl.ref(mobl.ref(results43), i175);
                   var result__ = it.get() == current.get();
-                  var tmp376 = mobl.ref(result__);
+                  var tmp606 = mobl.ref(result__);
                   subs__.addSub(it.addEventListener('change', function() {
-                    tmp376.set(it.get() == current.get());
+                    tmp606.set(it.get() == current.get());
                   }));
                   subs__.addSub(current.addEventListener('change', function() {
-                    tmp376.set(it.get() == current.get());
+                    tmp606.set(it.get() == current.get());
                   }));
                   
                   
-                  var node54 = $("<span>");
-                  iternode3.append(node54);
-                  var condSubs15 = new mobl.CompSubscription();
-                  subs__.addSub(condSubs15);
-                  var oldValue15;
-                  var renderCond15 = function() {
-                    var value111 = tmp376.get();
-                    if(oldValue15 === value111) return;
-                    oldValue15 = value111;
-                    var subs__ = condSubs15;
+                  var node274 = $("<span>");
+                  iternode43.append(node274);
+                  var condSubs67 = new mobl.CompSubscription();
+                  subs__.addSub(condSubs67);
+                  var oldValue67;
+                  var renderCond67 = function() {
+                    var value559 = tmp606.get();
+                    if(oldValue67 === value559) return;
+                    oldValue67 = value559;
+                    var subs__ = condSubs67;
                     subs__.unsubscribe();
-                    node54.empty();
-                    if(value111) {
-                      var nodes358 = $("<span>");
-                      node54.append(nodes358);
+                    node274.empty();
+                    if(value559) {
+                      var nodes630 = $("<span>");
+                      node274.append(nodes630);
                       subs__.addSub((ui.item)(mobl.ref(ui.selectedItemStyle), mobl.ref(ui.itemPushedStyle), mobl.ref(null), mobl.ref(null), mobl.ref(false), function(_, callback) {
-                        var root406 = $("<span>");
+                        var root810 = $("<span>");
                         var subs__ = new mobl.CompSubscription();
-                        var nodes359 = $("<span>");
-                        root406.append(nodes359);
+                        var nodes631 = $("<span>");
+                        root810.append(nodes631);
                         subs__.addSub(masterItem.addEventListener('change', function() {
-                          renderControl9();
+                          renderControl101();
                         }));
                         
-                        function renderControl9() {
+                        function renderControl101() {
                           subs__.addSub((masterItem.get())(it, function(elements, callback) {
-                            var root407 = $("<span>");
+                            var root811 = $("<span>");
                             var subs__ = new mobl.CompSubscription();
-                            callback(root407); return subs__;
+                            callback(root811); return subs__;
                             return subs__;
                           }, function(node) {
-                            var oldNodes = nodes359;
-                            nodes359 = node.contents();
-                            oldNodes.replaceWith(nodes359);
+                            var oldNodes = nodes631;
+                            nodes631 = node.contents();
+                            oldNodes.replaceWith(nodes631);
                           }));
                         }
-                        renderControl9();
-                        callback(root406); return subs__;
+                        renderControl101();
+                        callback(root810); return subs__;
                         
                         return subs__;
                       }, function(node) {
+<<<<<<< HEAD
                         var oldNodes = nodes358;
                         nodes358 = node.contents();
                         oldNodes.replaceWith(nodes358);
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+                        var oldNodes = nodes630;
+                        nodes630 = node.contents();
+                        oldNodes.replaceWith(nodes630);
+>>>>>>> adcc239... Has item specify
                       }));
                       
                       
@@ -4077,6 +4681,7 @@ ui.masterDetail = function(items, masterItem, detail, elements, callback) {
                                        var result__ = ui.scrollUp();
                                        if(callback && callback.apply) callback(); return;
                                      };
+<<<<<<< HEAD
 <<<<<<< HEAD
                       var tmp6468 = mobl.ref(result__);
                       
@@ -4113,44 +4718,54 @@ ui.masterDetail = function(items, masterItem, detail, elements, callback) {
                         oldNodes.replaceWith(nodes7216);
 =======
                       var tmp375 = mobl.ref(result__);
+=======
+                      var tmp605 = mobl.ref(result__);
+>>>>>>> adcc239... Has item specify
                       
-                      var nodes360 = $("<span>");
-                      node54.append(nodes360);
-                      subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp375, mobl.ref(null), mobl.ref(true), function(_, callback) {
-                        var root408 = $("<span>");
+                      var nodes632 = $("<span>");
+                      node274.append(nodes632);
+                      subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp605, mobl.ref(null), mobl.ref(true), function(_, callback) {
+                        var root812 = $("<span>");
                         var subs__ = new mobl.CompSubscription();
-                        var nodes361 = $("<span>");
-                        root408.append(nodes361);
+                        var nodes633 = $("<span>");
+                        root812.append(nodes633);
                         subs__.addSub(masterItem.addEventListener('change', function() {
-                          renderControl10();
+                          renderControl103();
                         }));
                         
-                        function renderControl10() {
+                        function renderControl103() {
                           subs__.addSub((masterItem.get())(it, function(elements, callback) {
-                            var root409 = $("<span>");
+                            var root813 = $("<span>");
                             var subs__ = new mobl.CompSubscription();
-                            callback(root409); return subs__;
+                            callback(root813); return subs__;
                             return subs__;
                           }, function(node) {
-                            var oldNodes = nodes361;
-                            nodes361 = node.contents();
-                            oldNodes.replaceWith(nodes361);
+                            var oldNodes = nodes633;
+                            nodes633 = node.contents();
+                            oldNodes.replaceWith(nodes633);
                           }));
                         }
-                        renderControl10();
-                        callback(root408); return subs__;
+                        renderControl103();
+                        callback(root812); return subs__;
                         
                         return subs__;
                       }, function(node) {
+<<<<<<< HEAD
                         var oldNodes = nodes360;
                         nodes360 = node.contents();
                         oldNodes.replaceWith(nodes360);
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+                        var oldNodes = nodes632;
+                        nodes632 = node.contents();
+                        oldNodes.replaceWith(nodes632);
+>>>>>>> adcc239... Has item specify
                       }));
                       
                       
                     }
                   };
+<<<<<<< HEAD
 <<<<<<< HEAD
                   renderCond929();
                   subs__.addSub(tmp6469.addEventListener('change', function() {
@@ -4172,11 +4787,23 @@ ui.masterDetail = function(items, masterItem, detail, elements, callback) {
                   iternode3 = iternode3.contents();
                   oldNodes.replaceWith(iternode3);
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+                  renderCond67();
+                  subs__.addSub(tmp606.addEventListener('change', function() {
+                    renderCond67();
+                  }));
+                  
+                  
+                  var oldNodes = iternode43;
+                  iternode43 = iternode43.contents();
+                  oldNodes.replaceWith(iternode43);
+>>>>>>> adcc239... Has item specify
                   
                   
                 }());
               }
               mobl.delayedUpdateScrollers();
+<<<<<<< HEAD
 <<<<<<< HEAD
               subs__.addSub(list674.addEventListener('change', function() { listSubs__.unsubscribe(); renderList674(true); }));
               subs__.addSub(items.addEventListener('change', function() { listSubs__.unsubscribe(); renderList674(true); }));
@@ -4233,61 +4860,70 @@ ui.masterDetail = function(items, masterItem, detail, elements, callback) {
 =======
               subs__.addSub(list3.addEventListener('change', function() { listSubs__.unsubscribe(); renderList3(true); }));
               subs__.addSub(items.addEventListener('change', function() { listSubs__.unsubscribe(); renderList3(true); }));
+=======
+              subs__.addSub(list43.addEventListener('change', function() { listSubs__.unsubscribe(); renderList43(true); }));
+              subs__.addSub(items.addEventListener('change', function() { listSubs__.unsubscribe(); renderList43(true); }));
+>>>>>>> adcc239... Has item specify
             });
           };
-          renderList3();
+          renderList43();
           
-          callback(root405); return subs__;
+          callback(root809); return subs__;
           
           return subs__;
         }, function(node) {
-          var oldNodes = nodes357;
-          nodes357 = node.contents();
-          oldNodes.replaceWith(nodes357);
+          var oldNodes = nodes629;
+          nodes629 = node.contents();
+          oldNodes.replaceWith(nodes629);
         }));
-        node49.append(node50);
+        node269.append(node270);
         
-        var node51 = $("<div>");
-        node51.attr('style', "float:left; width:66.5%; position:relative; margin-left: 0.5%;");
+        var node271 = $("<div>");
+        node271.attr('style', "float:left; width:66.5%; position:relative; margin-left: 0.5%;");
         
         
-        var node52 = $("<span>");
-        node51.append(node52);
-        var condSubs14 = new mobl.CompSubscription();
-        subs__.addSub(condSubs14);
-        var oldValue14;
-        var renderCond14 = function() {
-          var value110 = current.get();
-          if(oldValue14 === value110) return;
-          oldValue14 = value110;
-          var subs__ = condSubs14;
+        var node272 = $("<span>");
+        node271.append(node272);
+        var condSubs66 = new mobl.CompSubscription();
+        subs__.addSub(condSubs66);
+        var oldValue66;
+        var renderCond66 = function() {
+          var value558 = current.get();
+          if(oldValue66 === value558) return;
+          oldValue66 = value558;
+          var subs__ = condSubs66;
           subs__.unsubscribe();
-          node52.empty();
-          if(value110) {
-            var nodes355 = $("<span>");
-            node52.append(nodes355);
+          node272.empty();
+          if(value558) {
+            var nodes627 = $("<span>");
+            node272.append(nodes627);
             subs__.addSub(detail.addEventListener('change', function() {
-              renderControl8();
+              renderControl100();
             }));
             
-            function renderControl8() {
+            function renderControl100() {
               subs__.addSub((detail.get())(current, function(elements, callback) {
-                var root403 = $("<span>");
+                var root807 = $("<span>");
                 var subs__ = new mobl.CompSubscription();
-                callback(root403); return subs__;
+                callback(root807); return subs__;
                 return subs__;
               }, function(node) {
-                var oldNodes = nodes355;
-                nodes355 = node.contents();
-                oldNodes.replaceWith(nodes355);
+                var oldNodes = nodes627;
+                nodes627 = node.contents();
+                oldNodes.replaceWith(nodes627);
               }));
             }
+<<<<<<< HEAD
             renderControl8();
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+            renderControl100();
+>>>>>>> adcc239... Has item specify
             
             
           } else {
             var result__ = mobl._("Select an item on the left", []);
+<<<<<<< HEAD
 <<<<<<< HEAD
             var tmp6470 = mobl.ref(result__);
             
@@ -4304,24 +4940,34 @@ ui.masterDetail = function(items, masterItem, detail, elements, callback) {
               oldNodes.replaceWith(nodes7212);
 =======
             var tmp377 = mobl.ref(result__);
+=======
+            var tmp607 = mobl.ref(result__);
+>>>>>>> adcc239... Has item specify
             
-            var nodes356 = $("<span>");
-            node52.append(nodes356);
-            subs__.addSub((mobl.label)(tmp377, mobl.ref(null), mobl.ref(null), function(_, callback) {
-              var root404 = $("<span>");
+            var nodes628 = $("<span>");
+            node272.append(nodes628);
+            subs__.addSub((mobl.label)(tmp607, mobl.ref(null), mobl.ref(null), function(_, callback) {
+              var root808 = $("<span>");
               var subs__ = new mobl.CompSubscription();
-              callback(root404); return subs__;
+              callback(root808); return subs__;
               return subs__;
             }, function(node) {
+<<<<<<< HEAD
               var oldNodes = nodes356;
               nodes356 = node.contents();
               oldNodes.replaceWith(nodes356);
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+              var oldNodes = nodes628;
+              nodes628 = node.contents();
+              oldNodes.replaceWith(nodes628);
+>>>>>>> adcc239... Has item specify
             }));
             
             
           }
         };
+<<<<<<< HEAD
 <<<<<<< HEAD
         renderCond928();
         subs__.addSub(current.addEventListener('change', function() {
@@ -4332,13 +4978,21 @@ ui.masterDetail = function(items, masterItem, detail, elements, callback) {
         node3822.append(node3823);
 =======
         renderCond14();
+=======
+        renderCond66();
+>>>>>>> adcc239... Has item specify
         subs__.addSub(current.addEventListener('change', function() {
-          renderCond14();
+          renderCond66();
         }));
         
+<<<<<<< HEAD
         node49.append(node51);
         node48.append(node49);
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+        node269.append(node271);
+        node268.append(node269);
+>>>>>>> adcc239... Has item specify
         
         
         
@@ -4347,6 +5001,7 @@ ui.masterDetail = function(items, masterItem, detail, elements, callback) {
         
       });
     } else {
+<<<<<<< HEAD
 <<<<<<< HEAD
       var nodes7218 = $("<span>");
       node3822.append(nodes7218);
@@ -4418,77 +5073,88 @@ ui.masterDetail = function(items, masterItem, detail, elements, callback) {
 =======
       var nodes362 = $("<span>");
       node48.append(nodes362);
+=======
+      var nodes634 = $("<span>");
+      node268.append(nodes634);
+>>>>>>> adcc239... Has item specify
       subs__.addSub((ui.group)(function(_, callback) {
-        var root410 = $("<span>");
+        var root814 = $("<span>");
         var subs__ = new mobl.CompSubscription();
         
-        var node55 = mobl.loadingSpan();
-        root410.append(node55);
-        var list4;
+        var node275 = mobl.loadingSpan();
+        root814.append(node275);
+        var list44;
         var listSubs__ = new mobl.CompSubscription();
         subs__.addSub(listSubs__);
-        var renderList4 = function() {
+        var renderList44 = function() {
           var subs__ = listSubs__;
-          list4 = items.get();
-          list4.list(function(results4) {
-            node55.empty();
-            for(var i130 = 0; i130 < results4.length; i130++) {
+          list44 = items.get();
+          list44.list(function(results44) {
+            node275.empty();
+            for(var i176 = 0; i176 < results44.length; i176++) {
               (function() {
-                var iternode4 = $("<span>");
-                node55.append(iternode4);
+                var iternode44 = $("<span>");
+                node275.append(iternode44);
                 var it;
-                it = mobl.ref(mobl.ref(results4), i130);
+                it = mobl.ref(mobl.ref(results44), i176);
                 var result__ = function(event, callback) {
                                  if(event && event.stopPropagation) event.stopPropagation();
                                  mobl.call('ui.detailScreen', [it, detail, mobl.ref(false), mobl.ref("slide")], function(result__) {
-                                 var tmp412 = result__;
+                                 var tmp642 = result__;
                                  if(callback && callback.apply) callback(); return;
                                  });
                                };
-                var tmp371 = mobl.ref(result__);
+                var tmp601 = mobl.ref(result__);
                 
-                var nodes363 = $("<span>");
-                iternode4.append(nodes363);
-                subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp371, mobl.ref(null), mobl.ref(false), function(_, callback) {
-                  var root411 = $("<span>");
+                var nodes635 = $("<span>");
+                iternode44.append(nodes635);
+                subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp601, mobl.ref(null), mobl.ref(false), function(_, callback) {
+                  var root815 = $("<span>");
                   var subs__ = new mobl.CompSubscription();
-                  var nodes364 = $("<span>");
-                  root411.append(nodes364);
+                  var nodes636 = $("<span>");
+                  root815.append(nodes636);
                   subs__.addSub(masterItem.addEventListener('change', function() {
-                    renderControl11();
+                    renderControl104();
                   }));
                   
-                  function renderControl11() {
+                  function renderControl104() {
                     subs__.addSub((masterItem.get())(it, function(elements, callback) {
-                      var root412 = $("<span>");
+                      var root816 = $("<span>");
                       var subs__ = new mobl.CompSubscription();
-                      callback(root412); return subs__;
+                      callback(root816); return subs__;
                       return subs__;
                     }, function(node) {
-                      var oldNodes = nodes364;
-                      nodes364 = node.contents();
-                      oldNodes.replaceWith(nodes364);
+                      var oldNodes = nodes636;
+                      nodes636 = node.contents();
+                      oldNodes.replaceWith(nodes636);
                     }));
                   }
-                  renderControl11();
-                  callback(root411); return subs__;
+                  renderControl104();
+                  callback(root815); return subs__;
                   
                   return subs__;
                 }, function(node) {
-                  var oldNodes = nodes363;
-                  nodes363 = node.contents();
-                  oldNodes.replaceWith(nodes363);
+                  var oldNodes = nodes635;
+                  nodes635 = node.contents();
+                  oldNodes.replaceWith(nodes635);
                 }));
                 
+<<<<<<< HEAD
                 var oldNodes = iternode4;
                 iternode4 = iternode4.contents();
                 oldNodes.replaceWith(iternode4);
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+                var oldNodes = iternode44;
+                iternode44 = iternode44.contents();
+                oldNodes.replaceWith(iternode44);
+>>>>>>> adcc239... Has item specify
                 
                 
               }());
             }
             mobl.delayedUpdateScrollers();
+<<<<<<< HEAD
 <<<<<<< HEAD
             subs__.addSub(list675.addEventListener('change', function() { listSubs__.unsubscribe(); renderList675(true); }));
             subs__.addSub(items.addEventListener('change', function() { listSubs__.unsubscribe(); renderList675(true); }));
@@ -4506,23 +5172,34 @@ ui.masterDetail = function(items, masterItem, detail, elements, callback) {
 =======
             subs__.addSub(list4.addEventListener('change', function() { listSubs__.unsubscribe(); renderList4(true); }));
             subs__.addSub(items.addEventListener('change', function() { listSubs__.unsubscribe(); renderList4(true); }));
+=======
+            subs__.addSub(list44.addEventListener('change', function() { listSubs__.unsubscribe(); renderList44(true); }));
+            subs__.addSub(items.addEventListener('change', function() { listSubs__.unsubscribe(); renderList44(true); }));
+>>>>>>> adcc239... Has item specify
           });
         };
-        renderList4();
+        renderList44();
         
-        callback(root410); return subs__;
+        callback(root814); return subs__;
         
         return subs__;
       }, function(node) {
+<<<<<<< HEAD
         var oldNodes = nodes362;
         nodes362 = node.contents();
         oldNodes.replaceWith(nodes362);
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+        var oldNodes = nodes634;
+        nodes634 = node.contents();
+        oldNodes.replaceWith(nodes634);
+>>>>>>> adcc239... Has item specify
       }));
       
       
     }
   };
+<<<<<<< HEAD
 <<<<<<< HEAD
   renderCond927();
   subs__.addSub(tmp6488.addEventListener('change', function() {
@@ -4538,11 +5215,20 @@ ui.masterDetail = function(items, masterItem, detail, elements, callback) {
   
   callback(root402); return subs__;
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+  renderCond65();
+  subs__.addSub(tmp625.addEventListener('change', function() {
+    renderCond65();
+  }));
+  
+  callback(root806); return subs__;
+>>>>>>> adcc239... Has item specify
   
   return subs__;
 };
 
 ui.detailScreen = function(it, detail, callback, screenCallback) {
+<<<<<<< HEAD
 <<<<<<< HEAD
   var root9686 = $("<div>");
   var subs__ = new mobl.CompSubscription();
@@ -4555,15 +5241,25 @@ ui.detailScreen = function(it, detail, callback, screenCallback) {
     var root9687 = $("<span>");
 =======
   var root413 = $("<div>");
+=======
+  var root817 = $("<div>");
+>>>>>>> adcc239... Has item specify
   var subs__ = new mobl.CompSubscription();
   var result__ = mobl._("Detail", []);
-  var tmp374 = mobl.ref(result__);
+  var tmp604 = mobl.ref(result__);
   
+<<<<<<< HEAD
   var nodes365 = $("<span>");
   root413.append(nodes365);
   subs__.addSub((ui.header)(tmp374, mobl.ref(false), mobl.ref(null), function(_, callback) {
     var root414 = $("<span>");
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+  var nodes637 = $("<span>");
+  root817.append(nodes637);
+  subs__.addSub((ui.header)(tmp604, mobl.ref(false), mobl.ref(null), function(_, callback) {
+    var root818 = $("<span>");
+>>>>>>> adcc239... Has item specify
     var subs__ = new mobl.CompSubscription();
     var result__ = function(event, callback) {
                      if(event && event.stopPropagation) event.stopPropagation();
@@ -4571,6 +5267,7 @@ ui.detailScreen = function(it, detail, callback, screenCallback) {
                      return;
                      if(callback && callback.apply) callback(); return;
                    };
+<<<<<<< HEAD
 <<<<<<< HEAD
     var tmp6466 = mobl.ref(result__);
     
@@ -4619,51 +5316,59 @@ ui.detailScreen = function(it, detail, callback, screenCallback) {
   callback(root9686); return subs__;
 =======
     var tmp373 = mobl.ref(result__);
+=======
+    var tmp603 = mobl.ref(result__);
+>>>>>>> adcc239... Has item specify
     
     var result__ = mobl._("Back", []);
-    var tmp372 = mobl.ref(result__);
+    var tmp602 = mobl.ref(result__);
     
-    var nodes366 = $("<span>");
-    root414.append(nodes366);
-    subs__.addSub((ui.backButton)(tmp372, mobl.ref(ui.backButtonStyle), mobl.ref(ui.backButtonPushedStyle), tmp373, function(_, callback) {
-      var root415 = $("<span>");
+    var nodes638 = $("<span>");
+    root818.append(nodes638);
+    subs__.addSub((ui.backButton)(tmp602, mobl.ref(ui.backButtonStyle), mobl.ref(ui.backButtonPushedStyle), tmp603, function(_, callback) {
+      var root819 = $("<span>");
       var subs__ = new mobl.CompSubscription();
-      callback(root415); return subs__;
+      callback(root819); return subs__;
       return subs__;
     }, function(node) {
-      var oldNodes = nodes366;
-      nodes366 = node.contents();
-      oldNodes.replaceWith(nodes366);
+      var oldNodes = nodes638;
+      nodes638 = node.contents();
+      oldNodes.replaceWith(nodes638);
     }));
-    callback(root414); return subs__;
+    callback(root818); return subs__;
     
     return subs__;
   }, function(node) {
-    var oldNodes = nodes365;
-    nodes365 = node.contents();
-    oldNodes.replaceWith(nodes365);
+    var oldNodes = nodes637;
+    nodes637 = node.contents();
+    oldNodes.replaceWith(nodes637);
   }));
-  var nodes367 = $("<span>");
-  root413.append(nodes367);
+  var nodes639 = $("<span>");
+  root817.append(nodes639);
   subs__.addSub(detail.addEventListener('change', function() {
-    renderControl12();
+    renderControl105();
   }));
   
-  function renderControl12() {
+  function renderControl105() {
     subs__.addSub((detail.get())(it, function(elements, callback) {
-      var root416 = $("<span>");
+      var root820 = $("<span>");
       var subs__ = new mobl.CompSubscription();
-      callback(root416); return subs__;
+      callback(root820); return subs__;
       return subs__;
     }, function(node) {
-      var oldNodes = nodes367;
-      nodes367 = node.contents();
-      oldNodes.replaceWith(nodes367);
+      var oldNodes = nodes639;
+      nodes639 = node.contents();
+      oldNodes.replaceWith(nodes639);
     }));
   }
+<<<<<<< HEAD
   renderControl12();
   callback(root413); return subs__;
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+  renderControl105();
+  callback(root817); return subs__;
+>>>>>>> adcc239... Has item specify
   
   
   return subs__;
@@ -4671,6 +5376,7 @@ ui.detailScreen = function(it, detail, callback, screenCallback) {
 ui.selectedItemStyle = 'ui__selectedItemStyle';
 
 ui.zoomList = function(coll, listCtrl, zoomCtrl, elements, callback) {
+<<<<<<< HEAD
 <<<<<<< HEAD
   var root9690 = $("<span>");
   var subs__ = new mobl.CompSubscription();
@@ -4754,86 +5460,95 @@ ui.zoomList = function(coll, listCtrl, zoomCtrl, elements, callback) {
                   oldNodes.replaceWith(nodes7225);
 =======
   var root417 = $("<span>");
+=======
+  var root821 = $("<span>");
+>>>>>>> adcc239... Has item specify
   var subs__ = new mobl.CompSubscription();
   
   var selected = mobl.ref(null);
-  var nodes368 = $("<span>");
-  root417.append(nodes368);
+  var nodes640 = $("<span>");
+  root821.append(nodes640);
   subs__.addSub((ui.group)(function(_, callback) {
-    var root418 = $("<span>");
+    var root822 = $("<span>");
     var subs__ = new mobl.CompSubscription();
     
-    var node56 = mobl.loadingSpan();
-    root418.append(node56);
-    var list5;
+    var node276 = mobl.loadingSpan();
+    root822.append(node276);
+    var list45;
     var listSubs__ = new mobl.CompSubscription();
     subs__.addSub(listSubs__);
-    var renderList5 = function() {
+    var renderList45 = function() {
       var subs__ = listSubs__;
-      list5 = coll.get();
-      list5.list(function(results5) {
-        node56.empty();
-        for(var i131 = 0; i131 < results5.length; i131++) {
+      list45 = coll.get();
+      list45.list(function(results45) {
+        node276.empty();
+        for(var i177 = 0; i177 < results45.length; i177++) {
           (function() {
-            var iternode5 = $("<span>");
-            node56.append(iternode5);
+            var iternode45 = $("<span>");
+            node276.append(iternode45);
             var it;
-            it = mobl.ref(mobl.ref(results5), i131);
+            it = mobl.ref(mobl.ref(results45), i177);
             var result__ = it.get() == selected.get();
-            var tmp379 = mobl.ref(result__);
+            var tmp609 = mobl.ref(result__);
             subs__.addSub(it.addEventListener('change', function() {
-              tmp379.set(it.get() == selected.get());
+              tmp609.set(it.get() == selected.get());
             }));
             subs__.addSub(selected.addEventListener('change', function() {
-              tmp379.set(it.get() == selected.get());
+              tmp609.set(it.get() == selected.get());
             }));
             
             
-            var node57 = $("<span>");
-            iternode5.append(node57);
-            var condSubs16 = new mobl.CompSubscription();
-            subs__.addSub(condSubs16);
-            var oldValue16;
-            var renderCond16 = function() {
-              var value112 = tmp379.get();
-              if(oldValue16 === value112) return;
-              oldValue16 = value112;
-              var subs__ = condSubs16;
+            var node277 = $("<span>");
+            iternode45.append(node277);
+            var condSubs68 = new mobl.CompSubscription();
+            subs__.addSub(condSubs68);
+            var oldValue68;
+            var renderCond68 = function() {
+              var value560 = tmp609.get();
+              if(oldValue68 === value560) return;
+              oldValue68 = value560;
+              var subs__ = condSubs68;
               subs__.unsubscribe();
-              node57.empty();
-              if(value112) {
-                var nodes369 = $("<span>");
-                node57.append(nodes369);
+              node277.empty();
+              if(value560) {
+                var nodes641 = $("<span>");
+                node277.append(nodes641);
                 subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), mobl.ref(null), mobl.ref(null), mobl.ref(false), function(_, callback) {
-                  var root419 = $("<span>");
+                  var root823 = $("<span>");
                   var subs__ = new mobl.CompSubscription();
-                  var nodes370 = $("<span>");
-                  root419.append(nodes370);
+                  var nodes642 = $("<span>");
+                  root823.append(nodes642);
                   subs__.addSub(zoomCtrl.addEventListener('change', function() {
-                    renderControl13();
+                    renderControl106();
                   }));
                   
-                  function renderControl13() {
+                  function renderControl106() {
                     subs__.addSub((zoomCtrl.get())(it, function(elements, callback) {
-                      var root420 = $("<span>");
+                      var root824 = $("<span>");
                       var subs__ = new mobl.CompSubscription();
-                      callback(root420); return subs__;
+                      callback(root824); return subs__;
                       return subs__;
                     }, function(node) {
-                      var oldNodes = nodes370;
-                      nodes370 = node.contents();
-                      oldNodes.replaceWith(nodes370);
+                      var oldNodes = nodes642;
+                      nodes642 = node.contents();
+                      oldNodes.replaceWith(nodes642);
                     }));
                   }
-                  renderControl13();
-                  callback(root419); return subs__;
+                  renderControl106();
+                  callback(root823); return subs__;
                   
                   return subs__;
                 }, function(node) {
+<<<<<<< HEAD
                   var oldNodes = nodes369;
                   nodes369 = node.contents();
                   oldNodes.replaceWith(nodes369);
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+                  var oldNodes = nodes641;
+                  nodes641 = node.contents();
+                  oldNodes.replaceWith(nodes641);
+>>>>>>> adcc239... Has item specify
                 }));
                 
                 
@@ -4844,6 +5559,7 @@ ui.zoomList = function(coll, listCtrl, zoomCtrl, elements, callback) {
                                  selected.set(result__);
                                  if(callback && callback.apply) callback(); return;
                                };
+<<<<<<< HEAD
 <<<<<<< HEAD
                 var tmp6471 = mobl.ref(result__);
                 
@@ -4880,44 +5596,54 @@ ui.zoomList = function(coll, listCtrl, zoomCtrl, elements, callback) {
                   oldNodes.replaceWith(nodes7227);
 =======
                 var tmp378 = mobl.ref(result__);
+=======
+                var tmp608 = mobl.ref(result__);
+>>>>>>> adcc239... Has item specify
                 
-                var nodes371 = $("<span>");
-                node57.append(nodes371);
-                subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp378, mobl.ref(null), mobl.ref(true), function(_, callback) {
-                  var root421 = $("<span>");
+                var nodes643 = $("<span>");
+                node277.append(nodes643);
+                subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp608, mobl.ref(null), mobl.ref(true), function(_, callback) {
+                  var root825 = $("<span>");
                   var subs__ = new mobl.CompSubscription();
-                  var nodes372 = $("<span>");
-                  root421.append(nodes372);
+                  var nodes644 = $("<span>");
+                  root825.append(nodes644);
                   subs__.addSub(listCtrl.addEventListener('change', function() {
-                    renderControl14();
+                    renderControl107();
                   }));
                   
-                  function renderControl14() {
+                  function renderControl107() {
                     subs__.addSub((listCtrl.get())(it, function(elements, callback) {
-                      var root422 = $("<span>");
+                      var root826 = $("<span>");
                       var subs__ = new mobl.CompSubscription();
-                      callback(root422); return subs__;
+                      callback(root826); return subs__;
                       return subs__;
                     }, function(node) {
-                      var oldNodes = nodes372;
-                      nodes372 = node.contents();
-                      oldNodes.replaceWith(nodes372);
+                      var oldNodes = nodes644;
+                      nodes644 = node.contents();
+                      oldNodes.replaceWith(nodes644);
                     }));
                   }
-                  renderControl14();
-                  callback(root421); return subs__;
+                  renderControl107();
+                  callback(root825); return subs__;
                   
                   return subs__;
                 }, function(node) {
+<<<<<<< HEAD
                   var oldNodes = nodes371;
                   nodes371 = node.contents();
                   oldNodes.replaceWith(nodes371);
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+                  var oldNodes = nodes643;
+                  nodes643 = node.contents();
+                  oldNodes.replaceWith(nodes643);
+>>>>>>> adcc239... Has item specify
                 }));
                 
                 
               }
             };
+<<<<<<< HEAD
 <<<<<<< HEAD
             renderCond930();
             subs__.addSub(tmp6472.addEventListener('change', function() {
@@ -4939,11 +5665,23 @@ ui.zoomList = function(coll, listCtrl, zoomCtrl, elements, callback) {
             iternode5 = iternode5.contents();
             oldNodes.replaceWith(iternode5);
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+            renderCond68();
+            subs__.addSub(tmp609.addEventListener('change', function() {
+              renderCond68();
+            }));
+            
+            
+            var oldNodes = iternode45;
+            iternode45 = iternode45.contents();
+            oldNodes.replaceWith(iternode45);
+>>>>>>> adcc239... Has item specify
             
             
           }());
         }
         mobl.delayedUpdateScrollers();
+<<<<<<< HEAD
 <<<<<<< HEAD
         subs__.addSub(list676.addEventListener('change', function() { listSubs__.unsubscribe(); renderList676(true); }));
         subs__.addSub(coll.addEventListener('change', function() { listSubs__.unsubscribe(); renderList676(true); }));
@@ -4963,20 +5701,28 @@ ui.zoomList = function(coll, listCtrl, zoomCtrl, elements, callback) {
 =======
         subs__.addSub(list5.addEventListener('change', function() { listSubs__.unsubscribe(); renderList5(true); }));
         subs__.addSub(coll.addEventListener('change', function() { listSubs__.unsubscribe(); renderList5(true); }));
+=======
+        subs__.addSub(list45.addEventListener('change', function() { listSubs__.unsubscribe(); renderList45(true); }));
+        subs__.addSub(coll.addEventListener('change', function() { listSubs__.unsubscribe(); renderList45(true); }));
+>>>>>>> adcc239... Has item specify
       });
     };
-    renderList5();
+    renderList45();
     
-    callback(root418); return subs__;
+    callback(root822); return subs__;
     
     return subs__;
   }, function(node) {
-    var oldNodes = nodes368;
-    nodes368 = node.contents();
-    oldNodes.replaceWith(nodes368);
+    var oldNodes = nodes640;
+    nodes640 = node.contents();
+    oldNodes.replaceWith(nodes640);
   }));
+<<<<<<< HEAD
   callback(root417); return subs__;
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+  callback(root821); return subs__;
+>>>>>>> adcc239... Has item specify
   
   return subs__;
 };
@@ -4984,14 +5730,19 @@ ui.loadMoreStyle = 'ui__loadMoreStyle';
 
 ui.stagedList = function(coll, listCtrl, initialItems, step, moreLabel, moreStyle, elements, callback) {
 <<<<<<< HEAD
+<<<<<<< HEAD
   var root9696 = $("<span>");
 =======
   var root423 = $("<span>");
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+  var root827 = $("<span>");
+>>>>>>> adcc239... Has item specify
   var subs__ = new mobl.CompSubscription();
   
   var n = mobl.ref(initialItems.get());
   coll.get().count(function(result__) {
+<<<<<<< HEAD
 <<<<<<< HEAD
     var tmp6506 = result__;
     var total = mobl.ref(result__);
@@ -5049,65 +5800,75 @@ ui.stagedList = function(coll, listCtrl, initialItems, step, moreLabel, moreStyl
             oldNodes.replaceWith(iternode677);
 =======
     var tmp413 = result__;
+=======
+    var tmp643 = result__;
+>>>>>>> adcc239... Has item specify
     var total = mobl.ref(result__);
     var result__ = coll.get().limit(n.get());
-    var tmp380 = mobl.ref(result__);
+    var tmp610 = mobl.ref(result__);
     subs__.addSub(mobl.ref(coll.get().limit(n.get())).addEventListener('change', function() {
-      tmp380.set(coll.get().limit(n.get()));
+      tmp610.set(coll.get().limit(n.get()));
     }));
     subs__.addSub(coll.addEventListener('change', function() {
-      tmp380.set(coll.get().limit(n.get()));
+      tmp610.set(coll.get().limit(n.get()));
     }));
     subs__.addSub(n.addEventListener('change', function() {
-      tmp380.set(coll.get().limit(n.get()));
+      tmp610.set(coll.get().limit(n.get()));
     }));
     
     
-    var node58 = mobl.loadingSpan();
-    root423.append(node58);
-    var list6;
+    var node278 = mobl.loadingSpan();
+    root827.append(node278);
+    var list46;
     var listSubs__ = new mobl.CompSubscription();
     subs__.addSub(listSubs__);
-    var renderList6 = function() {
+    var renderList46 = function() {
       var subs__ = listSubs__;
-      list6 = tmp380.get();
-      list6.list(function(results6) {
-        node58.empty();
-        for(var i132 = 0; i132 < results6.length; i132++) {
+      list46 = tmp610.get();
+      list46.list(function(results46) {
+        node278.empty();
+        for(var i178 = 0; i178 < results46.length; i178++) {
           (function() {
-            var iternode6 = $("<span>");
-            node58.append(iternode6);
+            var iternode46 = $("<span>");
+            node278.append(iternode46);
             var it;
-            it = mobl.ref(mobl.ref(results6), i132);
-            var nodes373 = $("<span>");
-            iternode6.append(nodes373);
+            it = mobl.ref(mobl.ref(results46), i178);
+            var nodes645 = $("<span>");
+            iternode46.append(nodes645);
             subs__.addSub(listCtrl.addEventListener('change', function() {
-              renderControl15();
+              renderControl108();
             }));
             
-            function renderControl15() {
+            function renderControl108() {
               subs__.addSub((listCtrl.get())(it, function(elements, callback) {
-                var root424 = $("<span>");
+                var root828 = $("<span>");
                 var subs__ = new mobl.CompSubscription();
-                callback(root424); return subs__;
+                callback(root828); return subs__;
                 return subs__;
               }, function(node) {
-                var oldNodes = nodes373;
-                nodes373 = node.contents();
-                oldNodes.replaceWith(nodes373);
+                var oldNodes = nodes645;
+                nodes645 = node.contents();
+                oldNodes.replaceWith(nodes645);
               }));
             }
-            renderControl15();
+            renderControl108();
             
+<<<<<<< HEAD
             var oldNodes = iternode6;
             iternode6 = iternode6.contents();
             oldNodes.replaceWith(iternode6);
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+            var oldNodes = iternode46;
+            iternode46 = iternode46.contents();
+            oldNodes.replaceWith(iternode46);
+>>>>>>> adcc239... Has item specify
             
             
           }());
         }
         mobl.delayedUpdateScrollers();
+<<<<<<< HEAD
 <<<<<<< HEAD
         subs__.addSub(list677.addEventListener('change', function() { listSubs__.unsubscribe(); renderList677(true); }));
         subs__.addSub(tmp6473.addEventListener('change', function() { listSubs__.unsubscribe(); renderList677(true); }));
@@ -5141,40 +5902,50 @@ ui.stagedList = function(coll, listCtrl, initialItems, step, moreLabel, moreStyl
 =======
         subs__.addSub(list6.addEventListener('change', function() { listSubs__.unsubscribe(); renderList6(true); }));
         subs__.addSub(tmp380.addEventListener('change', function() { listSubs__.unsubscribe(); renderList6(true); }));
+=======
+        subs__.addSub(list46.addEventListener('change', function() { listSubs__.unsubscribe(); renderList46(true); }));
+        subs__.addSub(tmp610.addEventListener('change', function() { listSubs__.unsubscribe(); renderList46(true); }));
+>>>>>>> adcc239... Has item specify
       });
     };
-    renderList6();
+    renderList46();
     
     var result__ = n.get() < total.get();
-    var tmp382 = mobl.ref(result__);
+    var tmp612 = mobl.ref(result__);
     subs__.addSub(n.addEventListener('change', function() {
-      tmp382.set(n.get() < total.get());
+      tmp612.set(n.get() < total.get());
     }));
     subs__.addSub(total.addEventListener('change', function() {
-      tmp382.set(n.get() < total.get());
+      tmp612.set(n.get() < total.get());
     }));
     
     
-    var node59 = $("<span>");
-    root423.append(node59);
-    var condSubs17 = new mobl.CompSubscription();
-    subs__.addSub(condSubs17);
-    var oldValue17;
-    var renderCond17 = function() {
-      var value113 = tmp382.get();
-      if(oldValue17 === value113) return;
-      oldValue17 = value113;
-      var subs__ = condSubs17;
+    var node279 = $("<span>");
+    root827.append(node279);
+    var condSubs69 = new mobl.CompSubscription();
+    subs__.addSub(condSubs69);
+    var oldValue69;
+    var renderCond69 = function() {
+      var value561 = tmp612.get();
+      if(oldValue69 === value561) return;
+      oldValue69 = value561;
+      var subs__ = condSubs69;
       subs__.unsubscribe();
+<<<<<<< HEAD
       node59.empty();
       if(value113) {
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+      node279.empty();
+      if(value561) {
+>>>>>>> adcc239... Has item specify
         var result__ = function(event, callback) {
                          if(event && event.stopPropagation) event.stopPropagation();
                          var result__ = n.get() + step.get();
                          n.set(result__);
                          if(callback && callback.apply) callback(); return;
                        };
+<<<<<<< HEAD
 <<<<<<< HEAD
         var tmp6474 = mobl.ref(result__);
         
@@ -5204,32 +5975,41 @@ ui.stagedList = function(coll, listCtrl, initialItems, step, moreLabel, moreStyl
           oldNodes.replaceWith(nodes7230);
 =======
         var tmp381 = mobl.ref(result__);
+=======
+        var tmp611 = mobl.ref(result__);
+>>>>>>> adcc239... Has item specify
         
-        var nodes374 = $("<span>");
-        node59.append(nodes374);
-        subs__.addSub((mobl.block)(moreStyle, mobl.ref(null), tmp381, mobl.ref(null), function(_, callback) {
-          var root425 = $("<span>");
+        var nodes646 = $("<span>");
+        node279.append(nodes646);
+        subs__.addSub((mobl.block)(moreStyle, mobl.ref(null), tmp611, mobl.ref(null), function(_, callback) {
+          var root829 = $("<span>");
           var subs__ = new mobl.CompSubscription();
-          var nodes375 = $("<span>");
-          root425.append(nodes375);
+          var nodes647 = $("<span>");
+          root829.append(nodes647);
           subs__.addSub((mobl.label)(moreLabel, mobl.ref(null), mobl.ref(null), function(_, callback) {
-            var root426 = $("<span>");
+            var root830 = $("<span>");
             var subs__ = new mobl.CompSubscription();
-            callback(root426); return subs__;
+            callback(root830); return subs__;
             return subs__;
           }, function(node) {
-            var oldNodes = nodes375;
-            nodes375 = node.contents();
-            oldNodes.replaceWith(nodes375);
+            var oldNodes = nodes647;
+            nodes647 = node.contents();
+            oldNodes.replaceWith(nodes647);
           }));
-          callback(root425); return subs__;
+          callback(root829); return subs__;
           
           return subs__;
         }, function(node) {
+<<<<<<< HEAD
           var oldNodes = nodes374;
           nodes374 = node.contents();
           oldNodes.replaceWith(nodes374);
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+          var oldNodes = nodes646;
+          nodes646 = node.contents();
+          oldNodes.replaceWith(nodes646);
+>>>>>>> adcc239... Has item specify
         }));
         
         
@@ -5237,6 +6017,7 @@ ui.stagedList = function(coll, listCtrl, initialItems, step, moreLabel, moreStyl
         
       }
     };
+<<<<<<< HEAD
 <<<<<<< HEAD
     renderCond931();
     subs__.addSub(tmp6475.addEventListener('change', function() {
@@ -5252,6 +6033,14 @@ ui.stagedList = function(coll, listCtrl, initialItems, step, moreLabel, moreStyl
     
     callback(root423); return subs__;
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+    renderCond69();
+    subs__.addSub(tmp612.addEventListener('change', function() {
+      renderCond69();
+    }));
+    
+    callback(root827); return subs__;
+>>>>>>> adcc239... Has item specify
     
     
   });
@@ -5259,6 +6048,7 @@ ui.stagedList = function(coll, listCtrl, initialItems, step, moreLabel, moreStyl
 };
 
 ui.markableList = function(items, elements, callback) {
+<<<<<<< HEAD
 <<<<<<< HEAD
   var root9700 = $("<span>");
   var subs__ = new mobl.CompSubscription();
@@ -5315,64 +6105,74 @@ ui.markableList = function(items, elements, callback) {
             oldNodes.replaceWith(iternode678);
 =======
   var root427 = $("<span>");
+=======
+  var root831 = $("<span>");
+>>>>>>> adcc239... Has item specify
   var subs__ = new mobl.CompSubscription();
-  var nodes376 = $("<span>");
-  root427.append(nodes376);
+  var nodes648 = $("<span>");
+  root831.append(nodes648);
   subs__.addSub((ui.group)(function(_, callback) {
-    var root428 = $("<span>");
+    var root832 = $("<span>");
     var subs__ = new mobl.CompSubscription();
     
-    var node60 = mobl.loadingSpan();
-    root428.append(node60);
-    var list7;
+    var node281 = mobl.loadingSpan();
+    root832.append(node281);
+    var list47;
     var listSubs__ = new mobl.CompSubscription();
     subs__.addSub(listSubs__);
-    var renderList7 = function() {
+    var renderList47 = function() {
       var subs__ = listSubs__;
-      list7 = items.get();
-      list7.list(function(results7) {
-        node60.empty();
-        for(var i133 = 0; i133 < results7.length; i133++) {
+      list47 = items.get();
+      list47.list(function(results47) {
+        node281.empty();
+        for(var i179 = 0; i179 < results47.length; i179++) {
           (function() {
-            var iternode7 = $("<span>");
-            node60.append(iternode7);
+            var iternode47 = $("<span>");
+            node281.append(iternode47);
             var checked;var it;
-            checked = mobl.ref(mobl.ref(mobl.ref(results7), i133), "_1");it = mobl.ref(mobl.ref(mobl.ref(results7), i133), "_2");
-            var nodes377 = $("<span>");
-            iternode7.append(nodes377);
+            checked = mobl.ref(mobl.ref(mobl.ref(results47), i179), "_1");it = mobl.ref(mobl.ref(mobl.ref(results47), i179), "_2");
+            var nodes649 = $("<span>");
+            iternode47.append(nodes649);
             subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), mobl.ref(null), mobl.ref(null), mobl.ref(false), function(_, callback) {
-              var root429 = $("<span>");
+              var root833 = $("<span>");
               var subs__ = new mobl.CompSubscription();
-              var nodes378 = $("<span>");
-              root429.append(nodes378);
+              var nodes650 = $("<span>");
+              root833.append(nodes650);
               subs__.addSub((ui.checkBox)(checked, it, mobl.ref(null), function(_, callback) {
-                var root430 = $("<span>");
+                var root834 = $("<span>");
                 var subs__ = new mobl.CompSubscription();
-                callback(root430); return subs__;
+                callback(root834); return subs__;
                 return subs__;
               }, function(node) {
-                var oldNodes = nodes378;
-                nodes378 = node.contents();
-                oldNodes.replaceWith(nodes378);
+                var oldNodes = nodes650;
+                nodes650 = node.contents();
+                oldNodes.replaceWith(nodes650);
               }));
-              callback(root429); return subs__;
+              callback(root833); return subs__;
               
               return subs__;
             }, function(node) {
-              var oldNodes = nodes377;
-              nodes377 = node.contents();
-              oldNodes.replaceWith(nodes377);
+              var oldNodes = nodes649;
+              nodes649 = node.contents();
+              oldNodes.replaceWith(nodes649);
             }));
             
+<<<<<<< HEAD
             var oldNodes = iternode7;
             iternode7 = iternode7.contents();
             oldNodes.replaceWith(iternode7);
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+            var oldNodes = iternode47;
+            iternode47 = iternode47.contents();
+            oldNodes.replaceWith(iternode47);
+>>>>>>> adcc239... Has item specify
             
             
           }());
         }
         mobl.delayedUpdateScrollers();
+<<<<<<< HEAD
 <<<<<<< HEAD
         subs__.addSub(list678.addEventListener('change', function() { listSubs__.unsubscribe(); renderList678(true); }));
         subs__.addSub(items.addEventListener('change', function() { listSubs__.unsubscribe(); renderList678(true); }));
@@ -5392,34 +6192,47 @@ ui.markableList = function(items, elements, callback) {
 =======
         subs__.addSub(list7.addEventListener('change', function() { listSubs__.unsubscribe(); renderList7(true); }));
         subs__.addSub(items.addEventListener('change', function() { listSubs__.unsubscribe(); renderList7(true); }));
+=======
+        subs__.addSub(list47.addEventListener('change', function() { listSubs__.unsubscribe(); renderList47(true); }));
+        subs__.addSub(items.addEventListener('change', function() { listSubs__.unsubscribe(); renderList47(true); }));
+>>>>>>> adcc239... Has item specify
       });
     };
-    renderList7();
+    renderList47();
     
-    callback(root428); return subs__;
+    callback(root832); return subs__;
     
     return subs__;
   }, function(node) {
-    var oldNodes = nodes376;
-    nodes376 = node.contents();
-    oldNodes.replaceWith(nodes376);
+    var oldNodes = nodes648;
+    nodes648 = node.contents();
+    oldNodes.replaceWith(nodes648);
   }));
+<<<<<<< HEAD
   callback(root427); return subs__;
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+  callback(root831); return subs__;
+>>>>>>> adcc239... Has item specify
   
   return subs__;
 };
 
 ui.selectList = function(title, coll, doneButtonLabel, callback, screenCallback) {
 <<<<<<< HEAD
+<<<<<<< HEAD
   var root9704 = $("<div>");
 =======
   var root431 = $("<div>");
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+  var root835 = $("<div>");
+>>>>>>> adcc239... Has item specify
   var subs__ = new mobl.CompSubscription();
   
   var items = mobl.ref([]);
   var result__ = coll.get();
+<<<<<<< HEAD
 <<<<<<< HEAD
   coll.get().list(function(coll5124) {
     coll5124 = coll5124.reverse();
@@ -5440,19 +6253,28 @@ ui.selectList = function(title, coll, doneButtonLabel, callback, screenCallback)
   coll.get().list(function(coll157) {
     coll157 = coll157.reverse();
     function processOne13() {
+=======
+  coll.get().list(function(coll764) {
+    coll764 = coll764.reverse();
+    function processOne26() {
+>>>>>>> adcc239... Has item specify
       var it;
-      it = coll157.pop();
+      it = coll764.pop();
       var result__ = items.get().push(new mobl.Tuple(false, it));
       
-      if(coll157.length > 0) processOne13(); else rest13();
+      if(coll764.length > 0) processOne26(); else rest26();
       
     }
-    function rest13() {
-      var nodes379 = $("<span>");
-      root431.append(nodes379);
+    function rest26() {
+      var nodes651 = $("<span>");
+      root835.append(nodes651);
       subs__.addSub((ui.header)(title, mobl.ref(false), mobl.ref(null), function(_, callback) {
+<<<<<<< HEAD
         var root432 = $("<span>");
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+        var root836 = $("<span>");
+>>>>>>> adcc239... Has item specify
         var subs__ = new mobl.CompSubscription();
         var result__ = function(event, callback) {
                          if(event && event.stopPropagation) event.stopPropagation();
@@ -5461,6 +6283,7 @@ ui.selectList = function(title, coll, doneButtonLabel, callback, screenCallback)
                          return;
                          if(callback && callback.apply) callback(); return;
                        };
+<<<<<<< HEAD
 <<<<<<< HEAD
         var tmp6476 = mobl.ref(result__);
         
@@ -5480,28 +6303,38 @@ ui.selectList = function(title, coll, doneButtonLabel, callback, screenCallback)
           oldNodes.replaceWith(nodes7236);
 =======
         var tmp383 = mobl.ref(result__);
+=======
+        var tmp613 = mobl.ref(result__);
+>>>>>>> adcc239... Has item specify
         
         var result__ = mobl._("Back", []);
-        var tmp384 = mobl.ref(result__);
+        var tmp614 = mobl.ref(result__);
         
-        var nodes380 = $("<span>");
-        root432.append(nodes380);
-        subs__.addSub((ui.backButton)(tmp384, mobl.ref(ui.backButtonStyle), mobl.ref(ui.backButtonPushedStyle), tmp383, function(_, callback) {
-          var root433 = $("<span>");
+        var nodes652 = $("<span>");
+        root836.append(nodes652);
+        subs__.addSub((ui.backButton)(tmp614, mobl.ref(ui.backButtonStyle), mobl.ref(ui.backButtonPushedStyle), tmp613, function(_, callback) {
+          var root837 = $("<span>");
           var subs__ = new mobl.CompSubscription();
-          callback(root433); return subs__;
+          callback(root837); return subs__;
           return subs__;
         }, function(node) {
+<<<<<<< HEAD
           var oldNodes = nodes380;
           nodes380 = node.contents();
           oldNodes.replaceWith(nodes380);
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+          var oldNodes = nodes652;
+          nodes652 = node.contents();
+          oldNodes.replaceWith(nodes652);
+>>>>>>> adcc239... Has item specify
         }));
         var result__ = function(event, callback) {
                          if(event && event.stopPropagation) event.stopPropagation();
                          var result__ = [];
                          var selected = result__;
                          var result__ = items.get();
+<<<<<<< HEAD
 <<<<<<< HEAD
                          items.get().list(function(coll5123) {
                            coll5123 = coll5123.reverse();
@@ -5517,38 +6350,59 @@ ui.selectList = function(title, coll, doneButtonLabel, callback, screenCallback)
                              var tmp415 = coll156.pop();
                              checked = tmp415._1;it = tmp415._2;
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+                         items.get().list(function(coll763) {
+                           coll763 = coll763.reverse();
+                           function processOne25() {
+                             var checked;var it;
+                             var tmp645 = coll763.pop();
+                             checked = tmp645._1;it = tmp645._2;
+>>>>>>> adcc239... Has item specify
                              var result__ = checked;
                              if(result__) {
                                var result__ = selected.push(it);
                                
 <<<<<<< HEAD
+<<<<<<< HEAD
                                if(coll5123.length > 0) processOne293(); else rest293();
 =======
                                if(coll156.length > 0) processOne12(); else rest12();
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+                               if(coll763.length > 0) processOne25(); else rest25();
+>>>>>>> adcc239... Has item specify
                                
                              } else {
                                {
                                  
 <<<<<<< HEAD
+<<<<<<< HEAD
                                  if(coll5123.length > 0) processOne293(); else rest293();
 =======
                                  if(coll156.length > 0) processOne12(); else rest12();
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+                                 if(coll763.length > 0) processOne25(); else rest25();
+>>>>>>> adcc239... Has item specify
                                  
                                }
                              }
                            }
 <<<<<<< HEAD
+<<<<<<< HEAD
                            function rest293() {
 =======
                            function rest12() {
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+                           function rest25() {
+>>>>>>> adcc239... Has item specify
                              var result__ = selected;
                              if(screenCallback) screenCallback(result__);
                              return;
                              if(callback && callback.apply) callback(); return;
                            }
+<<<<<<< HEAD
 <<<<<<< HEAD
                            if(coll5123.length > 0) processOne293(); else rest293();
                          });
@@ -5571,29 +6425,37 @@ ui.selectList = function(title, coll, doneButtonLabel, callback, screenCallback)
         callback(root9705); return subs__;
 =======
                            if(coll156.length > 0) processOne12(); else rest12();
+=======
+                           if(coll763.length > 0) processOne25(); else rest25();
+>>>>>>> adcc239... Has item specify
                          });
                          
                        };
-        var tmp385 = mobl.ref(result__);
+        var tmp615 = mobl.ref(result__);
         
-        var nodes381 = $("<span>");
-        root432.append(nodes381);
-        subs__.addSub((ui.button)(doneButtonLabel, mobl.ref(ui.buttonStyle), mobl.ref(ui.buttonPushedStyle), tmp385, function(_, callback) {
-          var root434 = $("<span>");
+        var nodes653 = $("<span>");
+        root836.append(nodes653);
+        subs__.addSub((ui.button)(doneButtonLabel, mobl.ref(ui.buttonStyle), mobl.ref(ui.buttonPushedStyle), tmp615, function(_, callback) {
+          var root838 = $("<span>");
           var subs__ = new mobl.CompSubscription();
-          callback(root434); return subs__;
+          callback(root838); return subs__;
           return subs__;
         }, function(node) {
-          var oldNodes = nodes381;
-          nodes381 = node.contents();
-          oldNodes.replaceWith(nodes381);
+          var oldNodes = nodes653;
+          nodes653 = node.contents();
+          oldNodes.replaceWith(nodes653);
         }));
+<<<<<<< HEAD
         callback(root432); return subs__;
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+        callback(root836); return subs__;
+>>>>>>> adcc239... Has item specify
         
         
         return subs__;
       }, function(node) {
+<<<<<<< HEAD
 <<<<<<< HEAD
         var oldNodes = nodes7235;
         nodes7235 = node.contents();
@@ -5620,31 +6482,41 @@ ui.selectList = function(title, coll, doneButtonLabel, callback, screenCallback)
         var oldNodes = nodes379;
         nodes379 = node.contents();
         oldNodes.replaceWith(nodes379);
+=======
+        var oldNodes = nodes651;
+        nodes651 = node.contents();
+        oldNodes.replaceWith(nodes651);
+>>>>>>> adcc239... Has item specify
       }));
-      var nodes382 = $("<span>");
-      root431.append(nodes382);
+      var nodes654 = $("<span>");
+      root835.append(nodes654);
       subs__.addSub((ui.markableList)(items, function(_, callback) {
-        var root435 = $("<span>");
+        var root839 = $("<span>");
         var subs__ = new mobl.CompSubscription();
-        callback(root435); return subs__;
+        callback(root839); return subs__;
         return subs__;
       }, function(node) {
-        var oldNodes = nodes382;
-        nodes382 = node.contents();
-        oldNodes.replaceWith(nodes382);
+        var oldNodes = nodes654;
+        nodes654 = node.contents();
+        oldNodes.replaceWith(nodes654);
       }));
-      callback(root431); return subs__;
+      callback(root835); return subs__;
       
       
     }
+<<<<<<< HEAD
     if(coll157.length > 0) processOne13(); else rest13();
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+    if(coll764.length > 0) processOne26(); else rest26();
+>>>>>>> adcc239... Has item specify
   });
   
   return subs__;
 };
 
 ui.searchList = function(Ent, masterItem, detailItem, resultLimit, searchTermPlaceholder, elements, callback) {
+<<<<<<< HEAD
 <<<<<<< HEAD
   var root9709 = $("<span>");
   var subs__ = new mobl.CompSubscription();
@@ -5695,53 +6567,60 @@ ui.searchList = function(Ent, masterItem, detailItem, resultLimit, searchTermPla
   callback(root9709); return subs__;
 =======
   var root436 = $("<span>");
+=======
+  var root840 = $("<span>");
+>>>>>>> adcc239... Has item specify
   var subs__ = new mobl.CompSubscription();
   
   var phrase = mobl.ref("");
-  var nodes383 = $("<span>");
-  root436.append(nodes383);
+  var nodes655 = $("<span>");
+  root840.append(nodes655);
   subs__.addSub((ui.searchBox)(phrase, searchTermPlaceholder, mobl.ref(null), mobl.ref(null), function(_, callback) {
-    var root437 = $("<span>");
+    var root841 = $("<span>");
     var subs__ = new mobl.CompSubscription();
-    callback(root437); return subs__;
+    callback(root841); return subs__;
     return subs__;
   }, function(node) {
-    var oldNodes = nodes383;
-    nodes383 = node.contents();
-    oldNodes.replaceWith(nodes383);
+    var oldNodes = nodes655;
+    nodes655 = node.contents();
+    oldNodes.replaceWith(nodes655);
   }));
   var result__ = Ent.get().searchPrefix(phrase.get()).limit(resultLimit.get());
-  var tmp386 = mobl.ref(result__);
+  var tmp616 = mobl.ref(result__);
   subs__.addSub(mobl.ref(Ent.get().searchPrefix(phrase.get()).limit(resultLimit.get())).addEventListener('change', function() {
-    tmp386.set(Ent.get().searchPrefix(phrase.get()).limit(resultLimit.get()));
+    tmp616.set(Ent.get().searchPrefix(phrase.get()).limit(resultLimit.get()));
   }));
   subs__.addSub(mobl.ref(Ent.get().searchPrefix(phrase.get())).addEventListener('change', function() {
-    tmp386.set(Ent.get().searchPrefix(phrase.get()).limit(resultLimit.get()));
+    tmp616.set(Ent.get().searchPrefix(phrase.get()).limit(resultLimit.get()));
   }));
   subs__.addSub(Ent.addEventListener('change', function() {
-    tmp386.set(Ent.get().searchPrefix(phrase.get()).limit(resultLimit.get()));
+    tmp616.set(Ent.get().searchPrefix(phrase.get()).limit(resultLimit.get()));
   }));
   subs__.addSub(phrase.addEventListener('change', function() {
-    tmp386.set(Ent.get().searchPrefix(phrase.get()).limit(resultLimit.get()));
+    tmp616.set(Ent.get().searchPrefix(phrase.get()).limit(resultLimit.get()));
   }));
   subs__.addSub(resultLimit.addEventListener('change', function() {
-    tmp386.set(Ent.get().searchPrefix(phrase.get()).limit(resultLimit.get()));
+    tmp616.set(Ent.get().searchPrefix(phrase.get()).limit(resultLimit.get()));
   }));
   
-  var nodes384 = $("<span>");
-  root436.append(nodes384);
-  subs__.addSub((ui.masterDetail)(tmp386, masterItem, detailItem, function(_, callback) {
-    var root438 = $("<span>");
+  var nodes656 = $("<span>");
+  root840.append(nodes656);
+  subs__.addSub((ui.masterDetail)(tmp616, masterItem, detailItem, function(_, callback) {
+    var root842 = $("<span>");
     var subs__ = new mobl.CompSubscription();
-    callback(root438); return subs__;
+    callback(root842); return subs__;
     return subs__;
   }, function(node) {
-    var oldNodes = nodes384;
-    nodes384 = node.contents();
-    oldNodes.replaceWith(nodes384);
+    var oldNodes = nodes656;
+    nodes656 = node.contents();
+    oldNodes.replaceWith(nodes656);
   }));
+<<<<<<< HEAD
   callback(root436); return subs__;
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+  callback(root840); return subs__;
+>>>>>>> adcc239... Has item specify
   
   
   return subs__;
@@ -5815,6 +6694,7 @@ ui.activeSectionStyle = 'ui__activeSectionStyle';
 
 ui.accordion = function(sections, activeSection, elements, callback) {
 <<<<<<< HEAD
+<<<<<<< HEAD
   var root9712 = $("<span>");
   var subs__ = new mobl.CompSubscription();
   
@@ -5856,45 +6736,52 @@ ui.accordion = function(sections, activeSection, elements, callback) {
               tmp6481.set(activeSection.get() == sectionName.get() ? ui.activeSectionHeaderStyle : ui.inActiveSectionHeaderStyle);
 =======
   var root439 = $("<span>");
+=======
+  var root843 = $("<span>");
+>>>>>>> adcc239... Has item specify
   var subs__ = new mobl.CompSubscription();
   
   var activeSection = mobl.ref(activeSection.get() ? activeSection.get() : sections.get().get(0)._1);
-  var nodes385 = $("<span>");
-  root439.append(nodes385);
+  var nodes657 = $("<span>");
+  root843.append(nodes657);
   subs__.addSub((mobl.block)(mobl.ref(ui.accordionStyle), mobl.ref(null), mobl.ref(null), mobl.ref(null), function(_, callback) {
-    var root440 = $("<span>");
+    var root844 = $("<span>");
     var subs__ = new mobl.CompSubscription();
     
-    var node61 = mobl.loadingSpan();
-    root440.append(node61);
-    var list8;
+    var node282 = mobl.loadingSpan();
+    root844.append(node282);
+    var list48;
     var listSubs__ = new mobl.CompSubscription();
     subs__.addSub(listSubs__);
-    var renderList8 = function() {
+    var renderList48 = function() {
       var subs__ = listSubs__;
-      list8 = sections.get();
-      list8.list(function(results8) {
-        node61.empty();
-        for(var i134 = 0; i134 < results8.length; i134++) {
+      list48 = sections.get();
+      list48.list(function(results48) {
+        node282.empty();
+        for(var i180 = 0; i180 < results48.length; i180++) {
           (function() {
-            var iternode8 = $("<span>");
-            node61.append(iternode8);
+            var iternode48 = $("<span>");
+            node282.append(iternode48);
             var sectionName;var sectionControl;
-            sectionName = mobl.ref(mobl.ref(mobl.ref(results8), i134), "_1");sectionControl = mobl.ref(mobl.ref(mobl.ref(results8), i134), "_2");
+            sectionName = mobl.ref(mobl.ref(mobl.ref(results48), i180), "_1");sectionControl = mobl.ref(mobl.ref(mobl.ref(results48), i180), "_2");
             var result__ = activeSection.get() == sectionName.get() ? ui.activeSectionHeaderStyle : ui.inActiveSectionHeaderStyle;
-            var tmp388 = mobl.ref(result__);
+            var tmp618 = mobl.ref(result__);
             subs__.addSub(activeSection.addEventListener('change', function() {
-              tmp388.set(activeSection.get() == sectionName.get() ? ui.activeSectionHeaderStyle : ui.inActiveSectionHeaderStyle);
+              tmp618.set(activeSection.get() == sectionName.get() ? ui.activeSectionHeaderStyle : ui.inActiveSectionHeaderStyle);
             }));
             subs__.addSub(sectionName.addEventListener('change', function() {
-              tmp388.set(activeSection.get() == sectionName.get() ? ui.activeSectionHeaderStyle : ui.inActiveSectionHeaderStyle);
+              tmp618.set(activeSection.get() == sectionName.get() ? ui.activeSectionHeaderStyle : ui.inActiveSectionHeaderStyle);
             }));
             subs__.addSub(mobl.ref(ui.activeSectionHeaderStyle).addEventListener('change', function() {
-              tmp388.set(activeSection.get() == sectionName.get() ? ui.activeSectionHeaderStyle : ui.inActiveSectionHeaderStyle);
+              tmp618.set(activeSection.get() == sectionName.get() ? ui.activeSectionHeaderStyle : ui.inActiveSectionHeaderStyle);
             }));
             subs__.addSub(mobl.ref(ui.inActiveSectionHeaderStyle).addEventListener('change', function() {
+<<<<<<< HEAD
               tmp388.set(activeSection.get() == sectionName.get() ? ui.activeSectionHeaderStyle : ui.inActiveSectionHeaderStyle);
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+              tmp618.set(activeSection.get() == sectionName.get() ? ui.activeSectionHeaderStyle : ui.inActiveSectionHeaderStyle);
+>>>>>>> adcc239... Has item specify
             }));
             
             var result__ = function(event, callback) {
@@ -5903,6 +6790,7 @@ ui.accordion = function(sections, activeSection, elements, callback) {
                              activeSection.set(result__);
                              if(callback && callback.apply) callback(); return;
                            };
+<<<<<<< HEAD
 <<<<<<< HEAD
             var tmp6480 = mobl.ref(result__);
             
@@ -5984,90 +6872,100 @@ ui.accordion = function(sections, activeSection, elements, callback) {
             oldNodes.replaceWith(iternode679);
 =======
             var tmp387 = mobl.ref(result__);
+=======
+            var tmp617 = mobl.ref(result__);
+>>>>>>> adcc239... Has item specify
             
-            var nodes386 = $("<span>");
-            iternode8.append(nodes386);
-            subs__.addSub((mobl.span)(tmp388, mobl.ref(null), tmp387, mobl.ref(null), function(_, callback) {
-              var root441 = $("<span>");
+            var nodes658 = $("<span>");
+            iternode48.append(nodes658);
+            subs__.addSub((mobl.span)(tmp618, mobl.ref(null), tmp617, mobl.ref(null), function(_, callback) {
+              var root845 = $("<span>");
               var subs__ = new mobl.CompSubscription();
-              var nodes387 = $("<span>");
-              root441.append(nodes387);
+              var nodes659 = $("<span>");
+              root845.append(nodes659);
               subs__.addSub((mobl.label)(sectionName, mobl.ref(null), mobl.ref(null), function(_, callback) {
-                var root442 = $("<span>");
+                var root846 = $("<span>");
                 var subs__ = new mobl.CompSubscription();
-                callback(root442); return subs__;
+                callback(root846); return subs__;
                 return subs__;
               }, function(node) {
-                var oldNodes = nodes387;
-                nodes387 = node.contents();
-                oldNodes.replaceWith(nodes387);
+                var oldNodes = nodes659;
+                nodes659 = node.contents();
+                oldNodes.replaceWith(nodes659);
               }));
-              callback(root441); return subs__;
+              callback(root845); return subs__;
               
               return subs__;
             }, function(node) {
-              var oldNodes = nodes386;
-              nodes386 = node.contents();
-              oldNodes.replaceWith(nodes386);
+              var oldNodes = nodes658;
+              nodes658 = node.contents();
+              oldNodes.replaceWith(nodes658);
             }));
             var result__ = activeSection.get() == sectionName.get() ? ui.activeSectionStyle : ui.inActiveSectionStyle;
-            var tmp389 = mobl.ref(result__);
+            var tmp619 = mobl.ref(result__);
             subs__.addSub(activeSection.addEventListener('change', function() {
-              tmp389.set(activeSection.get() == sectionName.get() ? ui.activeSectionStyle : ui.inActiveSectionStyle);
+              tmp619.set(activeSection.get() == sectionName.get() ? ui.activeSectionStyle : ui.inActiveSectionStyle);
             }));
             subs__.addSub(sectionName.addEventListener('change', function() {
-              tmp389.set(activeSection.get() == sectionName.get() ? ui.activeSectionStyle : ui.inActiveSectionStyle);
+              tmp619.set(activeSection.get() == sectionName.get() ? ui.activeSectionStyle : ui.inActiveSectionStyle);
             }));
             subs__.addSub(mobl.ref(ui.activeSectionStyle).addEventListener('change', function() {
-              tmp389.set(activeSection.get() == sectionName.get() ? ui.activeSectionStyle : ui.inActiveSectionStyle);
+              tmp619.set(activeSection.get() == sectionName.get() ? ui.activeSectionStyle : ui.inActiveSectionStyle);
             }));
             subs__.addSub(mobl.ref(ui.inActiveSectionStyle).addEventListener('change', function() {
-              tmp389.set(activeSection.get() == sectionName.get() ? ui.activeSectionStyle : ui.inActiveSectionStyle);
+              tmp619.set(activeSection.get() == sectionName.get() ? ui.activeSectionStyle : ui.inActiveSectionStyle);
             }));
             
-            var nodes388 = $("<span>");
-            iternode8.append(nodes388);
-            subs__.addSub((mobl.block)(tmp389, mobl.ref(null), mobl.ref(null), mobl.ref(null), function(_, callback) {
-              var root443 = $("<span>");
+            var nodes660 = $("<span>");
+            iternode48.append(nodes660);
+            subs__.addSub((mobl.block)(tmp619, mobl.ref(null), mobl.ref(null), mobl.ref(null), function(_, callback) {
+              var root847 = $("<span>");
               var subs__ = new mobl.CompSubscription();
-              var nodes389 = $("<span>");
-              root443.append(nodes389);
+              var nodes661 = $("<span>");
+              root847.append(nodes661);
               subs__.addSub(sectionControl.addEventListener('change', function() {
-                renderControl16();
+                renderControl109();
               }));
               
-              function renderControl16() {
+              function renderControl109() {
                 subs__.addSub((sectionControl.get())(function(elements, callback) {
-                  var root444 = $("<span>");
+                  var root848 = $("<span>");
                   var subs__ = new mobl.CompSubscription();
-                  callback(root444); return subs__;
+                  callback(root848); return subs__;
                   return subs__;
                 }, function(node) {
-                  var oldNodes = nodes389;
-                  nodes389 = node.contents();
-                  oldNodes.replaceWith(nodes389);
+                  var oldNodes = nodes661;
+                  nodes661 = node.contents();
+                  oldNodes.replaceWith(nodes661);
                 }));
               }
-              renderControl16();
-              callback(root443); return subs__;
+              renderControl109();
+              callback(root847); return subs__;
               
               return subs__;
             }, function(node) {
-              var oldNodes = nodes388;
-              nodes388 = node.contents();
-              oldNodes.replaceWith(nodes388);
+              var oldNodes = nodes660;
+              nodes660 = node.contents();
+              oldNodes.replaceWith(nodes660);
             }));
             
+<<<<<<< HEAD
             var oldNodes = iternode8;
             iternode8 = iternode8.contents();
             oldNodes.replaceWith(iternode8);
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+            var oldNodes = iternode48;
+            iternode48 = iternode48.contents();
+            oldNodes.replaceWith(iternode48);
+>>>>>>> adcc239... Has item specify
             
             
             
           }());
         }
         mobl.delayedUpdateScrollers();
+<<<<<<< HEAD
 <<<<<<< HEAD
         subs__.addSub(list679.addEventListener('change', function() { listSubs__.unsubscribe(); renderList679(true); }));
         subs__.addSub(sections.addEventListener('change', function() { listSubs__.unsubscribe(); renderList679(true); }));
@@ -6087,20 +6985,28 @@ ui.accordion = function(sections, activeSection, elements, callback) {
 =======
         subs__.addSub(list8.addEventListener('change', function() { listSubs__.unsubscribe(); renderList8(true); }));
         subs__.addSub(sections.addEventListener('change', function() { listSubs__.unsubscribe(); renderList8(true); }));
+=======
+        subs__.addSub(list48.addEventListener('change', function() { listSubs__.unsubscribe(); renderList48(true); }));
+        subs__.addSub(sections.addEventListener('change', function() { listSubs__.unsubscribe(); renderList48(true); }));
+>>>>>>> adcc239... Has item specify
       });
     };
-    renderList8();
+    renderList48();
     
-    callback(root440); return subs__;
+    callback(root844); return subs__;
     
     return subs__;
   }, function(node) {
-    var oldNodes = nodes385;
-    nodes385 = node.contents();
-    oldNodes.replaceWith(nodes385);
+    var oldNodes = nodes657;
+    nodes657 = node.contents();
+    oldNodes.replaceWith(nodes657);
   }));
+<<<<<<< HEAD
   callback(root439); return subs__;
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+  callback(root843); return subs__;
+>>>>>>> adcc239... Has item specify
   
   return subs__;
 };
@@ -6119,6 +7025,7 @@ ui.tdStyle = 'ui__tdStyle';
 ui.tdStyle = 'ui__tdStyle';
 
 ui.table = function(style, elements, callback) {
+<<<<<<< HEAD
 <<<<<<< HEAD
   var root9718 = $("<span>");
   var subs__ = new mobl.CompSubscription();
@@ -6158,48 +7065,58 @@ ui.table = function(style, elements, callback) {
   callback(root9718); return subs__;
 =======
   var root445 = $("<span>");
+=======
+  var root849 = $("<span>");
+>>>>>>> adcc239... Has item specify
   var subs__ = new mobl.CompSubscription();
   
-  var node62 = $("<table>");
+  var node283 = $("<table>");
   
-  var ref57 = style;
-  if(ref57.get() !== null) {
-    node62.attr('class', ref57.get());
-    subs__.addSub(ref57.addEventListener('change', function(_, ref, val) {
-      node62.attr('class', val);
+  var ref281 = style;
+  if(ref281.get() !== null) {
+    node283.attr('class', ref281.get());
+    subs__.addSub(ref281.addEventListener('change', function(_, ref, val) {
+      node283.attr('class', val);
     }));
     
   }
-  subs__.addSub(ref57.rebind());
+  subs__.addSub(ref281.rebind());
   
-  var nodes390 = $("<span>");
-  node62.append(nodes390);
+  var nodes662 = $("<span>");
+  node283.append(nodes662);
   subs__.addSub(mobl.ref(elements).addEventListener('change', function() {
-    renderControl17();
+    renderControl110();
   }));
   
-  function renderControl17() {
+  function renderControl110() {
     subs__.addSub((elements)(function(elements, callback) {
-      var root446 = $("<span>");
+      var root850 = $("<span>");
       var subs__ = new mobl.CompSubscription();
-      callback(root446); return subs__;
+      callback(root850); return subs__;
       return subs__;
     }, function(node) {
-      var oldNodes = nodes390;
-      nodes390 = node.contents();
-      oldNodes.replaceWith(nodes390);
+      var oldNodes = nodes662;
+      nodes662 = node.contents();
+      oldNodes.replaceWith(nodes662);
     }));
   }
+<<<<<<< HEAD
   renderControl17();
   root445.append(node62);
   callback(root445); return subs__;
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+  renderControl110();
+  root849.append(node283);
+  callback(root849); return subs__;
+>>>>>>> adcc239... Has item specify
   
   
   return subs__;
 };
 
 ui.row = function(style, elements, callback) {
+<<<<<<< HEAD
 <<<<<<< HEAD
   var root9720 = $("<span>");
   var subs__ = new mobl.CompSubscription();
@@ -6239,48 +7156,58 @@ ui.row = function(style, elements, callback) {
   callback(root9720); return subs__;
 =======
   var root447 = $("<span>");
+=======
+  var root851 = $("<span>");
+>>>>>>> adcc239... Has item specify
   var subs__ = new mobl.CompSubscription();
   
-  var node63 = $("<tr>");
+  var node284 = $("<tr>");
   
-  var ref58 = style;
-  if(ref58.get() !== null) {
-    node63.attr('class', ref58.get());
-    subs__.addSub(ref58.addEventListener('change', function(_, ref, val) {
-      node63.attr('class', val);
+  var ref282 = style;
+  if(ref282.get() !== null) {
+    node284.attr('class', ref282.get());
+    subs__.addSub(ref282.addEventListener('change', function(_, ref, val) {
+      node284.attr('class', val);
     }));
     
   }
-  subs__.addSub(ref58.rebind());
+  subs__.addSub(ref282.rebind());
   
-  var nodes391 = $("<span>");
-  node63.append(nodes391);
+  var nodes663 = $("<span>");
+  node284.append(nodes663);
   subs__.addSub(mobl.ref(elements).addEventListener('change', function() {
-    renderControl18();
+    renderControl111();
   }));
   
-  function renderControl18() {
+  function renderControl111() {
     subs__.addSub((elements)(function(elements, callback) {
-      var root448 = $("<span>");
+      var root852 = $("<span>");
       var subs__ = new mobl.CompSubscription();
-      callback(root448); return subs__;
+      callback(root852); return subs__;
       return subs__;
     }, function(node) {
-      var oldNodes = nodes391;
-      nodes391 = node.contents();
-      oldNodes.replaceWith(nodes391);
+      var oldNodes = nodes663;
+      nodes663 = node.contents();
+      oldNodes.replaceWith(nodes663);
     }));
   }
+<<<<<<< HEAD
   renderControl18();
   root447.append(node63);
   callback(root447); return subs__;
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+  renderControl111();
+  root851.append(node284);
+  callback(root851); return subs__;
+>>>>>>> adcc239... Has item specify
   
   
   return subs__;
 };
 
 ui.cell = function(width, style, elements, callback) {
+<<<<<<< HEAD
 <<<<<<< HEAD
   var root9722 = $("<span>");
   var subs__ = new mobl.CompSubscription();
@@ -6330,58 +7257,68 @@ ui.cell = function(width, style, elements, callback) {
   callback(root9722); return subs__;
 =======
   var root449 = $("<span>");
+=======
+  var root853 = $("<span>");
+>>>>>>> adcc239... Has item specify
   var subs__ = new mobl.CompSubscription();
   
-  var node64 = $("<td>");
+  var node285 = $("<td>");
   
-  var ref59 = width;
-  if(ref59.get() !== null) {
-    node64.attr('width', ref59.get());
-    subs__.addSub(ref59.addEventListener('change', function(_, ref, val) {
-      node64.attr('width', val);
+  var ref283 = width;
+  if(ref283.get() !== null) {
+    node285.attr('width', ref283.get());
+    subs__.addSub(ref283.addEventListener('change', function(_, ref, val) {
+      node285.attr('width', val);
     }));
     
   }
-  subs__.addSub(ref59.rebind());
+  subs__.addSub(ref283.rebind());
   
-  var ref60 = style;
-  if(ref60.get() !== null) {
-    node64.attr('class', ref60.get());
-    subs__.addSub(ref60.addEventListener('change', function(_, ref, val) {
-      node64.attr('class', val);
+  var ref284 = style;
+  if(ref284.get() !== null) {
+    node285.attr('class', ref284.get());
+    subs__.addSub(ref284.addEventListener('change', function(_, ref, val) {
+      node285.attr('class', val);
     }));
     
   }
-  subs__.addSub(ref60.rebind());
+  subs__.addSub(ref284.rebind());
   
-  var nodes392 = $("<span>");
-  node64.append(nodes392);
+  var nodes664 = $("<span>");
+  node285.append(nodes664);
   subs__.addSub(mobl.ref(elements).addEventListener('change', function() {
-    renderControl19();
+    renderControl112();
   }));
   
-  function renderControl19() {
+  function renderControl112() {
     subs__.addSub((elements)(function(elements, callback) {
-      var root450 = $("<span>");
+      var root854 = $("<span>");
       var subs__ = new mobl.CompSubscription();
-      callback(root450); return subs__;
+      callback(root854); return subs__;
       return subs__;
     }, function(node) {
-      var oldNodes = nodes392;
-      nodes392 = node.contents();
-      oldNodes.replaceWith(nodes392);
+      var oldNodes = nodes664;
+      nodes664 = node.contents();
+      oldNodes.replaceWith(nodes664);
     }));
   }
+<<<<<<< HEAD
   renderControl19();
   root449.append(node64);
   callback(root449); return subs__;
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+  renderControl112();
+  root853.append(node285);
+  callback(root853); return subs__;
+>>>>>>> adcc239... Has item specify
   
   
   return subs__;
 };
 
 ui.col = function(width, style, elements, callback) {
+<<<<<<< HEAD
 <<<<<<< HEAD
   var root9724 = $("<span>");
   var subs__ = new mobl.CompSubscription();
@@ -6431,58 +7368,68 @@ ui.col = function(width, style, elements, callback) {
   callback(root9724); return subs__;
 =======
   var root451 = $("<span>");
+=======
+  var root855 = $("<span>");
+>>>>>>> adcc239... Has item specify
   var subs__ = new mobl.CompSubscription();
   
-  var node65 = $("<td>");
+  var node286 = $("<td>");
   
-  var ref61 = width;
-  if(ref61.get() !== null) {
-    node65.attr('width', ref61.get());
-    subs__.addSub(ref61.addEventListener('change', function(_, ref, val) {
-      node65.attr('width', val);
+  var ref285 = width;
+  if(ref285.get() !== null) {
+    node286.attr('width', ref285.get());
+    subs__.addSub(ref285.addEventListener('change', function(_, ref, val) {
+      node286.attr('width', val);
     }));
     
   }
-  subs__.addSub(ref61.rebind());
+  subs__.addSub(ref285.rebind());
   
-  var ref62 = style;
-  if(ref62.get() !== null) {
-    node65.attr('class', ref62.get());
-    subs__.addSub(ref62.addEventListener('change', function(_, ref, val) {
-      node65.attr('class', val);
+  var ref286 = style;
+  if(ref286.get() !== null) {
+    node286.attr('class', ref286.get());
+    subs__.addSub(ref286.addEventListener('change', function(_, ref, val) {
+      node286.attr('class', val);
     }));
     
   }
-  subs__.addSub(ref62.rebind());
+  subs__.addSub(ref286.rebind());
   
-  var nodes393 = $("<span>");
-  node65.append(nodes393);
+  var nodes665 = $("<span>");
+  node286.append(nodes665);
   subs__.addSub(mobl.ref(elements).addEventListener('change', function() {
-    renderControl20();
+    renderControl113();
   }));
   
-  function renderControl20() {
+  function renderControl113() {
     subs__.addSub((elements)(function(elements, callback) {
-      var root452 = $("<span>");
+      var root856 = $("<span>");
       var subs__ = new mobl.CompSubscription();
-      callback(root452); return subs__;
+      callback(root856); return subs__;
       return subs__;
     }, function(node) {
-      var oldNodes = nodes393;
-      nodes393 = node.contents();
-      oldNodes.replaceWith(nodes393);
+      var oldNodes = nodes665;
+      nodes665 = node.contents();
+      oldNodes.replaceWith(nodes665);
     }));
   }
+<<<<<<< HEAD
   renderControl20();
   root451.append(node65);
   callback(root451); return subs__;
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+  renderControl113();
+  root855.append(node286);
+  callback(root855); return subs__;
+>>>>>>> adcc239... Has item specify
   
   
   return subs__;
 };
 
 ui.headerCol = function(width, style, elements, callback) {
+<<<<<<< HEAD
 <<<<<<< HEAD
   var root9726 = $("<span>");
   var subs__ = new mobl.CompSubscription();
@@ -6536,56 +7483,66 @@ ui.headerCol = function(width, style, elements, callback) {
   callback(root9726); return subs__;
 =======
   var root453 = $("<span>");
+=======
+  var root857 = $("<span>");
+>>>>>>> adcc239... Has item specify
   var subs__ = new mobl.CompSubscription();
   
-  var node66 = $("<td>");
+  var node287 = $("<td>");
   
-  var ref63 = width;
-  if(ref63.get() !== null) {
-    node66.attr('width', ref63.get());
-    subs__.addSub(ref63.addEventListener('change', function(_, ref, val) {
-      node66.attr('width', val);
+  var ref287 = width;
+  if(ref287.get() !== null) {
+    node287.attr('width', ref287.get());
+    subs__.addSub(ref287.addEventListener('change', function(_, ref, val) {
+      node287.attr('width', val);
     }));
     
   }
-  subs__.addSub(ref63.rebind());
+  subs__.addSub(ref287.rebind());
   
-  var ref64 = style;
-  if(ref64.get() !== null) {
-    node66.attr('class', ref64.get());
-    subs__.addSub(ref64.addEventListener('change', function(_, ref, val) {
-      node66.attr('class', val);
+  var ref288 = style;
+  if(ref288.get() !== null) {
+    node287.attr('class', ref288.get());
+    subs__.addSub(ref288.addEventListener('change', function(_, ref, val) {
+      node287.attr('class', val);
     }));
     
   }
-  subs__.addSub(ref64.rebind());
+  subs__.addSub(ref288.rebind());
   
   
-  var node67 = $("<strong>");
+  var node288 = $("<strong>");
   
-  var nodes394 = $("<span>");
-  node67.append(nodes394);
+  var nodes666 = $("<span>");
+  node288.append(nodes666);
   subs__.addSub(mobl.ref(elements).addEventListener('change', function() {
-    renderControl21();
+    renderControl114();
   }));
   
-  function renderControl21() {
+  function renderControl114() {
     subs__.addSub((elements)(function(elements, callback) {
-      var root454 = $("<span>");
+      var root858 = $("<span>");
       var subs__ = new mobl.CompSubscription();
-      callback(root454); return subs__;
+      callback(root858); return subs__;
       return subs__;
     }, function(node) {
-      var oldNodes = nodes394;
-      nodes394 = node.contents();
-      oldNodes.replaceWith(nodes394);
+      var oldNodes = nodes666;
+      nodes666 = node.contents();
+      oldNodes.replaceWith(nodes666);
     }));
   }
+<<<<<<< HEAD
   renderControl21();
   node66.append(node67);
   root453.append(node66);
   callback(root453); return subs__;
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+  renderControl114();
+  node287.append(node288);
+  root857.append(node287);
+  callback(root857); return subs__;
+>>>>>>> adcc239... Has item specify
   
   
   
@@ -6619,6 +7576,7 @@ __ns.setupScrollers = function() {
   var counter = result__;
   var result__ = items;
 <<<<<<< HEAD
+<<<<<<< HEAD
   items.list(function(coll5125) {
     coll5125 = coll5125.reverse();
     function processOne295() {
@@ -6631,6 +7589,13 @@ __ns.setupScrollers = function() {
       var item;
       item = coll158.pop();
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+  items.list(function(coll765) {
+    coll765 = coll765.reverse();
+    function processOne27() {
+      var item;
+      item = coll765.pop();
+>>>>>>> adcc239... Has item specify
       var result__ = item == it;
       if(result__) {
         var result__ = counter;
@@ -6640,10 +7605,14 @@ __ns.setupScrollers = function() {
         counter = result__;
         
 <<<<<<< HEAD
+<<<<<<< HEAD
         if(coll5125.length > 0) processOne295(); else rest295();
 =======
         if(coll158.length > 0) processOne14(); else rest14();
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+        if(coll765.length > 0) processOne27(); else rest27();
+>>>>>>> adcc239... Has item specify
         
       } else {
         {
@@ -6651,29 +7620,76 @@ __ns.setupScrollers = function() {
           counter = result__;
           
 <<<<<<< HEAD
+<<<<<<< HEAD
           if(coll5125.length > 0) processOne295(); else rest295();
 =======
           if(coll158.length > 0) processOne14(); else rest14();
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+          if(coll765.length > 0) processOne27(); else rest27();
+>>>>>>> adcc239... Has item specify
           
         }
       }
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
     function rest295() {
 =======
     function rest14() {
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+    function rest27() {
+>>>>>>> adcc239... Has item specify
       var result__ = -1;
       if(callback && callback.apply) callback(result__);
       return;
       if(callback && callback.apply) callback(); return;
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
     if(coll5125.length > 0) processOne295(); else rest295();
 =======
     if(coll158.length > 0) processOne14(); else rest14();
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+    if(coll765.length > 0) processOne27(); else rest27();
+  });
+  
+};
+
+ui.hasItem = function(it, items, callback) {
+  var __this = this;
+  var result__ = items;
+  items.list(function(coll766) {
+    coll766 = coll766.reverse();
+    function processOne28() {
+      var item;
+      item = coll766.pop();
+      var result__ = item == it;
+      if(result__) {
+        var result__ = true;
+        if(callback && callback.apply) callback(result__);
+        return;
+        
+        if(coll766.length > 0) processOne28(); else rest28();
+        
+      } else {
+        {
+          
+          if(coll766.length > 0) processOne28(); else rest28();
+          
+        }
+      }
+    }
+    function rest28() {
+      var result__ = false;
+      if(callback && callback.apply) callback(result__);
+      return;
+      if(callback && callback.apply) callback(); return;
+    }
+    if(coll766.length > 0) processOne28(); else rest28();
+>>>>>>> adcc239... Has item specify
   });
   
 };
@@ -6686,6 +7702,7 @@ ui.hideCurrentQ = function() {
 
 
 ui.mMasterDetail = function(items, masterItem, detail, elements, callback) {
+<<<<<<< HEAD
 <<<<<<< HEAD
   var root9728 = $("<span>");
   var subs__ = new mobl.CompSubscription();
@@ -6760,82 +7777,92 @@ ui.mMasterDetail = function(items, masterItem, detail, elements, callback) {
                           tmp6483.set(result__);
 =======
   var root455 = $("<span>");
+=======
+  var root859 = $("<span>");
+>>>>>>> adcc239... Has item specify
   var subs__ = new mobl.CompSubscription();
   items.get().one(function(result__) {
-    var tmp417 = result__;
+    var tmp647 = result__;
     var current = mobl.ref(result__);
     
-    var node68 = $("<div>");
-    node68.attr('width', "100%");
+    var node289 = $("<div>");
+    node289.attr('width', "100%");
     
     
-    var node69 = $("<div>");
-    node69.attr('style', "float:left; width:33%; position:relative; border-right: solid 1px #cccccc;");
+    var node290 = $("<div>");
+    node290.attr('style', "float:left; width:33%; position:relative; border-right: solid 1px #cccccc;");
     
-    var nodes396 = $("<span>");
-    node69.append(nodes396);
+    var nodes668 = $("<span>");
+    node290.append(nodes668);
     subs__.addSub((ui.group)(function(_, callback) {
-      var root457 = $("<span>");
+      var root861 = $("<span>");
       var subs__ = new mobl.CompSubscription();
       
-      var node74 = mobl.loadingSpan();
-      root457.append(node74);
-      var list9;
+      var node295 = mobl.loadingSpan();
+      root861.append(node295);
+      var list49;
       var listSubs__ = new mobl.CompSubscription();
       subs__.addSub(listSubs__);
-      var renderList9 = function() {
+      var renderList49 = function() {
         var subs__ = listSubs__;
-        list9 = items.get();
-        list9.list(function(results9) {
-          node74.empty();
-          for(var i135 = 0; i135 < results9.length; i135++) {
+        list49 = items.get();
+        list49.list(function(results49) {
+          node295.empty();
+          for(var i181 = 0; i181 < results49.length; i181++) {
             (function() {
-              var iternode9 = $("<span>");
-              node74.append(iternode9);
+              var iternode49 = $("<span>");
+              node295.append(iternode49);
               var it;
-              it = mobl.ref(mobl.ref(results9), i135);
+              it = mobl.ref(mobl.ref(results49), i181);
               var result__ = it.get() == current.get();
-              var tmp393 = mobl.ref(result__);
+              var tmp623 = mobl.ref(result__);
               subs__.addSub(it.addEventListener('change', function() {
-                tmp393.set(it.get() == current.get());
+                tmp623.set(it.get() == current.get());
               }));
               subs__.addSub(current.addEventListener('change', function() {
-                tmp393.set(it.get() == current.get());
+                tmp623.set(it.get() == current.get());
               }));
               
               
-              var node75 = $("<span>");
-              iternode9.append(node75);
-              var condSubs19 = new mobl.CompSubscription();
-              subs__.addSub(condSubs19);
-              var oldValue19;
-              var renderCond19 = function() {
-                var value115 = tmp393.get();
-                if(oldValue19 === value115) return;
-                oldValue19 = value115;
-                var subs__ = condSubs19;
+              var node296 = $("<span>");
+              iternode49.append(node296);
+              var condSubs71 = new mobl.CompSubscription();
+              subs__.addSub(condSubs71);
+              var oldValue71;
+              var renderCond71 = function() {
+                var value563 = tmp623.get();
+                if(oldValue71 === value563) return;
+                oldValue71 = value563;
+                var subs__ = condSubs71;
                 subs__.unsubscribe();
-                node75.empty();
-                if(value115) {
-                  var nodes397 = $("<span>");
-                  node75.append(nodes397);
+                node296.empty();
+                if(value563) {
+                  var nodes669 = $("<span>");
+                  node296.append(nodes669);
                   subs__.addSub((ui.item)(mobl.ref(ui.selectedItemStyle), mobl.ref(ui.itemPushedStyle), mobl.ref(null), mobl.ref(null), mobl.ref(false), function(_, callback) {
-                    var root458 = $("<span>");
+                    var root862 = $("<span>");
                     var subs__ = new mobl.CompSubscription();
                     ui.indexOf(it.get(), items.get(), function(result__) {
-                      var tmp429 = result__;
-                      var tmp390 = mobl.ref(result__);
+                      var tmp656 = result__;
+                      var tmp620 = mobl.ref(result__);
                       subs__.addSub(it.addEventListener('change', function() {
                         ui.indexOf(it.get(), items.get(), function(result__) {
+<<<<<<< HEAD
                           var tmp427 = result__;
                           var result__ = tmp427;
                           tmp390.set(result__);
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+                          var tmp654 = result__;
+                          var result__ = tmp654;
+                          tmp620.set(result__);
+>>>>>>> adcc239... Has item specify
                           
                         });
                       }));
                       subs__.addSub(items.addEventListener('change', function() {
                         ui.indexOf(it.get(), items.get(), function(result__) {
+<<<<<<< HEAD
 <<<<<<< HEAD
                           var tmp6512 = result__;
                           var result__ = tmp6512;
@@ -6845,10 +7872,16 @@ ui.mMasterDetail = function(items, masterItem, detail, elements, callback) {
                           var result__ = tmp428;
                           tmp390.set(result__);
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+                          var tmp655 = result__;
+                          var result__ = tmp655;
+                          tmp620.set(result__);
+>>>>>>> adcc239... Has item specify
                           
                         });
                       }));
                       
+<<<<<<< HEAD
 <<<<<<< HEAD
                       var nodes7254 = $("<span>");
                       root9731.append(nodes7254);
@@ -6873,29 +7906,39 @@ ui.mMasterDetail = function(items, masterItem, detail, elements, callback) {
 =======
                       var nodes398 = $("<span>");
                       root458.append(nodes398);
+=======
+                      var nodes670 = $("<span>");
+                      root862.append(nodes670);
+>>>>>>> adcc239... Has item specify
                       subs__.addSub(masterItem.addEventListener('change', function() {
-                        renderControl23();
+                        renderControl116();
                       }));
                       
-                      function renderControl23() {
-                        subs__.addSub((masterItem.get())(it, tmp390, function(elements, callback) {
-                          var root459 = $("<span>");
+                      function renderControl116() {
+                        subs__.addSub((masterItem.get())(it, tmp620, function(elements, callback) {
+                          var root863 = $("<span>");
                           var subs__ = new mobl.CompSubscription();
-                          callback(root459); return subs__;
+                          callback(root863); return subs__;
                           return subs__;
                         }, function(node) {
-                          var oldNodes = nodes398;
-                          nodes398 = node.contents();
-                          oldNodes.replaceWith(nodes398);
+                          var oldNodes = nodes670;
+                          nodes670 = node.contents();
+                          oldNodes.replaceWith(nodes670);
                         }));
                       }
+<<<<<<< HEAD
                       renderControl23();
                       callback(root458); return subs__;
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+                      renderControl116();
+                      callback(root862); return subs__;
+>>>>>>> adcc239... Has item specify
                       
                     });
                     return subs__;
                   }, function(node) {
+<<<<<<< HEAD
 <<<<<<< HEAD
                     var oldNodes = nodes7253;
                     nodes7253 = node.contents();
@@ -6905,6 +7948,11 @@ ui.mMasterDetail = function(items, masterItem, detail, elements, callback) {
                     nodes397 = node.contents();
                     oldNodes.replaceWith(nodes397);
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+                    var oldNodes = nodes669;
+                    nodes669 = node.contents();
+                    oldNodes.replaceWith(nodes669);
+>>>>>>> adcc239... Has item specify
                   }));
                   
                   
@@ -6918,6 +7966,7 @@ ui.mMasterDetail = function(items, masterItem, detail, elements, callback) {
                                    var result__ = ui.scrollUp();
                                    if(callback && callback.apply) callback(); return;
                                  };
+<<<<<<< HEAD
 <<<<<<< HEAD
                   var tmp6485 = mobl.ref(result__);
                   
@@ -6936,26 +7985,36 @@ ui.mMasterDetail = function(items, masterItem, detail, elements, callback) {
                           tmp6484.set(result__);
 =======
                   var tmp392 = mobl.ref(result__);
+=======
+                  var tmp622 = mobl.ref(result__);
+>>>>>>> adcc239... Has item specify
                   
-                  var nodes399 = $("<span>");
-                  node75.append(nodes399);
-                  subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp392, mobl.ref(null), mobl.ref(true), function(_, callback) {
-                    var root460 = $("<span>");
+                  var nodes671 = $("<span>");
+                  node296.append(nodes671);
+                  subs__.addSub((ui.item)(mobl.ref(ui.itemStyle), mobl.ref(ui.itemPushedStyle), tmp622, mobl.ref(null), mobl.ref(true), function(_, callback) {
+                    var root864 = $("<span>");
                     var subs__ = new mobl.CompSubscription();
                     ui.indexOf(it.get(), items.get(), function(result__) {
-                      var tmp432 = result__;
-                      var tmp391 = mobl.ref(result__);
+                      var tmp659 = result__;
+                      var tmp621 = mobl.ref(result__);
                       subs__.addSub(it.addEventListener('change', function() {
                         ui.indexOf(it.get(), items.get(), function(result__) {
+<<<<<<< HEAD
                           var tmp430 = result__;
                           var result__ = tmp430;
                           tmp391.set(result__);
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+                          var tmp657 = result__;
+                          var result__ = tmp657;
+                          tmp621.set(result__);
+>>>>>>> adcc239... Has item specify
                           
                         });
                       }));
                       subs__.addSub(items.addEventListener('change', function() {
                         ui.indexOf(it.get(), items.get(), function(result__) {
+<<<<<<< HEAD
 <<<<<<< HEAD
                           var tmp6515 = result__;
                           var result__ = tmp6515;
@@ -6965,10 +8024,16 @@ ui.mMasterDetail = function(items, masterItem, detail, elements, callback) {
                           var result__ = tmp431;
                           tmp391.set(result__);
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+                          var tmp658 = result__;
+                          var result__ = tmp658;
+                          tmp621.set(result__);
+>>>>>>> adcc239... Has item specify
                           
                         });
                       }));
                       
+<<<<<<< HEAD
 <<<<<<< HEAD
                       var nodes7256 = $("<span>");
                       root9733.append(nodes7256);
@@ -6993,29 +8058,39 @@ ui.mMasterDetail = function(items, masterItem, detail, elements, callback) {
 =======
                       var nodes400 = $("<span>");
                       root460.append(nodes400);
+=======
+                      var nodes672 = $("<span>");
+                      root864.append(nodes672);
+>>>>>>> adcc239... Has item specify
                       subs__.addSub(masterItem.addEventListener('change', function() {
-                        renderControl24();
+                        renderControl117();
                       }));
                       
-                      function renderControl24() {
-                        subs__.addSub((masterItem.get())(it, tmp391, function(elements, callback) {
-                          var root461 = $("<span>");
+                      function renderControl117() {
+                        subs__.addSub((masterItem.get())(it, tmp621, function(elements, callback) {
+                          var root865 = $("<span>");
                           var subs__ = new mobl.CompSubscription();
-                          callback(root461); return subs__;
+                          callback(root865); return subs__;
                           return subs__;
                         }, function(node) {
-                          var oldNodes = nodes400;
-                          nodes400 = node.contents();
-                          oldNodes.replaceWith(nodes400);
+                          var oldNodes = nodes672;
+                          nodes672 = node.contents();
+                          oldNodes.replaceWith(nodes672);
                         }));
                       }
+<<<<<<< HEAD
                       renderControl24();
                       callback(root460); return subs__;
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+                      renderControl117();
+                      callback(root864); return subs__;
+>>>>>>> adcc239... Has item specify
                       
                     });
                     return subs__;
                   }, function(node) {
+<<<<<<< HEAD
 <<<<<<< HEAD
                     var oldNodes = nodes7255;
                     nodes7255 = node.contents();
@@ -7025,11 +8100,17 @@ ui.mMasterDetail = function(items, masterItem, detail, elements, callback) {
                     nodes399 = node.contents();
                     oldNodes.replaceWith(nodes399);
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+                    var oldNodes = nodes671;
+                    nodes671 = node.contents();
+                    oldNodes.replaceWith(nodes671);
+>>>>>>> adcc239... Has item specify
                   }));
                   
                   
                 }
               };
+<<<<<<< HEAD
 <<<<<<< HEAD
               renderCond933();
               subs__.addSub(tmp6486.addEventListener('change', function() {
@@ -7051,11 +8132,23 @@ ui.mMasterDetail = function(items, masterItem, detail, elements, callback) {
               iternode9 = iternode9.contents();
               oldNodes.replaceWith(iternode9);
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+              renderCond71();
+              subs__.addSub(tmp623.addEventListener('change', function() {
+                renderCond71();
+              }));
+              
+              
+              var oldNodes = iternode49;
+              iternode49 = iternode49.contents();
+              oldNodes.replaceWith(iternode49);
+>>>>>>> adcc239... Has item specify
               
               
             }());
           }
           mobl.delayedUpdateScrollers();
+<<<<<<< HEAD
 <<<<<<< HEAD
           subs__.addSub(list680.addEventListener('change', function() { listSubs__.unsubscribe(); renderList680(true); }));
           subs__.addSub(items.addEventListener('change', function() { listSubs__.unsubscribe(); renderList680(true); }));
@@ -7118,103 +8211,105 @@ ui.mMasterDetail = function(items, masterItem, detail, elements, callback) {
 =======
           subs__.addSub(list9.addEventListener('change', function() { listSubs__.unsubscribe(); renderList9(true); }));
           subs__.addSub(items.addEventListener('change', function() { listSubs__.unsubscribe(); renderList9(true); }));
+=======
+          subs__.addSub(list49.addEventListener('change', function() { listSubs__.unsubscribe(); renderList49(true); }));
+          subs__.addSub(items.addEventListener('change', function() { listSubs__.unsubscribe(); renderList49(true); }));
+>>>>>>> adcc239... Has item specify
         });
       };
-      renderList9();
+      renderList49();
       
-      callback(root457); return subs__;
+      callback(root861); return subs__;
       
       return subs__;
     }, function(node) {
-      var oldNodes = nodes396;
-      nodes396 = node.contents();
-      oldNodes.replaceWith(nodes396);
+      var oldNodes = nodes668;
+      nodes668 = node.contents();
+      oldNodes.replaceWith(nodes668);
     }));
-    node68.append(node69);
+    node289.append(node290);
     
-    var node70 = $("<div>");
-    node70.attr('style', "float:left; width:66.5%; position:relative; margin-left: 0.5%;");
+    var node291 = $("<div>");
+    node291.attr('style', "float:left; width:66.5%; position:relative; margin-left: 0.5%;");
     
-    items.get().count(function(result__) {
-      var tmp426 = result__;
-      var result__ = tmp426 > 0;
-      var tmp425 = result__;
-      var result__ = current.get() && tmp425;
-      var tmp424 = result__;
-      var tmp394 = mobl.ref(result__);
+    ui.hasItem(current.get(), items.get(), function(result__) {
+      var tmp653 = result__;
+      var result__ = current.get() && tmp653;
+      var tmp652 = result__;
+      var tmp624 = mobl.ref(result__);
       subs__.addSub(current.addEventListener('change', function() {
-        items.get().count(function(result__) {
-          var tmp420 = result__;
-          var result__ = tmp420 > 0;
-          var tmp419 = result__;
-          var result__ = current.get() && tmp419;
-          var tmp418 = result__;
-          var result__ = tmp418;
-          tmp394.set(result__);
+        ui.hasItem(current.get(), items.get(), function(result__) {
+          var tmp649 = result__;
+          var result__ = current.get() && tmp649;
+          var tmp648 = result__;
+          var result__ = tmp648;
+          tmp624.set(result__);
           
         });
       }));
       subs__.addSub(items.addEventListener('change', function() {
-        items.get().count(function(result__) {
-          var tmp423 = result__;
-          var result__ = tmp423 > 0;
-          var tmp422 = result__;
-          var result__ = current.get() && tmp422;
-          var tmp421 = result__;
-          var result__ = tmp421;
-          tmp394.set(result__);
+        ui.hasItem(current.get(), items.get(), function(result__) {
+          var tmp651 = result__;
+          var result__ = current.get() && tmp651;
+          var tmp650 = result__;
+          var result__ = tmp650;
+          tmp624.set(result__);
           
         });
       }));
       
       
-      var node71 = $("<span>");
-      node70.append(node71);
-      var condSubs18 = new mobl.CompSubscription();
-      subs__.addSub(condSubs18);
-      var oldValue18;
-      var renderCond18 = function() {
-        var value114 = tmp394.get();
-        if(oldValue18 === value114) return;
-        oldValue18 = value114;
-        var subs__ = condSubs18;
+      var node292 = $("<span>");
+      node291.append(node292);
+      var condSubs70 = new mobl.CompSubscription();
+      subs__.addSub(condSubs70);
+      var oldValue70;
+      var renderCond70 = function() {
+        var value562 = tmp624.get();
+        if(oldValue70 === value562) return;
+        oldValue70 = value562;
+        var subs__ = condSubs70;
         subs__.unsubscribe();
-        node71.empty();
-        if(value114) {
-          var nodes395 = $("<span>");
-          node71.append(nodes395);
+        node292.empty();
+        if(value562) {
+          var nodes667 = $("<span>");
+          node292.append(nodes667);
           subs__.addSub(detail.addEventListener('change', function() {
+<<<<<<< HEAD
             renderControl22();
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+            renderControl115();
+>>>>>>> adcc239... Has item specify
           }));
           
-          function renderControl22() {
+          function renderControl115() {
             subs__.addSub((detail.get())(current, function(elements, callback) {
-              var root456 = $("<span>");
+              var root860 = $("<span>");
               var subs__ = new mobl.CompSubscription();
-              callback(root456); return subs__;
+              callback(root860); return subs__;
               return subs__;
             }, function(node) {
-              var oldNodes = nodes395;
-              nodes395 = node.contents();
-              oldNodes.replaceWith(nodes395);
+              var oldNodes = nodes667;
+              nodes667 = node.contents();
+              oldNodes.replaceWith(nodes667);
             }));
           }
-          renderControl22();
+          renderControl115();
           
           
         } else {
           
-          var node72 = $("<div>");
-          node72.attr('style', "padding:20px");
+          var node293 = $("<div>");
+          node293.attr('style', "padding:20px");
           
           
-          var node73 = $("<h2>");
+          var node294 = $("<h2>");
           
           
-          node73.append("Add more questions.");
-          node72.append(node73);
-          node71.append(node72);
+          node294.append("Add more questions.");
+          node293.append(node294);
+          node292.append(node293);
           
           
           
@@ -7251,14 +8346,14 @@ ui.mMasterDetail = function(items, masterItem, detail, elements, callback) {
     
 =======
       };
-      renderCond18();
-      subs__.addSub(tmp394.addEventListener('change', function() {
-        renderCond18();
+      renderCond70();
+      subs__.addSub(tmp624.addEventListener('change', function() {
+        renderCond70();
       }));
       
-      node68.append(node70);
-      root455.append(node68);
-      callback(root455); return subs__;
+      node289.append(node291);
+      root859.append(node289);
+      callback(root859); return subs__;
       
     });
 >>>>>>> ce8fc3b... more specific condition for rendering detail

@@ -13,11 +13,21 @@ function indexOf(it : Dynamic, items : Collection<Dynamic>) : Num {
 	return -1;
 }
 
+<<<<<<< HEAD
 var visible : Bool = true;
 
 function hideCurrentQ():void
 {
   visible = false;
+=======
+function hasItem(it : Dynamic, items : Collection<Dynamic>) : Bool {
+  foreach (item in items) {
+    if (item == it) {
+      return true;
+    }
+  }
+  return false;
+>>>>>>> adcc239... Has item specify
 }
 
 control mMasterDetail(items : Collection<?>, masterItem : Control2<Dynamic, Num>, detail : Control1<Dynamic>) {
@@ -40,10 +50,14 @@ control mMasterDetail(items : Collection<?>, masterItem : Control2<Dynamic, Num>
     </div>
     <div style="float:left; width:66.5%; position:relative; margin-left: 0.5%;">
 <<<<<<< HEAD
+<<<<<<< HEAD
       when(current && visible) {
 =======
       when(current && items.count() > 0) {
 >>>>>>> ce8fc3b... more specific condition for rendering detail
+=======
+      when(current && hasItem(current, items)) {
+>>>>>>> adcc239... Has item specify
         detail(current)
       } else {
         <div style="padding:20px">

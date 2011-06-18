@@ -35,7 +35,7 @@ control mMasterDetail(items : Collection<?>, masterItem : Control2<Dynamic, Num>
       group {
         list(it in items) {
           when(it == current) {
-            detail(current)
+            detail(it)
           } else {
           }
         }

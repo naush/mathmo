@@ -1,7 +1,6 @@
 module ui
 
 mixin mobl::ui::generic
-import nrichRPG::questionAnswer
 
 function indexOf(it : Dynamic, items : Collection<Dynamic>) : Num {
 	var counter : Num = 1;
@@ -15,10 +14,10 @@ function indexOf(it : Dynamic, items : Collection<Dynamic>) : Num {
 }
 
 var current : Dynamic = null;
+var copyItems : Collection<Dynamic> = null;
 
-function clearAllQ():void
+function deleteCurrentQ():void
 {
-  QA.all().destroyAll();
   current = null;
 }
 

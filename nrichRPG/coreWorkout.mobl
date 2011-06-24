@@ -452,9 +452,9 @@ control answerBlock(qa:QA) {
 			else {
 				label("A" + qa.number + ". ")
 				plot("corePlotArea", plotStyle)
-				<span style="display:none">
-					html(renderQA(qa))
-				</span>
+				// <span style="display:none">
+				// 	html(renderQA(qa))
+				// </span>
 			}
 		}
 	}
@@ -467,16 +467,16 @@ control answerBlock(qa:QA) {
 			else {
 				label("A" + qa.number + ". ")
 				plot("corePlotArea", plotStyle)
-				<span style="display:none">
-					html(renderQA(qa))
-				</span>
+				// <span style="display:none">
+				// 	html(renderQA(qa))
+				// </span>
 			}
 		}
 	}
 	block(answerStyle) {
-		<span style="display:none">
-			html(renderQA(qa))
-		</span>
+		// <span style="display:none">
+		// 	html(renderQA(qa))
+		// </span>
 		label("Did you agree?")
 		sideButton("Yes", onclick={qa.correct=true;})
 		sideButton("No", onclick={qa.correct=false;})
@@ -510,9 +510,9 @@ control showQA(qa:QA) {
   group {
     item(questionStyle, onclick={renderMaths();}, hideArrow=true) {
       html("Q" + qa.number + ". " + qa.question)
-      <span style="display:none">
-        html(renderQA(qa))
-      </span>
+      // <span style="display:none">
+      //   html(renderQA(qa))
+      // </span>
     }
     item(onclick={renderMaths();}, hideArrow=true) {
       block(answerStyle) {

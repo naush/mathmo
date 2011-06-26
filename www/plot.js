@@ -3,33 +3,33 @@ mobl.provides('plot');
 mobl.provides('mobl');
 
 plot.plot = function(id, s, elements, callback) {
-  var root15041 = $("<span>");
+  var root11334 = $("<span>");
   var subs__ = new mobl.CompSubscription();
   
-  var node2819 = $("<div>");
+  var node743 = $("<div>");
   
-  var ref2590 = id;
-  if(ref2590.get() !== null) {
-    node2819.attr('id', ref2590.get());
-    subs__.addSub(ref2590.addEventListener('change', function(_, ref, val) {
-      node2819.attr('id', val);
+  var ref573 = id;
+  if(ref573.get() !== null) {
+    node743.attr('id', ref573.get());
+    subs__.addSub(ref573.addEventListener('change', function(_, ref, val) {
+      node743.attr('id', val);
     }));
     
   }
-  subs__.addSub(ref2590.rebind());
+  subs__.addSub(ref573.rebind());
   
-  var ref2591 = s;
-  if(ref2591.get() !== null) {
-    node2819.attr('class', ref2591.get());
-    subs__.addSub(ref2591.addEventListener('change', function(_, ref, val) {
-      node2819.attr('class', val);
+  var ref574 = s;
+  if(ref574.get() !== null) {
+    node743.attr('class', ref574.get());
+    subs__.addSub(ref574.addEventListener('change', function(_, ref, val) {
+      node743.attr('class', val);
     }));
     
   }
-  subs__.addSub(ref2591.rebind());
+  subs__.addSub(ref574.rebind());
   
-  root15041.append(node2819);
-  callback(root15041); return subs__;
+  root11334.append(node743);
+  callback(root11334); return subs__;
   
   return subs__;
 };

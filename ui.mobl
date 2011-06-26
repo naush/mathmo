@@ -45,7 +45,7 @@ screen detailScreen(it : Dynamic, detail : Control1<Dynamic>) {
 
 
 @when window.innerWidth > 500
-control mMasterDetail(items : Collection<?>, masterItem : Control2<Dynamic, Num>, detail : Control1<Dynamic>) {
+control mMasterDetail(items : Collection<?>, masterItem : Control2<Dynamic, Num>, detail : Control2<Dynamic, Num>) {
   var current : Dynamic = items.one()
   <div width="100%">
     <div style="float:left; width:45%; position:relative; border-right: solid 1px #cccccc;">
@@ -65,7 +65,7 @@ control mMasterDetail(items : Collection<?>, masterItem : Control2<Dynamic, Num>
     </div>
     <div style="float:left; width:53%; position:relative; margin-left: 1%;">
       when(current && visible) {
-        detail(current)
+        detail(current, indexOf(current, items))
       } 
       /* else {
         <div style="padding:20px">

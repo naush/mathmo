@@ -455,7 +455,7 @@ control answerBlock(qa:QA, number:Num) {
 			<span id="A" + number>plot("corePlotArea", plotStyle)</span>
 		}
 	}
-	block(answerStyle, onclick={ qa.answer = $("#A" + number).children("span:first").html(); }) {
+	block(answerStyle) {
 		<span style="display:none">
 			html(renderQA(qa))
 		</span>

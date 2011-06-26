@@ -507,8 +507,9 @@ control showQA(qa:QA, number:Num) {
 		}, style=delStyle, pushedStyle=delPushedStyle)
 	}
 	group {
-		item(questionStyle, onclick={renderMaths();}, hideArrow=true) {
-			html("Q" + number + ". " + qa.question)
+		item(questionStyle, onclick={renderMaths(); qa.question = $("#Q" + number).html(); }, hideArrow=true) {
+			html("Q" + number + ". ")
+			<span id="Q" + number>html(qa.question)</span>
 			<span style="display:none">
 				html(renderQA(qa))
 			</span>

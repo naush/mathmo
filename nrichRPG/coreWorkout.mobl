@@ -450,7 +450,7 @@ control answerBlock(qa:QA, number:Num) {
 		block(agreeStyle) {
 			when(qa.answer != "%GRAPH%") {
 				label("A" + number + ". ")
-				html(qa.answer)
+				<span id="A" + number>html(qa.answer)</span>
 			}
 			else {
 				label("A" + number + ". ")
@@ -465,7 +465,7 @@ control answerBlock(qa:QA, number:Num) {
 		block(disagreeStyle) {
 			when(qa.answer != "%GRAPH%") {
 				label("A" + number + ". ")
-				html(qa.answer)
+        <span id="A" + number>html(qa.answer)</span>
 			}
 			else {
 				label("A" + number + ". ")
@@ -514,7 +514,7 @@ control showQA(qa:QA, number:Num) {
 				html(renderQA(qa))
 			</span>
 		}
-		item(onclick={renderMaths();}, hideArrow=true) {
+		item(onclick={renderMaths(); qa.answer = $("#A" + number).html();}, hideArrow=true) {
 			block(answerStyle) {
 				checkBox(qa.done, "Check answer", onchange = {
 					renderQA(qa);

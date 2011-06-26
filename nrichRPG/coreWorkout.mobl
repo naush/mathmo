@@ -449,13 +449,17 @@ control answerBlock(qa:QA, number:Num) {
 	block(qa.correct ? agreeStyle : disagreeStyle) {
     label("A" + number + ". ")
 		when(qa.answer != "%GRAPH%") {
-			<span id="A" + number>html(qa.answer)</span>
+			<span id="answer-block-" + number>html(qa.answer)</span>
 		}
 		else {
-			<span id="A" + number>plot("corePlotArea", plotStyle)</span>
+			plot("corePlotArea", plotStyle)
 		}
 	}
-	block(answerStyle) {
+	block(answerStyle, onclick={ 
+	  if (qa.answer != "%GRAPH%") {
+      qa.answer = $("#answer-block-" + number).children("span:first").html();
+	  }
+	}) {
 		<span style="display:none">
 			html(renderQA(qa))
 		</span>
@@ -486,9 +490,9 @@ control showQA(qa:QA, number:Num) {
 		}, style=delStyle, pushedStyle=delPushedStyle)
 	}
 	group {
-		item(questionStyle, onclick={renderMaths(); qa.question = $("#Q" + number).children("span:first").html(); }, hideArrow=true) {
+		item(questionStyle, onclick={renderMaths(); qa.question = $("#question-block-" + number).children("span:first").html(); }, hideArrow=true) {
 			html("Q" + number + ". ")
-			<span id="Q" + number>html(qa.question)</span>
+			<span id="question-block-" + number>html(qa.question)</span>
 			<span style="display:none">
 				html(renderQA(qa))
 			</span>

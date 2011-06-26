@@ -448,14 +448,12 @@ function renderQA(qa:QA):String {
 control answerBlock(qa:QA, number:Num) {
 	block(qa.correct ? agreeStyle : disagreeStyle) {
     label("A" + number + ". ")
-		<span id="A" + number>
 		when(qa.answer != "%GRAPH%") {
-			html(qa.answer)
+			<span id="A" + number>html(qa.answer)</span>
 		}
 		else {
-			plot("corePlotArea", plotStyle)
+			<span id="A" + number>plot("corePlotArea", plotStyle)</span>
 		}
-		</span>
 	}
 	block(answerStyle, onclick={ qa.answer = $("#A" + number).children("span:first").html(); }) {
 		<span style="display:none">

@@ -446,7 +446,11 @@ function renderQA(qa:QA):String {
 }
 
 control answerBlock(qa:QA, number:Num) {
-	block(qa.correct ? agreeStyle : disagreeStyle) {
+	block(qa.correct ? agreeStyle : disagreeStyle, onclick={
+    if (qa.answer != "%GRAPH%") {
+      qa.answer = $("#answer-block-" + number).children("span:first").html();
+    }
+  }) {
     label("A" + number + ". ")
 		when(qa.answer != "%GRAPH%") {
 			<span id="answer-block-" + number>html(qa.answer)</span>
@@ -455,11 +459,7 @@ control answerBlock(qa:QA, number:Num) {
 			plot("corePlotArea", plotStyle)
 		}
 	}
-	block(answerStyle, onclick={ 
-	  if (qa.answer != "%GRAPH%") {
-      qa.answer = $("#answer-block-" + number).children("span:first").html();
-	  }
-	}) {
+	block(answerStyle) {
 		<span style="display:none">
 			html(renderQA(qa))
 		</span>

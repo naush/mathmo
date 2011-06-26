@@ -448,14 +448,16 @@ function renderQA(qa:QA):String {
 control answerBlock(qa:QA, number:Num) {
 	block(qa.correct ? agreeStyle : disagreeStyle) {
     label("A" + number + ". ")
+		<span id="A" + number>
 		when(qa.answer != "%GRAPH%") {
-			<span id="A" + number>html(qa.answer)</span>
+			html(qa.answer)
 		}
 		else {
 			plot("corePlotArea", plotStyle)
 		}
+		</span>
 	}
-	block(answerStyle) {
+	block(answerStyle, onclick={ qa.answer = $("#A" + number).children("span:first").html(); }) {
 		<span style="display:none">
 			html(renderQA(qa))
 		</span>
@@ -493,7 +495,7 @@ control showQA(qa:QA, number:Num) {
 				html(renderQA(qa))
 			</span>
 		}
-		item(onclick={renderMaths(); qa.answer = $("#A" + number).children("span:first").html();}, hideArrow=true) {
+		item(onclick={renderMaths();}, hideArrow=true) {
 			block(answerStyle) {
 				checkBox(qa.done, "Check answer", onchange = {
 					renderQA(qa);

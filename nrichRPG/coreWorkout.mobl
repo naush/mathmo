@@ -450,7 +450,7 @@ control answerBlock(qa:QA, number:Num) {
 		block(agreeStyle) {
 			when(qa.answer != "%GRAPH%") {
 				label("A" + number + ". ")
-				<span id="A" + number>html(qa.answer)</span>
+				<span id="A" + number databind=qa.answer></span>
 			}
 			else {
 				label("A" + number + ". ")
@@ -465,7 +465,7 @@ control answerBlock(qa:QA, number:Num) {
 		block(disagreeStyle) {
 			when(qa.answer != "%GRAPH%") {
 				label("A" + number + ". ")
-        <span id="A" + number>html(qa.answer)</span>
+        <span id="A" + number databind=qa.answer></span>
 			}
 			else {
 				label("A" + number + ". ")
@@ -509,7 +509,7 @@ control showQA(qa:QA, number:Num) {
 	group {
 		item(questionStyle, onclick={renderMaths(); qa.question = $("#Q" + number).html(); }, hideArrow=true) {
 			html("Q" + number + ". ")
-			<span id="Q" + number>html(qa.question)</span>
+			<span id="Q" + number databind=qa.question></span>
 			<span style="display:none">
 				html(renderQA(qa))
 			</span>

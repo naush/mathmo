@@ -21,17 +21,6 @@ function hideCurrent() {
   visible = false;
 }
 
-control mMasterDetail(items : Collection<Dynamic>, masterItem : Control2<Dynamic, Num>, detail : Control1<Dynamic>) {
-	group {
-    list(it in items) {
-	    item(onclick={ alert("Render detailScreen()!"); detailScreen(it, detail); alert("Calling renderMaths()!"); sleep(100); renderMaths(); alert("Called renderMaths()!"); }) {
-        masterItem(it, indexOf(it, items))
-        script { sleep(100); renderMaths(); }
-	    }
-    }
-	}
-}
-
 screen detailScreen(it : Dynamic, detail : Control1<Dynamic>) {
   detail(it)
 }
@@ -48,7 +37,7 @@ control mMasterDetail(items : Collection<?>, masterItem : Control2<Dynamic, Num>
               masterItem(it, indexOf(it, items))
             }
           } else {
-            item(hideArrow=true, onclick={ current = it; visible = true;}) {
+            item(hideArrow=true, onclick={ current = it; visible = true; alert("Calling renderMaths()!"); renderMaths();}) {
               masterItem(it, indexOf(it, items))
             }
           }

@@ -436,13 +436,12 @@ control panelHeader(text : String, onclick : Callback = null) {
 }
 
 
-function renderQA(qa:QA):String {
+function renderQA(qa:QA) {
 	renderMaths();
 	if(qa.done && qa.answer == "%GRAPH%") {
 		var jsonData:JSON = JSON.parse(qa.plotData);
 		lineChart("corePlotArea", jsonData);
 	}
-	return "";
 }
 
 function removeMathJaxIncidentElements() {
@@ -468,9 +467,7 @@ control answerBlock(qa:QA, number:Num) {
 		}
 	}
 	block(answerStyle) {
-		<span style="display:none">
-			html(renderQA(qa))
-		</span>
+		script { renderQA(qa); }
 		label("Did you agree?")
 		sideButton("Yes", onclick={qa.correct=true;})
 		sideButton("No", onclick={qa.correct=false;})
@@ -505,9 +502,7 @@ control showQA(qa:QA, number:Num) {
 		  }, hideArrow=true) {
 			html("Q" + number + ". ")
 			<span id="question-block-" + number>html(qa.question)</span>
-			<span style="display:none">
-				html(renderQA(qa))
-			</span>
+			script { renderQA(qa); }
 		}
 		item(onclick={renderMaths();}, hideArrow=true) {
 			block(answerStyle) {

@@ -445,8 +445,14 @@ function renderQA(qa:QA):String {
 	return "";
 }
 
+
+
 control answerBlock(qa:QA, number:Num) {
 	block(qa.correct ? agreeStyle : disagreeStyle, onclick={
+
+	  $("span").remove(".MathJax_Preview");
+    $("script").remove("#MathJax-Element-*");
+
     if (qa.answer != "%GRAPH%") {
       qa.answer = $("#answer-block-" + number).children("span:first").html();
     }

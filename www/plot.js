@@ -3,33 +3,33 @@ mobl.provides('plot');
 mobl.provides('mobl');
 
 plot.plot = function(id, s, elements, callback) {
-  var root11334 = $("<span>");
+  var root1479 = $("<span>");
   var subs__ = new mobl.CompSubscription();
   
-  var node743 = $("<div>");
+  var node354 = $("<div>");
   
-  var ref573 = id;
-  if(ref573.get() !== null) {
-    node743.attr('id', ref573.get());
-    subs__.addSub(ref573.addEventListener('change', function(_, ref, val) {
-      node743.attr('id', val);
+  var ref366 = id;
+  if(ref366.get() !== null) {
+    node354.attr('id', ref366.get());
+    subs__.addSub(ref366.addEventListener('change', function(_, ref, val) {
+      node354.attr('id', val);
     }));
     
   }
-  subs__.addSub(ref573.rebind());
+  subs__.addSub(ref366.rebind());
   
-  var ref574 = s;
-  if(ref574.get() !== null) {
-    node743.attr('class', ref574.get());
-    subs__.addSub(ref574.addEventListener('change', function(_, ref, val) {
-      node743.attr('class', val);
+  var ref367 = s;
+  if(ref367.get() !== null) {
+    node354.attr('class', ref367.get());
+    subs__.addSub(ref367.addEventListener('change', function(_, ref, val) {
+      node354.attr('class', val);
     }));
     
   }
-  subs__.addSub(ref574.rebind());
+  subs__.addSub(ref367.rebind());
   
-  root11334.append(node743);
-  callback(root11334); return subs__;
+  root1479.append(node354);
+  callback(root1479); return subs__;
   
   return subs__;
 };

@@ -24,7 +24,7 @@ function hideCurrent() {
 control mMasterDetail(items : Collection<Dynamic>, masterItem : Control2<Dynamic, Num>, detail : Control1<Dynamic>) {
 	group {
 	    list(it in items) {
-		    item(onclick={ detailScreen(it, detail); }) {
+		    item(onclick={ detailScreen(it, detail); sleep(200); renderMaths(); }) {
 		        masterItem(it, indexOf(it, items))
 		    }
 	    }
@@ -34,10 +34,6 @@ control mMasterDetail(items : Collection<Dynamic>, masterItem : Control2<Dynamic
 
 screen detailScreen(it : Dynamic, detail : Control1<Dynamic>) {
   header(_("Detail")) {
-  	script {
-  		sleep(100);
-  		renderMaths();
-  	}
     backButton(_("Back"), onclick={ screen return; })
   }
   detail(it)

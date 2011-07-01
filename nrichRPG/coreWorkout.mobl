@@ -467,7 +467,6 @@ control answerBlock(qa:QA, number:Num) {
 		}
 	}
 	block(answerStyle) {
-		script { renderQA(qa); }
 		label("Did you agree?")
 		sideButton("Yes", onclick={qa.correct=true;})
 		sideButton("No", onclick={qa.correct=false;})
@@ -504,7 +503,6 @@ control showQA(qa:QA, number:Num) {
 		  }, hideArrow=true) {
 			html("Q" + number + ". ")
 			<span id="question-block-" + number>html(blank(qa.questionHtml) ? qa.question : qa.questionHtml)</span>
-			script { renderQA(qa); }
 		}
 		item(onclick={renderMaths();}, hideArrow=true) {
 			block(answerStyle) {

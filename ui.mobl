@@ -24,8 +24,9 @@ function hideCurrent() {
 control mMasterDetail(items : Collection<Dynamic>, masterItem : Control2<Dynamic, Num>, detail : Control1<Dynamic>) {
 	group {
 	    list(it in items) {
-		    item(onclick={ detailScreen(it, detail); sleep(200); renderMaths(); }) {
+		    item(onclick={ detailScreen(it, detail); }) {
 		        masterItem(it, indexOf(it, items))
+		        script { sleep(200); renderMaths(); }
 		    }
 	    }
 	}

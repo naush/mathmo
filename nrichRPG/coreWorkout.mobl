@@ -498,7 +498,6 @@ control showQA(qa:QA, number:Num) {
 	}
 	group {
 		item(questionStyle, onclick={
-		    alert("Calling renderMaths()!");
 			  renderMaths();
 	      removeMathJaxIncidentElements();
 			  qa.questionHtml = $("#question-block-" + number).children("span:first").html();

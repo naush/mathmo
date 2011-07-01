@@ -494,6 +494,7 @@ control showQA(qa:QA, number:Num) {
 			qa = qa2;
 			renderQA(qa);
 		}, style=delStyle, pushedStyle=delPushedStyle)
+    script { sleep(100); renderMaths(); }
 	}
 	group {
 		item(questionStyle, onclick={
@@ -515,6 +516,7 @@ control showQA(qa:QA, number:Num) {
 			}
 		}
 	}
+  script { sleep(100); renderMaths(); }
 }
 
 external sync function randomCoreQA(topic:String):Array<String>

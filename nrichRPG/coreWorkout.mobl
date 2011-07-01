@@ -447,7 +447,7 @@ function renderQA(qa:QA):String {
 
 function removeMathJaxIncidentElements() {
   $("span").remove(".MathJax_Preview");
-  $("script[id^='MathJax-Element-']").each(function() { $(this).remove });
+  $("[id^='MathJax-Element-']").each(function() { $(this).remove(); });
 }
 
 control answerBlock(qa:QA, number:Num) {

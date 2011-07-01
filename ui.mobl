@@ -32,14 +32,9 @@ control mMasterDetail(items : Collection<Dynamic>, masterItem : Control2<Dynamic
 	}
 }
 
-
 screen detailScreen(it : Dynamic, detail : Control1<Dynamic>) {
-  header(_("Detail")) {
-    backButton(_("Back"), onclick={ screen return; })
-  }
   detail(it)
 }
-
 
 @when window.innerWidth > 500
 control mMasterDetail(items : Collection<?>, masterItem : Control2<Dynamic, Num>, detail : Control2<Dynamic, Num>) {

@@ -455,12 +455,12 @@ control answerBlock(qa:QA, number:Num) {
 	  removeMathJaxIncidentElements();
 
     if (qa.answer != "%GRAPH%") {
-      qa.answer = $("#answer-block-" + number).children("span:first").html();
+      qa.answerHtml = $("#answer-block-" + number).children("span:first").html();
     }
   }) {
     label("A" + number + ". ")
 		when(qa.answer != "%GRAPH%") {
-			<span id="answer-block-" + number>html(qa.answer)</span>
+      <span id="answer-block-" + number>html(blank(qa.answerHtml) ? qa.answer : qa.answerHtml)</span>
 		}
 		else {
 			plot("corePlotArea", plotStyle)
@@ -483,7 +483,9 @@ function nextQA(qa:QA):QA
 	return qa2;
 }
 
-
+function blank(text : String) : Bool {
+  return !(text == null || text.toString() == "");
+}
 
 control showQA(qa:QA, number:Num) {
 	panelHeader(qa.topic, onclick={renderMaths();}) {
@@ -498,10 +500,11 @@ control showQA(qa:QA, number:Num) {
 		item(questionStyle, onclick={
 			  renderMaths();
 	      removeMathJaxIncidentElements();
-			  qa.question = $("#question-block-" + number).children("span:first").html();
+			  qa.questionHtml = $("#question-block-" + number).children("span:first").html();
 		  }, hideArrow=true) {
 			html("Q" + number + ". ")
-			<span id="question-block-" + number onload={renderQA(qa);}>html(qa.question)</span>
+			<span id="question-block-" + number>html(blank(qa.questionHtml) ? qa.question : qa.questionHtml)</span>
+			script { renderQA(qa); }
 		}
 		item(onclick={renderMaths();}, hideArrow=true) {
 			block(answerStyle) {

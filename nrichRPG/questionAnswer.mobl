@@ -8,6 +8,8 @@ entity QA {
 	done : Bool
 	correct : Bool
 	plotData : String
+	questionHtml : String
+	answerHtml : String
 }
 
 entity TopicScore {

@@ -9,7 +9,9 @@ nrichRPG.questionAnswer.QA = persistence.define('nrichRPG__questionAnswer__QA', 
   'answer': 'VARCHAR(255)',
   'done': 'BOOL',
   'correct': 'BOOL',
-  'plotData': 'VARCHAR(255)'
+  'plotData': 'VARCHAR(255)',
+  'questionHtml': 'VARCHAR(255)',
+  'answerHtml': 'VARCHAR(255)'
 });
 
 

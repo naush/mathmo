@@ -457,7 +457,7 @@ control answerBlock(qa:QA, number:Num) {
     if (qa.answer != "%GRAPH%") {
       qa.answerHtml = $("#answer-block-" + number).children("span:first").html();
     } else {
-    	qa.plotHtml = $("#plot-wrapper").html();
+    	qa.plotHtml = $("#plot-wrapper").children("span:first").html();
     }
   }) {
     label("A" + number + ". ")

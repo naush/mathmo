@@ -37,7 +37,7 @@ control qTab() {
 		*/
 		button("Clear", onclick={
 			clearAllQ();
-      		hideCurrent();
+      hideCurrent();
 		}, style=delStyle, pushedStyle=delPushedStyle)
 	}
 	mMasterDetail(QA.all() order by number asc, qaItem, showQA)

@@ -3,6 +3,7 @@ module ui
 mixin mobl::ui::generic
 
 import mathJAX
+import plot
 
 function indexOf(it : Dynamic, items : Collection<Dynamic>) : Num {
 	var counter : Num = 1;
@@ -37,7 +38,12 @@ control mMasterDetail(items : Collection<?>, masterItem : Control2<Dynamic, Num>
               masterItem(it, indexOf(it, items))
             }
           } else {
-            item(hideArrow=true, onclick={ current = it; visible = true; renderMaths();}) {
+            item(hideArrow=true, onclick={
+	              current = it;
+	              visible = true;
+	              renderMaths();
+	              renderPlot("corePlotArea", current);
+              }) {
               masterItem(it, indexOf(it, items))
             }
           }

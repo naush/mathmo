@@ -435,13 +435,9 @@ control panelHeader(text : String, onclick : Callback = null) {
   </div>
 }
 
-
 function renderQA(qa:QA) {
 	renderMaths();
-	if(qa.done && qa.answer == "%GRAPH%") {
-		var jsonData:JSON = JSON.parse(qa.plotData);
-		lineChart("corePlotArea", jsonData);
-	}
+	renderPlot("corePlotArea", qa);
 }
 
 function removeMathJaxIncidentElements() {

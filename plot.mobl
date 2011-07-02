@@ -8,6 +8,13 @@ function blank(text : String) : Bool {
   return (text == null || text.toString() == "");
 }
 
+function renderPlot(id:String, qa:QA) {
+  if(qa.done && qa.answer == "%GRAPH%") {
+    var jsonData:JSON = JSON.parse(qa.plotData);
+    lineChart(id, jsonData);
+  }
+}
+
 control plot(qa:QA, id:String, s:Style) {
   <div id=id class=s></div>
 	// <span id="plot-wrapper">

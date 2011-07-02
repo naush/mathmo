@@ -2,9 +2,10 @@ module plot
 
 import mobl
 
+import nrichRPG::questionAnswer
 
-control plot(id:String, s:Style) {
-	<div id=id class=s></div>
+control plot(qa:QA, id:String, s:Style) {
+	<div id=id class=s>html(qa.plotHtml)</div>
 }
 
 external sync function lineChart(id:String, data:[[[Num]]]) : void 

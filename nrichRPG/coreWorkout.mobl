@@ -456,6 +456,8 @@ control answerBlock(qa:QA, number:Num) {
 
     if (qa.answer != "%GRAPH%") {
       qa.answerHtml = $("#answer-block-" + number).children("span:first").html();
+    } else {
+    	qa.plotHtml = $("corePlotArea").html();
     }
   }) {
     label("A" + number + ". ")
@@ -463,7 +465,7 @@ control answerBlock(qa:QA, number:Num) {
       <span id="answer-block-" + number>html(blank(qa.answerHtml) ? qa.answer : qa.answerHtml)</span>
 		}
 		else {
-			plot("corePlotArea", plotStyle)
+			plot(qa, "corePlotArea", plotStyle)
 		}
 	}
 	block(answerStyle) {

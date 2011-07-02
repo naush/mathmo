@@ -1,35 +1,50 @@
 mobl.provides('plot');
+mobl.provides('nrichRPG');
+mobl.provides('nrichRPG.questionAnswer');
 mobl.provides('plot');
 mobl.provides('mobl');
 
-plot.plot = function(id, s, elements, callback) {
-  var root1479 = $("<span>");
+plot.plot = function(qa, id, s, elements, callback) {
+  var root352 = $("<span>");
   var subs__ = new mobl.CompSubscription();
   
-  var node354 = $("<div>");
+  var node14 = $("<div>");
   
-  var ref366 = id;
-  if(ref366.get() !== null) {
-    node354.attr('id', ref366.get());
-    subs__.addSub(ref366.addEventListener('change', function(_, ref, val) {
-      node354.attr('id', val);
+  var ref12 = id;
+  if(ref12.get() !== null) {
+    node14.attr('id', ref12.get());
+    subs__.addSub(ref12.addEventListener('change', function(_, ref, val) {
+      node14.attr('id', val);
     }));
     
   }
-  subs__.addSub(ref366.rebind());
+  subs__.addSub(ref12.rebind());
   
-  var ref367 = s;
-  if(ref367.get() !== null) {
-    node354.attr('class', ref367.get());
-    subs__.addSub(ref367.addEventListener('change', function(_, ref, val) {
-      node354.attr('class', val);
+  var ref13 = s;
+  if(ref13.get() !== null) {
+    node14.attr('class', ref13.get());
+    subs__.addSub(ref13.addEventListener('change', function(_, ref, val) {
+      node14.attr('class', val);
     }));
     
   }
-  subs__.addSub(ref367.rebind());
+  subs__.addSub(ref13.rebind());
   
-  root1479.append(node354);
-  callback(root1479); return subs__;
+  var nodes324 = $("<span>");
+  node14.append(nodes324);
+  subs__.addSub((mobl.html)(mobl.ref(qa, 'plotHtml'), function(_, callback) {
+    var root353 = $("<span>");
+    var subs__ = new mobl.CompSubscription();
+    callback(root353); return subs__;
+    return subs__;
+  }, function(node) {
+    var oldNodes = nodes324;
+    nodes324 = node.contents();
+    oldNodes.replaceWith(nodes324);
+  }));
+  root352.append(node14);
+  callback(root352); return subs__;
+  
   
   return subs__;
 };

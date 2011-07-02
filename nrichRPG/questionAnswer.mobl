@@ -10,6 +10,7 @@ entity QA {
 	plotData : String
 	questionHtml : String
 	answerHtml : String
+	plotHtml : String
 }
 
 entity TopicScore {

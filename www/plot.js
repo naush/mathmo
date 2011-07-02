@@ -10,39 +10,33 @@ plot.blank = function(text) {
 
 
 plot.plot = function(qa, id, s, elements, callback) {
-  var root722 = $("<span>");
+  var root900 = $("<span>");
   var subs__ = new mobl.CompSubscription();
   
-  var node42 = $("<span>");
-  node42.attr('id', "plot-wrapper");
+  var node50 = $("<div>");
   
-  var result__ = plot.blank(qa.get().plotHtml) ? "<div id=" + id.get() + " class=" + s.get() + "></div>" : qa.get().plotHtml;
-  var tmp684 = mobl.ref(result__);
-  subs__.addSub(id.addEventListener('change', function() {
-    tmp684.set(plot.blank(qa.get().plotHtml) ? "<div id=" + id.get() + " class=" + s.get() + "></div>" : qa.get().plotHtml);
-  }));
-  subs__.addSub(s.addEventListener('change', function() {
-    tmp684.set(plot.blank(qa.get().plotHtml) ? "<div id=" + id.get() + " class=" + s.get() + "></div>" : qa.get().plotHtml);
-  }));
-  subs__.addSub(mobl.ref(qa, 'plotHtml').addEventListener('change', function() {
-    tmp684.set(plot.blank(qa.get().plotHtml) ? "<div id=" + id.get() + " class=" + s.get() + "></div>" : qa.get().plotHtml);
-  }));
+  var ref46 = id;
+  if(ref46.get() !== null) {
+    node50.attr('id', ref46.get());
+    subs__.addSub(ref46.addEventListener('change', function(_, ref, val) {
+      node50.attr('id', val);
+    }));
+    
+  }
+  subs__.addSub(ref46.rebind());
   
-  var nodes657 = $("<span>");
-  node42.append(nodes657);
-  subs__.addSub((mobl.html)(tmp684, function(_, callback) {
-    var root723 = $("<span>");
-    var subs__ = new mobl.CompSubscription();
-    callback(root723); return subs__;
-    return subs__;
-  }, function(node) {
-    var oldNodes = nodes657;
-    nodes657 = node.contents();
-    oldNodes.replaceWith(nodes657);
-  }));
-  root722.append(node42);
-  callback(root722); return subs__;
+  var ref47 = s;
+  if(ref47.get() !== null) {
+    node50.attr('class', ref47.get());
+    subs__.addSub(ref47.addEventListener('change', function(_, ref, val) {
+      node50.attr('class', val);
+    }));
+    
+  }
+  subs__.addSub(ref47.rebind());
   
+  root900.append(node50);
+  callback(root900); return subs__;
   
   return subs__;
 };

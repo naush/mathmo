@@ -28,7 +28,7 @@ screen detailScreen(it : Dynamic, detail : Control1<Dynamic>) {
 
 @when window.innerWidth > 500
 control mMasterDetail(items : Collection<?>, masterItem : Control2<Dynamic, Num>, detail : Control2<Dynamic, Num>) {
-  var current : Dynamic = items.one()
+  var current : Dynamic = null
   <div width="100%">
     <div style="float:left; width:45%; position:relative; border-right: solid 1px #cccccc;">
       group {

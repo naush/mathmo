@@ -3,47 +3,58 @@ mobl.provides('nrichRPG');
 mobl.provides('nrichRPG.questionAnswer');
 mobl.provides('plot');
 mobl.provides('mobl');
+plot.blank = function(text) {
+   var __this = this;
+  return (text == null || text.toString() == "");
+};
+
 
 plot.plot = function(qa, id, s, elements, callback) {
-  var root352 = $("<span>");
+  var root356 = $("<span>");
   var subs__ = new mobl.CompSubscription();
   
-  var node14 = $("<div>");
+  var node16 = $("<div>");
   
-  var ref12 = id;
-  if(ref12.get() !== null) {
-    node14.attr('id', ref12.get());
-    subs__.addSub(ref12.addEventListener('change', function(_, ref, val) {
-      node14.attr('id', val);
+  var ref16 = id;
+  if(ref16.get() !== null) {
+    node16.attr('id', ref16.get());
+    subs__.addSub(ref16.addEventListener('change', function(_, ref, val) {
+      node16.attr('id', val);
     }));
     
   }
-  subs__.addSub(ref12.rebind());
+  subs__.addSub(ref16.rebind());
   
-  var ref13 = s;
-  if(ref13.get() !== null) {
-    node14.attr('class', ref13.get());
-    subs__.addSub(ref13.addEventListener('change', function(_, ref, val) {
-      node14.attr('class', val);
+  var ref17 = s;
+  if(ref17.get() !== null) {
+    node16.attr('class', ref17.get());
+    subs__.addSub(ref17.addEventListener('change', function(_, ref, val) {
+      node16.attr('class', val);
     }));
     
   }
-  subs__.addSub(ref13.rebind());
+  subs__.addSub(ref17.rebind());
   
-  var nodes324 = $("<span>");
-  node14.append(nodes324);
-  subs__.addSub((mobl.html)(mobl.ref(qa, 'plotHtml'), function(_, callback) {
-    var root353 = $("<span>");
+  var result__ = plot.blank(qa.get().plotHtml) ? "" : qa.get().plotHtml;
+  var tmp347 = mobl.ref(result__);
+  subs__.addSub(mobl.ref(qa, 'plotHtml').addEventListener('change', function() {
+    tmp347.set(plot.blank(qa.get().plotHtml) ? "" : qa.get().plotHtml);
+  }));
+  
+  var nodes326 = $("<span>");
+  node16.append(nodes326);
+  subs__.addSub((mobl.html)(tmp347, function(_, callback) {
+    var root357 = $("<span>");
     var subs__ = new mobl.CompSubscription();
-    callback(root353); return subs__;
+    callback(root357); return subs__;
     return subs__;
   }, function(node) {
-    var oldNodes = nodes324;
-    nodes324 = node.contents();
-    oldNodes.replaceWith(nodes324);
+    var oldNodes = nodes326;
+    nodes326 = node.contents();
+    oldNodes.replaceWith(nodes326);
   }));
-  root352.append(node14);
-  callback(root352); return subs__;
+  root356.append(node16);
+  callback(root356); return subs__;
   
   
   return subs__;

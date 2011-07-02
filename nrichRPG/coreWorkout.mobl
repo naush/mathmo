@@ -457,7 +457,7 @@ control answerBlock(qa:QA, number:Num) {
     if (qa.answer != "%GRAPH%") {
       qa.answerHtml = $("#answer-block-" + number).children("span:first").html();
     } else {
-    	qa.plotHtml = $("corePlotArea").html();
+    	qa.plotHtml = $("#corePlotArea").html();
     }
   }) {
     label("A" + number + ". ")
@@ -482,10 +482,6 @@ function nextQA(qa:QA):QA
 	if(qa2 == null)
 		return QA.all().one();
 	return qa2;
-}
-
-function blank(text : String) : Bool {
-  return (text == null || text.toString() == "");
 }
 
 control showQA(qa:QA, number:Num) {

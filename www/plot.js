@@ -10,51 +10,57 @@ plot.blank = function(text) {
 
 
 plot.plot = function(qa, id, s, elements, callback) {
-  var root356 = $("<span>");
+  var root538 = $("<span>");
   var subs__ = new mobl.CompSubscription();
   
-  var node16 = $("<div>");
+  var node28 = $("<span>");
+  node28.attr('id', "plot-wrapper");
   
-  var ref16 = id;
-  if(ref16.get() !== null) {
-    node16.attr('id', ref16.get());
-    subs__.addSub(ref16.addEventListener('change', function(_, ref, val) {
-      node16.attr('id', val);
+  
+  var node29 = $("<div>");
+  
+  var ref28 = id;
+  if(ref28.get() !== null) {
+    node29.attr('id', ref28.get());
+    subs__.addSub(ref28.addEventListener('change', function(_, ref, val) {
+      node29.attr('id', val);
     }));
     
   }
-  subs__.addSub(ref16.rebind());
+  subs__.addSub(ref28.rebind());
   
-  var ref17 = s;
-  if(ref17.get() !== null) {
-    node16.attr('class', ref17.get());
-    subs__.addSub(ref17.addEventListener('change', function(_, ref, val) {
-      node16.attr('class', val);
+  var ref29 = s;
+  if(ref29.get() !== null) {
+    node29.attr('class', ref29.get());
+    subs__.addSub(ref29.addEventListener('change', function(_, ref, val) {
+      node29.attr('class', val);
     }));
     
   }
-  subs__.addSub(ref17.rebind());
+  subs__.addSub(ref29.rebind());
   
   var result__ = plot.blank(qa.get().plotHtml) ? "" : qa.get().plotHtml;
-  var tmp347 = mobl.ref(result__);
+  var tmp515 = mobl.ref(result__);
   subs__.addSub(mobl.ref(qa, 'plotHtml').addEventListener('change', function() {
-    tmp347.set(plot.blank(qa.get().plotHtml) ? "" : qa.get().plotHtml);
+    tmp515.set(plot.blank(qa.get().plotHtml) ? "" : qa.get().plotHtml);
   }));
   
-  var nodes326 = $("<span>");
-  node16.append(nodes326);
-  subs__.addSub((mobl.html)(tmp347, function(_, callback) {
-    var root357 = $("<span>");
+  var nodes491 = $("<span>");
+  node29.append(nodes491);
+  subs__.addSub((mobl.html)(tmp515, function(_, callback) {
+    var root539 = $("<span>");
     var subs__ = new mobl.CompSubscription();
-    callback(root357); return subs__;
+    callback(root539); return subs__;
     return subs__;
   }, function(node) {
-    var oldNodes = nodes326;
-    nodes326 = node.contents();
-    oldNodes.replaceWith(nodes326);
+    var oldNodes = nodes491;
+    nodes491 = node.contents();
+    oldNodes.replaceWith(nodes491);
   }));
-  root356.append(node16);
-  callback(root356); return subs__;
+  node28.append(node29);
+  root538.append(node28);
+  callback(root538); return subs__;
+  
   
   
   return subs__;

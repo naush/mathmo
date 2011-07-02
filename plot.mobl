@@ -9,7 +9,9 @@ function blank(text : String) : Bool {
 }
 
 control plot(qa:QA, id:String, s:Style) {
+	<span id="plot-wrapper">
 	<div id=id class=s>html(blank(qa.plotHtml) ? "" : qa.plotHtml)</div>
+	</span>
 }
 
 external sync function lineChart(id:String, data:[[[Num]]]) : void 

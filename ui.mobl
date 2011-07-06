@@ -22,14 +22,14 @@ function hideCurrent() {
   visible = false;
 }
 
-screen detailScreen(it : Dynamic, detail : Control1<Dynamic>) {
-  detail(it)
+screen detailScreen(it : Dynamic, detail : Control1<Dynamic>, index : Num) {
+  detail(it, index)
 }
 
-control mMasterDetail(items : Collection<Dynamic>, masterItem : Control2<Dynamic, Num>, detail : Control1<Dynamic>) {
+control mMasterDetail(items : Collection<Dynamic>, masterItem : Control2<Dynamic, Num>, detail : Control2<Dynamic, Num>) {
   group {
       list(it in items) {
-        item(onclick={ detailScreen(it, detail); }) {
+        item(onclick={ detailScreen(it, detail, indexOf(it, items)); renderMaths(); renderPlot("corePlotArea", it); }) {
             masterItem(it, indexOf(it, items))
         }
       }

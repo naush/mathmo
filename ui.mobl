@@ -24,6 +24,11 @@ function hideCurrent() {
 
 screen mDetailScreen(it : Dynamic, detail : Control2<Dynamic, Num>, number : Num) {
   header(_("Detail")) {
+    script {
+      sleep(100);
+      renderMaths();
+      renderPlot("corePlotArea", it);
+    }
     backButton(_("Back"), onclick={ screen return; })
   }
   detail(it, number)
@@ -32,7 +37,7 @@ screen mDetailScreen(it : Dynamic, detail : Control2<Dynamic, Num>, number : Num
 control mMasterDetail(items : Collection<Dynamic>, masterItem : Control2<Dynamic, Num>, detail : Control2<Dynamic, Num>) {
   group {
       list(it in items) {
-        item(onclick={ mDetailScreen(it, detail, indexOf(it, items)); renderMaths(); renderPlot("corePlotArea", it); }) {
+        item(onclick={ mDetailScreen(it, detail, indexOf(it, items)); }) {
             masterItem(it, indexOf(it, items))
         }
       }

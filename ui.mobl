@@ -22,8 +22,8 @@ function hideCurrent() {
   visible = false;
 }
 
-screen detailScreen(it : Dynamic, detail : Control2<Dynamic, Num>, index : Num) {
-  detail(it, index)
+screen detailScreen(it : Dynamic, detail : Control2<Dynamic, Num>, number : Num) {
+  detail(it, number)
 }
 
 control mMasterDetail(items : Collection<Dynamic>, masterItem : Control2<Dynamic, Num>, detail : Control2<Dynamic, Num>) {

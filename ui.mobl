@@ -22,7 +22,7 @@ function hideCurrent() {
   visible = false;
 }
 
-screen detailScreen(it : Dynamic, detail : Control1<Dynamic>, index : Num) {
+screen detailScreen(it : Dynamic, detail : Control2<Dynamic, Num>, index : Num) {
   detail(it, index)
 }
 

@@ -23,6 +23,9 @@ function hideCurrent() {
 }
 
 screen mDetailScreen(it : Dynamic, detail : Control2<Dynamic, Num>, number : Num) {
+  header(_("Detail")) {
+    backButton(_("Back"), onclick={ screen return; })
+  }
   detail(it, number)
 }
 

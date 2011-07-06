@@ -26,6 +26,17 @@ screen detailScreen(it : Dynamic, detail : Control1<Dynamic>) {
   detail(it)
 }
 
+control mMasterDetail(items : Collection<Dynamic>, masterItem : Control2<Dynamic, Num>, detail : Control1<Dynamic>) {
+  var current : Dynamic = null
+  group {
+      list(it in items) {
+        item(onclick={ renderMaths(); renderPlot("corePlotArea", it); detailScreen(it, detail); }) {
+            masterItem(it, indexOf(it, items))
+        }
+      }
+  }
+}
+
 @when window.innerWidth > 500
 control mMasterDetail(items : Collection<?>, masterItem : Control2<Dynamic, Num>, detail : Control2<Dynamic, Num>) {
   var current : Dynamic = null

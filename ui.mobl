@@ -29,7 +29,7 @@ screen detailScreen(it : Dynamic, detail : Control1<Dynamic>) {
 control mMasterDetail(items : Collection<Dynamic>, masterItem : Control2<Dynamic, Num>, detail : Control1<Dynamic>) {
   group {
       list(it in items) {
-        item(onclick={ detailScreen(it, detail); renderMaths(); renderPlot("corePlotArea", it); }) {
+        item(onclick={ detailScreen(it, detail); }) {
             masterItem(it, indexOf(it, items))
         }
       }

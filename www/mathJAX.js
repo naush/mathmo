@@ -4,7 +4,7 @@ mobl.provides('mobl');
 mathJAX.renderMaths = function(callback) {
   var __this = this;
   mobl.sleep(0, function(result__) {
-    var tmp721 = result__;
+    var tmp0 = result__;
     var result__ = mathJAX.render();
     if(callback && callback.apply) callback(); return;
   });
@@ -13,7 +13,7 @@ mathJAX.renderMaths = function(callback) {
 mathJAX.renderMathsIn = function(event, callback) {
   var __this = this;
   mobl.sleep(0, function(result__) {
-    var tmp722 = result__;
+    var tmp1 = result__;
     var result__ = mathJAX.renderIn(event);
     if(callback && callback.apply) callback(); return;
   });

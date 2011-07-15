@@ -44,9 +44,9 @@ control mMasterDetail(items : Collection<Dynamic>, masterItem : Control2<Dynamic
   }
 }
 
-@when window.innerWidth > 500
-control mMasterDetail(items : Collection<?>, masterItem : Control2<Dynamic, Num>, detail : Control2<Dynamic, Num>) {
-  var current : Dynamic = null
+@when window.innerWidth > 600
+control mMasterDetail(items : Collection<?>, masterItem : Control2<Dynamic, Num>, detail : Control1<Dynamic>) {
+  var current : Dynamic = items.one()
   <div width="100%">
     <div style="float:left; width:45%; position:relative; border-right: solid 1px #cccccc;">
       group {

@@ -81,6 +81,7 @@ __ns.dyn = function(o) {
            };
 }(mobl));
 mobl.label = function(s, style, onclick, elements, callback) {
+<<<<<<< HEAD
   var root0 = $("<span>");
   var subs__ = new mobl.CompSubscription();
   
@@ -113,11 +114,46 @@ mobl.label = function(s, style, onclick, elements, callback) {
   
   root0.append(node0);
   callback(root0); return subs__;
+=======
+  var root1130 = $("<span>");
+  var subs__ = new mobl.CompSubscription();
+  
+  var node186 = $("<span>");
+  
+  var ref149 = s;
+  node186.text(""+ref149.get());
+  var ignore29 = false;
+  subs__.addSub(ref149.addEventListener('change', function(_, ref, val) {
+    if(ignore29) return;
+    node186.text(""+val);
+  }));
+  subs__.addSub(ref149.rebind());
+  
+  
+  var ref150 = style;
+  if(ref150.get() !== null) {
+    node186.attr('class', ref150.get());
+    subs__.addSub(ref150.addEventListener('change', function(_, ref, val) {
+      node186.attr('class', val);
+    }));
+    
+  }
+  subs__.addSub(ref150.rebind());
+  
+  var val69 = onclick.get();
+  if(val69 !== null) {
+    subs__.addSub(mobl.domBind(node186, 'tap', val69));
+  }
+  
+  root1130.append(node186);
+  callback(root1130); return subs__;
+>>>>>>> upstream/master
   
   return subs__;
 };
 
 mobl.block = function(cssClass, id, onclick, onswipe, elements, callback) {
+<<<<<<< HEAD
   var root1 = $("<span>");
   var subs__ = new mobl.CompSubscription();
   
@@ -174,12 +210,71 @@ mobl.block = function(cssClass, id, onclick, onswipe, elements, callback) {
   renderControl0();
   root1.append(node1);
   callback(root1); return subs__;
+=======
+  var root1131 = $("<span>");
+  var subs__ = new mobl.CompSubscription();
+  
+  var node187 = $("<div>");
+  
+  var ref151 = id;
+  if(ref151.get() !== null) {
+    node187.attr('id', ref151.get());
+    subs__.addSub(ref151.addEventListener('change', function(_, ref, val) {
+      node187.attr('id', val);
+    }));
+    
+  }
+  subs__.addSub(ref151.rebind());
+  
+  var ref152 = cssClass;
+  if(ref152.get() !== null) {
+    node187.attr('class', ref152.get());
+    subs__.addSub(ref152.addEventListener('change', function(_, ref, val) {
+      node187.attr('class', val);
+    }));
+    
+  }
+  subs__.addSub(ref152.rebind());
+  
+  var val70 = onclick.get();
+  if(val70 !== null) {
+    subs__.addSub(mobl.domBind(node187, 'tap', val70));
+  }
+  
+  var val71 = onswipe.get();
+  if(val71 !== null) {
+    subs__.addSub(mobl.domBind(node187, 'swipe', val71));
+  }
+  
+  var nodes947 = $("<span>");
+  node187.append(nodes947);
+  subs__.addSub(mobl.ref(elements).addEventListener('change', function() {
+    renderControl60();
+  }));
+  
+  function renderControl60() {
+    subs__.addSub((elements)(function(elements, callback) {
+      var root1132 = $("<span>");
+      var subs__ = new mobl.CompSubscription();
+      callback(root1132); return subs__;
+      return subs__;
+    }, function(node) {
+      var oldNodes = nodes947;
+      nodes947 = node.contents();
+      oldNodes.replaceWith(nodes947);
+    }));
+  }
+  renderControl60();
+  root1131.append(node187);
+  callback(root1131); return subs__;
+>>>>>>> upstream/master
   
   
   return subs__;
 };
 
 mobl.span = function(cssClass, id, onclick, onswipe, elements, callback) {
+<<<<<<< HEAD
   var root3 = $("<span>");
   var subs__ = new mobl.CompSubscription();
   
@@ -236,35 +331,114 @@ mobl.span = function(cssClass, id, onclick, onswipe, elements, callback) {
   renderControl1();
   root3.append(node2);
   callback(root3); return subs__;
+=======
+  var root1133 = $("<span>");
+  var subs__ = new mobl.CompSubscription();
+  
+  var node188 = $("<span>");
+  
+  var ref153 = id;
+  if(ref153.get() !== null) {
+    node188.attr('id', ref153.get());
+    subs__.addSub(ref153.addEventListener('change', function(_, ref, val) {
+      node188.attr('id', val);
+    }));
+    
+  }
+  subs__.addSub(ref153.rebind());
+  
+  var ref154 = cssClass;
+  if(ref154.get() !== null) {
+    node188.attr('class', ref154.get());
+    subs__.addSub(ref154.addEventListener('change', function(_, ref, val) {
+      node188.attr('class', val);
+    }));
+    
+  }
+  subs__.addSub(ref154.rebind());
+  
+  var val72 = onclick.get();
+  if(val72 !== null) {
+    subs__.addSub(mobl.domBind(node188, 'tap', val72));
+  }
+  
+  var val73 = onswipe.get();
+  if(val73 !== null) {
+    subs__.addSub(mobl.domBind(node188, 'swipe', val73));
+  }
+  
+  var nodes948 = $("<span>");
+  node188.append(nodes948);
+  subs__.addSub(mobl.ref(elements).addEventListener('change', function() {
+    renderControl61();
+  }));
+  
+  function renderControl61() {
+    subs__.addSub((elements)(function(elements, callback) {
+      var root1134 = $("<span>");
+      var subs__ = new mobl.CompSubscription();
+      callback(root1134); return subs__;
+      return subs__;
+    }, function(node) {
+      var oldNodes = nodes948;
+      nodes948 = node.contents();
+      oldNodes.replaceWith(nodes948);
+    }));
+  }
+  renderControl61();
+  root1133.append(node188);
+  callback(root1133); return subs__;
+>>>>>>> upstream/master
   
   
   return subs__;
 };
 
 mobl.link = function(url, target, elements, callback) {
+<<<<<<< HEAD
   var root5 = $("<span>");
+=======
+  var root1135 = $("<span>");
+>>>>>>> upstream/master
   var subs__ = new mobl.CompSubscription();
   
   var l = $("<a>");
   
+<<<<<<< HEAD
   var ref6 = url;
   if(ref6.get() !== null) {
     l.attr('href', ref6.get());
     subs__.addSub(ref6.addEventListener('change', function(_, ref, val) {
+=======
+  var ref155 = url;
+  if(ref155.get() !== null) {
+    l.attr('href', ref155.get());
+    subs__.addSub(ref155.addEventListener('change', function(_, ref, val) {
+>>>>>>> upstream/master
       l.attr('href', val);
     }));
     
   }
+<<<<<<< HEAD
   subs__.addSub(ref6.rebind());
   
   var ref7 = target;
   if(ref7.get() !== null) {
     l.attr('target', ref7.get());
     subs__.addSub(ref7.addEventListener('change', function(_, ref, val) {
+=======
+  subs__.addSub(ref155.rebind());
+  
+  var ref156 = target;
+  if(ref156.get() !== null) {
+    l.attr('target', ref156.get());
+    subs__.addSub(ref156.addEventListener('change', function(_, ref, val) {
+>>>>>>> upstream/master
       l.attr('target', val);
     }));
     
   }
+<<<<<<< HEAD
   subs__.addSub(ref7.rebind());
   
   var nodes2 = $("<span>");
@@ -294,6 +468,37 @@ mobl.link = function(url, target, elements, callback) {
   } else {
     {
       callback(root5); return subs__;
+=======
+  subs__.addSub(ref156.rebind());
+  
+  var nodes949 = $("<span>");
+  l.append(nodes949);
+  subs__.addSub(mobl.ref(elements).addEventListener('change', function() {
+    renderControl62();
+  }));
+  
+  function renderControl62() {
+    subs__.addSub((elements)(function(elements, callback) {
+      var root1136 = $("<span>");
+      var subs__ = new mobl.CompSubscription();
+      callback(root1136); return subs__;
+      return subs__;
+    }, function(node) {
+      var oldNodes = nodes949;
+      nodes949 = node.contents();
+      oldNodes.replaceWith(nodes949);
+    }));
+  }
+  renderControl62();
+  root1135.append(l);
+  var result__ = l.contents().length == 0;
+  if(result__) {
+    var result__ = l.text(url.get());
+    callback(root1135); return subs__;
+  } else {
+    {
+      callback(root1135); return subs__;
+>>>>>>> upstream/master
     }
   }
   
@@ -302,6 +507,7 @@ mobl.link = function(url, target, elements, callback) {
 };
 
 mobl.nl = function(elements, callback) {
+<<<<<<< HEAD
   var root7 = $("<span>");
   var subs__ = new mobl.CompSubscription();
   
@@ -309,11 +515,21 @@ mobl.nl = function(elements, callback) {
   
   root7.append(node3);
   callback(root7); return subs__;
+=======
+  var root1137 = $("<span>");
+  var subs__ = new mobl.CompSubscription();
+  
+  var node189 = $("<br>");
+  
+  root1137.append(node189);
+  callback(root1137); return subs__;
+>>>>>>> upstream/master
   
   return subs__;
 };
 
 mobl.screenContext = function(elements, callback) {
+<<<<<<< HEAD
   var root8 = $("<span>");
   var subs__ = new mobl.CompSubscription();
   
@@ -347,6 +563,41 @@ mobl.screenContext = function(elements, callback) {
   node4.append(node5);
   root8.append(node4);
   callback(root8); return subs__;
+=======
+  var root1138 = $("<span>");
+  var subs__ = new mobl.CompSubscription();
+  
+  var node190 = $("<div>");
+  node190.attr('class', "screenContext");
+  node190.attr('style', "position: relative;");
+  
+  
+  var node191 = $("<div>");
+  node191.attr('class', "initialElements");
+  
+  var nodes950 = $("<span>");
+  node191.append(nodes950);
+  subs__.addSub(mobl.ref(elements).addEventListener('change', function() {
+    renderControl63();
+  }));
+  
+  function renderControl63() {
+    subs__.addSub((elements)(function(elements, callback) {
+      var root1139 = $("<span>");
+      var subs__ = new mobl.CompSubscription();
+      callback(root1139); return subs__;
+      return subs__;
+    }, function(node) {
+      var oldNodes = nodes950;
+      nodes950 = node.contents();
+      oldNodes.replaceWith(nodes950);
+    }));
+  }
+  renderControl63();
+  node190.append(node191);
+  root1138.append(node190);
+  callback(root1138); return subs__;
+>>>>>>> upstream/master
   
   
   

@@ -4,7 +4,11 @@ mobl.provides('mobl');
 mathJAX.renderMaths = function(callback) {
   var __this = this;
   mobl.sleep(0, function(result__) {
+<<<<<<< HEAD
     var tmp0 = result__;
+=======
+    var tmp668 = result__;
+>>>>>>> upstream/master
     var result__ = mathJAX.render();
     if(callback && callback.apply) callback(); return;
   });
@@ -13,7 +17,11 @@ mathJAX.renderMaths = function(callback) {
 mathJAX.renderMathsIn = function(event, callback) {
   var __this = this;
   mobl.sleep(0, function(result__) {
+<<<<<<< HEAD
     var tmp1 = result__;
+=======
+    var tmp669 = result__;
+>>>>>>> upstream/master
     var result__ = mathJAX.renderIn(event);
     if(callback && callback.apply) callback(); return;
   });

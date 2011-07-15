@@ -51,7 +51,7 @@ function randomQ(n:Num, topicCode:String):void
 {
 	var keys:[String] = topicMapForId(topicCode).keys();
 	foreach(i in range(0,n)) {
-		var r:Num = Math.floor(keys.length*Math.random());
+		var r:Num = Math.floor(keys.length*Math.random()); // random(keys.length + 1);
 		var tid:String = keys[r]; 
 		makeQA(tid);
 	}
@@ -195,7 +195,7 @@ screen addDifferentiation() {
 		topicItem("C21")
 		topicItem("C22")
 		topicItem("C19")
-    }	
+    }
 }
 
 screen addIntegration() {
@@ -206,7 +206,7 @@ screen addIntegration() {
 		topicItem("C28")
 		topicItem("C3")
 		topicItem("C4")
-    }	
+    }
 }
 
 screen addDifferentialEquations() {
@@ -358,31 +358,31 @@ function removeMathJaxIncidentElements() {
   $("[id^='MathJax-Element-']").each(function() { $(this).remove(); });
 }
 
-control answerBlock(qa:QA, number:Num) {
-	block(qa.correct ? agreeStyle : disagreeStyle, onclick={
-
-	  removeMathJaxIncidentElements();
-
-    if (qa.answer != "%GRAPH%") {
-      qa.answerHtml = $("#answer-block-" + number).children("span:first").html();
-    } else {
-    	qa.plotHtml = $("#plot-wrapper").children("span:first").html();
-    }
-  }) {
-    label("A" + number + ". ")
-		when(qa.answer != "%GRAPH%") {
-      <span id="answer-block-" + number>html(blank(qa.answerHtml) ? qa.answer : qa.answerHtml)</span>
-		}
-		else {
-			plot(qa, "corePlotArea", plotStyle)
-		}
-	}
-	block(answerStyle) {
-		label("Did you agree?")
-		sideButton("Yes", onclick={qa.correct=true;})
-		sideButton("No", onclick={qa.correct=false;})
-	}	
-}
+// control answerBlock(qa:QA, number:Num) {
+// 	block(qa.correct ? agreeStyle : disagreeStyle, onclick={
+// 
+// 	  removeMathJaxIncidentElements();
+// 
+//     if (qa.answer != "%GRAPH%") {
+//       qa.answerHtml = $("#answer-block-" + number).children("span:first").html();
+//     } else {
+//     	qa.plotHtml = $("#plot-wrapper").children("span:first").html();
+//     }
+//   }) {
+//     label("A" + number + ". ")
+// 		when(qa.answer != "%GRAPH%") {
+//       <span id="answer-block-" + number>html(blank(qa.answerHtml) ? qa.answer : qa.answerHtml)</span>
+// 		}
+// 		else {
+// 			plot(qa, "corePlotArea", plotStyle)
+// 		}
+// 	}
+// 	block(answerStyle) {
+// 		label("Did you agree?")
+// 		sideButton("Yes", onclick={qa.correct=true;})
+// 		sideButton("No", onclick={qa.correct=false;})
+// 	}	
+// }
 
 function nextQA(qa:QA):QA
 {
@@ -401,10 +401,10 @@ control showQA(qa:QA, number:Num) {
 			if (qa2 == null) {
 			  hideCurrent();
 			} else {
-		      	qa = qa2;
-		      	renderQA(qa);
-	      	}
-/*	      
+      	qa = qa2;
+      	renderQA(qa);
+	    }
+/*
 			var qa2:QA = nextQA(qa);
 			remove(qa);
 			qa = qa2;
@@ -431,17 +431,61 @@ control showQA(qa:QA, number:Num) {
 			html("Q" + number + ". ")
 			<span id="question-block-" + number>html(blank(qa.questionHtml) ? qa.question : qa.questionHtml)</span>
 		}
-		item(onclick={renderMaths();}, hideArrow=true) {
-			block(answerStyle) {
-				checkBox(qa.done, "Check answer", onchange = {
-					renderQA(qa);
-				})
-			}
-			when(qa.done) {
-				answerBlock(qa, number)
-			}
+		item(hideArrow=true) {
+		  makeChoices(qa)
 		}
+		// item(onclick={renderMaths();}, hideArrow=true) {
+		// 	block(answerStyle) {
+		// 		checkBox(qa.done, "Check answer", onchange = {
+		// 			renderQA(qa);
+		// 		})
+		// 	}
+		// 	when(qa.done) {
+		// 		answerBlock(qa, number)
+		// 	}
+		// }
 	}
+}
+
+var correctChoice : Num = -1;
+
+control makeChoices(qa : QA) {
+  var currenctChoice : Num = -1
+  block() {
+    list((order, answer) in generateChoices(qa)) {
+      item(style = order == currenctChoice ? (currenctChoice == correctChoice ? agreeStyle : disagreeStyle) : itemStyle, hideArrow=true, onclick={
+      	currenctChoice = order;
+      	if (currenctChoice == correctChoice) {
+      	  qa.done = true;
+      	  qa.correct = true;
+      	} else {
+      	  qa.correct = false;
+      	}
+      }, pushedStyle=itemPushedStyle) {
+        html("Choice " + order + ".")
+        html(answer)
+      }
+    }
+  }
+}
+
+function generateChoices(qa : QA) : Array<(Num, String)> {
+	var randomIndex = random(4);
+	correctChoice = randomIndex;
+  var choices : Array<(Num, String)> = [];
+  foreach (index in range(1, 5)) {
+  	if (index == randomIndex) {
+      choices.push((index, qa.answer));
+  	} else {
+  	  var problem : Array<String> = makeProblem(qa.topic);
+      var answer = problem[1];
+		  if (problem.length > 2) {
+		    answer = problem[2];
+		  }
+      choices.push((index, answer));
+  	}
+  }
+  return choices;
 }
 
 external sync function makeProblem(tid:String):Array<String>
@@ -452,17 +496,19 @@ external sync function initStatsTopicMap(map:Map<String,String>):void
 
 var max:Num = 0;
 
+// var qas:Collection<QA> = QA.all() order by number desc limit 1;
+// qa.number = qas.one() == null ? 0 : (qas.one().number + 1);
 
 function makeQA(tid:String):QA {
-	//var topicMap:Map<String,String> = topicMapForId(tid);
-
+	// var topicMap:Map<String,String> = topicMapForId(tid);
 	var qa = QA();
+  // var qas:Collection<QA> = QA.all() order by number desc;
 	var qas:Collection<QA> = QA.all();
-	foreach(item in qas) {
+	foreach(item in QA.all()) {
 		max = Math.max(max, item.number);
 	}
 	qa.number = max + 1;
-	var q_and_A:Array<String> = makeProblem(tid);
+	var q_and_A : Array<String> = makeProblem(tid);
 	qa.question = q_and_A[0];
 	qa.answer = q_and_A[1];
 	qa.topic = tid;  //q_and_A[2];
@@ -471,10 +517,8 @@ function makeQA(tid:String):QA {
 	}
 	qa.done = false;
 	add(qa);
-	
 	return qa;
 }
-
 
 <javascript>
 

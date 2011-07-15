@@ -6,14 +6,14 @@ import mathJAX
 import plot
 
 function indexOf(it : Dynamic, items : Collection<Dynamic>) : Num {
-	var counter : Num = 1;
-	foreach (item in items) {
-		if (item == it) {
-			return counter;
-		}
-		counter = counter + 1;
-	}
-	return -1;
+  var counter : Num = 1;
+  foreach (item in items) {
+    if (item == it) {
+      return counter;
+    }
+    counter = counter + 1;
+  }
+  return -1;
 }
 
 var visible : Bool  = true;
@@ -45,8 +45,8 @@ control mMasterDetail(items : Collection<Dynamic>, masterItem : Control2<Dynamic
 }
 
 @when window.innerWidth > 600
-control mMasterDetail(items : Collection<?>, masterItem : Control2<Dynamic, Num>, detail : Control1<Dynamic>) {
-  var current : Dynamic = items.one()
+control mMasterDetail(items : Collection<?>, masterItem : Control2<Dynamic, Num>, detail : Control2<Dynamic, Num>) {
+  var current : Dynamic = null
   <div width="100%">
     <div style="float:left; width:45%; position:relative; border-right: solid 1px #cccccc;">
       group {
@@ -57,10 +57,10 @@ control mMasterDetail(items : Collection<?>, masterItem : Control2<Dynamic, Num>
             }
           } else {
             item(hideArrow=true, onclick={
-	              current = it;
-	              visible = true;
-	              renderMaths();
-	              renderPlot("corePlotArea", current);
+                current = it;
+                visible = true;
+                renderMaths();
+                renderPlot("corePlotArea", current);
               }) {
               masterItem(it, indexOf(it, items))
             }
@@ -77,10 +77,10 @@ control mMasterDetail(items : Collection<?>, masterItem : Control2<Dynamic, Num>
 }
 
 control introduction() {
-	header("Mathmo") {
-		image("mathmoIcon.png", 35, 35, style=logoStyle)
-	}
-	var intro="""
+  header("Mathmo") {
+    image("mathmoIcon.png", 35, 35, style=logoStyle)
+  }
+  var intro="""
 <div style="padding:20px">
 <img src="icon.png" style="width:30px;height:30px; float:left; padding:5px 5px 5px 0px"/> Mathmo is designed to give you extra practice.
 <br />
@@ -134,24 +134,24 @@ The <a href="http://code.google.com/p/flot/">flot plotting library</a>
 
 </div>
 """
-	html(intro)
+  html(intro)
 }
 
 
 style tabbarStyle activeTabButtonStyle {
-	padding-top: 12px;
-	padding-bottom: 11px;
+  padding-top: 12px;
+  padding-bottom: 11px;
 }
 style tabbarStyle inActiveTabButtonStyle {
-	padding-top: 10px;
-	padding-bottom: 11px;
+  padding-top: 10px;
+  padding-bottom: 11px;
 }
 
 style section {
-	padding:5px;
-	font-size:1.2em;
-	width:100%;
-	color:#CC0000;
+  padding:5px;
+  font-size:1.2em;
+  width:100%;
+  color:#CC0000;
 }
 
 style logoStyle {

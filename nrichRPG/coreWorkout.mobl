@@ -432,7 +432,7 @@ control showQA(qa:QA, number:Num) {
 			<span id="question-block-" + number>html(blank(qa.questionHtml) ? qa.question : qa.questionHtml)</span>
 		}
 		item(hideArrow=true) {
-		  makeChoices(qa)
+		  makeChoices(qa, number)
 		}
 		// item(onclick={renderMaths();}, hideArrow=true) {
 		// 	block(answerStyle) {
@@ -447,13 +447,19 @@ control showQA(qa:QA, number:Num) {
 	}
 }
 
-control makeChoices(qa : QA) {
-  var currenctChoice : Num = -1
+function choiceItemStyle(choiceNumber : Num, questionNumber : Num, currentChoice : Num, correctChoice : Num) : Style {
+  var encodedChoiceNumber = choiceNumber + questionNumber * 4;
+  var encodedCorrectChoice = correctChoice + questionNumber * 4;
+  return encodedChoiceNumber == currentChoice ? (currentChoice == encodedCorrectChoice ? agreeStyle : disagreeStyle) : itemStyle;
+}
+
+control makeChoices(qa : QA, number : Num) {
+  var currentChoice : Num = -1
   block() {
     list((order, correctChoice, answer) in generateChoices(qa)) {
-      item(style = order == currenctChoice ? (currenctChoice == correctChoice ? agreeStyle : disagreeStyle) : itemStyle, hideArrow=true, onclick={
-      	currenctChoice = order;
-      	if (currenctChoice == correctChoice) {
+      item(style = choiceItemStyle(order, number, currentChoice, correctChoice), hideArrow=true, onclick={
+      	currentChoice = order + number * 4;
+      	if (currentChoice == correctChoice + number * 4) {
       	  qa.done = true;
       	  qa.correct = true;
       	} else {

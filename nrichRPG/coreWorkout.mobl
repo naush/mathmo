@@ -497,19 +497,14 @@ external sync function initCoreTopicMap(map:Map<String,String>):void
 external sync function initFurtherTopicMap(map:Map<String,String>):void
 external sync function initStatsTopicMap(map:Map<String,String>):void
 
-var max:Num = 0;
+var max : Num = 0;
 
-// var qas:Collection<QA> = QA.all() order by number desc limit 1;
-// qa.number = qas.one() == null ? 0 : (qas.one().number + 1);
-
-function makeQA(tid:String):QA {
+function makeQA(tid : String) : QA {
 	// var topicMap:Map<String,String> = topicMapForId(tid);
 	var qa = QA();
-  // var qas:Collection<QA> = QA.all() order by number desc;
-	var qas:Collection<QA> = QA.all();
-	foreach(item in QA.all()) {
-		max = Math.max(max, item.number);
-	}
+  var qas : Collection<QA> = QA.all() order by number desc limit 1;
+  if (qas.count() > 0)
+    max = qas.one().number;
 	qa.number = max + 1;
 	var q_and_A : Array<String> = makeProblem(tid);
 	qa.question = q_and_A[0];

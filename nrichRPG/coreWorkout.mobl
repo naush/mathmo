@@ -447,12 +447,10 @@ control showQA(qa:QA, number:Num) {
 	}
 }
 
-var correctChoice : Num = -1;
-
 control makeChoices(qa : QA) {
   var currenctChoice : Num = -1
   block() {
-    list((order, answer) in generateChoices(qa)) {
+    list((order, correctChoice, answer) in generateChoices(qa)) {
       item(style = order == currenctChoice ? (currenctChoice == correctChoice ? agreeStyle : disagreeStyle) : itemStyle, hideArrow=true, onclick={
       	currenctChoice = order;
       	if (currenctChoice == correctChoice) {
@@ -469,20 +467,19 @@ control makeChoices(qa : QA) {
   }
 }
 
-function generateChoices(qa : QA) : Array<(Num, String)> {
-	var randomIndex = random(4);
-	correctChoice = randomIndex;
-  var choices : Array<(Num, String)> = [];
+function generateChoices(qa : QA) : Array<(Num, Num, String)> {
+	var correctChoice = random(4);
+  var choices : Array<(Num, Num, String)> = [];
   foreach (index in range(1, 5)) {
-  	if (index == randomIndex) {
-      choices.push((index, qa.answer));
+  	if (index == correctChoice) {
+      choices.push((index, correctChoice, qa.answer));
   	} else {
   	  var problem : Array<String> = makeProblem(qa.topic);
       var answer = problem[1];
 		  if (problem.length > 2) {
 		    answer = problem[2];
 		  }
-      choices.push((index, answer));
+      choices.push((index, correctChoice, answer));
   	}
   }
   return choices;

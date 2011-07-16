@@ -51,7 +51,7 @@ function randomQ(n:Num, topicCode:String):void
 {
 	var keys:[String] = topicMapForId(topicCode).keys();
 	foreach(i in range(0,n)) {
-		var r:Num = Math.floor(keys.length*Math.random()); // random(keys.length + 1);
+		var r:Num = random(keys.length - 1);
 		var tid:String = keys[r]; 
 		makeQA(tid);
 	}

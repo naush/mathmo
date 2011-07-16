@@ -459,7 +459,6 @@ control makeChoices(qa : QA, number : Num) {
     list((order, correctChoice, answer) in generateChoices(qa)) {
       item(style = choiceItemStyle(order, number, currentChoice, correctChoice), hideArrow=true, onclick={
       	currentChoice = order + number * 4;
-      	alert(correctChoice);
       	if (currentChoice == correctChoice + number * 4) {
       	  qa.done = true;
       	  qa.correct = true;
